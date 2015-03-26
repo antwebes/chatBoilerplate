@@ -1,0 +1,11 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+antwebes_chateaclient_register:
+    path:      /registro
+    defaults:  { _controller: ChateaClientBundle:User:register }
+
+antwebes_chateclient:
+    resource: '@ChateaClientBundle/Resources/config/routing.xml'
+    prefix:   / 

@@ -1,0 +1,23 @@
+{% extends "::layout.html.twig" %}
+
+{% block head_css %}
+    {{ parent() }}
+    {% block chatea_css %}{% endblock chatea_css %}
+{% endblock head_css %}
+
+{% block body_pre_container %}{% endblock %}
+
+{% block body_container_content %}
+	{% block chatea_body %}
+	{% endblock %}
+{% endblock body_container_content %}
+
+
+{% block body_js_end %}
+	{{ parent() }}
+    <script>
+        window.homepage = "{{social_endpoint}}";
+    </script>
+	
+    {% block chatea_js %}{% endblock %}
+{% endblock %}

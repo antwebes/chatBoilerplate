@@ -1,2 +1,4 @@
-# chat-boilerplate
-Project reusable and customize to create a page of chat
+blog
+====
+
+A Symfony project created on March 26, 2015, 9:22 am.
