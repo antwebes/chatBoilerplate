@@ -18,3 +18,14 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    chatea_client_id: id_randomId
+    chatea_secret_id: secret_id
+    chatea_app_id: id
+    chatea_enviroment: prod
+    api_endpoint: 'http://api.chateagratis.local/app_dev.php'
+    recaptcha_public_key: CLAVE_PUBLICA
+    recaptcha_private_key: CLAVEL_PRIVADA
+    recaptcha_enabled: false
+
+    social_endpoint: 'https://www.chatsfree.net/'

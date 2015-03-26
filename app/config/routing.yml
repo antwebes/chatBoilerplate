@@ -9,3 +9,8 @@ antwebes_chateaclient_register:
 antwebes_chateclient:
     resource: '@ChateaClientBundle/Resources/config/routing.xml'
     prefix:   / 
+
+chatea_secure:
+   resource: "@ChateaSecureBundle/Controller/SecuredController.php"
+   prefix: /usuario
+   type: annotation

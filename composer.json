@@ -21,7 +21,8 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
-        "antwebes/chatea-client-bundle" : "0.1.6@dev"
+        "antwebes/chatea-client-bundle" : "dev-develop@dev",
+        "raulfraile/ladybug": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
@@ -44,7 +45,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

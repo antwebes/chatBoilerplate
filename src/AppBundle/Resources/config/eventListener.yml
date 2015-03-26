@@ -1,0 +1,8 @@
+parameters:
+
+services:
+    app.event_listener.channel_client_listener:
+        class: AppBundle\EventListener\ChateaClientListener
+        arguments: []
+        tags:
+            - { name: kernel.event_subscriber }

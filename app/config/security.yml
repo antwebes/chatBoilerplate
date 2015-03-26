@@ -30,7 +30,7 @@ security:
             logout:
                 invalidate_session: false
                 path:   _antwebes_chateaclient_logout
-                target: index
+                target: homepage
                 handlers: [antwewebs_revoke_access_on_logout_handler]
 
     access_control:
