@@ -19,7 +19,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Ant\Bundle\ChateaClientBundle\ChateaClientBundle(),
             new Ant\Bundle\ChateaSecureBundle\ChateaSecureBundle(),
-            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle()
+            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
+            new Snc\RedisBundle\SncRedisBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

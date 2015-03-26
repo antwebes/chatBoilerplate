@@ -29,3 +29,6 @@ parameters:
     recaptcha_enabled: false
 
     social_endpoint: 'https://www.chatsfree.net/'
+
+    redis_host: localhost
+    redis_db: 3

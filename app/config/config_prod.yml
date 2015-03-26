@@ -26,3 +26,15 @@ twig:
     globals:
         bp_analytics_id: UA-396979-12
         social_endpoint: %social_endpoint%
+
+snc_redis:
+    clients:
+        default:
+            type: predis
+            alias: default
+            dsn: redis://%redis_host%/%redis_db%
+            logging: %kernel.debug%
+    session:
+      client: default
+      prefix: 'chat.boilerplate_'
+      ttl: 3600
