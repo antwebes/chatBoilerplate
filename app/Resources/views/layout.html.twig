@@ -58,4 +58,31 @@
   </div>
 {% endblock body_container_content %}
 
+{% block body_js_end %}
+    <script>
+
+        {% if (app.user) and ( app.user.validated == false) %}
+
+        var e = document.createElement('div');
+        e.innerHTML = '<div class="row"><div class="col-xs-12" id="message_header_center"><div class="alert alert-warning"> Hola <strong>{{ app.user.username }}</strong>, {{  "tu cuenta no ha sido validada. Revisa tu cuenta de correo o puedes hacer"  | trans }} <a href="{{ path('confirm_email') }}">click aqu&iacute; para reenviarte el email de confirmación!</a></div></div></div>';
+
+
+        var main = document.getElementById("main");
+
+        main.insertBefore(e, main.childNodes[0]);
+        {% endif %}
+
+
+        {% if app.user %}
+        document.cookie = "token={{ app.user.accessToken }}; path=/";
+        document.cookie = "user={{ app.user.username }}; path=/";
+        {% else %}
+        document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
+        document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
+        {% endif %}
+    </script>
+{% endblock body_js_end %}
+
+
+
 {% block footer_content %}<p>&copy; {{ affiliate_name }} 2015</p>{% endblock footer_content %}
