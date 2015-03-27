@@ -1,5 +1,12 @@
 {% extends "::base.html.twig" %}
 
+{% block flash_message %}
+  {% for flashMessage in app.session.flashbag.get('notice') %}
+      <div class="flash-notice">
+          {{ flashMessage }}
+      </div>
+  {% endfor %}
+{% endblock flash_message %}
 
 {% block body_pre_container %}
 <!-- Main jumbotron for a primary marketing message or call to action -->

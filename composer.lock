@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0ba5f7749d9d6068939a8b7c6b383eb8",
+    "hash": "2d01db1ef8f06c5f29d42e53171d863a",
     "packages": [
         {
             "name": "antwebes/chatea-client-bundle",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "6383fba58a5b08586b31e42a64c1fac34f0b1086"
+                "reference": "71f7d07637add2caa06f422a512772042d0228a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/6383fba58a5b08586b31e42a64c1fac34f0b1086",
-                "reference": "6383fba58a5b08586b31e42a64c1fac34f0b1086",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/71f7d07637add2caa06f422a512772042d0228a4",
+                "reference": "71f7d07637add2caa06f422a512772042d0228a4",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-03-27 07:52:46"
+            "time": "2015-03-27 12:03:22"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaSecureBundle.git",
-                "reference": "f2557db2640f4d46840d060e618cfa9805eddd22"
+                "reference": "f3e9536da6185e2b79339ee0b1757d30f3cd94d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/f2557db2640f4d46840d060e618cfa9805eddd22",
-                "reference": "f2557db2640f4d46840d060e618cfa9805eddd22",
+                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/f3e9536da6185e2b79339ee0b1757d30f3cd94d4",
+                "reference": "f3e9536da6185e2b79339ee0b1757d30f3cd94d4",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-03-18 08:29:49"
+            "time": "2015-03-27 10:15:28"
         },
         {
             "name": "doctrine/annotations",
@@ -1366,16 +1366,16 @@
         },
         {
             "name": "raulfraile/ladybug",
-            "version": "dev-master",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/raulfraile/ladybug.git",
-                "reference": "5c27eb1b277cbaf6e9ebc9379a1daa7e502b489e"
+                "reference": "1fb36821c3e91bd9a030335df452b264811449bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/raulfraile/ladybug/zipball/5c27eb1b277cbaf6e9ebc9379a1daa7e502b489e",
-                "reference": "5c27eb1b277cbaf6e9ebc9379a1daa7e502b489e",
+                "url": "https://api.github.com/repos/raulfraile/ladybug/zipball/1fb36821c3e91bd9a030335df452b264811449bf",
+                "reference": "1fb36821c3e91bd9a030335df452b264811449bf",
                 "shasum": ""
             },
             "require": {
@@ -1436,7 +1436,62 @@
                 "print_r",
                 "var_dump"
             ],
-            "time": "2014-10-14 06:18:03"
+            "time": "2014-08-23 19:43:25"
+        },
+        {
+            "name": "raulfraile/ladybug-bundle",
+            "version": "v1.0.6",
+            "target-dir": "RaulFraile/Bundle/LadybugBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/LadybugBundle.git",
+                "reference": "0a3171f1d15194aadaba12fd9c81c11707c6b1c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/LadybugBundle/zipball/0a3171f1d15194aadaba12fd9c81c11707c6b1c3",
+                "reference": "0a3171f1d15194aadaba12fd9c81c11707c6b1c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "raulfraile/ladybug": "~1.0.0",
+                "raulfraile/ladybug-plugin-symfony2": "~1.0.0",
+                "symfony/framework-bundle": ">=2.0.0"
+            },
+            "replace": {
+                "raulfraile/ladybugbundle": "dev-master"
+            },
+            "require-dev": {
+                "mockery/mockery": "@stable",
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "RaulFraile\\Bundle\\LadybugBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfrailebeneyto.com/"
+                }
+            ],
+            "description": "Symfony2 bundle for Ladybug library (Simple and Extensible PHP Dumper)",
+            "homepage": "https://github.com/raulfraile/LadybugBundle",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "tree",
+                "twig"
+            ],
+            "time": "2014-10-10 06:09:15"
         },
         {
             "name": "raulfraile/ladybug-installer",
@@ -1527,6 +1582,49 @@
                 "plugin"
             ],
             "time": "2013-09-29 10:19:08"
+        },
+        {
+            "name": "raulfraile/ladybug-plugin-symfony2",
+            "version": "v1.0.1",
+            "target-dir": "Ladybug/Plugin/Symfony2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/ladybug-plugin-symfony2.git",
+                "reference": "81a50bdcf966ccf51e9dbf07494fdb3a4bf69b84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/ladybug-plugin-symfony2/zipball/81a50bdcf966ccf51e9dbf07494fdb3a4bf69b84",
+                "reference": "81a50bdcf966ccf51e9dbf07494fdb3a4bf69b84",
+                "shasum": ""
+            },
+            "require": {
+                "raulfraile/ladybug-installer": "~1.0.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.8.0",
+                "raulfraile/ladybug": "~1.0.0",
+                "symfony/http-foundation": "*"
+            },
+            "type": "ladybug-plugin",
+            "extra": {
+                "ladybug_name": "Symfony2"
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ladybug\\Plugin\\Symfony2\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Symfony2 plugin for ladybug",
+            "keywords": [
+                "ladybug",
+                "plugin"
+            ],
+            "time": "2013-09-29 09:17:09"
         },
         {
             "name": "raulfraile/ladybug-theme-modern",
@@ -1951,12 +2049,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "8593b904653f7366c24b5c0192fd887d1b75ec99"
+                "reference": "15cac12fd7f5dca557693afe0f7722032d65de6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/8593b904653f7366c24b5c0192fd887d1b75ec99",
-                "reference": "8593b904653f7366c24b5c0192fd887d1b75ec99",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/15cac12fd7f5dca557693afe0f7722032d65de6f",
+                "reference": "15cac12fd7f5dca557693afe0f7722032d65de6f",
                 "shasum": ""
             },
             "require": {
@@ -2051,7 +2149,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-03-26 13:42:51"
+            "time": "2015-03-27 10:13:01"
         },
         {
             "name": "twig/extensions",
@@ -2162,8 +2260,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "antwebes/chatea-client-bundle": 20,
-        "raulfraile/ladybug": 20
+        "antwebes/chatea-client-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

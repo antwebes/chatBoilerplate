@@ -19,7 +19,7 @@ chatea_client_reset_password_perform:
     methods: [POST]
 chatea_client_register_channel:
     path: /registrar-canal
-    defaults: { _controller: ChateaClientBundle:Channel:register }
+    defaults: { _controller: AppBundle:ChateaClientChannel:register }
 confirm_email:
     path: /confirmar-email
     defaults: { _controller: ChateaClientBundle:User:confirmEmail }

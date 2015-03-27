@@ -5,6 +5,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
+        <meta name="robots" content="noindex">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{% block title %}Block title base!{% endblock %}</title>
@@ -47,7 +48,7 @@
         {% block navbar %}
             {% include "::navbar.html.twig" %}
         {% endblock navbar %}
-
+        {% block flash_message %}{% endblock flash_message %}
         {% block body_pre_container %}
         {% endblock body_pre_container %}
 

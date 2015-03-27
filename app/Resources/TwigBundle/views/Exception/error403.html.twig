@@ -1,0 +1,68 @@
+{% extends '::base_error.html.twig' %}
+
+{% block title %}Acceso denegado{% endblock title %}
+
+{% block headtitle %}Acceso denegado{% endblock headtitle %}
+
+{% block message %}
+
+    {# lo he metido aqui pk imposible importar el css, ni idea de porque#}
+    <style>
+        <!--
+        .error-v1 {
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        .error-v1 p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .error-v1 span {
+            color: #555;
+            display: block;
+            font-size: 35px;
+            font-weight: 200;
+        }
+
+        .error-v1 span.error-v1-title {
+            color: #777;
+            font-size: 180px;
+            line-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        /*For Mobile Devices*/
+        @media (max-width: 500px) {
+            .error-v1 p {
+                font-size: 12px;
+            }
+
+            .error-v1 span {
+                font-size: 25px;
+            }
+
+            .error-v1 span.error-v1-title {
+                font-size: 140px;
+            }
+        }
+        -->
+    </style>
+    <!--Error Block-->
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="error-v1">
+                <span class="error-v1-title"><i class="fa fa-ban"></i></span>
+                <p>Es posible que aún no hayas validado tu correo electrónico. </p>
+                <a class="btn-u btn-bordered" href="{{ path('homepage') }}">Volver al index</a>
+            </div>
+        </div>
+    </div>
+    <!--End Error Block-->
+    <h2 class="hide">The server returned a "{{ status_code }} {{ status_text }}".</h2>
+    
+{% endblock %}
+
+{% block buttons %}
+{% endblock %}
