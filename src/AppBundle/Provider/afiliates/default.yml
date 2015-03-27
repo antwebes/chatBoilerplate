@@ -1,8 +1,8 @@
 client: 15
 affiliate_name: 'Chat'
-brand_image_url: 'http://www.chatearlatino.net/img/logo.png'
+brand_image_url: ''
 welcome_message: Bienvenido a nuestro chat
 welcome_message_extended: A continuación podrás gestionar tu cuenta.
 chat_url: 'http://www.chatearlatino.net/chat'
-navbar_color: '#fff'
+navbar_color: '#9ac02f'
 email: contacto@antweb.es
