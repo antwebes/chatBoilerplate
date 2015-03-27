@@ -13,7 +13,11 @@
   <div class="container">
     <h1>{{ welcome_message }}</h1>
     <p>{{ welcome_message_extended }}</p>
-    {% if app.user %}<p class="text-center"><a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">Entrar al chat como {{ app.user.username }}</a></p>{% endif %}
+    {% if app.user %}
+        {% if  chat_url is not null %}
+        <p class="text-center"><a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">Entrar al chat como {{ app.user.username }}</a></p>
+        {% endif %}
+    {% endif %}
   </div>
   <hr>
 {% endblock body_pre_container %}

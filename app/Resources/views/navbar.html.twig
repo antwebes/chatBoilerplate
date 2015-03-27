@@ -23,8 +23,8 @@
       </form>
         {% else %}
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#"> Bienvenido {{ app.user.username }}!</a></li>
-                <li>
+                <li><a href="#"> Bienvenido {{ app.user.username }}!</a></li>
+                <li class="active">
                 <a href="{{ path('_antwebes_chateaclient_logout') }}">Cerrar sesión</a>
                 </li>
             </ul>
