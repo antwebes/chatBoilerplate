@@ -12,6 +12,7 @@ chatea_client_register_user:
     defaults:  { _controller: ChateaClientBundle:User:register }
 chatea_client_reset_password:
     path: /resetear-contraseña
+    methods: [GET]
     defaults: { _controller: ChateaClientBundle:ResetPassword:reset }
 chatea_client_reset_password_perform:
     path: /resetear-contraseña
