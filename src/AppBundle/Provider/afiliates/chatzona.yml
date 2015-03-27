@@ -1,0 +1,7 @@
+client: 16
+affiliate_name: 'Chatzona'
+brand_image_url: 'http://www.chatzona.org/imagenes/logoa.png'
+welcome_message: Bienvenido a ChatZona
+welcome_message_extended: A continuación podrás gestionar tu cuenta.
+chat_url: 'http://www.chatearlatino.net/chat'
+navbar_color: '#fff'

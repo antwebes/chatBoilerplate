@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "d560e0b52997e67ba2aee0f7841dd61f209d6125"
+                "reference": "6383fba58a5b08586b31e42a64c1fac34f0b1086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/d560e0b52997e67ba2aee0f7841dd61f209d6125",
-                "reference": "d560e0b52997e67ba2aee0f7841dd61f209d6125",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/6383fba58a5b08586b31e42a64c1fac34f0b1086",
+                "reference": "6383fba58a5b08586b31e42a64c1fac34f0b1086",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-03-26 17:02:38"
+            "time": "2015-03-27 07:52:46"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -1213,12 +1213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "c31a2c4e8db5da8b46c74cf275d7f109c0f249ac"
+                "reference": "df7da8a5550eb94cb885df6be7ffebe2768c10fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c31a2c4e8db5da8b46c74cf275d7f109c0f249ac",
-                "reference": "c31a2c4e8db5da8b46c74cf275d7f109c0f249ac",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/df7da8a5550eb94cb885df6be7ffebe2768c10fd",
+                "reference": "df7da8a5550eb94cb885df6be7ffebe2768c10fd",
                 "shasum": ""
             },
             "require": {
@@ -1278,7 +1278,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-03-09 09:58:04"
+            "time": "2015-03-26 18:30:54"
         },
         {
             "name": "psr/log",

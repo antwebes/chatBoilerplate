@@ -3,34 +3,48 @@
 
 {% block body_pre_container %}
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
   <div class="container">
-    <h1>Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    <h1>{{ welcome_message }}</h1>
+    <p>{{ welcome_message_extended }}</p>
+    {% if app.user %}<p class="text-center"><a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">Entrar al chat como {{ app.user.username }}</a></p>{% endif %}
   </div>
-</div>
+  <hr>
 {% endblock body_pre_container %}
 
 {% block body_container_content %}
   <!-- Example row of columns -->
   <div class="row">
+    {% if app.user %}
+        <div class="col-md-4">
+            <h2>Registrar sala</h2>
+            <p>Registra tu sala de forma gratuíta, esta sala debe ser luego aprobada por los administradores de la red. </p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_channel') }}" role="button">Registrar sala</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Cambiar tus preferencias</h2>
+            <p>Te permite cambiar preferencias sobre tu perfil, como tu email o contraseña.</p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_user_settings') }}" role="button">Cambiar Prefrencias</a></p>
+        </div>
+    {% else %}
     <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2>Registra tu apodo</h2>
+      <p>Registra tu apodo para que nadie pueda usarlo. Es totalmente gratis y te permitirá registrar canales, subir tu perfil y muchas novedades más. </p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_user') }}" role="button">Registrar apodo</a></p>
     </div>
+
     <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2>Entrar con tu cuenta</h2>
+      <p>Accede al chat con tu nick registrado introduciendo usuario y contraseña.</p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login') }}" role="button">Acceder con tu cuenta</a></p>
    </div>
+
     <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2>Regenerar contraseña</h2>
+      <p>Si tenías tu nick registrado antes de la migración, debes volver a regenerar una nueva contraseña.</p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_reset_password') }}" role="button">Resetear contraseña</a></p>
     </div>
+    {% endif %}
   </div>
 {% endblock body_container_content %}
 
-{% block footer_content %}<p>&copy; Company 2015</p>{% endblock footer_content %}
+{% block footer_content %}<p>&copy; {{ affiliate_name }} 2015</p>{% endblock footer_content %}

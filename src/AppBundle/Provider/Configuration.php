@@ -13,11 +13,11 @@ class Configuration
         $yml = false;
         
         if (strpos($host,'chatzona') !== false) {
-        	$yml = @file_get_contents(__DIR__ . '/chatzona.yml');
+        	$yml = @file_get_contents(__DIR__ . '/afiliates/chatzona.yml');
         }
 
         if($yml === FALSE){
-        	$yml = @file_get_contents(__DIR__ . '/default.yml');
+        	$yml = @file_get_contents(__DIR__ . '/afiliates/default.yml');
         }
 
         $parameters = Yaml::parse($yml);
