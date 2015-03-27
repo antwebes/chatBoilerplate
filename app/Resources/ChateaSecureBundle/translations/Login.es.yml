@@ -1,0 +1,8 @@
+login.login: "Iniciar sesión"
+login.register_title: "¿Aún no tienes cuenta?"
+login.register_btn: "Registrarse Gratis"
+login.register_message: "Crea tu cuenta de chat."
+login.username: "Nombre de usuario"
+login.password: "Contraseña"
+login.submit: "Autenticar"
+login.forgot_password: "Olvidaste contraseña?"

@@ -1,0 +1,8 @@
+login.login: "Login"
+login.username: "Username"
+login.register_title: "Do not have an account yet?"
+login.register_btn: "Free register"
+login.register_message: "Create your account."
+login.password: "Password"
+login.submit: "Login"
+login.forgot_password: "Forgot password?"
