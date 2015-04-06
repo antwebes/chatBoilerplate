@@ -33,3 +33,11 @@ assetic:
 twig:
     globals:
         social_endpoint: %social_endpoint%
+
+snc_redis:
+    clients:
+        default:
+            type: predis
+            alias: default
+            dsn: redis://%redis_host%/%redis_db%
+            logging: %kernel.debug%
