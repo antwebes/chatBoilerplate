@@ -30,7 +30,10 @@
 		            "channel": "{{channel_affiliate}}",
 		            "type": "default",
 		            "version": "html",
-		            "language": "es"
+		            "language": "es",
+		            {% if app.user%}
+		            "auto_connect" : true
+		            {% endif %}
 				};
 
 			    var cookieNick = getCookie("user") || chat_options.nick;
