@@ -5,6 +5,8 @@
 	{% if index_chat is not null %}
 		{# include js in block body_js_end #}
 		<div id="cgs-webchat" ></div>
+	{% else %}
+		{{ parent() }}
 	{% endif %}
 {% endblock body_pre_container %}
 
