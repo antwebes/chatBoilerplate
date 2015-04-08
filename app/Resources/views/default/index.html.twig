@@ -2,7 +2,7 @@
 
 {% block body_pre_container %}
 
-	{% if index_chat is not null %}
+	{% if index_chat is not null and index_chat%}
 		{# include js in block body_js_end #}
 		<div id="cgs-webchat" ></div>
 	{% else %}
