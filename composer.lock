@@ -4,21 +4,21 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7c081ca440c1844a022b3af280bf587c",
+    "hash": "09102f67c9ebb77800cfe03f163ec15d",
     "packages": [
         {
             "name": "antwebes/chatea-client-bundle",
-            "version": "dev-develop",
+            "version": "v0.1.9",
             "target-dir": "Ant/Bundle/ChateaClientBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "d8f7f9897bf8f204b5828d94f6aea49c9e85a180"
+                "reference": "c5e730ea57a8bb367a6e7c9707d663eced6c8a43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/d8f7f9897bf8f204b5828d94f6aea49c9e85a180",
-                "reference": "d8f7f9897bf8f204b5828d94f6aea49c9e85a180",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/c5e730ea57a8bb367a6e7c9707d663eced6c8a43",
+                "reference": "c5e730ea57a8bb367a6e7c9707d663eced6c8a43",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-04-06 10:37:50"
+            "time": "2015-04-08 08:21:23"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -2158,12 +2158,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "89f6e1e1157b61e7c0b0d0d19a11c2f968305852"
+                "reference": "e140c7f3bd0d81a2b60d1e896f814d8b7bf5e867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/89f6e1e1157b61e7c0b0d0d19a11c2f968305852",
-                "reference": "89f6e1e1157b61e7c0b0d0d19a11c2f968305852",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/e140c7f3bd0d81a2b60d1e896f814d8b7bf5e867",
+                "reference": "e140c7f3bd0d81a2b60d1e896f814d8b7bf5e867",
                 "shasum": ""
             },
             "require": {
@@ -2258,7 +2258,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-04-05 16:28:06"
+            "time": "2015-04-08 05:25:44"
         },
         {
             "name": "twig/extensions",
