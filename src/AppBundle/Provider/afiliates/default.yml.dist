@@ -1,0 +1,12 @@
+client: 15
+affiliate_name: 'Chat'
+brand_image_url: ''
+welcome_message: Main title of layout
+welcome_message_extended: Message after main title in layout
+chat_url: null
+navbar_color: '#9ac02f'
+email: contacto@yourHost.com
+index_chat: true #If you want that page of index will render a chat
+nick_affiliate: guest #nick with user join to chat by default
+channel_affiliate: "my_chat" #chatroom with user join to chat by default
+meta_title_base: 'Title of page by default'

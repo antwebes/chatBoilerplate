@@ -24,7 +24,7 @@ monolog:
 
 twig:
     globals:
-        bp_analytics_id: UA-396979-12
+        bp_analytics_id: UA-41992080-4
         social_endpoint: %social_endpoint%
 
 snc_redis:
