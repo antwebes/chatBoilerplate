@@ -14,7 +14,7 @@
 
 {% block body_js_end %}
 	{{ parent() }}
-	{% if index_chat is not null %}
+	{% if index_chat is not null and index_chat%}
 		<script type="text/javascript"><!--
 		    function getCookie(name) {
 			        var value = "; " + document.cookie;
