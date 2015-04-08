@@ -2,9 +2,11 @@
 
 {% block body_pre_container %}
 
-	{% if index_chat is not null %}
+	{% if index_chat is not null and index_chat%}
 		{# include js in block body_js_end #}
 		<div id="cgs-webchat" ></div>
+	{% else %}
+		{{ parent() }}
 	{% endif %}
 {% endblock body_pre_container %}
 
@@ -12,7 +14,7 @@
 
 {% block body_js_end %}
 	{{ parent() }}
-	{% if index_chat is not null %}
+	{% if index_chat is not null and index_chat%}
 		<script type="text/javascript"><!--
 		    function getCookie(name) {
 			        var value = "; " + document.cookie;
@@ -28,7 +30,10 @@
 		            "channel": "{{channel_affiliate}}",
 		            "type": "default",
 		            "version": "html",
-		            "language": "es"
+		            "language": "es",
+		            {% if app.user%}
+		            "auto_connect" : true
+		            {% endif %}
 				};
 
 			    var cookieNick = getCookie("user") || chat_options.nick;
