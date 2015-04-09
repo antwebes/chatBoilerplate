@@ -8,6 +8,18 @@
 	{% else %}
 		{{ parent() }}
 	{% endif %}
+	{% if radio_index is not null and radio_index %}
+		<div class="row">
+			<div class="col-md-6 col-xs-12">
+				<iframe class="embed-responsive-item" width="560" height="90" src="{{radio_src_iframe}}"></iframe>
+			</div>
+			<div class="col-md-6 col-xs-12">
+			{% if radio_apps_template is defined %}
+				{{ include('AppBundle:affiliates:radio_lider_apps.html.twig') }}
+			{% endif %}
+			</div>
+		</div>
+	{% endif %}
 {% endblock body_pre_container %}
 
 

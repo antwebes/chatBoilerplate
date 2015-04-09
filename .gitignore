@@ -1,5 +1,7 @@
+# Files of affiliates customizes
 src/AppBundle/Provider/afiliates/*
 !src/AppBundle/Provider/afiliates/default.yml.dist
+src/AppBundle/Resources/views/affiliates/*
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
