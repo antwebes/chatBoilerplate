@@ -2,20 +2,21 @@
 
 {% block body_pre_container %}
 
-	{% if index_chat is not null and index_chat%}
+	{% if index_chat is defined and index_chat is not null and index_chat %}
 		{# include js in block body_js_end #}
 		<div id="cgs-webchat" style="margin-top: -20px;" ></div>
 	{% else %}
 		{{ parent() }}
 	{% endif %}
-	{% if radio_index is not null and radio_index %}
+	{% if radio_index is defined and radio_index is not null and radio_index %}
 		<div class="row">
 			<div class="col-md-6 col-xs-12">
 				<iframe class="embed-responsive-item" width="560" height="90" src="{{radio_src_iframe}}"></iframe>
 			</div>
 			<div class="col-md-6 col-xs-12">
 			{% if radio_apps_template is defined %}
-				{{ include('AppBundle:affiliates:radio_lider_apps.html.twig') }}
+				{% set template =  'AppBundle:affiliates:'~radio_apps_template~'.html.twig' %}
+				{{ include(template) }}
 			{% endif %}
 			</div>
 		</div>
@@ -26,7 +27,7 @@
 
 {% block body_js_end %}
 	{{ parent() }}
-	{% if index_chat is not null and index_chat%}
+	{% if index_chat is defined and index_chat is not null and index_chat%}
 		<script type="text/javascript"><!--
 		    function getCookie(name) {
 			        var value = "; " + document.cookie;
