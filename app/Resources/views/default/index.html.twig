@@ -9,15 +9,17 @@
 		{{ parent() }}
 	{% endif %}
 	{% if radio_index is defined and radio_index is not null and radio_index %}
-		<div class="row">
-			<div class="col-md-6 col-xs-12">
-				<iframe class="embed-responsive-item" width="560" height="90" src="{{radio_src_iframe}}"></iframe>
-			</div>
-			<div class="col-md-6 col-xs-12">
-			{% if radio_apps_template is defined %}
-				{% set template =  'AppBundle:affiliates:'~radio_apps_template~'.html.twig' %}
-				{{ include(template) }}
-			{% endif %}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<iframe class="embed-responsive-item" width="560" height="90" src="{{radio_src_iframe}}"></iframe>
+				</div>
+				<div class="col-md-6 col-xs-12">
+				{% if radio_apps_template is defined %}
+					{% set template =  'AppBundle:affiliates:'~radio_apps_template~'.html.twig' %}
+					{{ include(template) }}
+				{% endif %}
+				</div>
 			</div>
 		</div>
 	{% endif %}
