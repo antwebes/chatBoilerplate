@@ -4,21 +4,21 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1884ba9a16a0d67fe54fc9a332ff3f46",
+    "hash": "913f69902e6520b9ad2a3e231650b128",
     "packages": [
         {
             "name": "antwebes/chatea-client-bundle",
-            "version": "v0.1.10",
+            "version": "v0.1.11",
             "target-dir": "Ant/Bundle/ChateaClientBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "a915ac2d343874acf68011601b6ed395ec0f508f"
+                "reference": "021c0dceb91b54fadfd0fafad72fc3413beab4dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/a915ac2d343874acf68011601b6ed395ec0f508f",
-                "reference": "a915ac2d343874acf68011601b6ed395ec0f508f",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/021c0dceb91b54fadfd0fafad72fc3413beab4dd",
+                "reference": "021c0dceb91b54fadfd0fafad72fc3413beab4dd",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-04-10 08:36:37"
+            "time": "2015-04-15 14:37:29"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -272,12 +272,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "6c5c32eb6c596993d04e13b95d0c1e8153783d7a"
+                "reference": "c9eadeb743ac6199f7eec423cb9426bc518b7b03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/6c5c32eb6c596993d04e13b95d0c1e8153783d7a",
-                "reference": "6c5c32eb6c596993d04e13b95d0c1e8153783d7a",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/c9eadeb743ac6199f7eec423cb9426bc518b7b03",
+                "reference": "c9eadeb743ac6199f7eec423cb9426bc518b7b03",
                 "shasum": ""
             },
             "require": {
@@ -334,20 +334,20 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-02-16 12:24:01"
+            "time": "2015-04-15 00:11:59"
         },
         {
             "name": "doctrine/collections",
-            "version": "dev-master",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "856cb378598f57b3ab6499b1abeb05836feb5725"
+                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/856cb378598f57b3ab6499b1abeb05836feb5725",
-                "reference": "856cb378598f57b3ab6499b1abeb05836feb5725",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
                 "shasum": ""
             },
             "require": {
@@ -400,7 +400,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-04 16:54:49"
+            "time": "2015-04-14 22:21:58"
         },
         {
             "name": "doctrine/common",
@@ -1718,12 +1718,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "cb8195ddf5b310b34033921edec638829ccfa201"
+                "reference": "4027a414acb7bd221d9ad4f125ecc1276380f8e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/cb8195ddf5b310b34033921edec638829ccfa201",
-                "reference": "cb8195ddf5b310b34033921edec638829ccfa201",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/4027a414acb7bd221d9ad4f125ecc1276380f8e3",
+                "reference": "4027a414acb7bd221d9ad4f125ecc1276380f8e3",
                 "shasum": ""
             },
             "require": {
@@ -1755,7 +1755,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2015-04-10 06:19:33"
+            "time": "2015-04-13 08:53:05"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -2158,12 +2158,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "08c2f44a9625059617a677229758fd09d28adaa7"
+                "reference": "49cbf1c7d1bf11c01b87540768fb898ae78cc625"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/08c2f44a9625059617a677229758fd09d28adaa7",
-                "reference": "08c2f44a9625059617a677229758fd09d28adaa7",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/49cbf1c7d1bf11c01b87540768fb898ae78cc625",
+                "reference": "49cbf1c7d1bf11c01b87540768fb898ae78cc625",
                 "shasum": ""
             },
             "require": {
@@ -2258,7 +2258,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-04-09 18:30:45"
+            "time": "2015-04-15 14:34:30"
         },
         {
             "name": "twig/extensions",
