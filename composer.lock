@@ -4,27 +4,27 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "09102f67c9ebb77800cfe03f163ec15d",
+    "hash": "1884ba9a16a0d67fe54fc9a332ff3f46",
     "packages": [
         {
             "name": "antwebes/chatea-client-bundle",
-            "version": "v0.1.9",
+            "version": "v0.1.10",
             "target-dir": "Ant/Bundle/ChateaClientBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "c5e730ea57a8bb367a6e7c9707d663eced6c8a43"
+                "reference": "a915ac2d343874acf68011601b6ed395ec0f508f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/c5e730ea57a8bb367a6e7c9707d663eced6c8a43",
-                "reference": "c5e730ea57a8bb367a6e7c9707d663eced6c8a43",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/a915ac2d343874acf68011601b6ed395ec0f508f",
+                "reference": "a915ac2d343874acf68011601b6ed395ec0f508f",
                 "shasum": ""
             },
             "require": {
                 "antwebes/chatea-client-lib": "0.1.1",
                 "antwebes/chatea-common": "0.1.0",
-                "antwebes/chatea-secure-bundle": "0.1.1",
+                "antwebes/chatea-secure-bundle": "0.1.2",
                 "excelwebzone/recaptcha-bundle": "1.0.0",
                 "symfony/framework-bundle": "~2.3"
             },
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-04-08 08:21:23"
+            "time": "2015-04-10 08:36:37"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -151,17 +151,17 @@
         },
         {
             "name": "antwebes/chatea-secure-bundle",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "target-dir": "Ant/Bundle/ChateaSecureBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaSecureBundle.git",
-                "reference": "f3e9536da6185e2b79339ee0b1757d30f3cd94d4"
+                "reference": "44b17a4c22b23827854a80568a4be76af152ef76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/f3e9536da6185e2b79339ee0b1757d30f3cd94d4",
-                "reference": "f3e9536da6185e2b79339ee0b1757d30f3cd94d4",
+                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/44b17a4c22b23827854a80568a4be76af152ef76",
+                "reference": "44b17a4c22b23827854a80568a4be76af152ef76",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-03-27 10:15:28"
+            "time": "2015-04-10 08:27:31"
         },
         {
             "name": "doctrine/annotations",
@@ -481,12 +481,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "bd2598b174edf58039bc1a4ea513cc49aabed98c"
+                "reference": "7c467c3482bb2077126f1c2ce5d8b47cfbc5b00e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/bd2598b174edf58039bc1a4ea513cc49aabed98c",
-                "reference": "bd2598b174edf58039bc1a4ea513cc49aabed98c",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/7c467c3482bb2077126f1c2ce5d8b47cfbc5b00e",
+                "reference": "7c467c3482bb2077126f1c2ce5d8b47cfbc5b00e",
                 "shasum": ""
             },
             "require": {
@@ -536,7 +536,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-02-10 13:30:46"
+            "time": "2015-04-08 09:26:43"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1718,12 +1718,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "c344892aa9f09f0005b395d79ad2531a7deaedc9"
+                "reference": "cb8195ddf5b310b34033921edec638829ccfa201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/c344892aa9f09f0005b395d79ad2531a7deaedc9",
-                "reference": "c344892aa9f09f0005b395d79ad2531a7deaedc9",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/cb8195ddf5b310b34033921edec638829ccfa201",
+                "reference": "cb8195ddf5b310b34033921edec638829ccfa201",
                 "shasum": ""
             },
             "require": {
@@ -1755,7 +1755,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2015-03-26 11:09:17"
+            "time": "2015-04-10 06:19:33"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -2158,12 +2158,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "e140c7f3bd0d81a2b60d1e896f814d8b7bf5e867"
+                "reference": "08c2f44a9625059617a677229758fd09d28adaa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/e140c7f3bd0d81a2b60d1e896f814d8b7bf5e867",
-                "reference": "e140c7f3bd0d81a2b60d1e896f814d8b7bf5e867",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/08c2f44a9625059617a677229758fd09d28adaa7",
+                "reference": "08c2f44a9625059617a677229758fd09d28adaa7",
                 "shasum": ""
             },
             "require": {
@@ -2258,7 +2258,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-04-08 05:25:44"
+            "time": "2015-04-09 18:30:45"
         },
         {
             "name": "twig/extensions",
