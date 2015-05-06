@@ -22,6 +22,7 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "antwebes/chatea-client-bundle" : "0.1.13@dev",
+        "antwebes/api-social-bundle": "dev-master",
         "raulfraile/ladybug-bundle": "~1.0",
         "predis/predis": "0.8.x-dev",
         "snc/redis-bundle": "1.1.x-dev"
