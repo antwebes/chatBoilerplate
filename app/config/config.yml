@@ -30,7 +30,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ "ChateaClientBundle"]
+    bundles:        [ "ChateaClientBundle", "ApiSocialBundle"]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -82,9 +82,18 @@ chatea_client:
         secret: %chatea_secret_id%
     api_endpoint: %api_endpoint%
     app_id: %chatea_app_id%
+    limits:
+        user_manager: %limits.users%
+        photo_manager: %limits.photos%
 
 ewz_recaptcha:
     public_key:  %recaptcha_public_key%
     private_key: %recaptcha_private_key%
     locale_key:  kernel.default_locale
     enabled: %recaptcha_enabled%
+
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }

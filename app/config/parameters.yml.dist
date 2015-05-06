@@ -33,3 +33,5 @@ parameters:
     redis_host: localhost
     redis_db: 3
     redis_password: ~
+    limits.users: 30
+    limits.photos: 30
