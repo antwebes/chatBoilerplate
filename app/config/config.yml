@@ -30,7 +30,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ "ChateaClientBundle", "ApiSocialBundle"]
+    bundles:        [ "ChateaClientBundle", "ApiSocialBundle", "HelpBundle"]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

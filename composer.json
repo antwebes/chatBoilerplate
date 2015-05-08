@@ -25,7 +25,7 @@
         "raulfraile/ladybug-bundle": "~1.0",
         "predis/predis": "0.8.x-dev",
         "snc/redis-bundle": "1.1.x-dev",
-        "antwebes/help-bundle": "0.1.0"
+        "antwebes/help-bundle": "dev-icons_bootstrap_filter_optipng"
     },
     "scripts": {
         "post-install-cmd": [

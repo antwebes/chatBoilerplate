@@ -1,6 +1,10 @@
-api_social:
-    resource: "@ApiSocialBundle/Resources/config/routing.yml"
+ant_api_social:
+    resource: "@ApiSocialBundle/Resources/config/routing-es.yml"
     prefix:   /
+
+ant_help_bundle:
+    resource: "@HelpBundle/Resources/config/routing/routing-es.yml"
+    prefix:   /ayuda
 
 app:
     resource: "@AppBundle/Controller/"

@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Snc\RedisBundle\SncRedisBundle(),
             new Ant\Bundle\ApiSocialBundle\ApiSocialBundle(),
+            new Ant\HelpBundle\HelpBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
