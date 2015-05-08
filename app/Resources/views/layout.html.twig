@@ -6,15 +6,15 @@
           {{ flashMessage }}
       </div>
   {% endfor %}
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="col-xs-12" id="message_header_center">
-        {% if (app.user) and ( app.user.validated == false) %}
+    {% if (app.user) and ( app.user.validated == false) %}
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="col-xs-12" id="message_header_center">
             <div class="alert alert-warning">
                 Hola <strong>{{ app.user.username }}</strong>, Necesitas validar tu email.
                 <a href="{{ path('confirm_email') }}"> pincha aquí para validar tu email!</a>
             </div>
-        {% endif %}
-    </div>
+      </div>
+    {% endif %}
 {% endblock flash_message %}
 
 {% block body_pre_container %}
