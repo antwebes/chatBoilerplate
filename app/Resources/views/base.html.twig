@@ -28,6 +28,13 @@
                 background-image: linear-gradient(to bottom, {{ navbar_color }} 0px, {{ navbar_color }} 100%);
                 background-repeat: repeat-x;
             }
+            .ant-navbar-link > li > a{
+                color: {{ navbar_link }} !important;
+            }
+
+            .ant-navbar-link > li > a:hover, .ant-navbar-link > li > a:focus {
+                color: {{ navbar_link_hover}} !important;
+            }
         </style>
 
         {% block head_js %}
