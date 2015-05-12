@@ -6,15 +6,15 @@
           {{ flashMessage }}
       </div>
   {% endfor %}
-    {% if (app.user) and ( app.user.validated == false) %}
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="col-xs-12" id="message_header_center">
-            <div class="alert alert-warning">
-                Hola <strong>{{ app.user.username }}</strong>, Necesitas validar tu email.
-                <a href="{{ path('confirm_email') }}"> pincha aquí para validar tu email!</a>
-            </div>
-      </div>
-    {% endif %}
+  {% if (app.user) and ( app.user.validated == false) %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="col-xs-12" id="message_header_center">
+          <div class="alert alert-warning">
+              Hola <strong>{{ app.user.username }}</strong>, Ahora solo necesitas validar tu email.
+              <a href="{{ path('confirm_email') }}"> Aquí tienes toda la información necesaria</a>
+          </div>
+    </div>
+  {% endif %}
 {% endblock flash_message %}
 
 {% block body_pre_container %}
@@ -69,19 +69,6 @@
 
 {% block body_js_end %}
     <script>
-
-        {% if (app.user) and ( app.user.validated == false) %}
-
-        var e = document.createElement('div');
-        e.innerHTML = '<div class="row"><div class="col-xs-12" id="message_header_center"><div class="alert alert-warning"> Hola <strong>{{ app.user.username }}</strong>, {{  "tu cuenta no ha sido validada. Revisa tu cuenta de correo o puedes hacer"  | trans }} <a href="{{ path('confirm_email') }}">click aqu&iacute; para reenviarte el email de confirmación!</a></div></div></div>';
-
-
-        var main = document.getElementById("main");
-
-        main.insertBefore(e, main.childNodes[0]);
-        {% endif %}
-
-
         {% if app.user %}
         document.cookie = "token={{ app.user.accessToken }}; path=/";
         document.cookie = "user={{ app.user.username }}; path=/";
