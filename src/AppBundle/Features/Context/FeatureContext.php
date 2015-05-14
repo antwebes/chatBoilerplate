@@ -42,7 +42,7 @@ class FeatureContext extends BaseContext
     public function beforeRegister()
     {
         parent::doInitFakeServer();
-        
+
         $this->fakeServerMappings->addPostResource(
             '/oauth/v2/token',
             'fixtures/login/success_register_login.json',
@@ -55,6 +55,23 @@ class FeatureContext extends BaseContext
         $this->fakeServerMappings->addPostResource(
             '/api/register',
             'fixtures/users/register.json'
+        );
+    }
+
+    /**
+     * @BeforeScenario @reset_password
+     */
+    public function beforePassword()
+    {
+        parent::doInitFakeServer();
+
+        $this->fakeServerMappings->addPostResource(
+            '/resetting/send-email',
+            'fixtures/users/reset_password.json',
+            200,
+            array(
+                "username" => "anemail@address.com"
+            )
         );
     }
 
