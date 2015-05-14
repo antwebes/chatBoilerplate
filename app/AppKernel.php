@@ -39,4 +39,13 @@ class AppKernel extends Kernel
     {
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
+
+    protected function getContainerBaseClass()
+    {
+        if('test' == $this->environment){
+            return '\AppBundle\DependencyInjection\CacheableContainer';
+        }
+
+        return parent::getContainerBaseClass();
+    }
 }

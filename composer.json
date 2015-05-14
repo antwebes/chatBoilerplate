@@ -27,6 +27,15 @@
         "snc/redis-bundle": "1.1.x-dev",
         "antwebes/help-bundle": "dev-icons_bootstrap_filter_optipng"
     },
+    "require-dev" : {
+        "behat/behat" : "2.4.*@stable",
+        "behat/mink" : "1.4.*@stable",
+        "behat/mink-extension" : "*",
+        "behat/mink-goutte-driver" : "*",
+        "behat/mink-selenium2-driver" : "*",
+        "behat/symfony2-extension": "*",
+        "antwebes/guzzle-fake-server" : "dev-master"
+    },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",

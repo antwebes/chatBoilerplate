@@ -1,0 +1,21 @@
+phantomjs:
+    context:
+        class:  FeatureContext
+    extensions:
+        Behat\MinkExtension\Extension:
+            base_url: http://social.chateagratis.local/
+            goutte: ~
+            selenium2:
+                wd_host: "http://localhost:8643/wd/hub"
+default:
+    context:
+        class: FeatureContext
+    extensions:
+        Behat\MinkExtension\Extension:
+            base_url: http://social.chateagratis.local/
+            goutte: ~
+            selenium2: ~
+        Behat\Symfony2Extension\Extension:
+            mink_driver: true
+        Behat\MinkExtension\Extension:
+            default_session: 'symfony2'

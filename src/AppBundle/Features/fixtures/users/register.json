@@ -1,0 +1,18 @@
+{
+  "id": 33,
+  "username": "address",
+  "username_canonical": "address",
+  "email": "anemail@address.com",
+  "enabled": false,
+  "client": {
+    "name": "social_chatsfree",
+    "id": "1",
+    "confirmed_uri": "http://www.chatsfree.net/register/confirmed",
+    "resetting_url": "http://www.chatsfree.net/forgot-password"
+  },
+  "city": {
+    "name": "Melbourne",
+    "id": 189484
+  },
+  "ip": "10.10.10.10"
+}
