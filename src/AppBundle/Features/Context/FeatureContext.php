@@ -41,7 +41,7 @@ class FeatureContext extends BaseContext
      */
     public function beforeRegister()
     {
-        parent::doInitFakeServer();
+        $this->doInitFakeServer();
 
         $this->fakeServerMappings->addPostResource(
             '/oauth/v2/token',
@@ -52,9 +52,26 @@ class FeatureContext extends BaseContext
                 "password" => "mysuperpass"
             )
         );
+    }
+
+    /**
+     * @BeforeScenario @login
+     */
+    public function beforeLogin()
+    {
+        $this->doInitFakeServer();
+
         $this->fakeServerMappings->addPostResource(
-            '/api/register',
-            'fixtures/users/register.json'
+            '/oauth/v2/token',
+            'fixtures/login/success_register_login.json',
+            200,
+            array(
+                "grant_type" =>  "password",
+                "client_id" => $this->kernel->getContainer()->getParameter("chatea_client_id"),
+                "client_secret" => $this->kernel->getContainer()->getParameter("chatea_secret_id"),
+                "username" => "ausername",
+                "password" => "mysuperpassword"
+            )
         );
     }
 
