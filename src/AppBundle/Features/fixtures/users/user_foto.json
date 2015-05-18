@@ -1,0 +1,26 @@
+{
+  "id": 495,
+  "participant": {
+    "id": 300,
+    "username": "Emily",
+    "username_canonical": "Emily",
+    "language": "en"
+  },
+  "publicated_at": "2014-02-18T09:19:30+0100",
+  "title": "Jefazo",
+  "number_votes": "0",
+  "discriminator": "user",
+  "path": "http://images-chatsfree.s3-website-us-east-1.amazonaws.com/original/2014/02/18/53031792da81a.jpg",
+  "path_large": "http://images-chatsfree.s3-website-us-east-1.amazonaws.com/2014/02/18/53031792da81a_large.jpg",
+  "path_medium": "http://images-chatsfree.s3-website-us-east-1.amazonaws.com/2014/02/18/53031792da81a_medium.jpg",
+  "path_small": "http://images-chatsfree.s3-website-us-east-1.amazonaws.com/2014/02/18/53031792da81a_small.jpg",
+  "path_icon": "http://images-chatsfree.s3-website-us-east-1.amazonaws.com/2014/02/18/53031792da81a_icon.jpg",
+  "_links": {
+    "self": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/photos/495"
+    },
+    "creator": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/users/300"
+    }
+  }
+}
