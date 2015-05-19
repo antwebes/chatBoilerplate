@@ -10,38 +10,13 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-
-antwebes_chateclient:
-    resource: '@ChateaClientBundle/Resources/config/routing.xml'
-    prefix:   / 
-
-chatea_client_register_user:
-    path:      /registro
-    defaults:  { _controller: ChateaClientBundle:User:register }
-chatea_client_reset_password:
-    path: /resetear-contraseña
-    methods: [GET]
-    defaults: { _controller: ChateaClientBundle:ResetPassword:reset }
-chatea_client_reset_password_perform:
-    path: /resetear-contraseña
-    defaults: { _controller: ChateaClientBundle:ResetPassword:doReset }
-    methods: [POST]
 chatea_client_register_channel:
     path: /registrar-canal
     defaults: { _controller: AppBundle:ChateaClientChannel:register }
-confirm_email:
-    path: /confirmar-email
-    defaults: { _controller: ChateaClientBundle:User:confirmEmail }
-chatea_confirmed:
-    path: /registro/confirmado
-    defaults: { _controller: ChateaClientBundle:User:confirmed }
-chatea_confirmed_success:
-    path: /registro/finalizado
-    defaults: { _controller: ChateaClientBundle:User:confirmedSuccess }
-chatea_client_user_settings:
-    path: /usuario/preferencias
-    defaults: { _controller: ChateaClientBundle:User:userSettings }
-
+    
+antwebes_chateclient:
+    resource: '@ChateaClientBundle/Resources/config/routing/routing-es.xml'
+    prefix:   / 
 
 chatea_secure:
    resource: "@ChateaSecureBundle/Controller/SecuredController.php"
