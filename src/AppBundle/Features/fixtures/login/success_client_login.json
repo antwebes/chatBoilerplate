@@ -5,7 +5,7 @@
   "scope": "password",
   "roles": ["ROLE_ADMIN", "arole1", "arole2"],
   "refresh_token":"YjVlNjhiOTkzM2NlZjMwZDdiMzQzZmYyNmFhZDI3NGFjY2VmODZhOTMzZmZlMmExOGNlZjQ2NDEyMGI3Mjk4NQ",
-  "id":31,
+  "id":2,
   "enabled":true,
   "username": "alex"
 }

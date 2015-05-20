@@ -178,6 +178,64 @@ class FeatureContext extends BaseContext
     }
 
     /**
+     * @BeforeScenario @edit_user_profile
+     */
+    public function beforeEditUserProfile()
+    {
+        $this->beforeViewUserList();
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/emily',
+            'fixtures/users/user.json'
+        );
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/2',
+            'fixtures/users/user.json'
+        );
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/2/channels?limit=25&offset=0',
+            'fixtures/users/user_channels.json'
+        );
+        $this->fakeServerMappings->addGetResource(
+            '/api/channels/1/fans?limit=4&offset=0&filters=has_profile_photo%3D1',
+            'fixtures/channels/channels_fans.json'
+        );
+        $this->fakeServerMappings->addGetResource(
+            '/api/channels/2/fans?limit=4&offset=0&filters=has_profile_photo%3D1',
+            'fixtures/channels/channels_fans.json'
+        );
+        $this->fakeServerMappings->addGetResource(
+            '/api/channels/100/fans?limit=4&offset=0&filters=has_profile_photo%3D1',
+            'fixtures/channels/channels_fans.json'
+        );
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/2/photos?limit=25&offset=0',
+            'fixtures/users/user_fotos.json'
+        );
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/photos/495',
+            'fixtures/users/user_foto.json'
+        );
+
+        $this->fakeServerMappings->addPatchResource(
+            '/api/users/2/profiles',
+            'fixtures/users/user_profile.json',
+            200,
+            array(
+                "social_profile" => array(
+                    "about" => "algo sobre min",
+                    "seeking" => "women",
+                    "gender" => "female",
+                    "youWant" => "algo querere",
+                    "birthday" => "1990-04-06"
+                )
+            )
+        );
+    }
+
+    /**
      * @param ServiceMocker $mocker
      */
     public function setServiceMocker(ServiceMocker $mocker)
