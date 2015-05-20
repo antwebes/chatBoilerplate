@@ -45,6 +45,11 @@
             <p>Te permite cambiar preferencias sobre tu perfil, como tu email o contraseña.</p>
             <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_user_settings') }}" role="button">Cambiar Prefrencias</a></p>
         </div>
+        <div class="col-md-4">
+            <h2>Cambiar datos de perfil</h2>
+            <p>Te permite cambiar los datos de tu perfil como género, lo que buscas, lo que te gusta y también cambiar tu foto.</p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_update_profile_index') }}" role="button">Cambiar perfil</a></p>
+        </div>
     {% else %}
     <div class="col-md-4">
       <h2>Registra tu apodo</h2>
