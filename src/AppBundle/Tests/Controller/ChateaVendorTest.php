@@ -76,7 +76,7 @@ class ChateaVendorTest extends WebTestCase
         );
     }
  */
-    public function testRegisterFinalizedNoRegister()
+    /*public function testRegisterFinalizedNoRegister()
     {
         $client = static::createClient();
 
@@ -97,5 +97,5 @@ class ChateaVendorTest extends WebTestCase
         $this->assertTrue(
             $client->getResponse()->isRedirect()
         );
-    }
+    }*/
 }
