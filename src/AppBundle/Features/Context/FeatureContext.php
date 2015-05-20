@@ -43,16 +43,43 @@ class FeatureContext extends BaseContext
      */
     public function beforeRegister()
     {
-        $this->doInitFakeServer();
+        parent::doInitFakeServer();
 
         $this->fakeServerMappings->addPostResource(
             '/oauth/v2/token',
             'fixtures/login/success_register_login.json',
             200,
             array(
+                "grant_type" => "password",
                 "username" => "ausername",
-                "password" => "mysuperpass"
+                "password" => "mysuperpass",
+                "client_id" => $this->kernel->getContainer()->getParameter("chatea_client_id"),
+                "client_secret" => $this->kernel->getContainer()->getParameter("chatea_secret_id")
             )
+        );
+
+        $this->fakeServerMappings->addPostResource(
+            '/api/register',
+            'fixtures/users/register.json',
+            200,
+            array(
+                'user_registration' => array(
+                    'email' => 'anemail@address.com',
+                    'username' => 'ausername',
+                    'plainPassword' => array(
+                        'first' => 'mysuperpass',
+                        'second' => 'mysuperpass'
+                    ),
+                    'client' => (string)$this->kernel->getContainer()->getParameter("chatea_app_id"),
+                    'ip' => '127.0.0.1',
+                    'language' => 'es'
+                )
+            )
+        );
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/2',
+            'fixtures/users/user.json'
         );
     }
 

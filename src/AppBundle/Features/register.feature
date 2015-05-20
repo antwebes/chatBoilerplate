@@ -14,4 +14,5 @@ Feature: I need to be able to register as a user
       And I select "1990" from "user_registration_birthday_year"
       And I check "user_registration_terms_and_conditions"
       And I press "Registrar"
+      And I press "Saltar"
      Then I should see "El registro se ha realizado con éxito"

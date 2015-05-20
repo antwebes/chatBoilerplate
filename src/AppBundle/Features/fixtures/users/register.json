@@ -1,7 +1,7 @@
 {
-  "id": 33,
-  "username": "address",
-  "username_canonical": "address",
+  "id": 2,
+  "username": "ausername",
+  "username_canonical": "ausername",
   "email": "anemail@address.com",
   "enabled": false,
   "client": {
