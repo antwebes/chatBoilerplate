@@ -24,6 +24,12 @@ class FeatureContext extends BaseContext
 
     protected function doInitFakeServer()
     {
+        $cachedServiseces = array('antwebes_client', 'antwebs_chateasecure.guzzle_client', 'antwebes_client_auth');
+        $container = $this->kernel->getContainer();
+
+        // we need to cache the guzzle client services so we dont generate them evevy time we ask for them and so not loosing the listeners of the faker
+        $container->setServicesToCache($cachedServiseces);
+
         parent::doInitFakeServer();
 
         $this->fakeServerMappings->addPostResource(
