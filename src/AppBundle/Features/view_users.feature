@@ -51,7 +51,7 @@ Feature: View User data
      When I click "Fotos"
      Then I should be on "/usuario/login"
 
-  @view_user_profile
+  @view_user_profile 
   Scenario: View users photos as loged in user
     Given I am logedin
       #And I am on "http://boilerplatele.local/app_dev.php"
@@ -70,5 +70,5 @@ Feature: View User data
       And I click "Emily"
       And I click "Fotos"
       And I click on the first photo
-     Then I should be on "/usuarios/2/foto/495"
+     Then I should be on "/usuarios/2/fotos/495"
       And I should see "Jefazo"

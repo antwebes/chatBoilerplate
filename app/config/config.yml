@@ -75,6 +75,7 @@ chatea_secure:
         secret: %chatea_secret_id%
         enviroment: %chatea_enviroment%
     api_endpoint: %api_endpoint%
+    homepage_path: homepage
 
 chatea_client:
     app_auth:
