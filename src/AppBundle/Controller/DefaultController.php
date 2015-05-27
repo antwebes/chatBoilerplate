@@ -14,7 +14,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        return $this->render('AppBundle:Default:index.html.twig');
     }
 
     public function logoAction()
@@ -28,7 +28,7 @@ class DefaultController extends Controller
     		$affiliate_name =  $parameters['affiliate_name'];
     	}
 
-        return $this->render('default/logo.html.twig', array('affiliate_name' => $affiliate_name));
+        return $this->render('AppBundle:Default:logo.html.twig', array('affiliate_name' => $affiliate_name));
     }
 
 }

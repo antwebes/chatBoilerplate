@@ -1,4 +1,4 @@
-{% extends "::base.html.twig" %}
+{% extends "AppBundle:layout:base.html.twig" %}
 
 {% block flash_message %}
   {% for flashMessage in app.session.flashbag.get('notice') %}
