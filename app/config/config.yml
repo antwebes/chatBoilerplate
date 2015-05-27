@@ -38,7 +38,13 @@ assetic:
         #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
         #yui_css:
         #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
-
+    assets:
+       fontello-eot:
+          inputs: '@PrettyBundle/Resources/public/font/fontello.eot'
+          output: 'font/fontello.eot'
+       fontello-woff:
+          inputs: '@PrettyBundle/Resources/public/font/fontello.woff'
+          output: 'font/fontello.woff'
 # Doctrine Configuration
 doctrine:
     dbal:
