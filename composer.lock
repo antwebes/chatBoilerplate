@@ -296,7 +296,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "a46171741a77f9eaaedfcb8e73077c7a696353e4"
+                "reference": "03a58ec8329cb4ed2a99f09985780ee4279e5757"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -318,7 +318,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-05-26 11:09:49"
+            "time": "2015-05-27 06:37:05"
         },
         {
             "name": "doctrine/annotations",
@@ -1884,16 +1884,15 @@
         {
             "name": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "98871b3397e258dd9d16d65023268e6baa0202cf"
+                "reference": "8cf9ba588534a3f910907c3093db1cfc9419a50f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/98871b3397e258dd9d16d65023268e6baa0202cf",
-                "reference": "98871b3397e258dd9d16d65023268e6baa0202cf",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/8cf9ba588534a3f910907c3093db1cfc9419a50f",
+                "reference": "8cf9ba588534a3f910907c3093db1cfc9419a50f",
                 "shasum": ""
             },
             "require": {
@@ -1915,8 +1914,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Sensio\\Bundle\\FrameworkExtraBundle": ""
+                "psr-4": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1934,7 +1933,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2015-05-02 15:39:08"
+            "time": "2015-05-27 01:08:48"
         },
         {
             "name": "sensio/generator-bundle",
@@ -2169,12 +2168,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/MonologBundle.git",
-                "reference": "64c314c3465256b15e00b1743df544bba028338e"
+                "reference": "0d7387b2a41375fefe46c7bd122d403333eaee90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/64c314c3465256b15e00b1743df544bba028338e",
-                "reference": "64c314c3465256b15e00b1743df544bba028338e",
+                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/0d7387b2a41375fefe46c7bd122d403333eaee90",
+                "reference": "0d7387b2a41375fefe46c7bd122d403333eaee90",
                 "shasum": ""
             },
             "require": {
@@ -2220,7 +2219,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2015-03-05 14:49:20"
+            "time": "2015-05-26 17:31:12"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -2285,12 +2284,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "36dfdaf3db553040c1670dd850f26f36e2955f49"
+                "reference": "ce2a47abe23d90582bd4b3be636b984efc9301e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/36dfdaf3db553040c1670dd850f26f36e2955f49",
-                "reference": "36dfdaf3db553040c1670dd850f26f36e2955f49",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/ce2a47abe23d90582bd4b3be636b984efc9301e3",
+                "reference": "ce2a47abe23d90582bd4b3be636b984efc9301e3",
                 "shasum": ""
             },
             "require": {
@@ -2385,7 +2384,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-25 07:43:48"
+            "time": "2015-05-26 23:41:50"
         },
         {
             "name": "twig/extensions",
