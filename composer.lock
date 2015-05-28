@@ -635,12 +635,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "fad0612028612bb7a917706656cea061823610e6"
+                "reference": "37d2186d3b9b5344b9739cb31f52df6289fd3543"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/fad0612028612bb7a917706656cea061823610e6",
-                "reference": "fad0612028612bb7a917706656cea061823610e6",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/37d2186d3b9b5344b9739cb31f52df6289fd3543",
+                "reference": "37d2186d3b9b5344b9739cb31f52df6289fd3543",
                 "shasum": ""
             },
             "require": {
@@ -704,7 +704,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-05-22 09:57:48"
+            "time": "2015-05-22 15:31:09"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -2194,12 +2194,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "b5281c8cacdea3eab8c80c88df9e00fde1ea2b34"
+                "reference": "a77136d0b51593fd498d0bc2b738673723247d9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/b5281c8cacdea3eab8c80c88df9e00fde1ea2b34",
-                "reference": "b5281c8cacdea3eab8c80c88df9e00fde1ea2b34",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/a77136d0b51593fd498d0bc2b738673723247d9f",
+                "reference": "a77136d0b51593fd498d0bc2b738673723247d9f",
                 "shasum": ""
             },
             "require": {
@@ -2243,7 +2243,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2014-12-20 09:22:58"
+            "time": "2015-05-23 12:01:43"
         },
         {
             "name": "symfony/symfony",
@@ -2251,12 +2251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "089d9f734a8512e696ec295a73563fbc0d8bdf0f"
+                "reference": "36dfdaf3db553040c1670dd850f26f36e2955f49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/089d9f734a8512e696ec295a73563fbc0d8bdf0f",
-                "reference": "089d9f734a8512e696ec295a73563fbc0d8bdf0f",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/36dfdaf3db553040c1670dd850f26f36e2955f49",
+                "reference": "36dfdaf3db553040c1670dd850f26f36e2955f49",
                 "shasum": ""
             },
             "require": {
@@ -2351,7 +2351,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-05-21 04:29:49"
+            "time": "2015-05-25 07:43:48"
         },
         {
             "name": "twig/extensions",

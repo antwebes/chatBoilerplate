@@ -11,7 +11,7 @@
     <div class="col-xs-12" id="message_header_center">
           <div class="alert alert-warning">
               Hola <strong>{{ app.user.username }}</strong>, Ahora solo necesitas validar tu email.
-              <a href="{{ path('confirm_email') }}"> Aquí tienes toda la información necesaria</a>
+              <a href="{{ path('confirm_email') }}"> Aquí tienes toda la información necesaria</a> o también puedes <a href="{{ path('chatea_client_user_settings') }}">cambiarte de email</a>
           </div>
     </div>
   {% endif %}
