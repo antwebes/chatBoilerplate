@@ -6,6 +6,12 @@
           {{ flashMessage }}
       </div>
   {% endfor %}
+
+  {% for flashMessage in app.session.flashbag.get('error') %}
+      <div class="flash-error">
+          {{ flashMessage }}
+      </div>
+  {% endfor %}
   {% if (app.user) and ( app.user.validated == false) %}
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="col-xs-12" id="message_header_center">
