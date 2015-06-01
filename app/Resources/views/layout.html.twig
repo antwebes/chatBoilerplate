@@ -1,0 +1,89 @@
+{% extends "AppBundle:layout:base.html.twig" %}
+
+{% block flash_message %}
+  {% for flashMessage in app.session.flashbag.get('notice') %}
+      <div class="flash-notice">
+          {{ flashMessage }}
+      </div>
+  {% endfor %}
+  {% if (app.user) and ( app.user.validated == false) %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="col-xs-12" id="message_header_center">
+          <div class="alert alert-warning">
+              Hola <strong>{{ app.user.username }}</strong>, Ahora solo necesitas validar tu email.
+              <a href="{{ path('confirm_email') }}"> Aquí tienes toda la información necesaria</a>
+          </div>
+    </div>
+  {% endif %}
+{% endblock flash_message %}
+
+{% block body_pre_container %}
+  <div class="container">
+    <h1>{{ welcome_message }}</h1>
+    <p>{{ welcome_message_extended }}</p>
+    {% if app.user %}
+        {% if  chat_url is not null %}
+        <p class="text-center"><a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">Entrar al chat como {{ app.user.username }}</a></p>
+        {% endif %}
+    {% endif %}
+  </div>
+  <hr>
+
+{% endblock body_pre_container %}
+
+{% block body_container_content %}
+  <!-- Example row of columns -->
+  <div class="row">
+    {% if app.user %}
+        <div class="col-md-4">
+            <h2>Registrar sala</h2>
+            <p>Registra tu sala de forma gratuíta, esta sala debe ser luego aprobada por los administradores de la red. </p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_channel') }}" role="button">Registrar sala</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Cambiar tus preferencias</h2>
+            <p>Te permite cambiar preferencias sobre tu perfil, como tu email o contraseña.</p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_user_settings') }}" role="button">Cambiar Prefrencias</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Cambiar datos de perfil</h2>
+            <p>Te permite cambiar los datos de tu perfil como género, lo que buscas, lo que te gusta y también cambiar tu foto.</p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_update_profile_index') }}" role="button">Cambiar perfil</a></p>
+        </div>
+    {% else %}
+    <div class="col-md-4">
+      <h2>Registra tu apodo</h2>
+      <p>Registra tu apodo para que nadie pueda usarlo. Es totalmente gratis y te permitirá registrar canales, subir tu perfil y muchas novedades más. </p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_user') }}" role="button">Registrar apodo</a></p>
+    </div>
+
+    <div class="col-md-4">
+      <h2>Entrar con tu cuenta</h2>
+      <p>Accede al chat con tu nick registrado introduciendo usuario y contraseña.</p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login') }}" role="button">Acceder con tu cuenta</a></p>
+   </div>
+
+    <div class="col-md-4">
+      <h2>Regenerar contraseña</h2>
+      <p>Si tenías tu nick registrado antes de la migración, debes volver a regenerar una nueva contraseña.</p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_reset_password') }}" role="button">Resetear contraseña</a></p>
+    </div>
+    {% endif %}
+  </div>
+{% endblock body_container_content %}
+
+{% block body_js_end %}
+    <script>
+        {% if app.user %}
+        document.cookie = "token={{ app.user.accessToken }}; path=/";
+        document.cookie = "user={{ app.user.username }}; path=/";
+        {% else %}
+        document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
+        document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
+        {% endif %}
+    </script>
+{% endblock body_js_end %}
+
+
+
+{% block footer_content %}<p>&copy; {{ affiliate_name }} 2015</p>{% endblock footer_content %}
