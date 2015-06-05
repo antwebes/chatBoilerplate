@@ -24,6 +24,7 @@ class AppKernel extends Kernel
             new Snc\RedisBundle\SncRedisBundle(),
             new Ant\Bundle\ApiSocialBundle\ApiSocialBundle(),
             new Ant\HelpBundle\HelpBundle(),
+            new JMS\TranslationBundle\JMSTranslationBundle(),
             new Ant\Bundle\PrettyBundle\PrettyBundle()
         );
 

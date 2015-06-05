@@ -26,7 +26,8 @@
         "predis/predis": "0.8.x-dev",
         "snc/redis-bundle": "1.1.x-dev",
         "antwebes/help-bundle": "dev-icons_bootstrap_filter_optipng",
-        "antwebes/pretty-bundle": "dev-master"
+        "antwebes/pretty-bundle": "dev-master",
+        "jms/translation-bundle": "1.1.0"
     },
     "require-dev" : {
         "behat/behat" : "2.4.*@stable",
