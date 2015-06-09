@@ -23,3 +23,4 @@ index_chat: true #If you want that page of index will render a chat
 nick_affiliate: guest #nick with user join to chat by default
 channel_affiliate: "my_chat" #chatroom with user join to chat by default
 meta_title_base: 'Title of page by default'
+access_pretty_bundle: false
