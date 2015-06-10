@@ -1,1 +1,11 @@
-{% extends '::base_error.html.twig' %}
+{% extends 'AppBundle:layout:base_error.html.twig' %}
+
+
+{% block headtitle %}{{"Page not found" | trans }} {% endblock headtitle %}
+
+{% block message %}{{ "Revisa que la url está bien escrita." | trans }}{% endblock message %}
+
+{% block buttons %}
+	<a href="{{ path('homepage') }}" class="btn btn-primary">{{ "Inicio" }}</a>
+    <a href="{{ path('_antwebes_chateaclient_login') }}" class="btn btn-success">Login</a>
+{% endblock buttons %}
