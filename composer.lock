@@ -296,7 +296,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "820228272d347e5d901087ea88e3a94d428dff5d"
+                "reference": "77c00a5ef8ca955f7936e87416c033dffa74057a"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -318,7 +318,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-06-10 07:49:15"
+            "time": "2015-06-10 09:58:02"
         },
         {
             "name": "doctrine/annotations",
