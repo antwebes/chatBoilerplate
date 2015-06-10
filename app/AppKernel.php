@@ -22,6 +22,8 @@ class AppKernel extends Kernel
             new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Snc\RedisBundle\SncRedisBundle(),
+            new Ant\Bundle\ApiSocialBundle\ApiSocialBundle(),
+            new Ant\HelpBundle\HelpBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -36,5 +38,14 @@ class AppKernel extends Kernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+    }
+
+    protected function getContainerBaseClass()
+    {
+        if('test' == $this->environment){
+            return '\AppBundle\DependencyInjection\CacheableContainer';
+        }
+
+        return parent::getContainerBaseClass();
     }
 }

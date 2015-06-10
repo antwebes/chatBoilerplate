@@ -1,5 +1,9 @@
 {% extends "::layout.html.twig" %}
 
+{% block title %}
+    {% block head_title %}{{ meta_title_base }}{% endblock %}
+{% endblock %}
+
 {% block head_css %}
     {{ parent() }}
     {% block chatea_css %}{% endblock chatea_css %}

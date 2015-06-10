@@ -5,6 +5,9 @@ welcome_message: Main title of layout
 welcome_message_extended: Message after main title in layout
 chat_url: null
 navbar_color: '#9ac02f'
+navbar_links_color: '#fff'
+navbar_link: 'red'
+navbar_link_hover: 'blue'
 email: contacto@yourHost.com
 index_chat: true #If you want that page of index will render a chat
 nick_affiliate: guest #nick with user join to chat by default
