@@ -296,7 +296,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "dc221f7243245beac4558198df22095522f89f42"
+                "reference": "6945479cc7d36a5d08f53d2d161538e89241c25c"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -318,7 +318,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-06-11 14:29:41"
+            "time": "2015-06-12 08:28:16"
         },
         {
             "name": "doctrine/annotations",
@@ -1410,12 +1410,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "77aef55318035d37dbd4e87ea0c37a191f3e766e"
+                "reference": "3f1ac6544cedfb6285035521d4b9f231567ca821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/77aef55318035d37dbd4e87ea0c37a191f3e766e",
-                "reference": "77aef55318035d37dbd4e87ea0c37a191f3e766e",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/3f1ac6544cedfb6285035521d4b9f231567ca821",
+                "reference": "3f1ac6544cedfb6285035521d4b9f231567ca821",
                 "shasum": ""
             },
             "require": {
@@ -1478,7 +1478,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-06-05 11:23:05"
+            "time": "2015-06-11 18:34:48"
         },
         {
             "name": "nikic/php-parser",
