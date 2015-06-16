@@ -1,35 +1,39 @@
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      {{ render(controller("AppBundle:Default:logo")) }}
-      <ul class="nav navbar-nav ant-navbar-link" style="margin-left:5px;">
-        <li><a href="{{ path('ant_user_user_users')}}">{{ "users" | trans }}</a></li>
-        <li><a href="{{ path('ant_help_index')}}">{{ "help" | trans }}</a></li>
-      </ul>
-    </div>
+	<div class="container">
+		<div class="navbar-header">
+			<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+			</button>
+			{{ render(controller("AppBundle:Default:logo")) }}
+		</div>
 
-    <div id="navbar" class="navbar-collapse collapse">
-        {% if not app.user %}
-      <form class="navbar-form navbar-right" action="{{ path("_security_check") }}" method="post" role="form">
-        <div class="form-group">
-          <input type="text" placeholder="Nick" name="_username" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <input type="password" name="_password" placeholder="Contraseña" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-success">Entrar</button>
-      </form>
-        {% else %}
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"> Bienvenido {{ app.user.username }}!</a></li>
-                <li class="active">
-                <a href="{{ path('_antwebes_chateaclient_logout') }}">Cerrar sesión</a>
-                </li>
-            </ul>
-        {% endif %}
-    </div><!--/.navbar-collapse -->
-
-
-
-  </div>
+	    <div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav ant-navbar-link" style="margin-left:5px;">
+		        <li><a href="{{ path('ant_user_user_users')}}">{{ "users" | trans }}</a></li>
+		        <li><a href="{{ path('ant_help_index')}}">{{ "help" | trans }}</a></li>
+		        <li><a href="{{ path('channel_list')}}">{{ "channels" | trans }}</a></li>
+			</ul>
+	        {% if not app.user %}
+			<form class="navbar-form navbar-right" action="{{ path("_security_check") }}" method="post" role="form">
+		        <div class="form-group">
+		        	<input type="text" placeholder="Nick" name="_username" class="form-control" required>
+		        </div>
+		        <div class="form-group">
+					<input type="password" name="_password" placeholder="Contraseña" class="form-control" required>
+		        </div>
+		        <button type="submit" class="btn btn-success">Entrar</button>
+			</form>
+	        {% else %}
+			<ul class="nav navbar-nav navbar-right">
+	        	<li><a href="#"> Bienvenido {{ app.user.username }}!</a></li>
+	            <li class="active">
+	            	<a href="{{ path('_antwebes_chateaclient_logout') }}">Cerrar sesión</a>
+				</li>
+			</ul>
+	        {% endif %}
+	    </div><!--/.navbar-collapse -->
+	</div>
 </nav>
