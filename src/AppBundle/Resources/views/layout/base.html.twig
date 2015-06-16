@@ -12,6 +12,11 @@
         <meta name="description" content="{% block head_meta_description %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        {% if favicon is defined %}
+        <link rel="shortcut icon" href="{{ favicon }}" />
+        {% else %}
+            <link rel="shortcut icon" href="/favicon.ico" />
+        {% endif %}
 
         {% block head_css %}
             {% stylesheets "@AppBundle/Resources/public/css/bootstrap.min.css"
