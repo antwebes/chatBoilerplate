@@ -40,15 +40,18 @@ function isConnected() {
     } else  return false;
 }
 
+function disableBtn() {
+    $("#chatBtnConnect").attr('disabled','disabled');
+    $("#chatBtnConnect").addClass("btn-success");
+}
+
 
 function newChatButton(target) {
     var connected = isConnected();
     if(target == undefined) {   //index
-        if(connected) {
+        if(connected){
             $("#chatBtnConnect").text('Online en el chat.');
-            $("#chatBtnConnect").attr('disabled','disabled');
-            $("#chatBtnConnect").addClass("btn-success");
-
+            disableBtn();
         } else {
             $("#chatBtnConnect").removeAttr('disabled');
             $("#chatBtnConnect").text('Comenzar a chatear');
@@ -59,15 +62,26 @@ function newChatButton(target) {
         $("#chatBtnConnect").removeAttr('disabled');
         $("#chatBtnConnect").addClass("btn-highlight");
         if(target.charAt(0) == "#") {
-            $("#chatBtnConnect").text('Chat en ' +target );
+            $("#chatBtnConnect").text('Chatear en ' +target );
         } else {
-            $("#chatBtnConnect").text('Chat con ' +target );
+            $("#chatBtnConnect").text('Chatear con ' +target );
         }
 
+        $("#chatBtnConnect").click(function() {
+            if(isConnected()) {
+
+                $.notify({
+                    message: " Abriendo chat " +target + " dirígite a la pestaña de chat.",
+                    enter: 'animated zoomInDown',
+                    exit: 'animated zoomOutUp'
+                });
+                disableBtn();
+            } else {
+                window.open(window.chat_url+ "?target=" + target);
+                disableBtn();
+            }
+        });
     }
-
-
-
 }
 
 console.log("connected", isConnected());
