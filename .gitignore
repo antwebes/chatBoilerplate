@@ -32,6 +32,8 @@ src/AppBundle/Resources/views/affiliates/*
 /web/js/*
 /web/css/*
 /web/images/*
+!/web/images/pachatea.png
+
 
 # PHPUnit
 /app/phpunit.xml
