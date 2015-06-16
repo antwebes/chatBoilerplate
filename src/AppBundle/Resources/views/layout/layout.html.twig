@@ -54,7 +54,7 @@
         <div class="col-md-4">
             <h2>Cambiar datos de perfil</h2>
             <p>Te permite cambiar los datos de tu perfil como género, lo que buscas, lo que te gusta y también cambiar tu foto.</p>
-            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_update_profile_index') }}" role="button">Cambiar perfil</a></p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_update_profile_index') }}" role="button" name="change-profile">Cambiar perfil</a></p>
         </div>
     {% else %}
     <div class="col-md-4">
@@ -66,7 +66,7 @@
     <div class="col-md-4">
       <h2>Entrar con tu cuenta</h2>
       <p>Accede al chat con tu nick registrado introduciendo usuario y contraseña.</p>
-      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login') }}" role="button">Acceder con tu cuenta</a></p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login') }}" role="button" name="button-login">Acceder con tu cuenta</a></p>
    </div>
 
     <div class="col-md-4">
