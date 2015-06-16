@@ -25,19 +25,19 @@ Feature: View User data
      Then The tile is "Información personal de Emily"
       And The meta data is:
         | description | Información personal de Emily, ve fotos y chatea gratis con Emily |
-      And  I should see the following profile information:
+      And I should see the following profile information:
         | Nombre de usuario | Emily     |
         | Localización      | Rothville |
         | Edad              |           | #ponemos age vacio para que no peten los test cada año
-        | Genero            | Mujer     |
+        | Sexo	            | Mujer     |
         | Estoy buscando	| Mujeres   |
-      And I should see the cover "Canales de los cuales es propietario" and container "channels" and the table:
+      And I should see the cover "owner" and container "channels" and the table:
         | sfdg   |
         | Canada |
-      And I should see the cover "Canales de los cuales es moderador" and container "channels_moderator" and the table:
+      And I should see the cover "moderator" and container "channels_moderator" and the table:
         | sfdg   |
         | Canada |
-      And I should see the cover "Canales de los cuales es fan" and container "channels_fan" and the table:
+      And I should see the cover "fan" and container "channels_fan" and the table:
         | Columbia |
 
   @view_user_profile

@@ -13,4 +13,4 @@ Feature: Edit provile data
       And I select "6" from "social_profile_birthday_day"
       And I select "1990" from "social_profile_birthday_year"
       And I press "Enviar"
-     Then I should see "Tu perfil ha sido actualizado con éxito"
+     Then The "data-behat" with tag "msg-success" exist
