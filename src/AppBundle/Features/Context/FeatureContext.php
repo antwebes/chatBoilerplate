@@ -427,7 +427,7 @@ class FeatureContext extends BaseContext
      */
     public function iShouldSeeTheCoverAndContainerAndTheTable($arg1, $arg2, TableNode $table)
     {
-        $container = $this->iShouldSeeTheFieldIntoData("cover-title", $arg1, "data-behat");
+        $container = $this->theWithTagExist("data-behat", $arg1);
         $this->iShouldSeeThisTableWithData($table, $arg2, "name-channel");
     }
 
@@ -512,7 +512,7 @@ class FeatureContext extends BaseContext
 
         $this->fillField('username', 'ausername');
         $this->fillField('password', 'mysuperpassword');
-        $this->pressButton('Autenticar');
+        $this->pressButton('button-submit-login');
     }
 
     /**
@@ -530,5 +530,31 @@ class FeatureContext extends BaseContext
     public function showContent()
     {
         die($this->getSession()->getPage()->getHtml());
+    }
+    
+    /**
+     * @Then /^The "([^"]*)" with tag "([^"]*)" exist$/
+     */
+    public function theWithTagExist($arg1, $arg2)
+    {
+    	$element = $this->getSession()->getPage()->find('css', '*['.$arg1.'="'.$arg2.'"]');
+    	if(!$element){
+    		$message = sprintf("%s='%s' was not found", $arg1, $arg2);
+    		throw new ExpectationException($message, $this->getSession());
+    	}
+    	return $element;
+    }
+    
+    /**
+     * @Then /^The "([^"]*)" with tag "([^"]*)" not exist$/
+     */
+    public function theWithTagNotExist($arg1, $arg2)
+    {
+    	$element = $this->getSession()->getPage()->find('css', '*['.$arg1.'="'.$arg2.'"]');
+    	if($element){
+    		$message = sprintf("%s='%s' exist", $arg1, $arg2);
+    		throw new ExpectationException($message, $this->getSession());
+    	}
+    	return $element;
     }
 }
