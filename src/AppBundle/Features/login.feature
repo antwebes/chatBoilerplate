@@ -1,6 +1,6 @@
 Feature: I need to be able to login
 
-  @login
+  @login @part_from_index
   Scenario: Login
     Given I am on "http://boilerplatele.local/app_dev.php"
      When I click "Iniciar sesión"

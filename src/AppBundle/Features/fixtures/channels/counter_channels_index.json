@@ -1,0 +1,12 @@
+{
+  "total": 40,
+  "limit": 40,
+  "offset": 0,
+  "count": 40,
+  "_links": {
+    "self": {
+      "href": "http://api.chatsfree.lo/app_dev.php/api/channels"
+    }
+  },
+  "resources": []
+}

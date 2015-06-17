@@ -127,14 +127,39 @@ class FeatureContext extends BaseContext
         		'fixtures/users/users_limit.json'
         );
     }
+    
+    /**
+     * @BeforeScenario @part_from_index
+     */
+    public function beforeViewIndexList()
+    {
+    	$this->doInitFakeServer();
+    
+    	//para index
+	    $this->fakeServerMappings->addGetResource(
+	    		'/api/channels?filter=&order=&limit=10&offset=0',
+	    		'fixtures/channels/counter_channels_index.json'
+	    );
+	    
+	    $this->fakeServerMappings->addGetResource(
+	    		'/api/users?limit=30&offset=0',
+	    		'fixtures/users/counter_users_index.json'
+	    );
+	    
+	    $this->fakeServerMappings->addGetResource(
+	    		'/api/users?limit=30&offset=0&filters=language%3Des%2Chas_profile_photo%3D1&order=randomly%3Dasc',
+	    		'fixtures/users/users_limit.json'
+	    );
+	    //fin de index
+    }
 
     /**
      * @BeforeScenario @view_user_profile
      */
     public function beforeUserProfile()
     {
-        $this->beforeViewUserList();
-
+        $this->beforeViewUserList();        
+        
         $this->fakeServerMappings->addGetResource(
             '/api/users/emily',
             'fixtures/users/user.json'
@@ -521,6 +546,7 @@ class FeatureContext extends BaseContext
                 "password" => "mysuperpassword"
             )
         );
+        $this->beforeViewIndexList();
 
         $this->visit('/usuario/login');
 

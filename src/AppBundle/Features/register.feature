@@ -1,6 +1,6 @@
 Feature: I need to be able to register as a user
 
-  @register
+  @register @part_from_index
   Scenario: Register as an non loged in user
     Given I am on "http://boilerplatele.local/app_dev.php"
      When I click on the element with css "data-behat" and "register"

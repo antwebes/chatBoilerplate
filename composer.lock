@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "e33fff41f6e55254917626c88633213c7bf96f62"
+                "reference": "ec1b14d5243cb74585ebbef28450f1d1634882c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/e33fff41f6e55254917626c88633213c7bf96f62",
-                "reference": "e33fff41f6e55254917626c88633213c7bf96f62",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/ec1b14d5243cb74585ebbef28450f1d1634882c3",
+                "reference": "ec1b14d5243cb74585ebbef28450f1d1634882c3",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-06-16 11:37:03"
+            "time": "2015-06-17 07:15:27"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -296,7 +296,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "a8912382e2d32719b5fac1f3d936a1c02bb773bb"
+                "reference": "f2adf6246af239ce9563438a714b15708433d446"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -318,7 +318,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-06-16 06:13:17"
+            "time": "2015-06-17 08:02:32"
         },
         {
             "name": "doctrine/annotations",
@@ -326,12 +326,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "c8927ad70c6fce36b3af52c17ed996c9aa4de89b"
+                "reference": "735b6c591925226b2a42e84dbfde5d8180b68a62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/c8927ad70c6fce36b3af52c17ed996c9aa4de89b",
-                "reference": "c8927ad70c6fce36b3af52c17ed996c9aa4de89b",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/735b6c591925226b2a42e84dbfde5d8180b68a62",
+                "reference": "735b6c591925226b2a42e84dbfde5d8180b68a62",
                 "shasum": ""
             },
             "require": {
@@ -386,7 +386,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2015-05-13 13:47:35"
+            "time": "2015-06-16 14:15:23"
         },
         {
             "name": "doctrine/cache",
@@ -1336,12 +1336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "6c3bd95d329bfe79f3cfa137ac7a8a482e247644"
+                "reference": "b17bd13759a7c63b16a6bb88b9e84e4ff767dfaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/6c3bd95d329bfe79f3cfa137ac7a8a482e247644",
-                "reference": "6c3bd95d329bfe79f3cfa137ac7a8a482e247644",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/b17bd13759a7c63b16a6bb88b9e84e4ff767dfaf",
+                "reference": "b17bd13759a7c63b16a6bb88b9e84e4ff767dfaf",
                 "shasum": ""
             },
             "require": {
@@ -1402,7 +1402,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2015-03-02 19:47:30"
+            "time": "2015-06-16 13:36:43"
         },
         {
             "name": "monolog/monolog",

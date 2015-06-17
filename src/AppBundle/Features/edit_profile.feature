@@ -14,3 +14,14 @@ Feature: Edit provile data
       And I select "1990" from "social_profile_birthday_year"
       And I press "Enviar"
      Then The "data-behat" with tag "msg-success" exist
+     
+  Scenario: Go to page profile, user need is loged
+     When I go to "perfil"
+     Then I should be on "usuario/login"
+     
+  Scenario: Go to page profile, user need is loged
+     Then I should be on "usuario/login"
+  
+  Scenario: Go to page profile, user need is loged
+     When I go to "perfil/actualizar/foto"
+     Then I should be on "usuario/login"   

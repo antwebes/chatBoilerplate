@@ -1,4 +1,4 @@
-@view_user
+@view_user @part_from_index
 Feature: View User data
   In order to find interest people to meet, I need to list them and view their profiles
 
@@ -44,7 +44,7 @@ Feature: View User data
      Then I should be on "/usuarios/2/fotos"
       And I should see 19 photos
 
-  @view_user_profile   @pablo
+  @view_user_profile
   Scenario: View a users photo as loged in user
     Given I am logedin
       #And I am on "http://boilerplatele.local/app_dev.php"
