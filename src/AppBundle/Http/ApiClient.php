@@ -8,8 +8,9 @@ use Guzzle\Http\Message\RequestInterface;
 
 use Symfony\Component\HttpFoundation\Response;
 
-use  Ant\ChateaClient\Service\Client\StoreInterface;
+use Ant\ChateaClient\Service\Client\StoreInterface;
 use Ant\ChateaClient\Service\Client\AuthenticationException;
+use AppBundle\Http\ApiRequestAllow;
 
 
 /**
@@ -35,18 +36,24 @@ class ApiClient extends Client
     private $secret;
 
     /**
+     * @var ApiRequestAllow
+     */
+    private $api_request_allow;
+
+    /**
      * Create new http client connected to api
      *
      * @param string $baseUrl
      * @param StoreInterface $store
      * @param string $environment
      */
-    public function __construct($baseUrl, StoreInterface $store, $clientId, $secret, $environment = 'dev')
+    public function __construct($baseUrl, StoreInterface $store, $clientId, $secret, $environment = 'dev', $api_request_allow)
     {
         parent::__construct($baseUrl);
         $this->store = $store;
         $this->clientId = $clientId;
         $this->secret = $secret;
+        $this->api_request_allow = $api_request_allow;
     }
 
     /**
@@ -105,6 +112,7 @@ class ApiClient extends Client
         $body = $response->getBody(true);
         $statusCode = $response->getStatusCode();
 
+        $body = $this->api_request_allow->splitFields($body);
         $symfonyHeaders = array();
 
         foreach ($headers as $keys) {

@@ -1,2 +1,10 @@
 apiRequestAllow:
-  - "/api/users/{id}"
+  api_users:
+    url: "/api/users/{id}"
+    fields: ['id',  'username', 'profile']
+
+  api_outstanding_users:
+    url: "/api/outstanding/{id}"
+    fields: ['id',  'username', 'profile']
+
+
