@@ -121,6 +121,11 @@ class FeatureContext extends BaseContext
             '/api/users?limit=30&offset=0&filters=language%3Des',
             'fixtures/users/users_limit.json'
         );
+        
+        $this->fakeServerMappings->addGetResource(
+        		'/api/channels?filter=language%3Des&order=fans%3Ddesc&limit=10&offset=0',
+        		'fixtures/users/users_limit.json'
+        );
     }
 
     /**
@@ -134,6 +139,15 @@ class FeatureContext extends BaseContext
             '/api/users/emily',
             'fixtures/users/user.json'
         );
+        $this->fakeServerMappings->addGetResource(
+        		'/api/channels?filter=language%3Des&order=fans%3Ddesc&limit=10&offset=0',
+        		'fixtures/users/users_limit.json'
+        );
+        $this->fakeServerMappings->addGetResource(
+        		'/api/users/2/photos?limit=30&offset=0',
+        		'fixtures/users/user_fotos.json'
+        );
+        
         $this->fakeServerMappings->addGetResource(
             '/api/users/2',
             'fixtures/users/user.json'
@@ -436,7 +450,7 @@ class FeatureContext extends BaseContext
      */
     public function iShouldSeePhotos($expectedNumPhotos)
     {
-        $elements = $this->getSession()->getPage()->findAll('css', '.ace-thumbnails li');
+        $elements = $this->getSession()->getPage()->findAll('css', '[data-behat="photos"] li');
 
         if(count($elements) != $expectedNumPhotos){
             $message = sprintf("Expected to to be %s photos but got %s", $expectedNumPhotos, count($elements));
@@ -520,7 +534,7 @@ class FeatureContext extends BaseContext
      */
     public function iClickOnTheFirstPhoto()
     {
-        $element = $this->getSession()->getPage()->find('css', '.ace-thumbnails li a');
+        $element = $this->getSession()->getPage()->find('css', '[data-behat="photos"] li a');
         $element->click();
     }
 
@@ -556,5 +570,25 @@ class FeatureContext extends BaseContext
     		throw new ExpectationException($message, $this->getSession());
     	}
     	return $element;
+    }
+    
+    /** Click on the element with the provided css query
+     *
+     * @When /^I click on the element with css "([^"]*)" and "([^"]*)"$/
+     */
+    public function iClickOnTheElementWithXPath($arg1, $arg2)
+    {
+    	$session = $this->getSession(); // get the mink session
+    	
+    	$element = $session->getPage()->find('css', '*['.$arg1.'="'.$arg2.'"]');
+    	
+    	// errors must not pass silently
+    	if (null === $element) {
+    		throw new \InvalidArgumentException(sprintf('Could not evaluate Css: "%s" = "%s"', $arg1, $arg2));
+    	}
+    
+    	// ok, let's click on it
+    	$element->click();
+    
     }
 }

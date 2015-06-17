@@ -5,7 +5,7 @@ Feature: Edit provile data
   @edit_user_profile
   Scenario: View a users photo as loged in user
     Given I am logedin
-     When I press "change-profile"
+     When I click on the element with css "data-behat" and "change-profile"
       And I click "Editar perfil"
       And I fill in "social_profile_youWant" with "algo querere"
       And I fill in "social_profile_about" with "algo sobre min"

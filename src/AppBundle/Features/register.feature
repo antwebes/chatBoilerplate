@@ -3,7 +3,7 @@ Feature: I need to be able to register as a user
   @register
   Scenario: Register as an non loged in user
     Given I am on "http://boilerplatele.local/app_dev.php"
-     When I click "Registrar apodo"
+     When I click on the element with css "data-behat" and "register"
       And I fill in "user_registration_email_first" with "anemail@address.com"
       And I fill in "user_registration_email_second" with "anemail@address.com"
       And I fill in "user_registration_username" with "ausername"
