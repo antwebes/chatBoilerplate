@@ -1,4 +1,8 @@
-blog
+Installation
 ====
 
-A Symfony project created on March 26, 2015, 9:22 am.
+For install replace composer2.json to composer.json
+
+> rm composer.json
+
+> cp composer2.json composer.json
