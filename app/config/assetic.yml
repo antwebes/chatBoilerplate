@@ -1,0 +1,19 @@
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ "ChateaClientBundle", "ApiSocialBundle", "HelpBundle", "AppBundle"]
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        #closure:
+        #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
+        #yui_css:
+        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+    assets:
+       fontello-eot:
+          inputs: '@AppBundle/Resources/public/font/fontello.eot'
+          output: 'font/fontello.eot'
+       fontello-woff:
+          inputs: '@AppBundle/Resources/public/font/fontello.woff'
+          output: 'font/fontello.woff'
