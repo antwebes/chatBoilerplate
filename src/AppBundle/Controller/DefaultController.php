@@ -23,12 +23,13 @@ class DefaultController extends Controller
     public function logoAction()
     {
 
-    	$parameters = Configuration::loadYml($this->getRequest());
-
     	$affiliate_name = "Project name";
 
-    	if (array_key_exists("affiliate_name", $parameters)){
-    		$affiliate_name =  $parameters['affiliate_name'];
+        $twig = $this->container->get('twig');
+        $globals = $twig->getGlobals();
+
+    	if (array_key_exists("affiliate_name", $globals)){
+    		$affiliate_name =  $globals['affiliate_name'];
     	}
 
         return $this->render('AppBundle:Default:logo.html.twig', array('affiliate_name' => $affiliate_name));

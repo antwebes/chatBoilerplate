@@ -6,12 +6,12 @@ use Symfony\Component\Yaml\Yaml;
 
 class Configuration
 {
-    static function loadYml($request)
+    static function loadYml($request, $affiliate_dir)
     {
         $host = $request->getHost();
         $yml = false;
 
-        $yml = @file_get_contents(__DIR__ . '/afiliates/'.$host.'.yml');
+        $yml = @file_get_contents(__DIR__ ."/".$affiliate_dir.$host.'.yml');
 
 
         if($yml === FALSE){
