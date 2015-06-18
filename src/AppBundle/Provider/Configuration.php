@@ -11,7 +11,7 @@ class Configuration
         $host = $request->getHost();
         $yml = false;
 
-        $yml = @file_get_contents(__DIR__ ."/".$affiliate_dir.$host.'.yml');
+        $yml = file_get_contents(__DIR__ ."/".$affiliate_dir.$host.'.yml');
 
 
         if($yml === FALSE){

@@ -8,20 +8,10 @@
 	{% else %}
 		{{ parent() }}
 	{% endif %}
-	{% if radio_index is defined and radio_index is not null and radio_index %}
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-xs-12">
-					<iframe class="embed-responsive-item" width="560" height="90" src="{{radio_src_iframe}}"></iframe>
-				</div>
-				<div class="col-md-6 col-xs-12">
-				{% if radio_apps_template is defined %}
-					{% set template =  'AppBundle:affiliates:'~radio_apps_template~'.html.twig' %}
-					{{ include(template) }}
+	{% if index_chat %}
+				{% if extra_html is defined %}
+					{{ extra_html | raw}}
 				{% endif %}
-				</div>
-			</div>
-		</div>
 	{% endif %}
 {% endblock body_pre_container %}
 
@@ -29,7 +19,7 @@
 
 {% block body_js_end %}
 	{{ parent() }}
-	{% if index_chat is defined and index_chat is not null and index_chat%}
+	{% if index_chat is defined%}
 		<script type="text/javascript"><!--
 		    function getCookie(name) {
 			        var value = "; " + document.cookie;
