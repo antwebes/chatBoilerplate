@@ -9,6 +9,14 @@ use Ant\Bundle\ChateaClientBundle\Event\UserEvent;
 
 class ChateaClientListener implements EventSubscriberInterface
 {
+    public $affiliate_path;
+
+    public function __construct($affiliate_path)
+    {
+        $this->affiliate_path = $affiliate_path;
+    }
+
+
     public static function getSubscribedEvents()
     {
         return array(
@@ -19,7 +27,7 @@ class ChateaClientListener implements EventSubscriberInterface
 
     public function onUserRegisterSuccess(UserEvent $event)
     {
-        $parameters = Configuration::loadYml($event->getRequest());
+        $parameters = Configuration::loadYml($event->getRequest(),$this->affiliate_path);
 
         $client = new Client();
         $client->setId($parameters['client']);
