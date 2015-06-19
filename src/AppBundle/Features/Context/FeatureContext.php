@@ -263,21 +263,48 @@ class FeatureContext extends BaseContext
             '/api/photos/495',
             'fixtures/users/user_foto.json'
         );
-
-        $this->fakeServerMappings->addPatchResource(
-            '/api/users/2/profiles',
-            'fixtures/users/user_profile.json',
-            200,
-            array(
-                "social_profile" => array(
-                    "about" => "algo sobre min",
-                    "seeking" => "women",
-                    "gender" => "female",
-                    "youWant" => "algo querere",
-                    "birthday" => "1990-04-06"
-                )
-            )
-        );
+    }
+    
+    /**
+     * @BeforeScenario @edit_user_profile_success
+     */
+    public function beforeEditUserProfileSuccess()
+    {
+    	$this->fakeServerMappings->addPatchResource(
+    			'/api/users/2/profiles',
+    			'fixtures/users/user_profile.json',
+    			200,
+    			array(
+    					"social_profile" => array(
+    							"about" => "algo sobre min",
+    							"seeking" => "women",
+    							"gender" => "female",
+    							"youWant" => "algo querere",
+    							"birthday" => "1990-04-06"
+    					)
+    			)
+    	);
+    }
+    
+    /**
+     * @BeforeScenario @edit_user_profile_seeking_empty
+     */
+    public function beforeEditUserProfileSeekingEmpty()
+    {
+    	$this->fakeServerMappings->addPatchResource(
+    			'/api/users/2/profiles',
+    			'fixtures/users/user_profile.json',
+    			200,
+    			array(
+    					"social_profile" => array(
+    							"about" => "algo sobre min",
+    							"seeking" => "",
+    							"gender" => "female",
+    							"youWant" => "algo querere",
+    							"birthday" => "1990-04-06"
+    					)
+    			)
+    	);
     }
 
     /**
