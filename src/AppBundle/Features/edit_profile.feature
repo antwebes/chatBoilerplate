@@ -27,7 +27,7 @@ Feature: Edit provile data
       And I select "10" from "social_profile_birthday_day"
       And I select "1994" from "social_profile_birthday_year"
       And I press "Enviar"
-     Then The "data-behat" with tag "msg-success" exist
+     Then I should see "not contain extra fields"
      
   Scenario: Go to page profile, user need is loged
      When I go to "perfil"

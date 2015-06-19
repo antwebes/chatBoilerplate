@@ -293,8 +293,8 @@ class FeatureContext extends BaseContext
     {
     	$this->fakeServerMappings->addPatchResource(
     			'/api/users/2/profiles',
-    			'fixtures/users/user_profile.json',
-    			200,
+    			'fixtures/users/error_extra_field.json',
+    			400,
     			array(
     					"social_profile" => array(
     							"about" => "algo sobre min",
