@@ -300,8 +300,8 @@ class FeatureContext extends BaseContext
     							"about" => "algo sobre min",
     							"seeking" => "",
     							"gender" => "female",
-    							"youWant" => "algo querere",
-    							"birthday" => "1990-04-06"
+    							"youWant" => "text of you want",
+    							"birthday" => "1994-07-10"
     					)
     			)
     	);
