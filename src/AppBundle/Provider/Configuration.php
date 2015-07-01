@@ -21,10 +21,7 @@ class Configuration
         $candidateFiles = array(
             __DIR__ . '/afiliates/'.$host.'.yml',
             __DIR__ . '/afiliates/default.yml',
-            __DIR__ . '/afiliates/default.yml.dist'
         );
-
-        $yml = false;
 
         foreach($candidateFiles as $candidateFile){
             $yml = @file_get_contents($candidateFile);
@@ -34,6 +31,9 @@ class Configuration
             }
         }
 
-        return $yml;
+        $message = sprintf("There are no configuration parameters for this host. Create one of the following files: %s",
+            implode(", ", $candidateFiles));
+
+        throw new \Exception($message);
     }
 }
