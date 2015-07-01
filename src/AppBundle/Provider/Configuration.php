@@ -13,7 +13,7 @@ class Configuration
 
         $parameters = Yaml::parse($yml);
 
-        return $parameters;
+        return $parameters['parameters'];
     }
 
     static function loadConfigYmlFile($host)
