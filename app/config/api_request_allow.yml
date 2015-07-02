@@ -4,6 +4,10 @@ apiRequestAllow:
     fields: ['id',  'username', 'profile', 'username_canonical']
 
   api_outstanding_users:
+    url: "/api/users"
+    fields: ['resources']
+
+  api_outstanding_user:
     url: "/api/outstanding/{id}"
     fields: ['id',  'username', 'profile']
 

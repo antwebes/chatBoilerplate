@@ -80,6 +80,38 @@
 
 {% block body_js_end %}
     <script>
+        function getPreniumUsers(callback){
+            var url_source = '/app_dev.php/api/users';
+
+            $.ajax({
+                url: url_source,
+                data: {filters: "outstanding=1"},
+                dataType: "json",
+                contentType: "application/json",
+                success: function (response) {
+                    var resources = response.resources;
+                    var usernames = [];
+
+                    for(i=0; i < resources.length; i++){
+                        usernames.push(resources[i].username);
+                    }
+
+                    callback(usernames);
+                    //$('span[data-id="email-suggestions"]').html('<p class="alert-success">' + messages.mail_is_aviable + '</p>');
+                },
+                error: function (responseError) {
+//                    var response = $.parseJSON(responseError.responseText);
+//                    var messageError = response.errors.email.message;
+//                    $('span[data-id="email-suggestions"]').html('<p class="alert-danger">' + transServerError(messageError) + '</p>');
+                }
+
+            });
+        }
+
+        getPreniumUsers(function(data){
+            alert(data[0]);
+        });
+
         {% if app.user %}
         document.cookie = "token={{ app.user.accessToken }}; path=/";
         document.cookie = "user={{ app.user.username }}; path=/";
