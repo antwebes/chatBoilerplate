@@ -54,7 +54,6 @@ class DefaultController extends Controller
      */
     public function apiAction(Request $request)
     {
-
         if ($request->isXmlHttpRequest() or $request->headers->get('Content-Type') =='application/json') {
             $pathInfo = $request->getPathInfo();
 
@@ -63,16 +62,26 @@ class DefaultController extends Controller
             }
 
             $query_string = null;
+            $headers = array('Accept' => 'application/json');
 
             if ($request->getQueryString()){
                 $query_string = '?' .$request->getQueryString();
+
             }
             $url_api = $request->getPathInfo() . $query_string;
 
             $apiUri = trim($url_api,'/');
 
             try{
-                return $this->container->get('ant_core.http.api_client')->sendRequest('GET',$apiUri);
+                if($request->query->has('format')){
+                    if($request->query->get('format') == 'xml'){
+                        $headers['Accept'] = "application/xml";
+                    }
+
+                    $request->query->remove('format');
+                }
+
+                return $this->container->get('ant_core.http.api_client')->sendRequest('GET',$apiUri, $headers);
             }catch (ClientErrorResponseException $e){
                 $headersGuzzle = $e->getResponse()->getHeaders()->toArray();
                 $headersSymfony = array();

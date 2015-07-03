@@ -111,17 +111,20 @@ class ApiClient extends Client
         $headers = $response->getHeaders()->getAll();
         $body = $response->getBody(true);
         $statusCode = $response->getStatusCode();
-
-        $body = $this->api_request_allow->splitFields($body);
         $symfonyHeaders = array();
+
+        if ($response->getContentType() === 'application/json'){
+            $body = $this->api_request_allow->splitFields($body);
+        }
 
         foreach ($headers as $keys) {
             /**
              * Transfer-Encoding type chunked is not suported by symfony response
              */
-            if($keys->getName() == "Transfer-Encoding" && $keys->__toString() === 'chunked'){
+            if ($keys->getName() == "Transfer-Encoding" && $keys->__toString() === 'chunked') {
                 continue;
             }
+
             $symfonyHeaders[$keys->getName()] = $keys->__toString();
         }
 
