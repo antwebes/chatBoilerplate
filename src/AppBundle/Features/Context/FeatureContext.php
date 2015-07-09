@@ -121,19 +121,71 @@ class FeatureContext extends BaseContext
             '/api/users?limit=30&offset=0&filters=language%3Des',
             'fixtures/users/users_limit.json'
         );
+        
+        $this->fakeServerMappings->addGetResource(
+        		'/api/channels?filter=language%3Des&order=fans%3Ddesc&limit=10&offset=0',
+        		'fixtures/users/users_limit.json'
+        );
+    }
+    
+    /**
+     * @BeforeScenario @part_from_index
+     */
+    public function beforeViewIndexList()
+    {
+    	$this->doInitFakeServer();
+    
+    	//para index
+	    $this->fakeServerMappings->addGetResource(
+	    		'/api/channels?filter=&order=&limit=10&offset=0',
+	    		'fixtures/channels/counter_channels_index.json'
+	    );
+	    
+	    $this->fakeServerMappings->addGetResource(
+	    		'/api/users?limit=30&offset=0',
+	    		'fixtures/users/counter_users_index.json'
+	    );
+	    
+	    $this->fakeServerMappings->addGetResource(
+	    		'/api/users?limit=30&offset=0&filters=language%3Des%2Chas_profile_photo%3D1&order=randomly%3Dasc',
+	    		'fixtures/users/users_limit.json'
+	    );
+	    //fin de index
     }
 
+    /**
+     * @BeforeScenario @view_users
+     */
+    public function beforeUsersView()
+    {
+    	$this->beforeViewUserList();
+    
+    	$this->fakeServerMappings->addGetResource(
+    			'/api/users?limit=25&offset=0&filters=outstanding%3D1',
+    			'fixtures/users/users_outstanding.json'
+    			);
+    }
+    
     /**
      * @BeforeScenario @view_user_profile
      */
     public function beforeUserProfile()
     {
-        $this->beforeViewUserList();
-
+        $this->beforeViewUserList();        
+        
         $this->fakeServerMappings->addGetResource(
             '/api/users/emily',
             'fixtures/users/user.json'
         );
+        $this->fakeServerMappings->addGetResource(
+        		'/api/channels?filter=language%3Des&order=fans%3Ddesc&limit=10&offset=0',
+        		'fixtures/users/users_limit.json'
+        );
+        $this->fakeServerMappings->addGetResource(
+        		'/api/users/2/photos?limit=30&offset=0',
+        		'fixtures/users/user_fotos.json'
+        );
+        
         $this->fakeServerMappings->addGetResource(
             '/api/users/2',
             'fixtures/users/user.json'
@@ -224,21 +276,48 @@ class FeatureContext extends BaseContext
             '/api/photos/495',
             'fixtures/users/user_foto.json'
         );
-
-        $this->fakeServerMappings->addPatchResource(
-            '/api/users/2/profiles',
-            'fixtures/users/user_profile.json',
-            200,
-            array(
-                "social_profile" => array(
-                    "about" => "algo sobre min",
-                    "seeking" => "women",
-                    "gender" => "female",
-                    "youWant" => "algo querere",
-                    "birthday" => "1990-04-06"
-                )
-            )
-        );
+    }
+    
+    /**
+     * @BeforeScenario @edit_user_profile_success
+     */
+    public function beforeEditUserProfileSuccess()
+    {
+    	$this->fakeServerMappings->addPatchResource(
+    			'/api/users/2/profiles',
+    			'fixtures/users/user_profile.json',
+    			200,
+    			array(
+    					"social_profile" => array(
+    							"about" => "algo sobre min",
+    							"seeking" => "women",
+    							"gender" => "female",
+    							"youWant" => "algo querere",
+    							"birthday" => "1990-04-06"
+    					)
+    			)
+    	);
+    }
+    
+    /**
+     * @BeforeScenario @edit_user_profile_seeking_empty
+     */
+    public function beforeEditUserProfileSeekingEmpty()
+    {
+    	$this->fakeServerMappings->addPatchResource(
+    			'/api/users/2/profiles',
+    			'fixtures/users/error_extra_field.json',
+    			400,
+    			array(
+    					"social_profile" => array(
+    							"about" => "algo sobre min",
+    							"seeking" => "",
+    							"gender" => "female",
+    							"youWant" => "text of you want",
+    							"birthday" => "1994-07-10"
+    					)
+    			)
+    	);
     }
 
     /**
@@ -427,7 +506,7 @@ class FeatureContext extends BaseContext
      */
     public function iShouldSeeTheCoverAndContainerAndTheTable($arg1, $arg2, TableNode $table)
     {
-        $container = $this->iShouldSeeTheFieldIntoData("cover-title", $arg1, "data-behat");
+        $container = $this->theWithTagExist("data-behat", $arg1);
         $this->iShouldSeeThisTableWithData($table, $arg2, "name-channel");
     }
 
@@ -436,7 +515,7 @@ class FeatureContext extends BaseContext
      */
     public function iShouldSeePhotos($expectedNumPhotos)
     {
-        $elements = $this->getSession()->getPage()->findAll('css', '.ace-thumbnails li');
+        $elements = $this->getSession()->getPage()->findAll('css', '[data-behat="photos"] li');
 
         if(count($elements) != $expectedNumPhotos){
             $message = sprintf("Expected to to be %s photos but got %s", $expectedNumPhotos, count($elements));
@@ -507,12 +586,13 @@ class FeatureContext extends BaseContext
                 "password" => "mysuperpassword"
             )
         );
+        $this->beforeViewIndexList();
 
         $this->visit('/usuario/login');
 
         $this->fillField('username', 'ausername');
         $this->fillField('password', 'mysuperpassword');
-        $this->pressButton('Autenticar');
+        $this->pressButton('button-submit-login');
     }
 
     /**
@@ -520,7 +600,7 @@ class FeatureContext extends BaseContext
      */
     public function iClickOnTheFirstPhoto()
     {
-        $element = $this->getSession()->getPage()->find('css', '.ace-thumbnails li a');
+        $element = $this->getSession()->getPage()->find('css', '[data-behat="photos"] li a');
         $element->click();
     }
 
@@ -530,5 +610,51 @@ class FeatureContext extends BaseContext
     public function showContent()
     {
         die($this->getSession()->getPage()->getHtml());
+    }
+    
+    /**
+     * @Then /^The "([^"]*)" with tag "([^"]*)" exist$/
+     */
+    public function theWithTagExist($arg1, $arg2)
+    {
+    	$element = $this->getSession()->getPage()->find('css', '*['.$arg1.'="'.$arg2.'"]');
+    	if(!$element){
+    		$message = sprintf("%s='%s' was not found", $arg1, $arg2);
+    		throw new ExpectationException($message, $this->getSession());
+    	}
+    	return $element;
+    }
+    
+    /**
+     * @Then /^The "([^"]*)" with tag "([^"]*)" not exist$/
+     */
+    public function theWithTagNotExist($arg1, $arg2)
+    {
+    	$element = $this->getSession()->getPage()->find('css', '*['.$arg1.'="'.$arg2.'"]');
+    	if($element){
+    		$message = sprintf("%s='%s' exist", $arg1, $arg2);
+    		throw new ExpectationException($message, $this->getSession());
+    	}
+    	return $element;
+    }
+    
+    /** Click on the element with the provided css query
+     *
+     * @When /^I click on the element with css "([^"]*)" and "([^"]*)"$/
+     */
+    public function iClickOnTheElementWithXPath($arg1, $arg2)
+    {
+    	$session = $this->getSession(); // get the mink session
+    	
+    	$element = $session->getPage()->find('css', '*['.$arg1.'="'.$arg2.'"]');
+    	
+    	// errors must not pass silently
+    	if (null === $element) {
+    		throw new \InvalidArgumentException(sprintf('Could not evaluate Css: "%s" = "%s"', $arg1, $arg2));
+    	}
+    
+    	// ok, let's click on it
+    	$element->click();
+    
     }
 }

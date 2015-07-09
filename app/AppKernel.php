@@ -23,8 +23,15 @@ class AppKernel extends Kernel
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Snc\RedisBundle\SncRedisBundle(),
             new Ant\Bundle\ApiSocialBundle\ApiSocialBundle(),
-            new Ant\HelpBundle\HelpBundle()
+            new Ant\HelpBundle\HelpBundle(),
+            new JMS\TranslationBundle\JMSTranslationBundle(),
+
         );
+
+
+        if(class_exists("Ant\Bundle\PrettyBundle\PrettyBundle")){
+            array_push($bundles, new Ant\Bundle\PrettyBundle\PrettyBundle());
+        }
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();

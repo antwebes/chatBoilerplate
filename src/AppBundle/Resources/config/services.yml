@@ -1,0 +1,9 @@
+services:
+  ant_core.http.api_client:
+        class: AppBundle\Http\ApiClient
+        arguments: [ %api_endpoint%, @antwebes_chateaclient_lib_filestore,%chatea_client_id%,%chatea_secret_id% ,%kernel.environment%, @ant_core.http.api_request_allow ]
+
+
+  ant_core.http.api_request_allow:
+        class: AppBundle\Http\ApiRequestAllow
+        arguments: [%kernel.root_dir%, "config/api_request_allow.yml",'apiRequestAllow' ]
