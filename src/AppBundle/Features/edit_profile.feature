@@ -15,7 +15,7 @@ Feature: Edit provile data
       And I press "Enviar"
      Then The "data-behat" with tag "msg-success" exist
      
-  @edit_user_profile @edit_user_profile_seeking_empty @pablo
+  @edit_user_profile @edit_user_profile_seeking_empty
   Scenario: Edit profile with seeking empty
     Given I am logedin
      When I click on the element with css "data-behat" and "change-profile"

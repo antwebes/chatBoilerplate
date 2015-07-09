@@ -6,6 +6,7 @@ use AppBundle\Provider\Configuration;
 
 use Ant\Bundle\ChateaClientBundle\Api\Model\Client;
 use Ant\Bundle\ChateaClientBundle\Event\UserEvent;
+use Ant\Bundle\ChateaClientBundle\Event\ChateaClientEvents;
 
 class ChateaClientListener implements EventSubscriberInterface
 {
@@ -20,7 +21,7 @@ class ChateaClientListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            'user.register.success' => array('onUserRegisterSuccess', 0),
+			ChateaClientEvents::USER_REGISTER_SUCCESS => array('onUserRegisterSuccess', 0),
         );
     }
 

@@ -154,6 +154,19 @@ class FeatureContext extends BaseContext
     }
 
     /**
+     * @BeforeScenario @view_users
+     */
+    public function beforeUsersView()
+    {
+    	$this->beforeViewUserList();
+    
+    	$this->fakeServerMappings->addGetResource(
+    			'/api/users?limit=25&offset=0&filters=outstanding%3D1',
+    			'fixtures/users/users_outstanding.json'
+    			);
+    }
+    
+    /**
      * @BeforeScenario @view_user_profile
      */
     public function beforeUserProfile()
