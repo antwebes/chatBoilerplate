@@ -9,15 +9,7 @@ class Configuration
     static function loadYml($request, $affiliate_dir)
     {
         $host = $request->getHost();
-<<<<<<< HEAD
         return self::loadConfig($affiliate_dir, $host);
-=======
-        $yml = self::loadConfigYmlFile($affiliate_dir);
-
-        $parameters = Yaml::parse($yml);
-
-        return $parameters['parameters'];
->>>>>>> 20e99246863bfdec0df253de69ba930b75cb6221
     }
 
     static function loadConfig($affiliate_dir, $host)
