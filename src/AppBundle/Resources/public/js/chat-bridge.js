@@ -69,7 +69,11 @@ function newChatButton(target) {
 
         $("#chatBtnConnect").click(function() {
             if(isConnected()) {
-                localStorage.setItem("data", '{"event": "openPrivate", "arguments": "Borja"}');
+                if(target.charAt(0) == "#") {
+                    localStorage.setItem("data", '{"event": "openChannel", "arguments": "'+target+'"}');
+                } else {
+                    localStorage.setItem("data", '{"event": "openPrivate", "arguments": "'+target+'"}');
+                }
                 $.notify({
                     message: " Abriendo chat " +target + " dirígite a la pestaña de chat.",
                     enter: 'animated zoomInDown',
