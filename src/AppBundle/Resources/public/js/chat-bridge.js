@@ -21,7 +21,7 @@ function handlerChatNotify(e) {
         break;
         case "newprivate":
             $.notify({
-                message: ev.arguments + " te ha enviado un mensaje privado",
+                message: ev.arguments + " te ha enviado un mensaje privado en la página de chat.",
                 enter: 'animated zoomInDown',
                 exit: 'animated zoomOutUp'
             });
