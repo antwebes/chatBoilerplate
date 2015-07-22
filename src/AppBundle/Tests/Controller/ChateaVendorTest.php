@@ -22,7 +22,7 @@ class ChateaVendorTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/resetear-contraseña');
+        $crawler = $client->request('GET', '/resetear-contrasena');
 
         $this->assertEquals(
             200,
