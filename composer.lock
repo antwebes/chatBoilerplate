@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "a30483bcf7b34b6ee95b83f7656ae0f84e91c627"
+                "reference": "d3a9d1c95d501309fbae777e21a1ce3b3ced48f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/a30483bcf7b34b6ee95b83f7656ae0f84e91c627",
-                "reference": "a30483bcf7b34b6ee95b83f7656ae0f84e91c627",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/d3a9d1c95d501309fbae777e21a1ce3b3ced48f4",
+                "reference": "d3a9d1c95d501309fbae777e21a1ce3b3ced48f4",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-07-22 09:23:41"
+            "time": "2015-07-22 11:46:38"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "e1b37de2171051fa4f9981537ddae1b68cd53791"
+                "reference": "7fa795f65c30b42600d82bfefa8658b602554581"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/e1b37de2171051fa4f9981537ddae1b68cd53791",
-                "reference": "e1b37de2171051fa4f9981537ddae1b68cd53791",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/7fa795f65c30b42600d82bfefa8658b602554581",
+                "reference": "7fa795f65c30b42600d82bfefa8658b602554581",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-07-22 10:51:58"
+            "time": "2015-07-22 12:58:30"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -296,7 +296,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "e995fd851cde671a8baf2c10272f22c301cff0df"
+                "reference": "e12fa0a8e721a574ce26870d7cfaf5baf3f9fa6b"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -318,7 +318,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-07-09 10:50:09"
+            "time": "2015-07-22 12:59:12"
         },
         {
             "name": "doctrine/annotations",
