@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "21dc02066ede8f88a041854557d57756b3f61ed2"
+                "reference": "e1b37de2171051fa4f9981537ddae1b68cd53791"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/21dc02066ede8f88a041854557d57756b3f61ed2",
-                "reference": "21dc02066ede8f88a041854557d57756b3f61ed2",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/e1b37de2171051fa4f9981537ddae1b68cd53791",
+                "reference": "e1b37de2171051fa4f9981537ddae1b68cd53791",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-07-22 09:18:28"
+            "time": "2015-07-22 10:51:58"
         },
         {
             "name": "antwebes/chatea-client-lib",
