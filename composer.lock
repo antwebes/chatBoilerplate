@@ -255,12 +255,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/HelpBundle.git",
-                "reference": "ddedfc0bfd4fb0bba2290df095369bd72fec86d9"
+                "reference": "d1efc164d26a99b682a58bf4685b918f883aaa12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/HelpBundle/zipball/ddedfc0bfd4fb0bba2290df095369bd72fec86d9",
-                "reference": "ddedfc0bfd4fb0bba2290df095369bd72fec86d9",
+                "url": "https://api.github.com/repos/antwebes/HelpBundle/zipball/d1efc164d26a99b682a58bf4685b918f883aaa12",
+                "reference": "d1efc164d26a99b682a58bf4685b918f883aaa12",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -287,7 +287,7 @@
             "keywords": [
                 "help bundle"
             ],
-            "time": "2015-06-04 11:59:56"
+            "time": "2015-07-23 10:31:56"
         },
         {
             "name": "antwebes/pretty-bundle",
@@ -296,7 +296,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "e12fa0a8e721a574ce26870d7cfaf5baf3f9fa6b"
+                "reference": "521d642f05e72a4bae03bb1bb2bd05fda1c334de"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -318,7 +318,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-07-22 12:59:12"
+            "time": "2015-07-23 13:48:50"
         },
         {
             "name": "doctrine/annotations",
@@ -1525,12 +1525,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "871d526300b365b6536419045d3997f2a39c1179"
+                "reference": "8168def08ff8a6e09071031b5f6a9536f499a5cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/871d526300b365b6536419045d3997f2a39c1179",
-                "reference": "871d526300b365b6536419045d3997f2a39c1179",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/8168def08ff8a6e09071031b5f6a9536f499a5cf",
+                "reference": "8168def08ff8a6e09071031b5f6a9536f499a5cf",
                 "shasum": ""
             },
             "require": {
@@ -1572,7 +1572,7 @@
                 "predis",
                 "redis"
             ],
-            "time": "2015-07-19 07:35:52"
+            "time": "2015-07-23 10:15:14"
         },
         {
             "name": "psr/log",
@@ -2410,12 +2410,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "18fe9993494e4bd00fe6ff3337b380e4b3e6f348"
+                "reference": "e60795691ce18296cc6f772f034d8e593fac7f0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/18fe9993494e4bd00fe6ff3337b380e4b3e6f348",
-                "reference": "18fe9993494e4bd00fe6ff3337b380e4b3e6f348",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/e60795691ce18296cc6f772f034d8e593fac7f0e",
+                "reference": "e60795691ce18296cc6f772f034d8e593fac7f0e",
                 "shasum": ""
             },
             "require": {
@@ -2510,7 +2510,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-07-22 08:24:19"
+            "time": "2015-07-23 09:15:22"
         },
         {
             "name": "twig/extensions",
