@@ -108,27 +108,19 @@ class ApiClient extends Client
     public function handle(RequestInterface $request)
     {
         $response = $request->send();
-        $headers = $response->getHeaders()->getAll();
         $body = $response->getBody(true);
         $statusCode = $response->getStatusCode();
-        $symfonyHeaders = array();
 
         if ($response->getContentType() === 'application/json'){
             $body = $this->api_request_allow->splitFields($body);
         }
 
-        foreach ($headers as $keys) {
-            /**
-             * Transfer-Encoding type chunked is not suported by symfony response
-             */
-            if ($keys->getName() == "Transfer-Encoding" && $keys->__toString() === 'chunked') {
-                continue;
-            }
+        /*
+         * Remove symfony headers from guzzle because is not necessary
+         * and causes an error.
+         */
 
-            $symfonyHeaders[$keys->getName()] = $keys->__toString();
-        }
-
-        return new Response($body,$statusCode,$symfonyHeaders);
+        return new Response($body,$statusCode);
     }
 
     /**

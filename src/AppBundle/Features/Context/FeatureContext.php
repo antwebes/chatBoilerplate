@@ -399,7 +399,6 @@ class FeatureContext extends BaseContext
         $countElements = count($element->findAll('css', 'li'));
 
         if($countElements != $count){
-            ldd($countElements);
             $message = sprintf("Expected to see %s users", $count);
             throw new ExpectationException($message, $this->getSession());
         }
