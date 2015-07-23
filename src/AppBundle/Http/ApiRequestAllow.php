@@ -55,16 +55,28 @@ class ApiRequestAllow extends YamlFileLoader
 
     public function splitFields($data)
     {
-      $fields= $this->allowedByRoute[$this->current_route];
+        $fields= $this->allowedByRoute[$this->current_route];
 
+        $data  = json_decode($data, true);
 
-      $data  = json_decode($data, true);
+        //convert ["username", "email"] to ["username" => "", "email" => ""] for use
+        // in array_intersect_key function
+        $fields = array_fill_keys($fields, "");
 
-      foreach ($data as $key => $value) {
-          if (!in_array($key, $fields)) {
-              unset($data[$key]);
-           }
-        }
-      return json_encode($data);
+        /*
+         * We change this function for native instruction to improve performance.
+         *
+         * We use array_intersect_key native function to improve them.
+         *
+         *   New code 0.013470480998357 sec/serialize
+         *  ----------------------------------
+         *   Old code 0.014336290677389 sec/serialize
+         *
+         */
+
+        $data2 = array_intersect_key($data, $fields);
+        $json_data = json_encode($data2);
+
+        return $json_data;
     }
 } 
