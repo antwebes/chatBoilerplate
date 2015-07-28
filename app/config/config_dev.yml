@@ -1,6 +1,9 @@
 imports:
     - { resource: config.yml }
 
+parameters:
+    payment_endpoint: "http://chateapayments.lo/app_dev.php/"
+    
 framework:
     router:
         resource: "%kernel.root_dir%/config/routing_dev.yml"
@@ -33,6 +36,7 @@ assetic:
 twig:
     globals:
         social_endpoint: %social_endpoint%
+        payment_endpoint: %payment_endpoint%
 
 snc_redis:
     clients:
