@@ -1,8 +1,6 @@
 imports:
+    - { resource: parameters_dev.yml }
     - { resource: config.yml }
-
-parameters:
-    payment_endpoint: "http://chateapayments.lo/app_dev.php/"
     
 framework:
     router:
