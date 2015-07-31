@@ -1,0 +1,2 @@
+parameters:
+    payment_endpoint: "http://chateapayments.lo/app_dev.php/"

@@ -1,6 +1,9 @@
 imports:
     - { resource: config.yml }
 
+parameters:
+    payment_endpoint: "http://pagos.chateagratis.net"
+
 #framework:
 #    validation:
 #        cache: apc
@@ -26,6 +29,7 @@ twig:
     globals:
         bp_analytics_id: UA-41992080-4
         social_endpoint: %social_endpoint%
+        payment_endpoint: %payment_endpoint%
 
 snc_redis:
     clients:
