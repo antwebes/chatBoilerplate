@@ -20,68 +20,6 @@
 {% block body_js_end %}
 	{{ parent() }}
 	{% if index_chat is defined%}
-		<script type="text/javascript"><!--
-		    function getCookie(name) {
-			        var value = "; " + document.cookie;
-			        var parts = value.split("; " + name + "=");
-			        if (parts.length == 2) return parts.pop().split(";").shift();
-			    }
-
-			window.cgsInit = function () {
-				
-				//Configuración de variables
-		        var chat_options = {
-					"nick": "{{nick_affiliate}}????",
-		            "channel": "{{channel_affiliate}}",
-		            "type": "default",
-		            "version": "html",
-		            "language": "es",
-		            {% if app.user%}
-		            "auto_connect" : true
-		            {% endif %}
-				};
-
-			    var cookieNick = getCookie("user") || chat_options.nick;
-			    if(cookieNick != undefined) {
-			        chat_options.token = getCookie("token") || "";
-			        chat_options.nick = cookieNick;
-                    chat_options.token_nick = cookieNick;
-			    } else chat_options.token = "";
-
-
-			    isScrolledIntoView = function(elem)
-			    {
-			        var $elem = $(elem);
-			        var $window = $(window);
-
-			        var docViewTop = $window.scrollTop();
-			        var docViewBottom = docViewTop + $window.height();
-
-			        var elemTop = $elem.offset().top;
-			        var elemBottom = elemTop + $elem.height();
-
-			        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-			    };
-
-			    setTimeout(function () {
-			        if(!isScrolledIntoView("#cgs-webchat")){
-			            $("#cgs-webchat iframe").height($(window).height() - $("#cgs-webchat").offset().top -35);
-			        }
-			    }, 2000);
-
-				cgs.createChat(chat_options);
-				
-			};	
-		</script>
-
-		<script type="text/javascript"><!--
-		//Código de carga del script
-		(function() {
-		    var e = document.createElement('script');
-		    e.src = 'http://chat.chateagratis.net/chat/wchat.js';
-		    e.async = true;
-		    document.getElementById('cgs-webchat').appendChild(e);
-		}());
-		//--></script>
+          {% include "ApiSocialBundle:Chat:script.html.twig" with {enter_channel: channel_affiliate, chat_nick: nick_affiliate ~ '????'} %}
 	{% endif %}
 {% endblock %}
