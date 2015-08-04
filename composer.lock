@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "91e0e83a8023c3436110a284b5e956b99bd9619d"
+                "reference": "e44d6ac31b1e069286c42eaa9a0790e2cb37a0c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/91e0e83a8023c3436110a284b5e956b99bd9619d",
-                "reference": "91e0e83a8023c3436110a284b5e956b99bd9619d",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/e44d6ac31b1e069286c42eaa9a0790e2cb37a0c9",
+                "reference": "e44d6ac31b1e069286c42eaa9a0790e2cb37a0c9",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-08-04 09:34:27"
+            "time": "2015-08-04 13:06:26"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -298,7 +298,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "7f3a808356b03d89d80a57ba69197ca11ed01cb1"
+                "reference": "c11cbe7bb9685f83b09e511bc10e83f9852607de"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -320,7 +320,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-08-04 09:06:39"
+            "time": "2015-08-04 13:05:39"
         },
         {
             "name": "doctrine/annotations",
@@ -2012,12 +2012,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "18fc2063c4d6569cdca47a39fbac32342eb65f3c"
+                "reference": "9a4bd1870e4ac9908d996ac3fbfa5525e3db660b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/18fc2063c4d6569cdca47a39fbac32342eb65f3c",
-                "reference": "18fc2063c4d6569cdca47a39fbac32342eb65f3c",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/9a4bd1870e4ac9908d996ac3fbfa5525e3db660b",
+                "reference": "9a4bd1870e4ac9908d996ac3fbfa5525e3db660b",
                 "shasum": ""
             },
             "require": {
@@ -2059,7 +2059,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2015-08-03 11:59:27"
+            "time": "2015-08-04 12:18:40"
         },
         {
             "name": "sensio/generator-bundle",
