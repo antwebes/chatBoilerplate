@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "c985318ed9edc194cf52ba193cced69b5bf1ce0f"
+                "reference": "91e0e83a8023c3436110a284b5e956b99bd9619d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/c985318ed9edc194cf52ba193cced69b5bf1ce0f",
-                "reference": "c985318ed9edc194cf52ba193cced69b5bf1ce0f",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/91e0e83a8023c3436110a284b5e956b99bd9619d",
+                "reference": "91e0e83a8023c3436110a284b5e956b99bd9619d",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-08-04 09:01:09"
+            "time": "2015-08-04 09:34:27"
         },
         {
             "name": "antwebes/chatea-client-bundle",
