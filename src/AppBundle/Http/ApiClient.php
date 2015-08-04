@@ -120,7 +120,11 @@ class ApiClient extends Client
          * and causes an error.
          */
 
-        return new Response($body,$statusCode);
+        $resultResponse = new Response($body,$statusCode);
+        $head = $response->getHeaders()->get('Content-Type');
+        $resultResponse->headers->set('Content-Type', $head->__toString());
+
+        return $resultResponse;
     }
 
     /**
