@@ -1,9 +1,6 @@
 imports:
     - { resource: config.yml }
 
-parameters:
-    payment_endpoint: "http://pagos.chateagratis.net"
-
 #framework:
 #    validation:
 #        cache: apc
