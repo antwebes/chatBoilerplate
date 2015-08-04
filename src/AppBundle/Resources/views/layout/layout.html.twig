@@ -27,10 +27,16 @@
   <div class="container">
     <h1>{{ welcome_message }}</h1>
     <p>{{ welcome_message_extended }}</p>
-    {% if app.user %}
-        {% if  chat_url is not null %}
-        <p class="text-center"><a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">Entrar al chat como {{ app.user.username }}</a></p>
-        {% endif %}
+    {% if app.user and has_chat %}
+        <p class="text-center">
+        	{% if chat_url %}
+        		<a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">
+        	{% else %}
+        		<a class="btn btn-primary btn-lg" href="{{ path('ant_chat_chat_show')}}" role="button">
+        	{% endif %}
+        	Entrar al chat como {{ app.user.username }}
+        	</a>
+		</p>
     {% endif %}
   </div>
   <hr>
