@@ -1,6 +1,7 @@
 imports:
+    - { resource: parameters_dev.yml }
     - { resource: config.yml }
-
+    
 framework:
     router:
         resource: "%kernel.root_dir%/config/routing_dev.yml"
@@ -33,6 +34,7 @@ assetic:
 twig:
     globals:
         social_endpoint: %social_endpoint%
+        payment_endpoint: %payment_endpoint%
 
 snc_redis:
     clients:

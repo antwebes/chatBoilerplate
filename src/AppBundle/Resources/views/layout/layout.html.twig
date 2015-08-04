@@ -2,13 +2,13 @@
 
 {% block flash_message %}
   {% for flashMessage in app.session.flashbag.get('notice') %}
-      <div class="flash-notice">
-          {{ flashMessage }}
+      <div class="flash-notice alert alert-info" role="alert">
+            {{ flashMessage }}
       </div>
   {% endfor %}
 
   {% for flashMessage in app.session.flashbag.get('error') %}
-      <div class="flash-error">
+      <div class="flash-error alert alert-warning" role="alert">
           {{ flashMessage }}
       </div>
   {% endfor %}

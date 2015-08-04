@@ -13,16 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "d3a9d1c95d501309fbae777e21a1ce3b3ced48f4"
+                "reference": "115517ceb72a1e23e7765d1b08961e6f2fb72ae0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/d3a9d1c95d501309fbae777e21a1ce3b3ced48f4",
-                "reference": "d3a9d1c95d501309fbae777e21a1ce3b3ced48f4",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/115517ceb72a1e23e7765d1b08961e6f2fb72ae0",
+                "reference": "115517ceb72a1e23e7765d1b08961e6f2fb72ae0",
                 "shasum": ""
             },
             "require": {
-                "antwebes/chatea-client-bundle": "0.1.20",
+                "antwebes/chatea-client-bundle": "0.1.21",
                 "symfony/framework-bundle": "~2.3"
             },
             "require-dev": {
@@ -54,27 +54,27 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-07-22 11:46:38"
+            "time": "2015-07-27 12:03:24"
         },
         {
             "name": "antwebes/chatea-client-bundle",
-            "version": "v0.1.20",
+            "version": "v0.1.21",
             "target-dir": "Ant/Bundle/ChateaClientBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "7fa795f65c30b42600d82bfefa8658b602554581"
+                "reference": "d8e65fc21acc7f605cb519a13050528245fbf906"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/7fa795f65c30b42600d82bfefa8658b602554581",
-                "reference": "7fa795f65c30b42600d82bfefa8658b602554581",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/d8e65fc21acc7f605cb519a13050528245fbf906",
+                "reference": "d8e65fc21acc7f605cb519a13050528245fbf906",
                 "shasum": ""
             },
             "require": {
                 "antwebes/chatea-client-lib": "0.1.3",
                 "antwebes/chatea-common": "0.1.0",
-                "antwebes/chatea-secure-bundle": "0.1.4",
+                "antwebes/chatea-secure-bundle": "0.1.5",
                 "excelwebzone/recaptcha-bundle": "2.3.*",
                 "symfony/framework-bundle": "~2.3"
             },
@@ -107,7 +107,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-07-22 12:58:30"
+            "time": "2015-07-27 11:59:27"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -201,17 +201,17 @@
         },
         {
             "name": "antwebes/chatea-secure-bundle",
-            "version": "v0.1.4",
+            "version": "v0.1.5",
             "target-dir": "Ant/Bundle/ChateaSecureBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaSecureBundle.git",
-                "reference": "2fc6cded3988535052a937b9fd93b414bea2dc87"
+                "reference": "35d2caaf584ab936c45e05eca9f64d67cba1ac6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/2fc6cded3988535052a937b9fd93b414bea2dc87",
-                "reference": "2fc6cded3988535052a937b9fd93b414bea2dc87",
+                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/35d2caaf584ab936c45e05eca9f64d67cba1ac6d",
+                "reference": "35d2caaf584ab936c45e05eca9f64d67cba1ac6d",
                 "shasum": ""
             },
             "require": {
@@ -246,7 +246,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-05-20 09:26:59"
+            "time": "2015-07-27 11:51:26"
         },
         {
             "name": "antwebes/help-bundle",
@@ -1529,7 +1529,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/8168def08ff8a6e09071031b5f6a9536f499a5cf",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/cb91ad1aee5796cc48aa03d0b5ec83a8a5adfd66",
                 "reference": "8168def08ff8a6e09071031b5f6a9536f499a5cf",
                 "shasum": ""
             },
@@ -2414,7 +2414,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/e60795691ce18296cc6f772f034d8e593fac7f0e",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/633d0d835c4d7f10059524ddc7943c429d0d0ce7",
                 "reference": "e60795691ce18296cc6f772f034d8e593fac7f0e",
                 "shasum": ""
             },

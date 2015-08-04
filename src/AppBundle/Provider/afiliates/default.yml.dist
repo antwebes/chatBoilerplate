@@ -27,3 +27,4 @@ parameters:
     access_pretty_bundle: false
     favicon: ~
     extra_html: '<h1>Extra html</h1>'
+    chat_version: 'html'
