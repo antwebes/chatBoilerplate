@@ -37,3 +37,4 @@ parameters:
     limits.photos: 30
     guzzle_fake_server_base_fixtures_path: AppBundle/Features/fixtures
     affiliate_dir_path: %kernel.root_dir%/../vendor/antwebes/pretty-bundle/Ant/Bundle/PrettyBundle/Resources/config/affiliates/
+    payment_endpoint: "http://chateapayments.lo/app_dev.php/"
