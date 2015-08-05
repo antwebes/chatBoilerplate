@@ -46,7 +46,7 @@ function disableBtn() {
 }
 
 
-function newChatButton(target) {
+function newChatButton(target, url) {
     var connected = isConnected();
     if(target == undefined) {   //index
         if(connected){
@@ -81,7 +81,12 @@ function newChatButton(target) {
                 });
                 disableBtn();
             } else {
-                window.open(window.chat_url+ "?target=" + target);
+                if(url == undefined) {
+                    window.open(window.chat_url+ "?target=" + target);
+                } else {
+                    window.open(url);
+                }
+
                 disableBtn();
             }
         });
