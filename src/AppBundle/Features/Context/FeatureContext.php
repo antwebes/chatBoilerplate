@@ -2,8 +2,10 @@
 namespace AppBundle\Features\Context;
 
 use Ant\Bundle\GuzzleFakeServer\Behat\Context\Context as BaseContext;
+use AppBundle\Provider\Configuration;
 use Behat\Gherkin\Node\TableNode;
 use Behat\Mink\Exception\ExpectationException;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 class FeatureContext extends BaseContext
@@ -51,6 +53,9 @@ class FeatureContext extends BaseContext
     {
         parent::doInitFakeServer();
 
+        $container = $this->kernel->getContainer();
+        $parameters = Configuration::loadYml(new Request(),$container->getParameter('affiliate_dir_path'));
+
         $this->fakeServerMappings->addPostResource(
             '/oauth/v2/token',
             'fixtures/login/success_register_login.json',
@@ -59,8 +64,8 @@ class FeatureContext extends BaseContext
                 "grant_type" => "password",
                 "username" => "ausername",
                 "password" => "mysuperpass",
-                "client_id" => $this->kernel->getContainer()->getParameter("chatea_client_id"),
-                "client_secret" => $this->kernel->getContainer()->getParameter("chatea_secret_id")
+                "client_id" =>  $container->getParameter("chatea_client_id"),
+                "client_secret" => $container->getParameter("chatea_secret_id")
             )
         );
 
@@ -76,7 +81,7 @@ class FeatureContext extends BaseContext
                         'first' => 'mysuperpass',
                         'second' => 'mysuperpass'
                     ),
-                    'client' => (string)$this->kernel->getContainer()->getParameter("chatea_app_id"),
+                    'client' => (string)$parameters['client'],
                     'ip' => '127.0.0.1',
                     'language' => 'es'
                 )
