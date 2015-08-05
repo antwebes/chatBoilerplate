@@ -1,9 +1,9 @@
 Feature: I need to be able to register as a user
 
-  @register
+  @register @part_from_index
   Scenario: Register as an non loged in user
     Given I am on "http://boilerplatele.local/app_dev.php"
-     When I click "Registrar apodo"
+     When I click on the element with css "data-behat" and "register"
       And I fill in "user_registration_email_first" with "anemail@address.com"
       And I fill in "user_registration_email_second" with "anemail@address.com"
       And I fill in "user_registration_username" with "ausername"
@@ -13,6 +13,6 @@ Feature: I need to be able to register as a user
       And I select "1" from "user_registration_birthday_day"
       And I select "1990" from "user_registration_birthday_year"
       And I check "user_registration_terms_and_conditions"
-      And I press "Registrar"
-      And I press "Saltar"
-     Then I should see "El registro se ha realizado con éxito"
+      And I press "register"
+      And I press "No por ahora"
+     Then The "data-behat" with tag "register-success" exist

@@ -23,7 +23,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "antwebes/api-social-bundle": "dev-master",
         "raulfraile/ladybug-bundle": "~1.0",
-        "predis/predis": "0.8.x-dev",
+        "predis/predis": "^1.0",
         "snc/redis-bundle": "1.1.x-dev",
         "antwebes/help-bundle": "dev-icons_bootstrap_filter_optipng",
         "antwebes/pretty-bundle": "dev-master",
@@ -45,6 +45,7 @@
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "AppBundle\\Provider\\Composer\\ParameterGenerator::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -53,6 +54,7 @@
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "AppBundle\\Provider\\Composer\\ParameterGenerator::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",

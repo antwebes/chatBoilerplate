@@ -22,3 +22,9 @@ chatea_secure:
    resource: "@ChateaSecureBundle/Controller/SecuredController.php"
    prefix: /usuario
    type: annotation
+
+core_api:
+    path:  /api/{_resource}
+    defaults: { _controller: AppBundle:Default:api }
+    requirements:
+        _resource:  .+

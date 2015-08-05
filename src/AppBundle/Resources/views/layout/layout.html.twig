@@ -2,13 +2,13 @@
 
 {% block flash_message %}
   {% for flashMessage in app.session.flashbag.get('notice') %}
-      <div class="flash-notice">
-          {{ flashMessage }}
+      <div class="flash-notice alert alert-info" role="alert">
+            {{ flashMessage }}
       </div>
   {% endfor %}
 
   {% for flashMessage in app.session.flashbag.get('error') %}
-      <div class="flash-error">
+      <div class="flash-error alert alert-warning" role="alert">
           {{ flashMessage }}
       </div>
   {% endfor %}
@@ -27,10 +27,16 @@
   <div class="container">
     <h1>{{ welcome_message }}</h1>
     <p>{{ welcome_message_extended }}</p>
-    {% if app.user %}
-        {% if  chat_url is not null %}
-        <p class="text-center"><a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">Entrar al chat como {{ app.user.username }}</a></p>
-        {% endif %}
+    {% if app.user and has_chat %}
+        <p class="text-center">
+        	{% if chat_url %}
+        		<a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">
+        	{% else %}
+        		<a class="btn btn-primary btn-lg" href="{{ path('ant_chat_chat_show')}}" role="button">
+        	{% endif %}
+        	Entrar al chat como {{ app.user.username }}
+        	</a>
+		</p>
     {% endif %}
   </div>
   <hr>
@@ -54,19 +60,19 @@
         <div class="col-md-4">
             <h2>Cambiar datos de perfil</h2>
             <p>Te permite cambiar los datos de tu perfil como género, lo que buscas, lo que te gusta y también cambiar tu foto.</p>
-            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_update_profile_index') }}" role="button">Cambiar perfil</a></p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_update_profile_index') }}" role="button" data-behat="change-profile">Cambiar perfil</a></p>
         </div>
     {% else %}
     <div class="col-md-4">
       <h2>Registra tu apodo</h2>
       <p>Registra tu apodo para que nadie pueda usarlo. Es totalmente gratis y te permitirá registrar canales, subir tu perfil y muchas novedades más. </p>
-      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_user') }}" role="button">Registrar apodo</a></p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_user') }}" role="button" data-behat="register">Registrar apodo</a></p>
     </div>
 
     <div class="col-md-4">
       <h2>Entrar con tu cuenta</h2>
       <p>Accede al chat con tu nick registrado introduciendo usuario y contraseña.</p>
-      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login') }}" role="button">Acceder con tu cuenta</a></p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login') }}" role="button" name="button-login">Iniciar sesión</a></p>
    </div>
 
     <div class="col-md-4">
@@ -81,11 +87,11 @@
 {% block body_js_end %}
     <script>
         {% if app.user %}
-        document.cookie = "token={{ app.user.accessToken }}; path=/";
-        document.cookie = "user={{ app.user.username }}; path=/";
+            document.cookie = "token={{ app.user.accessToken }}; path=/";
+            document.cookie = "user={{ app.user.username }}; path=/";
         {% else %}
-        document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
-        document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
+            document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
+            document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
         {% endif %}
     </script>
 {% endblock body_js_end %}
