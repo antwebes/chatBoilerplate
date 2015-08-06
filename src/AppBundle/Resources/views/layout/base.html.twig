@@ -84,10 +84,17 @@
         {% block body_js %}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
-            {% javascripts '@AppBundle/Resources/public/js/vendor/bootstrap.min.js'
-                    '@AppBundle/Resources/public/js/main.js' %}
-                <script src="{{ asset_url }}"></script>
+            {% javascripts
+                    '@AppBundle/Resources/public/js/vendor/bootstrap.min.js'
+                    '@AppBundle/Resources/public/js/main.js'
+                    '@AppBundle/Resources/public/js/chat-bridge.js'
+                    '@AppBundle/Resources/public/js/vendor/bootstrap-notify.js'
+            %}
+            <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
+            <script>
+                window.chat_url = "{{ chat_url  }}";
+            </script>
         {% endblock body_js %}
         {% block body_js_end %}
         {% endblock body_js_end %}
