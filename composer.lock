@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "e44d6ac31b1e069286c42eaa9a0790e2cb37a0c9"
+                "reference": "c33fd10d5cfe5b6e4a3d028759e9367987236562"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/e44d6ac31b1e069286c42eaa9a0790e2cb37a0c9",
-                "reference": "e44d6ac31b1e069286c42eaa9a0790e2cb37a0c9",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/c33fd10d5cfe5b6e4a3d028759e9367987236562",
+                "reference": "c33fd10d5cfe5b6e4a3d028759e9367987236562",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-08-04 13:06:26"
+            "time": "2015-08-07 07:12:40"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -298,7 +298,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "0a7a6a5c0877721f58a5560c15606fc198547df9"
+                "reference": "6c12b5aa2073d388e59019a6c814dae1e7e7e010"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -320,7 +320,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-08-04 13:25:56"
+            "time": "2015-08-06 13:36:56"
         },
         {
             "name": "doctrine/annotations",
@@ -462,16 +462,16 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a"
+                "reference": "3661cd8bc5152598dbe6772e98b78d1fa8281a67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/3661cd8bc5152598dbe6772e98b78d1fa8281a67",
+                "reference": "3661cd8bc5152598dbe6772e98b78d1fa8281a67",
                 "shasum": ""
             },
             "require": {
@@ -483,7 +483,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -524,7 +524,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14 22:21:58"
+            "time": "2015-08-05 11:14:49"
         },
         {
             "name": "doctrine/common",
@@ -1338,12 +1338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "0023c5e18f4a03c6ba72706dea6514d45c7136d7"
+                "reference": "cba8311072155d3be4ab6b6366de171a0a3d100b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/0023c5e18f4a03c6ba72706dea6514d45c7136d7",
-                "reference": "0023c5e18f4a03c6ba72706dea6514d45c7136d7",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/cba8311072155d3be4ab6b6366de171a0a3d100b",
+                "reference": "cba8311072155d3be4ab6b6366de171a0a3d100b",
                 "shasum": ""
             },
             "require": {
@@ -1404,7 +1404,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2015-07-08 20:36:44"
+            "time": "2015-08-05 10:16:31"
         },
         {
             "name": "monolog/monolog",
@@ -2412,12 +2412,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "328ec0133ee40f7ef1d9b5c08e0423902fe08871"
+                "reference": "7ebda1e155c3f5e81053eb0c7fc1f38ae2af1eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/328ec0133ee40f7ef1d9b5c08e0423902fe08871",
-                "reference": "328ec0133ee40f7ef1d9b5c08e0423902fe08871",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7ebda1e155c3f5e81053eb0c7fc1f38ae2af1eda",
+                "reference": "7ebda1e155c3f5e81053eb0c7fc1f38ae2af1eda",
                 "shasum": ""
             },
             "require": {
@@ -2512,7 +2512,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-08-03 17:22:19"
+            "time": "2015-08-06 08:32:28"
         },
         {
             "name": "twig/extensions",
@@ -2567,12 +2567,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "617eaa000979c480c038d0577806f7e7e94e75f5"
+                "reference": "e375c9c562fe64354572ef78a0c6faa25cfc3240"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/617eaa000979c480c038d0577806f7e7e94e75f5",
-                "reference": "617eaa000979c480c038d0577806f7e7e94e75f5",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e375c9c562fe64354572ef78a0c6faa25cfc3240",
+                "reference": "e375c9c562fe64354572ef78a0c6faa25cfc3240",
                 "shasum": ""
             },
             "require": {
@@ -2616,7 +2616,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-07-31 13:50:08"
+            "time": "2015-08-04 14:19:10"
         }
     ],
     "packages-dev": [
