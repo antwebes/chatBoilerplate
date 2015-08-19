@@ -21,6 +21,10 @@
 	{{ parent() }}
     <script>
         window.homepage = "{{social_endpoint}}";
+        window.api_endpoint = "{{api_endpoint}}";
+        {% if app.user %}
+            window.token = "{{ app.user.accessToken}}";
+        {% endif %}
     </script>
 	
     {% block chatea_js %}{% endblock %}
