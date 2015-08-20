@@ -34,7 +34,8 @@
 				    <ul class="dropdown-menu">
 				      <li><a title="{{ "user.profile" | trans }}" href="{{ path('chatea_client_update_profile_index') }}">{{ "user.profile" | trans }}</a></li>
 				      <li><a title="{{ "Preferences" | trans }}" href="{{ path('chatea_client_user_settings') }}">{{ "Preferences" | trans }}</a></li>
-				      <li><a title="{{ "Register Channels" | trans }}" href="{{ path('chatea_client_register_channel') }}">{{ "Register Channels" | trans }}</a></li>
+                      <li><a title="{{ "Register Channels" | trans }}" href="{{ path('chatea_client_register_channel') }}">{{ "Register Channels" | trans }}</a></li>
+                        <li><a title="{{ "Register Channels" | trans }}" href="{{ path('ant_user_user_photos_show', {'id': app.user.id}) }}">{{ "My photos" | trans }}</a></li>
 				      <li role="separator" class="divider"></li>
 				      <li><a title="{{ "Logout" | trans }}" href="{{ path('_antwebes_chateaclient_logout') }}">{{ "Logout" | trans }}</a></li>
 				    </ul>
