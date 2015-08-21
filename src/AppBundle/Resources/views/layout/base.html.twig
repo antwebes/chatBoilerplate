@@ -72,7 +72,7 @@
         <div class="container">
             {% block body_container_content %}
             {% endblock body_container_content %}
-          <hr> 
+          <hr>
 
           {% block footer %}
           <footer>
@@ -80,7 +80,7 @@
           </footer>
           {% endblock footer %}
         </div> <!-- /container -->
-        {% endblock body_content %}      
+        {% endblock body_content %}
         {% block body_js %}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
@@ -93,8 +93,13 @@
             {% endjavascripts %}
             <script>
                 window.chat_url = "{{ chat_url  }}";
+                window.api_endpoint = "{{ api_endpoint }}";
+                {% if app.user %}
+                window.token = "{{ app.user.accessToken }}";
+                {% endif %}
             </script>
         {% endblock body_js %}
+
         {% block body_js_end %}
         {% endblock body_js_end %}
     {% endblock body %}
