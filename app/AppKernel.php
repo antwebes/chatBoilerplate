@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new Ant\Bundle\ApiSocialBundle\ApiSocialBundle(),
             new Ant\HelpBundle\HelpBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
+            new Ant\WebSiteParametersBundle\WebSiteParametersBundle(),
+
         );
 
 
