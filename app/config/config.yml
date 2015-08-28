@@ -88,5 +88,7 @@ services:
         tags:
             - { name: twig.extension }
 
+web_site_parameters:
+    client_id: %chatea_app_id%
 api_social:
     visits_limit: %visits_limit%

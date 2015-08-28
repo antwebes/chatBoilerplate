@@ -6,9 +6,3 @@ services:
         arguments: [%affiliate_dir_path%]
         tags:
             - { name: kernel.event_subscriber }
-
-    app.event.listener.parameters_request_listener:
-        class: AppBundle\EventListener\RequestParameterListener
-        arguments: [ @twig, %affiliate_dir_path% ]
-        tags:
-             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

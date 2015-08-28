@@ -28,3 +28,7 @@ core_api:
     defaults: { _controller: AppBundle:Default:api }
     requirements:
         _resource:  .+
+
+web_site_parameters:
+    resource: "@WebSiteParametersBundle/Resources/config/routing.xml"
+    prefix: /website-admin
