@@ -519,7 +519,7 @@ class FeatureContext extends BaseContext
      */
     public function iShouldSeePhotos($expectedNumPhotos)
     {
-        $elements = $this->getSession()->getPage()->findAll('css', '[data-behat="photos"] li');
+        $elements = $this->getSession()->getPage()->findAll('css', '[data-behat="photos"] figure');
 
         if(count($elements) != $expectedNumPhotos){
             $message = sprintf("Expected to to be %s photos but got %s", $expectedNumPhotos, count($elements));
@@ -604,7 +604,7 @@ class FeatureContext extends BaseContext
      */
     public function iClickOnTheFirstPhoto()
     {
-        $element = $this->getSession()->getPage()->find('css', '[data-behat="photos"] li a');
+        $element = $this->getSession()->getPage()->find('css', '[data-behat="photos"] figure a');
         $element->click();
     }
 
