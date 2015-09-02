@@ -5,7 +5,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
-        <meta name="robots" content="noindex">
+        {% block head_robots %}<meta name="robots" content="noindex">{% endblock %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{% block title %}{{ meta_title_base }}{% endblock %}</title>
@@ -26,6 +26,7 @@
                 <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
             {% endstylesheets %}
         {% endblock %}
+        {% block head_custom_css %}
         <style>
             .navbar-inverse {
                 background-color: {{ navbar_color }};
@@ -41,7 +42,8 @@
                 color: {{ navbar_link_hover}} !important;
             }
         </style>
-
+		{% endblock head_custom_css %}
+		
         {% block head_js %}
             {% javascripts '@AppBundle/Resources/public/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js'
                     %}
@@ -49,7 +51,7 @@
             {% endjavascripts %}
         {% endblock %}
     </head>
-    <body>
+    {% block body_tag %}<body>{% endblock body_tag %}
     {% block analytics %}
         {% if bp_analytics_id is defined %}
             <script>
@@ -62,35 +64,39 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         {% block body_content %}
-        {% block navbar %}
-            {% include "AppBundle:layout:navbar.html.twig" %}
-        {% endblock navbar %}
-        {% block flash_message %}{% endblock flash_message %}
-        {% block body_pre_container %}
-        {% endblock body_pre_container %}
+	        {% block navbar %}
+	            {% include "AppBundle:layout:navbar.html.twig" %}
+	        {% endblock navbar %}
+	        {% block flash_message %}{% endblock flash_message %}
+	        {% block body_pre_container %}
+	        {% endblock body_pre_container %}
+	
+			{% block body_container %}
+		        <div class="container">
+		            {% block body_container_content %}
+		            {% endblock body_container_content %}
+		          <hr>
+		
+		          {% block footer %}
+		          <footer>
+		            {% block footer_content %}{% endblock footer_content %}
+		          </footer>
+		          {% endblock footer %}
+		        </div> <!-- /container -->
+			{% endblock body_container %}
 
-        <div class="container">
-            {% block body_container_content %}
-            {% endblock body_container_content %}
-          <hr>
-
-          {% block footer %}
-          <footer>
-            {% block footer_content %}{% endblock footer_content %}
-          </footer>
-          {% endblock footer %}
-        </div> <!-- /container -->
         {% endblock body_content %}
         {% block body_js %}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
             {% javascripts
                     '@AppBundle/Resources/public/js/vendor/bootstrap.min.js'
-                    '@AppBundle/Resources/public/js/main.js'
                     '@AppBundle/Resources/public/js/vendor/bootstrap-notify.js'
+                    '@AppBundle/Resources/public/js/main.js'
             %}
             <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
+            {% block body_js_extra %}
             <script>
                 window.chat_url = "{{ chat_url  }}";
                 window.api_endpoint = "{{ api_endpoint }}";
@@ -98,6 +104,7 @@
                 window.token = "{{ app.user.accessToken }}";
                 {% endif %}
             </script>
+            {% endblock body_js_extra %}
         {% endblock body_js %}
 
         {% block body_js_end %}
