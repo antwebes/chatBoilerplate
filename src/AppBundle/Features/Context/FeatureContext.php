@@ -221,6 +221,11 @@ class FeatureContext extends BaseContext
             '/api/photos/495',
             'fixtures/users/user_foto.json'
         );
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/2/visitors?limit=3',
+            'fixtures/users/visitors.json'
+        );
     }
 
     /**
