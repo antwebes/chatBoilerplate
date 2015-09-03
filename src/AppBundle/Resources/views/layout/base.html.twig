@@ -77,14 +77,16 @@
 		            {% endblock body_container_content %}
 		          <hr>
 		
-		          {% block footer %}
+		          {% block footer_into_container %}
 		          <footer>
 		            {% block footer_content %}{% endblock footer_content %}
 		          </footer>
-		          {% endblock footer %}
+		          {% endblock footer_into_container %}
 		        </div> <!-- /container -->
 			{% endblock body_container %}
-
+			{% block footer_out_container %}
+			{% endblock footer_out_container %}
+			
         {% endblock body_content %}
         {% block body_js %}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
