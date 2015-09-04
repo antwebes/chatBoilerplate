@@ -551,6 +551,34 @@ class FeatureContext extends BaseContext
             }
         }
     }
+    
+    /**
+     * @Then /^I should see the element with id "([^"]*)"$/
+     */
+    public function iShouldSeeTheElementWithId($arg1)
+    {
+    	$element = $this->getSession()->getPage()->find('css', '#'.$arg1);
+    	if(!$element){
+    		$message = sprintf("The element with id %s not found ", $arg1);
+    		throw new ExpectationException($message, $this->getSession());
+    	}
+    	return $element;
+    }
+    
+    /**
+     * @Then /^I should see the element footer$/
+     */
+    public function iShouldSeeTheElementFooter()
+    {
+    	$element = $this->getSession()->getPage()->find('css', 'footer');
+    	if(!$element){
+    		$message = sprintf("The element footer not found ");
+	   		throw new ExpectationException($message, $this->getSession());
+    	}
+    	return $element;
+    }
+    
+    
 
     /**
      * Chequea que existe un elemento ($dataToCheck) del data ($dataName=$attrData)
