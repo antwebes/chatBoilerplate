@@ -87,3 +87,6 @@ services:
         class: Twig_Extensions_Extension_Text
         tags:
             - { name: twig.extension }
+
+api_social:
+    visits_limit: %visits_limit%
