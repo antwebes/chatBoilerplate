@@ -28,6 +28,13 @@ Feature: Edit provile data
       And I select "1994" from "social_profile_birthday_year"
       And I press "Enviar"
      Then I should see "not contain extra fields"
+  
+  @edit_user_profile @edit_user_profile_success
+  Scenario: Go to page of edit profile photo
+    Given I am logedin
+     When I click on the element with css "data-behat" and "change-profile"
+      And I click on the element with css "data-behat" and "update-profile-photo"
+     Then The "data-behat" with tag "title-update-photo-profile" exist
      
   Scenario: Go to page profile, user need is loged
      When I go to "perfil"
