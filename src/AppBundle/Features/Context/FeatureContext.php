@@ -113,6 +113,12 @@ class FeatureContext extends BaseContext
                 "password" => "mysuperpassword"
             )
         );
+        
+        //Here We need fake this call, because we show widget user session in navbar
+        $this->fakeServerMappings->addGetResource(
+        		'/api/users/2',
+        		'fixtures/users/user.json'
+        		);
     }
 
     /**
