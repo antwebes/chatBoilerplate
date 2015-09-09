@@ -2,3 +2,19 @@ users: Users
 help: Help
 channels: Channels
 "My photos": "My photos"
+
+
+menu.title: Toggle navigation
+menu.item.home: Home
+menu.item.chat: Chat
+menu.item.users: Users
+menu.item.channels: Roons
+menu.item.vote_photos: Vote
+menu.item.help: Help
+menu.item.my_account: My Acount
+menu.item.user_profile: Profile
+menu.item.preferences: Preferences
+menu.item.register_rooms: Register Channels
+menu.item.login: Login
+menu.item.logout: Logout
+menu.item.register: Register

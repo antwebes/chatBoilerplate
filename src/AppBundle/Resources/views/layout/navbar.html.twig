@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="navbar-header">
 			<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-	            <span class="sr-only">Toggle navigation</span>
+	            <span class="sr-only">{{ 'menu.title' | trans }}</span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
@@ -12,9 +12,9 @@
 
 	    <div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav ant-navbar-link" style="margin-left:5px;">
-		        <li><a href="{{ path('ant_user_user_users')}}">{{ "users" | trans }}</a></li>
-		        <li><a href="{{ path('ant_help_index')}}">{{ "help" | trans }}</a></li>
-		        <li><a href="{{ path('channel_list')}}">{{ "channels" | trans }}</a></li>
+		        <li><a href="{{ path('ant_user_user_users')}}">{{ "menu.item.users" | trans }}</a></li>
+		        <li><a href="{{ path('ant_help_index')}}">{{ "menu.item.help" | trans }}</a></li>
+		        <li><a href="{{ path('channel_list')}}">{{ "menu.item.channels" | trans }}</a></li>
 			</ul>
 	        {% if not app.user %}
 			<form class="navbar-form navbar-right" action="{{ path("_security_check") }}" method="post" role="form">
@@ -24,21 +24,22 @@
 		        <div class="form-group">
 					<input type="password" name="_password" placeholder="Contraseña" class="form-control" required>
 		        </div>
-		        <button type="submit" class="btn btn-success">Entrar</button>
+		        <button type="submit" class="btn btn-success">{{ "menu.item.login" | trans }}</button>
 			</form>
 	        {% else %}
 	        <ul class="nav navbar-nav navbar-right">
 				<li><a>{% trans %}Bienvenido{% endtrans %} {{ app.user.username }}</a></li>
 			  	<li class="dropdown">
-			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ "My Account" | trans }} <span class="caret"></span></a>
+			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			    		{{ "menu.item.my_account" | trans }} <span class="caret"></span>
+			    	</a>
 				    <ul class="dropdown-menu">
-				      <li><a title="{{ "user.profile" | trans }}" href="{{ path('chatea_client_update_profile_index') }}">{{ "user.profile" | trans }}</a></li>
-				      <li><a title="{{ "Preferences" | trans }}" href="{{ path('chatea_client_user_settings') }}">{{ "Preferences" | trans }}</a></li>
-                      <li><a title="{{ "Register Channels" | trans }}" href="{{ path('chatea_client_register_channel') }}">{{ "Register Channels" | trans }}</a></li>
-                      <li><a title="{{ "Vote Photos" | trans }}" href="{{ path('user_vote') }}">{{ "Vote Photos" | trans }}</a></li>
-                      <li><a title="{{ "Register Channels" | trans }}" href="{{ path('ant_user_user_photos_show', {'id': app.user.id}) }}">{{ "My photos" | trans }}</a></li>
+				      <li><a title="{{ "menu.item.user_profile" | trans }}" href="{{ path('chatea_client_update_profile_index') }}">{{ "menu.item.user_profile" | trans }}</a></li>
+				      <li><a title="{{ "menu.item.preferences" | trans }}" href="{{ path('chatea_client_user_settings') }}">{{ "menu.item.preferences" | trans }}</a></li>
+                      <li><a title="{{ "menu.item.register_rooms" | trans }}" href="{{ path('chatea_client_register_channel') }}">{{ "menu.item.register_rooms" | trans }}</a></li>
+                      <li><a title="{{ "menu.item.vote_photos" | trans }}" href="{{ path('user_vote') }}">{{ "menu.item.vote_photos" | trans }}</a></li>
 				      <li role="separator" class="divider"></li>
-				      <li><a title="{{ "Logout" | trans }}" href="{{ path('_antwebes_chateaclient_logout') }}">{{ "Logout" | trans }}</a></li>
+				      <li><a title="{{ "menu.item.logout" | trans }}" href="{{ path('_antwebes_chateaclient_logout') }}">{{ "menu.item.logout" | trans }}</a></li>
 				    </ul>
 				</li>
 			</ul>

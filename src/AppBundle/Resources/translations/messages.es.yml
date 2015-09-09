@@ -2,3 +2,20 @@ users: Usuarios
 help: Ayuda
 channels: Canales
 "My photos": "Mis fotos"
+
+
+
+menu.title: Toggle navigation
+menu.item.home: Inicio
+menu.item.chat: Chat
+menu.item.users: Usuarios
+menu.item.channels: Canales
+menu.item.vote_photos: Votos
+menu.item.help: Ayuda
+menu.item.my_account: Mi Cuenta
+menu.item.user_profile: Perfil
+menu.item.preferences: Ajustes
+menu.item.register_rooms: Registrar canal
+menu.item.login: Iniciar sesión
+menu.item.logout: Salir
+menu.item.register: Registrarse
