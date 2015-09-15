@@ -65,16 +65,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "58490698ccc998e47275a3abda08ef38e04a0bbb"
+                "reference": "b754aff32503550a383e4f48636ee00abcd53f9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/58490698ccc998e47275a3abda08ef38e04a0bbb",
-                "reference": "58490698ccc998e47275a3abda08ef38e04a0bbb",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/b754aff32503550a383e4f48636ee00abcd53f9f",
+                "reference": "b754aff32503550a383e4f48636ee00abcd53f9f",
                 "shasum": ""
             },
             "require": {
-                "antwebes/chatea-client-lib": "0.1.6",
+                "antwebes/chatea-client-lib": "0.1.5",
                 "antwebes/chatea-common": "0.1.0",
                 "antwebes/chatea-secure-bundle": "0.1.5",
                 "doctrine/annotations": "^1.2",
@@ -110,20 +110,20 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-14 13:58:27"
+            "time": "2015-09-15 10:36:11"
         },
         {
             "name": "antwebes/chatea-client-lib",
-            "version": "v0.1.6",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientLib.git",
-                "reference": "7ae4f5a7458ce2b89e170d58807f0083cad089e9"
+                "reference": "6135d6e18bf29824ccd4236b97b0cd2ed4bc9653"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientLib/zipball/7ae4f5a7458ce2b89e170d58807f0083cad089e9",
-                "reference": "7ae4f5a7458ce2b89e170d58807f0083cad089e9",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientLib/zipball/6135d6e18bf29824ccd4236b97b0cd2ed4bc9653",
+                "reference": "6135d6e18bf29824ccd4236b97b0cd2ed4bc9653",
                 "shasum": ""
             },
             "require": {
@@ -157,7 +157,7 @@
                 "chateagratis",
                 "library"
             ],
-            "time": "2015-09-14 13:54:04"
+            "time": "2015-09-07 08:44:31"
         },
         {
             "name": "antwebes/chatea-common",
@@ -2419,12 +2419,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "6d3f124854913ff250bc03d53c32017690f79433"
+                "reference": "306d88a1e318531a767d5876b272815c6236b06c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/6d3f124854913ff250bc03d53c32017690f79433",
-                "reference": "6d3f124854913ff250bc03d53c32017690f79433",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/306d88a1e318531a767d5876b272815c6236b06c",
+                "reference": "306d88a1e318531a767d5876b272815c6236b06c",
                 "shasum": ""
             },
             "require": {
@@ -2519,7 +2519,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-09-14 14:00:14"
+            "time": "2015-09-15 09:46:38"
         },
         {
             "name": "twig/extensions",
@@ -2574,12 +2574,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "1292dcc69ac453b493d5817bb6d344c91d27f80c"
+                "reference": "7ffa3a2ae1f27a75f9dd66efde2b4c408f65f3c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1292dcc69ac453b493d5817bb6d344c91d27f80c",
-                "reference": "1292dcc69ac453b493d5817bb6d344c91d27f80c",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7ffa3a2ae1f27a75f9dd66efde2b4c408f65f3c4",
+                "reference": "7ffa3a2ae1f27a75f9dd66efde2b4c408f65f3c4",
                 "shasum": ""
             },
             "require": {
@@ -2627,7 +2627,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-14 08:36:12"
+            "time": "2015-09-15 06:52:30"
         }
     ],
     "packages-dev": [
