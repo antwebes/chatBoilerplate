@@ -90,7 +90,7 @@ class FeatureContext extends BaseContext
 
         $this->fakeServerMappings->addGetResource(
             '/api/users/2',
-            'fixtures/users/user.json'
+            'fixtures/users/user_recent_register.json'
         );
     }
 
