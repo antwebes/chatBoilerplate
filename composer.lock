@@ -299,7 +299,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "941eba920512d62098861362194d04dd5cfa44f3"
+                "reference": "7a1053b71f6cd39b5f183e0e912f13cda4238f5b"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -321,7 +321,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-16 13:19:44"
+            "time": "2015-09-16 14:55:36"
         },
         {
             "name": "doctrine/annotations",
@@ -397,12 +397,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "ac3bc1e14fcd429c823fb98b634be1e8e0142eb0"
+                "reference": "dd47003641aa5425820c0ec8a6f4a85e7412ffcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/ac3bc1e14fcd429c823fb98b634be1e8e0142eb0",
-                "reference": "ac3bc1e14fcd429c823fb98b634be1e8e0142eb0",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/dd47003641aa5425820c0ec8a6f4a85e7412ffcd",
+                "reference": "dd47003641aa5425820c0ec8a6f4a85e7412ffcd",
                 "shasum": ""
             },
             "require": {
@@ -459,7 +459,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-09-10 14:00:46"
+            "time": "2015-09-16 13:31:45"
         },
         {
             "name": "doctrine/collections",
@@ -533,12 +533,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "9b792f308aef6b267743047e2ec96ef99de450cd"
+                "reference": "9f35e74fcbe9011b660e0b423e98c83b7a8699c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/9b792f308aef6b267743047e2ec96ef99de450cd",
-                "reference": "9b792f308aef6b267743047e2ec96ef99de450cd",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/9f35e74fcbe9011b660e0b423e98c83b7a8699c0",
+                "reference": "9f35e74fcbe9011b660e0b423e98c83b7a8699c0",
                 "shasum": ""
             },
             "require": {
@@ -598,7 +598,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-09-03 13:52:00"
+            "time": "2015-09-16 13:21:47"
         },
         {
             "name": "doctrine/dbal",
