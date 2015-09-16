@@ -25,12 +25,12 @@
 
 {% block body_pre_container %}
   <div class="container">
-    <h1>{{ welcome_message }}</h1>
-    <p>{{ welcome_message_extended }}</p>
-    {% if app.user and has_chat %}
+    <h1>{{ web_param.welcome_message }}</h1>
+    <p>{{ web_param.welcome_message_extended }}</p>
+    {% if app.user and web_param.has_chat %}
         <p class="text-center">
-        	{% if chat_url %}
-        		<a class="btn btn-primary btn-lg" href="{{ chat_url }}" role="button">
+        	{% if web_param.chat_url %}
+        		<a class="btn btn-primary btn-lg" href="{{ web_param.chat_url }}" role="button">
         	{% else %}
         		<a class="btn btn-primary btn-lg" href="{{ path('ant_chat_chat_show')}}" role="button">
         	{% endif %}
@@ -98,4 +98,4 @@
 
 
 
-{% block footer_content %}<p>&copy; {{ affiliate_name }} 2015</p>{% endblock footer_content %}
+{% block footer_content %}<p>&copy; {{ web_param.affiliate_name }} 2015</p>{% endblock footer_content %}

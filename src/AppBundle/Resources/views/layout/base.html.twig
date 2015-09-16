@@ -8,12 +8,12 @@
         {% block head_robots %}<meta name="robots" content="noindex">{% endblock %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% block title %}{{ meta_title_base }}{% endblock %}</title>
+        <title>{% block title %}{{ web_param.meta_title_base }}{% endblock %}</title>
         <meta name="description" content="{% block head_meta_description %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        {% if favicon is defined %}
-        <link rel="shortcut icon" href="{{ favicon }}" />
+        {% if web_param.favicon is defined %}
+        <link rel="shortcut icon" href="{{ web_param.favicon }}" />
         {% else %}
             <link rel="shortcut icon" href="/favicon.ico" />
         {% endif %}
@@ -29,17 +29,17 @@
         {% block head_custom_css %}
         <style>
             .navbar-inverse {
-                background-color: {{ navbar_color }};
-                background-image: -webkit-linear-gradient(top,{{ navbar_color }} 0,{{ navbar_color }} 100%);
-                background-image: linear-gradient(to bottom, {{ navbar_color }} 0px, {{ navbar_color }} 100%);
+                background-color: {{ web_param.navbar_color }};
+                background-image: -webkit-linear-gradient(top,{{ web_param.navbar_color }} 0,{{ web_param.navbar_color }} 100%);
+                background-image: linear-gradient(to bottom, {{ web_param.navbar_color }} 0px, {{ web_param.navbar_color }} 100%);
                 background-repeat: repeat-x;
             }
             .ant-navbar-link > li > a{
-                color: {{ navbar_link }} !important;
+                color: {{ web_param.navbar_link }} !important;
             }
 
             .ant-navbar-link > li > a:hover, .ant-navbar-link > li > a:focus {
-                color: {{ navbar_link_hover}} !important;
+                color: {{ web_param.navbar_link_hover}} !important;
             }
         </style>
 		{% endblock head_custom_css %}
@@ -55,7 +55,7 @@
     {% block analytics %}
         {% if bp_analytics_id is defined %}
             <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-41992080-4', 'auto');var dimensionValue = "{{affiliate_name}}";ga('set', 'dimension1', dimensionValue);ga('send', 'pageview');
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-41992080-4', 'auto');var dimensionValue = "{{web_param.affiliate_name}}";ga('set', 'dimension1', dimensionValue);ga('send', 'pageview');
             </script>
         {% endif %}
     {% endblock analytics %}
@@ -106,7 +106,7 @@
         {% block body_js_end %}
         {% endblock body_js_end %}
 		            <script>
-                window.chat_url = "{{ chat_url  }}";
+                window.chat_url = "{{ web_param.chat_url  }}";
                 window.api_endpoint = "{{ api_endpoint }}";
                 {% if app.user %}
                 window.token = "{{ app.user.accessToken }}";
