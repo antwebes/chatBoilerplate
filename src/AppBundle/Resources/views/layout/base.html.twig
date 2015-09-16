@@ -99,7 +99,13 @@
             <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
             {% block body_js_extra %}
-            <script>
+
+            {% endblock body_js_extra %}
+        {% endblock body_js %}
+
+        {% block body_js_end %}
+        {% endblock body_js_end %}
+		            <script>
                 window.chat_url = "{{ chat_url  }}";
                 window.api_endpoint = "{{ api_endpoint }}";
                 {% if app.user %}
@@ -137,11 +143,6 @@
                 </script>
                 {% endjavascripts %}
             {% endif %}
-            {% endblock body_js_extra %}
-        {% endblock body_js %}
-
-        {% block body_js_end %}
-        {% endblock body_js_end %}
     {% endblock body %}
     </body>
 </html>
