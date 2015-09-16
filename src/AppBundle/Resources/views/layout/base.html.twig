@@ -99,18 +99,19 @@
             <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
             {% block body_js_extra %}
-            <script>
-                window.chat_url = "{{ chat_url  }}";
-                window.api_endpoint = "{{ api_endpoint }}";
-                {% if app.user %}
-                window.token = "{{ app.user.accessToken }}";
-                {% endif %}
-            </script>
+
             {% endblock body_js_extra %}
         {% endblock body_js %}
 
         {% block body_js_end %}
         {% endblock body_js_end %}
+        <script>
+            window.chat_url = "{{ chat_url  }}";
+            window.api_endpoint = "{{ api_endpoint }}";
+            {% if app.user %}
+            window.token = "{{ app.user.accessToken }}";
+            {% endif %}
+        </script>
     {% endblock body %}
     </body>
 </html>
