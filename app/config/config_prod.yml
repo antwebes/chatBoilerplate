@@ -28,6 +28,7 @@ twig:
         social_endpoint: %social_endpoint%
         api_endpoint: %api_endpoint%
         payment_endpoint: %payment_endpoint%
+        api_endpoint: %api_endpoint%
 
 snc_redis:
     clients:
