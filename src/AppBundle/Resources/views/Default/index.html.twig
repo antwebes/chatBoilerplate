@@ -11,7 +11,7 @@
 
 {% block body_pre_container %}
 
-	{% if index_chat is defined and index_chat is not null and index_chat %}
+	{% if web_param.index_chat is defined and web_param.index_chat is not null and web_param.index_chat %}
 		{# include js in block body_js_end #}
 		<div id="cgs-webchat" style="margin-top: -20px;" ></div>
 	{% else %}
@@ -41,9 +41,9 @@
 	  </div>
 	  <hr>
 	{% endif %}
-	{% if index_chat %}
-				{% if extra_html is defined %}
-					{{ extra_html | raw}}
+	{% if web_param.index_chat %}
+				{% if web_param.extra_html is defined %}
+					{{ web_param.extra_html | raw}}
 				{% endif %}
 	{% endif %}
 {% endblock body_pre_container %}
@@ -51,8 +51,8 @@
 
 {% block body_js_end %}
 	{{ parent() }}
-	{% if index_chat is defined%}
-          {% include "ApiSocialBundle:Chat:script.html.twig" with {enter_channel: channel_affiliate, chat_nick: nick_affiliate ~ '????'} %}
+	{% if web_param.index_chat is defined%}
+          {% include "ApiSocialBundle:Chat:script.html.twig" with {enter_channel: web_param.channel_affiliate, chat_nick: web_param.nick_affiliate ~ '????'} %}
 	{% endif %}
 	
 	{# Init Js to lazyload to user in index #}
