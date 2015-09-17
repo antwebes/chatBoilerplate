@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "d9bc77593114fc0c3cc038dc06132c42bce123dc"
+                "reference": "8d04d5520e1c1a51212319a378a5f449a2647700"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/d9bc77593114fc0c3cc038dc06132c42bce123dc",
-                "reference": "d9bc77593114fc0c3cc038dc06132c42bce123dc",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/8d04d5520e1c1a51212319a378a5f449a2647700",
+                "reference": "8d04d5520e1c1a51212319a378a5f449a2647700",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-16 12:51:27"
+            "time": "2015-09-17 09:00:27"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -299,7 +299,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "7a1053b71f6cd39b5f183e0e912f13cda4238f5b"
+                "reference": "7003622c70a82c6dd82517525b048dc2e352099e"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -321,7 +321,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-16 14:55:36"
+            "time": "2015-09-17 09:01:22"
         },
         {
             "name": "doctrine/annotations",
