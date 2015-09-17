@@ -119,28 +119,7 @@
                 %}
                 <script src="{{ asset(asset_url) }}"></script>
 
-                <script>
-                    (function(){
-                        var user_id = {{ app.user.id }};
-                        var token = "{{ app.user.accessToken }}";
-                        var api_endpoint = "{{ api_endpoint }}";
-                        var $messageCounter = $('#num_messages');
-
-                        $.ajaxSetup({
-                            beforeSend: function(xhr, settings) {
-                                xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-                            }
-                        });
-
-                        $.Updater(api_endpoint + '/api/users/'+user_id+'/threads/inbox', {interval: '60000'}, function(data){
-                            nonReaded = $(data).filter(function(i, obj){
-                                return !obj.is_readed;
-                            });
-
-                            $messageCounter.html(nonReaded.length);
-                        });
-                    })();
-                </script>
+				{% include "ApiSocialBundle:Message:Common/script_to_navbar.html.twig" %}
                 {% endjavascripts %}
             {% endif %}
     {% endblock body %}
