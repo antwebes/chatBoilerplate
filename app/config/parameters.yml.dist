@@ -40,3 +40,4 @@ parameters:
     payment_endpoint: "http://chateapayments.lo/app_dev.php/"
     visits_limit: 3
     realtime_endpoint: http://127.0.0.1:8000
+    canAccessPrettyBundle: true

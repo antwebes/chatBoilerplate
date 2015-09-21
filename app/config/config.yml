@@ -95,3 +95,7 @@ api_social:
         hasProfilePhoto: desc
         lastLogin: desc
     realtime_endpoint: %realtime_endpoint%
+
+pretty:
+    parameters_service: 'yml'
+    canAccessPrettyBundle: %canAccessPrettyBundle%
