@@ -13,16 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "91041afbe4fa54c9a5989f10004a374481b630cd"
+                "reference": "cd996b2f699b6ea6904dcae655ee3322522bf739"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/91041afbe4fa54c9a5989f10004a374481b630cd",
-                "reference": "91041afbe4fa54c9a5989f10004a374481b630cd",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/cd996b2f699b6ea6904dcae655ee3322522bf739",
+                "reference": "cd996b2f699b6ea6904dcae655ee3322522bf739",
                 "shasum": ""
             },
             "require": {
-                "antwebes/chatea-client-bundle": "0.1.25",
+                "antwebes/chatea-client-bundle": "0.1.26",
                 "symfony/framework-bundle": "~2.3"
             },
             "require-dev": {
@@ -56,30 +56,35 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-17 12:16:30"
+            "time": "2015-09-22 11:28:12"
         },
         {
             "name": "antwebes/chatea-client-bundle",
-            "version": "v0.1.25",
+            "version": "v0.1.26",
             "target-dir": "Ant/Bundle/ChateaClientBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "1f45ea66f820c8abf4088ea5ce7723578a35651c"
+                "reference": "cb95175c82194918e3d70da0be76fb1d9ec20840"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/1f45ea66f820c8abf4088ea5ce7723578a35651c",
-                "reference": "1f45ea66f820c8abf4088ea5ce7723578a35651c",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/cb95175c82194918e3d70da0be76fb1d9ec20840",
+                "reference": "cb95175c82194918e3d70da0be76fb1d9ec20840",
                 "shasum": ""
             },
             "require": {
-                "antwebes/chatea-client-lib": "0.1.5",
+                "antwebes/chatea-client-lib": "0.1.6",
                 "antwebes/chatea-common": "0.1.0",
                 "antwebes/chatea-secure-bundle": "0.1.5",
                 "doctrine/annotations": "^1.2",
                 "excelwebzone/recaptcha-bundle": "2.3.*@dev",
-                "symfony/framework-bundle": "~2.3"
+                "symfony/assetic-bundle": "~2.3",
+                "symfony/form": "2.3.*",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/security-bundle": "2.3.*",
+                "symfony/twig-bundle": "2.3.*",
+                "symfony/validator": "2.3.*"
             },
             "require-dev": {
                 "raulfraile/ladybug": "~1.0"
@@ -110,20 +115,20 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-16 08:53:45"
+            "time": "2015-09-22 10:37:24"
         },
         {
             "name": "antwebes/chatea-client-lib",
-            "version": "v0.1.5",
+            "version": "v0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientLib.git",
-                "reference": "6135d6e18bf29824ccd4236b97b0cd2ed4bc9653"
+                "reference": "35e449ff3e0c8228993d5d04bf408891fe93b8fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientLib/zipball/6135d6e18bf29824ccd4236b97b0cd2ed4bc9653",
-                "reference": "6135d6e18bf29824ccd4236b97b0cd2ed4bc9653",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientLib/zipball/35e449ff3e0c8228993d5d04bf408891fe93b8fd",
+                "reference": "35e449ff3e0c8228993d5d04bf408891fe93b8fd",
                 "shasum": ""
             },
             "require": {
@@ -157,7 +162,7 @@
                 "chateagratis",
                 "library"
             ],
-            "time": "2015-09-07 08:44:31"
+            "time": "2015-09-22 10:35:29"
         },
         {
             "name": "antwebes/chatea-common",
@@ -299,7 +304,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "b56222521de38c229ae85cb0cb591260d1ec774e"
+                "reference": "db931c43df1052f2ae83407990c7cc1aad4f139f"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -321,7 +326,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-18 07:36:51"
+            "time": "2015-09-22 11:29:30"
         },
         {
             "name": "doctrine/annotations",
@@ -2303,12 +2308,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/MonologBundle.git",
-                "reference": "7704609d824c8c09b6e660811f7fa71029b14440"
+                "reference": "3cf6864d23a6f32eb01018d2309d855abe4ab3bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/7704609d824c8c09b6e660811f7fa71029b14440",
-                "reference": "7704609d824c8c09b6e660811f7fa71029b14440",
+                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/3cf6864d23a6f32eb01018d2309d855abe4ab3bb",
+                "reference": "3cf6864d23a6f32eb01018d2309d855abe4ab3bb",
                 "shasum": ""
             },
             "require": {
@@ -2354,7 +2359,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2015-09-16 09:27:15"
+            "time": "2015-09-20 19:20:38"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -2419,16 +2424,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "4a9676b5a2d81926ca14dd0cd8329e0759c69b35"
+                "reference": "bd415c6985907fe915712af54c6495633e6523ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/4a9676b5a2d81926ca14dd0cd8329e0759c69b35",
-                "reference": "4a9676b5a2d81926ca14dd0cd8329e0759c69b35",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/bd415c6985907fe915712af54c6495633e6523ee",
+                "reference": "bd415c6985907fe915712af54c6495633e6523ee",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "~2.3",
+                "doctrine/common": "~2.4",
                 "php": ">=5.3.3",
                 "psr/log": "~1.0",
                 "twig/twig": "~1.20|~2.0"
@@ -2474,8 +2479,8 @@
             },
             "require-dev": {
                 "doctrine/data-fixtures": "1.0.*",
-                "doctrine/dbal": "~2.2",
-                "doctrine/orm": "~2.2,>=2.2.3",
+                "doctrine/dbal": "~2.4",
+                "doctrine/orm": "~2.4,>=2.4.5",
                 "ircmaxell/password-compat": "~1.0",
                 "monolog/monolog": "~1.3",
                 "ocramius/proxy-manager": "~0.3.1",
@@ -2519,7 +2524,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-09-17 12:15:24"
+            "time": "2015-09-21 06:03:52"
         },
         {
             "name": "twig/extensions",
@@ -2574,12 +2579,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9fde02fe552256722466c9985520b6f50c9c759b"
+                "reference": "821464ad0137909bb38ad5dbf8a1f2230f33a9f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9fde02fe552256722466c9985520b6f50c9c759b",
-                "reference": "9fde02fe552256722466c9985520b6f50c9c759b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/821464ad0137909bb38ad5dbf8a1f2230f33a9f2",
+                "reference": "821464ad0137909bb38ad5dbf8a1f2230f33a9f2",
                 "shasum": ""
             },
             "require": {
@@ -2627,7 +2632,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-16 08:32:19"
+            "time": "2015-09-21 07:07:22"
         }
     ],
     "packages-dev": [
