@@ -97,5 +97,4 @@ api_social:
     realtime_endpoint: %realtime_endpoint%
 
 pretty:
-    parameters_service: 'yml'
-    canAccessPrettyBundle: %canAccessPrettyBundle%
+    parameters_service: 'ant_web_site_parameters'

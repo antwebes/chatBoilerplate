@@ -56,4 +56,22 @@ class AppKernel extends Kernel
 
         return parent::getContainerBaseClass();
     }
+
+    /**
+     * Initializes the service container.
+     *
+     * The cached version of the service container is used when fresh, otherwise the
+     * container is built.
+     */
+    protected function initializeContainer()
+    {
+        //xabier: this is necessary because command  php app/console assetic:dump use the twig.loader.filesystem, and is override in
+        // Ant\Bundle\PrettyBundle\DependencyInjection\Compiler\TemplateLoaderCompiler
+        //@see http://stackoverflow.com/questions/11405202/symfony-2-cant-clear-cache-you-cannot-create-a-service-request-of-an-in
+        parent::initializeContainer();
+        if (PHP_SAPI == 'cli') {
+            $this->getContainer()->enterScope('request');
+            $this->getContainer()->set('request', new \Symfony\Component\HttpFoundation\Request(), 'request');
+        }
+    }
 }
