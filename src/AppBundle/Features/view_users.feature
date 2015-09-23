@@ -6,7 +6,7 @@ Feature: View User data
   Scenario: List users
   Given I am on "http://boilerplatele.local/app_dev.php"
    When I click "Usuarios"
-   Then the API url "/api/users?limit=30&offset=0&filters=language%3Des" should have been called
+   Then the API url "/api/users?limit=30&offset=0&filters=language%3Des&order=lastLogin%3Ddesc%2ChasProfilePhoto%3Ddesc" should have been called
     And I should see that there are 2 pages
     And I should see the following users with there profile photo and link to the profile:
       | Emily   | Rothville  | http://api.chateagratis.local/uploads/2_medium.jpg | /usuarios/emily-2   |
@@ -17,7 +17,7 @@ Feature: View User data
   Scenario: View user profile
     Given I am on "http://boilerplatele.local/app_dev.php"
      When I click "Usuarios"
-     Then the API url "/api/users?limit=30&offset=0&filters=language%3Des" should have been called
+     Then the API url "/api/users?limit=30&offset=0&filters=language%3Des&order=lastLogin%3Ddesc%2ChasProfilePhoto%3Ddesc" should have been called
       And the API url "/api/users?limit=25&offset=0&filters=outstanding%3D1" should have been called
       And I click "Emily"
       And I should see the following profile information:

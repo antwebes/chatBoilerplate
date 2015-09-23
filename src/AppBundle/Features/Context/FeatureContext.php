@@ -129,7 +129,7 @@ class FeatureContext extends BaseContext
         $this->doInitFakeServer();
 
         $this->fakeServerMappings->addGetResource(
-            '/api/users?limit=30&offset=0&filters=language%3Des',
+            '/api/users?limit=30&offset=0&filters=language%3Des&order=lastLogin%3Ddesc%2ChasProfilePhoto%3Ddesc',
             'fixtures/users/users_limit.json'
         );
         
