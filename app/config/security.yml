@@ -41,4 +41,3 @@ security:
     access_control:
         - { path: ^/usuarios/.*/fotos, roles: ROLE_USER }
         - { path: ^/perfil, roles: ROLE_USER }
-        - { path: ^/website-admin, roles: ROLE_AFFILIATE }

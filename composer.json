@@ -28,7 +28,8 @@
         "antwebes/help-bundle": "dev-icons_bootstrap_filter_optipng",
         "antwebes/pretty-bundle": "dev-master",
         "antwebes/website-parameters": "dev-master",
-        "jms/translation-bundle": "1.1.0"
+        "jms/translation-bundle": "1.1.0",
+        "doctrine/doctrine-fixtures-bundle": "^2.2@dev"
     },
     "require-dev" : {
         "behat/behat" : "2.4.*@stable",
