@@ -101,6 +101,21 @@
             {% block body_js_extra %}
 
             {% endblock body_js_extra %}
+
+            {% block js_consent_cookie %}
+                <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+                <script type="text/javascript">
+                    window.cookieconsent_options = {
+                        "message":"{{ 'cookies.message' | trans({}, 'Cookies') }}",
+                        "dismiss":"{{ 'cookies.dismiss' | trans({}, 'Cookies') }}",
+                        "link":null,
+                        "theme":"light-bottom"
+                    };
+                </script>
+
+                <script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
+                <!-- End Cookie Consent plugin -->
+            {% endblock js_consent_cookie %}
         {% endblock body_js %}
 
         {% block body_js_end %}
