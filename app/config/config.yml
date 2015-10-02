@@ -27,7 +27,6 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
-
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -90,6 +89,4 @@ services:
 
 api_social:
     visits_limit: %visits_limit%
-
-pretty:
-    parameters_service: 'ant_web_site_parameters'
+    parameters_service: %parameters_service%

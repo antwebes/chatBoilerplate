@@ -2,19 +2,26 @@
 namespace AppBundle\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use AppBundle\Provider\Configuration;
-
 use Ant\Bundle\ChateaClientBundle\Api\Model\Client;
 use Ant\Bundle\ChateaClientBundle\Event\UserEvent;
 use Ant\Bundle\ChateaClientBundle\Event\ChateaClientEvents;
+use Ant\Bundle\ApiSocialBundle\Services\ParametersServiceInterface;
 
 class ChateaClientListener implements EventSubscriberInterface
 {
-    public $affiliate_path;
+    /**
+     * @var ParametersServiceInterface
+     */
+    public $parametersService;
 
-    public function __construct($affiliate_path)
+    /**
+     * ChateaClientListener constructor.
+     *
+     * @param ParametersServiceInterface $parametersService
+     */
+    public function __construct(ParametersServiceInterface $parametersService)
     {
-        $this->affiliate_path = $affiliate_path;
+        $this->parametersService = $parametersService;
     }
 
 
@@ -25,13 +32,20 @@ class ChateaClientListener implements EventSubscriberInterface
         );
     }
 
+    public final function getClientId()
+    {
+        return $this->parametersService->getParameter(ParametersServiceInterface::PARAMETER_TYPE_CONTAINER,'client_id');
+    }
+
+    public final function getClientName()
+    {
+        return $this->parametersService->getParameter(ParametersServiceInterface::PARAMETER_TYPE_CONTAINER,'client_id');
+    }
 
     public function onUserRegisterSuccess(UserEvent $event)
     {
-        $parameters = Configuration::loadYml($event->getRequest(),$this->affiliate_path);
-
         $client = new Client();
-        $client->setId($parameters['client']);
+        $client->setId(getClientId());
         $event->getUser()->setClient($client);
     }
 }

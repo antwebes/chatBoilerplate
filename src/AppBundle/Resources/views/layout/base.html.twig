@@ -43,7 +43,7 @@
             }
         </style>
 		{% endblock head_custom_css %}
-		
+
         {% block head_js %}
             {% javascripts '@AppBundle/Resources/public/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js'
                     %}
@@ -70,13 +70,13 @@
 	        {% block flash_message %}{% endblock flash_message %}
 	        {% block body_pre_container %}
 	        {% endblock body_pre_container %}
-	
+
 			{% block body_container %}
 		        <div class="container">
 		            {% block body_container_content %}
 		            {% endblock body_container_content %}
 		          <hr>
-		
+
 		          {% block footer_into_container %}
 		          <footer>
 		            {% block footer_content %}{% endblock footer_content %}
@@ -86,7 +86,7 @@
 			{% endblock body_container %}
 			{% block footer_out_container %}
 			{% endblock footer_out_container %}
-			
+
         {% endblock body_content %}
         {% block body_js %}
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
