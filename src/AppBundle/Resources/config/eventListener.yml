@@ -3,6 +3,6 @@ parameters:
 services:
     app.event_listener.channel_client_listener:
         class: AppBundle\EventListener\ChateaClientListener
-        arguments: [%affiliate_dir_path%]
+        arguments: [ @ant_parameters_service ]
         tags:
             - { name: kernel.event_subscriber }

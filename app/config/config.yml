@@ -27,7 +27,6 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
-
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -88,13 +87,9 @@ services:
         tags:
             - { name: twig.extension }
 
-web_site_parameters:
-    client_id: %chatea_app_id%
 api_social:
     visits_limit: %visits_limit%    users_orders:
         hasProfilePhoto: desc
         lastLogin: desc
     realtime_endpoint: %realtime_endpoint%
-
-pretty:
-    parameters_service: 'ant_web_site_parameters'
+    parameters_service: %parameters_service%

@@ -39,4 +39,5 @@ parameters:
     affiliate_dir_path: %kernel.root_dir%/../vendor/antwebes/pretty-bundle/Ant/Bundle/PrettyBundle/Resources/config/affiliates/
     payment_endpoint: "http://chateapayments.lo/app_dev.php/"
     visits_limit: 3
+    parameters_service: 'parameters_in_yml'
     realtime_endpoint: http://127.0.0.1:8000
