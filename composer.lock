@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "7d9027541ac3b9616a3ccb279c2a14379669fbf0"
+                "reference": "d7fc5f34f03881e5a56872ccd86eae8daf30eaee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/7d9027541ac3b9616a3ccb279c2a14379669fbf0",
-                "reference": "7d9027541ac3b9616a3ccb279c2a14379669fbf0",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/d7fc5f34f03881e5a56872ccd86eae8daf30eaee",
+                "reference": "d7fc5f34f03881e5a56872ccd86eae8daf30eaee",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-10-06 10:44:31"
+            "time": "2015-10-07 14:23:31"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -304,7 +304,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "f26f6990afb31089e02d60fc92d52d70d95994f1"
+                "reference": "44a8f85cc4342d0ff50b87a86abfe0617e7c733e"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -326,7 +326,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-10-06 10:46:03"
+            "time": "2015-10-07 14:37:37"
         },
         {
             "name": "doctrine/annotations",
@@ -2424,12 +2424,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "ea10f2415e40b808f90f0fb3f688eb94be6ebf54"
+                "reference": "2406cc7b4337d2810ee653b862ff0a0b4493e5de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/ea10f2415e40b808f90f0fb3f688eb94be6ebf54",
-                "reference": "ea10f2415e40b808f90f0fb3f688eb94be6ebf54",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/2406cc7b4337d2810ee653b862ff0a0b4493e5de",
+                "reference": "2406cc7b4337d2810ee653b862ff0a0b4493e5de",
                 "shasum": ""
             },
             "require": {
@@ -2524,7 +2524,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-10-06 08:49:56"
+            "time": "2015-10-07 12:28:08"
         },
         {
             "name": "twig/extensions",
