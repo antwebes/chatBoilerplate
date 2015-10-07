@@ -28,7 +28,7 @@
 			</form>
 	        {% else %}
 	        <ul class="nav navbar-nav navbar-right">
-				<li><a href="{{ path('ant_user_user_show', {'username' : app.user.username, 'user_id': app.user.id }) }}">{% trans %}Bienvenido{% endtrans %} {{ app.user.username }}</a></li>
+				<li><a href="{{ path('ant_user_user_show', {'username' : app.user.username, 'user_id': app.user.id }) }}" data-behat="user-greeting">{% trans %}Bienvenido{% endtrans %} {{ app.user.username }}</a></li>
 <li><a title="{{ "Messages" | trans }}" href="{{ path('ant_user_user_messages') }}">{{ "Messages" | trans }} (<span id="num_messages">0</span>)</a></li>
 			  	<li class="dropdown">
 			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

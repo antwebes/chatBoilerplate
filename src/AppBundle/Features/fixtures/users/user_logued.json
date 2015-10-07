@@ -1,0 +1,58 @@
+{
+  "id": 2,
+  "username": "ausername",
+  "username_canonical": "ausername",
+  "enabled": true,
+  "channels": [],
+  "channels_fan": [],
+  "channels_moderated": [],
+  "profile": {
+    "seeking": "women",
+    "gender": "female",
+    "birthday": "1993-10-30T00:00:00+0100",
+    "count_visits": 0,
+    "profile_photo": {
+      "id": 628,
+      "publicated_at": "2014-02-25T09:25:57+0100",
+      "number_votes": 0,
+      "score": 0,
+      "path": "http://api.chateagratis.local/uploads/original/2014/02/25/530c53953d217.jpg",
+      "path_large": "http://api.chateagratis.local/uploads/original/2014/02/25/530c53953d217_large.jpg",
+      "path_medium": "http://api.chateagratis.local/uploads/original/2014/02/25/530c53953d217_medium.jpg",
+      "path_small": "http://api.chateagratis.local/uploads/original/2014/02/25/530c53953d217_small.jpg",
+      "path_icon": "http://api.chateagratis.local/uploads/original/2014/02/25/530c53953d217_icon.jpg"
+    }
+  },
+  "city": {
+    "name": "Rothville",
+    "id": 121218
+  },
+  "client": {
+    "id": 13,
+    "name": "chateagratis-web",
+    "affiliate": {
+      "id": 1,
+      "name": "ant web"
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/users/2"
+    },
+    "channels": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/users/2/channels"
+    },
+    "channels_fan": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/users/2/channelsFan"
+    },
+    "blocked_users": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/users/2/blocked"
+    },
+    "photos": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/users/2/photos"
+    },
+    "channels_moderated": {
+      "href": "http://api.chateagratis.local/app_dev.php/api/users/2/moderated"
+    }
+  }
+}

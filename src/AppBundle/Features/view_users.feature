@@ -38,7 +38,6 @@ Feature: View User data
   @view_user_profile @view_users
   Scenario: View users photos as loged in user
     Given I am logedin
-      #And I am on "http://boilerplatele.local/app_dev.php"
      When I click "Usuarios"
       And I click "Emily"
       And I click "Fotos"
@@ -48,7 +47,6 @@ Feature: View User data
   @view_user_profile @view_users
   Scenario: View a users photo as loged in user
     Given I am logedin
-      #And I am on "http://boilerplatele.local/app_dev.php"
      When I click "Usuarios"
       And I click "Emily"
       And I click "Fotos"

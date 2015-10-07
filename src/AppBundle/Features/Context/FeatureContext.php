@@ -178,6 +178,31 @@ class FeatureContext extends BaseContext
     }
     
     /**
+     * @BeforeScenario @view_my_profile
+     */
+    public function beforeViewMyProfile()
+    {   
+    	$this->doInitFakeServer();
+    	
+    	$this->fakeServerMappings->addGetResource(
+    			'/api/users/2',
+    			'fixtures/users/user_logued.json'
+    			);
+    
+    	
+    	$this->fakeServerMappings->addGetResource(
+    			'/api/users/2/visitors?limit=3',
+    			 'fixtures/users/visitors.json'
+    			);
+    	
+    	//RightBar with list channels in show user
+        $this->fakeServerMappings->addGetResource(
+        		'/api/channels?filter=language%3Des&order=fans%3Ddesc&limit=10&offset=0',
+        		'fixtures/users/users_limit.json'
+        );
+    }
+    
+    /**
      * @BeforeScenario @view_user_profile
      */
     public function beforeUserProfile()
@@ -188,6 +213,8 @@ class FeatureContext extends BaseContext
             '/api/users/emily',
             'fixtures/users/user.json'
         );
+        
+        //RightBar with list channels in show user
         $this->fakeServerMappings->addGetResource(
         		'/api/channels?filter=language%3Des&order=fans%3Ddesc&limit=10&offset=0',
         		'fixtures/users/users_limit.json'
@@ -418,6 +445,14 @@ class FeatureContext extends BaseContext
             $message = sprintf("Expected to see %s users", $count);
             throw new ExpectationException($message, $this->getSession());
         }
+    }
+    
+    /**
+     * @Given /^I should see the value "([^"]*)" into attribute "([^"]*)"$/
+     */
+    public function iShouldSeeTheValueIntoAttribute($arg1, $arg2)
+    {
+    	return $this->findElementDataBehat($arg1, $arg2);
     }
 
     /**
