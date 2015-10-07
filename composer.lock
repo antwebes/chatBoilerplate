@@ -304,7 +304,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "44a8f85cc4342d0ff50b87a86abfe0617e7c733e"
+                "reference": "78dabc95249cbf0eb08cf8363dcc08e38b0107ed"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -326,7 +326,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-10-07 14:37:37"
+            "time": "2015-10-07 14:53:12"
         },
         {
             "name": "doctrine/annotations",
@@ -1166,12 +1166,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Incenteev/ParameterHandler.git",
-                "reference": "84a205fe80a46101607bafbc423019527893ddd0"
+                "reference": "f7b677a5f9bfd8bf5f165a0ff96ce7426b870312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/84a205fe80a46101607bafbc423019527893ddd0",
-                "reference": "84a205fe80a46101607bafbc423019527893ddd0",
+                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/f7b677a5f9bfd8bf5f165a0ff96ce7426b870312",
+                "reference": "f7b677a5f9bfd8bf5f165a0ff96ce7426b870312",
                 "shasum": ""
             },
             "require": {
@@ -1209,7 +1209,7 @@
             "keywords": [
                 "parameters management"
             ],
-            "time": "2015-06-03 08:27:03"
+            "time": "2015-10-07 14:51:08"
         },
         {
             "name": "jdorn/sql-formatter",
