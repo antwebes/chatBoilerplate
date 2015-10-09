@@ -27,6 +27,8 @@
   <div class="container">
     <h1>{{ welcome_message }}</h1>
     <p>{{ welcome_message_extended }}</p>
+    <h2 class="text-center">{{ 'form.members_search.placeholder' | trans }}</h2>
+    {{ render(controller('ApiSocialBundle:User:renderAdvancedSearch')) }}
     {% if app.user and has_chat %}
         <p class="text-center">
         	{% if chat_url %}
