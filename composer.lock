@@ -13,22 +13,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "d6833106206cbfac1cb379d8468058143c7f1899"
+                "reference": "2722abacba6678f0456ce97fd7c3d428b1c8cea1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/d6833106206cbfac1cb379d8468058143c7f1899",
-                "reference": "d6833106206cbfac1cb379d8468058143c7f1899",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/2722abacba6678f0456ce97fd7c3d428b1c8cea1",
+                "reference": "2722abacba6678f0456ce97fd7c3d428b1c8cea1",
                 "shasum": ""
             },
             "require": {
                 "antwebes/chatea-client-bundle": "0.1.27",
-                "symfony/framework-bundle": "~2.3"
+                "excelwebzone/recaptcha-bundle": "2.3.x-dev"
             },
             "require-dev": {
                 "mockery/mockery": "@stable",
                 "phpunit/phpunit": "@stable",
-                "raulfraile/ladybug": "~1.0"
+                "raulfraile/ladybug": "~1.0",
+                "symfony/dependency-injection": "v2.3.33",
+                "symfony/framework-bundle": "v2.3.33"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -56,7 +58,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-10-08 14:52:46"
+            "time": "2015-10-09 09:16:21"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -304,7 +306,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "138d7a4f298ede2ae0fb50ee4c5546b8268c36a0"
+                "reference": "86dd48ac0b2dd5cb5f4d564d3b85ad9b83d3fa45"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -326,7 +328,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-10-08 12:23:58"
+            "time": "2015-10-09 09:15:55"
         },
         {
             "name": "doctrine/annotations",
@@ -2579,12 +2581,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "efaf5036e6857616379b78648ffdb5fdafb92c87"
+                "reference": "aa1596785b515a96cd10275849dc0408ffcfef12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/efaf5036e6857616379b78648ffdb5fdafb92c87",
-                "reference": "efaf5036e6857616379b78648ffdb5fdafb92c87",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/aa1596785b515a96cd10275849dc0408ffcfef12",
+                "reference": "aa1596785b515a96cd10275849dc0408ffcfef12",
                 "shasum": ""
             },
             "require": {
@@ -2632,7 +2634,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-10-04 08:38:04"
+            "time": "2015-10-08 15:08:17"
         }
     ],
     "packages-dev": [
