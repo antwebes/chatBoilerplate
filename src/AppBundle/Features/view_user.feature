@@ -11,7 +11,7 @@ Feature: View User data
       And I click "Emily"
       And I should see the value "btn_chat_user" into attribute "data-behat"
 
-  @view_my_profile @pablo
+  @view_my_profile
   Scenario: View my profile with button edit profile
     Given I am logedin
       And I should see "Mi cuenta"
