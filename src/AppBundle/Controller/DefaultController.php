@@ -17,7 +17,11 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AppBundle:Default:index.html.twig');
+    	//1, $filter, $amount, $order
+    	$pager = $this->get('api_users')->findAll(1, array('has_profile_photo' => '1'), 12);
+    	$users = $pager->getResources();
+    	
+        return $this->render('AppBundle:Default:index.html.twig', array('users' => $users));
     }
 
     public function logoAction()

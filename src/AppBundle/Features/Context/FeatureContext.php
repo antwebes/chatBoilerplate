@@ -152,6 +152,12 @@ class FeatureContext extends BaseContext
 	    		'fixtures/channels/counter_channels_index.json'
 	    );
 	    
+	    //para index, llamada de recuperar a los usuarios	    
+	    $this->fakeServerMappings->addGetResource(
+	    		'/api/users?limit=12&offset=0&filters=has_profile_photo%3D1',
+	    		'fixtures/users/counter_users_index.json'
+	    		);
+	    
 	    $this->fakeServerMappings->addGetResource(
 	    		'/api/users?limit=30&offset=0',
 	    		'fixtures/users/counter_users_index.json'
