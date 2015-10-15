@@ -93,3 +93,4 @@ api_social:
     users_orders:
         hasProfilePhoto: desc
         lastLogin: desc
+    realtime_endpoint: %realtime_endpoint%
