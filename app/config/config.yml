@@ -88,7 +88,8 @@ services:
             - { name: twig.extension }
 
 api_social:
-    visits_limit: %visits_limit%    users_orders:
+    visits_limit: %visits_limit%    
+    users_orders:
         hasProfilePhoto: desc
         lastLogin: desc
     realtime_endpoint: %realtime_endpoint%
