@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "103d6f1ab9030945556a7f2ded41fdd7",
+    "content-hash": "64296e3c8aa502f06fb575b5a8660828",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
@@ -13,31 +14,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-<<<<<<< HEAD
-                "reference": "91041afbe4fa54c9a5989f10004a374481b630cd"
+                "reference": "bf6b05aaba0e663ff4b1a1c9d4453bedc63fce73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/cd996b2f699b6ea6904dcae655ee3322522bf739",
-                "reference": "91041afbe4fa54c9a5989f10004a374481b630cd",
-=======
-                "reference": "cd996b2f699b6ea6904dcae655ee3322522bf739"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/cd996b2f699b6ea6904dcae655ee3322522bf739",
-                "reference": "cd996b2f699b6ea6904dcae655ee3322522bf739",
->>>>>>> c1304112495dfc321f6928361693591279f1d1c5
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/bf6b05aaba0e663ff4b1a1c9d4453bedc63fce73",
+                "reference": "bf6b05aaba0e663ff4b1a1c9d4453bedc63fce73",
                 "shasum": ""
             },
             "require": {
-                "antwebes/chatea-client-bundle": "0.1.26",
-                "symfony/framework-bundle": "~2.3"
+                "antwebes/chatea-client-bundle": "0.1.28",
+                "excelwebzone/recaptcha-bundle": "2.3.x-dev"
             },
             "require-dev": {
                 "mockery/mockery": "@stable",
                 "phpunit/phpunit": "@stable",
-                "raulfraile/ladybug": "~1.0"
+                "raulfraile/ladybug": "~1.0",
+                "symfony/dependency-injection": "v2.3.33",
+                "symfony/framework-bundle": "v2.3.33"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -65,25 +59,21 @@
                 "chatea",
                 "chateagratis"
             ],
-<<<<<<< HEAD
-            "time": "2015-09-17 12:16:30"
-=======
-            "time": "2015-09-22 11:28:12"
->>>>>>> c1304112495dfc321f6928361693591279f1d1c5
+            "time": "2015-10-09 10:00:32"
         },
         {
             "name": "antwebes/chatea-client-bundle",
-            "version": "v0.1.26",
+            "version": "v0.1.28",
             "target-dir": "Ant/Bundle/ChateaClientBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "cb95175c82194918e3d70da0be76fb1d9ec20840"
+                "reference": "f8a5265f87b08df333935c70237ecfc3e09caf2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/cb95175c82194918e3d70da0be76fb1d9ec20840",
-                "reference": "cb95175c82194918e3d70da0be76fb1d9ec20840",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/f8a5265f87b08df333935c70237ecfc3e09caf2e",
+                "reference": "f8a5265f87b08df333935c70237ecfc3e09caf2e",
                 "shasum": ""
             },
             "require": {
@@ -91,7 +81,7 @@
                 "antwebes/chatea-common": "0.1.0",
                 "antwebes/chatea-secure-bundle": "0.1.5",
                 "doctrine/annotations": "^1.2",
-                "excelwebzone/recaptcha-bundle": "2.3.*@dev",
+                "excelwebzone/recaptcha-bundle": "2.3.x-dev",
                 "symfony/assetic-bundle": "~2.3",
                 "symfony/form": "2.3.*",
                 "symfony/framework-bundle": "~2.3",
@@ -128,7 +118,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-09-22 10:37:24"
+            "time": "2015-10-09 09:57:55"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -317,11 +307,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-<<<<<<< HEAD
-                "reference": "b56222521de38c229ae85cb0cb591260d1ec774e"
-=======
-                "reference": "db931c43df1052f2ae83407990c7cc1aad4f139f"
->>>>>>> c1304112495dfc321f6928361693591279f1d1c5
+                "reference": "86dd48ac0b2dd5cb5f4d564d3b85ad9b83d3fa45"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -343,8 +329,7 @@
                 "chatea",
                 "chateagratis"
             ],
-<<<<<<< HEAD
-            "time": "2015-09-18 07:36:51"
+            "time": "2015-10-09 09:15:55"
         },
         {
             "name": "antwebes/website-parameters",
@@ -353,7 +338,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/websiteparametersbundle.git",
-                "reference": "d3ba78f232c168f09e9bfc257d58d61972cb7d90"
+                "reference": "ee08d58dcfb174e581ca897d9e6ec0e0bd0b12d5"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -400,10 +385,7 @@
                 "parameters",
                 "webadmin"
             ],
-            "time": "2015-09-21 11:22:10"
-=======
-            "time": "2015-09-22 11:29:30"
->>>>>>> c1304112495dfc321f6928361693591279f1d1c5
+            "time": "2015-10-05 07:22:46"
         },
         {
             "name": "doctrine/annotations",
@@ -479,12 +461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "dd47003641aa5425820c0ec8a6f4a85e7412ffcd"
+                "reference": "1c3483678ab767c3e21d3a96d6dd1006b327d425"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/dd47003641aa5425820c0ec8a6f4a85e7412ffcd",
-                "reference": "dd47003641aa5425820c0ec8a6f4a85e7412ffcd",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/1c3483678ab767c3e21d3a96d6dd1006b327d425",
+                "reference": "1c3483678ab767c3e21d3a96d6dd1006b327d425",
                 "shasum": ""
             },
             "require": {
@@ -541,7 +523,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-09-16 13:31:45"
+            "time": "2015-10-08 07:32:30"
         },
         {
             "name": "doctrine/collections",
@@ -808,12 +790,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "d63be7eb9a95d46720f7d6badac4e5bc2bcff2e3"
+                "reference": "5674222e181c9236abdabed19fc660f35619d82c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/233faee4dea14c23e6bca5a77d67eb3c12be8da6",
-                "reference": "d63be7eb9a95d46720f7d6badac4e5bc2bcff2e3",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/5674222e181c9236abdabed19fc660f35619d82c",
+                "reference": "5674222e181c9236abdabed19fc660f35619d82c",
                 "shasum": ""
             },
             "require": {
@@ -878,7 +860,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-08-31 14:47:06"
+            "time": "2015-09-30 14:52:15"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -1026,12 +1008,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "3a422c73f7bc556d39571f436b61fd58ccae0eb0"
+                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/3a422c73f7bc556d39571f436b61fd58ccae0eb0",
-                "reference": "3a422c73f7bc556d39571f436b61fd58ccae0eb0",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/097e7ba84f64a427e55008117ef2bb94096731dc",
+                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc",
                 "shasum": ""
             },
             "require": {
@@ -1085,7 +1067,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-09-17 13:29:15"
+            "time": "2015-10-07 18:00:26"
         },
         {
             "name": "doctrine/lexer",
@@ -1357,12 +1339,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Incenteev/ParameterHandler.git",
-                "reference": "84a205fe80a46101607bafbc423019527893ddd0"
+                "reference": "f7b677a5f9bfd8bf5f165a0ff96ce7426b870312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/84a205fe80a46101607bafbc423019527893ddd0",
-                "reference": "84a205fe80a46101607bafbc423019527893ddd0",
+                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/f7b677a5f9bfd8bf5f165a0ff96ce7426b870312",
+                "reference": "f7b677a5f9bfd8bf5f165a0ff96ce7426b870312",
                 "shasum": ""
             },
             "require": {
@@ -1400,7 +1382,7 @@
             "keywords": [
                 "parameters management"
             ],
-            "time": "2015-06-03 08:27:03"
+            "time": "2015-10-07 14:51:08"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1535,12 +1517,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
-                "reference": "56cb5d6dec9e7a68a4da2fa89844f39d41092f31"
+                "reference": "cb92b179dddfb8a3f341d53bd27e088f24d9c2e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/56cb5d6dec9e7a68a4da2fa89844f39d41092f31",
-                "reference": "56cb5d6dec9e7a68a4da2fa89844f39d41092f31",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/cb92b179dddfb8a3f341d53bd27e088f24d9c2e5",
+                "reference": "cb92b179dddfb8a3f341d53bd27e088f24d9c2e5",
                 "shasum": ""
             },
             "require": {
@@ -1576,7 +1558,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -1605,20 +1587,20 @@
                 "compression",
                 "minification"
             ],
-            "time": "2015-08-31 19:07:16"
+            "time": "2015-10-15 01:33:42"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.17.1",
+            "version": "1.17.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422"
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/0524c87587ab85bc4c2d6f5b41253ccb930a5422",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
                 "shasum": ""
             },
             "require": {
@@ -1632,10 +1614,11 @@
                 "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
                 "php-console/php-console": "^3.1.3",
                 "phpunit/phpunit": "~4.5",
                 "phpunit/phpunit-mock-objects": "2.3.0",
-                "raven/raven": "~0.11",
+                "raven/raven": "^0.13",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
@@ -1681,7 +1664,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-08-31 09:17:37"
+            "time": "2015-10-14 12:51:02"
         },
         {
             "name": "nikic/php-parser",
@@ -2213,12 +2196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "9a4bd1870e4ac9908d996ac3fbfa5525e3db660b"
+                "reference": "99a2e6eb83c8ae93dea2ee8cb5e86146a979c709"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/99a2e6eb83c8ae93dea2ee8cb5e86146a979c709",
-                "reference": "9a4bd1870e4ac9908d996ac3fbfa5525e3db660b",
+                "reference": "99a2e6eb83c8ae93dea2ee8cb5e86146a979c709",
                 "shasum": ""
             },
             "require": {
@@ -2260,7 +2243,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2015-08-04 12:18:40"
+            "time": "2015-09-22 18:05:12"
         },
         {
             "name": "sensio/generator-bundle",
@@ -2499,19 +2482,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
-                "reference": "be97c9df984affabf8c04c920c46ce22c3066d67"
+                "reference": "015e01bb90d4d1f36626deebd0f93363930bd3a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/expression-language/zipball/98742ed56d6ee3b858f33c09c3b97194bd6cd638",
-                "reference": "be97c9df984affabf8c04c920c46ce22c3066d67",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/015e01bb90d4d1f36626deebd0f93363930bd3a9",
+                "reference": "015e01bb90d4d1f36626deebd0f93363930bd3a9",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7|~3.0.0"
             },
             "type": "library",
             "extra": {
@@ -2540,7 +2520,7 @@
             ],
             "description": "Symfony ExpressionLanguage Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-09 18:05:45"
+            "time": "2015-10-12 11:23:20"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2548,12 +2528,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "3cf6864d23a6f32eb01018d2309d855abe4ab3bb"
+                "reference": "7117b9a145722e3c5768db4585f6ad0643ed5c4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/a6494a97c0daac540e7c04b67832c56d68a644ed",
-                "reference": "3cf6864d23a6f32eb01018d2309d855abe4ab3bb",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/7117b9a145722e3c5768db4585f6ad0643ed5c4a",
+                "reference": "7117b9a145722e3c5768db4585f6ad0643ed5c4a",
                 "shasum": ""
             },
             "require": {
@@ -2571,7 +2551,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7.x-dev"
+                    "dev-master": "2.8.x-dev"
                 }
             },
             "autoload": {
@@ -2599,7 +2579,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2015-09-20 19:20:38"
+            "time": "2015-10-02 11:51:59"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -2607,12 +2587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "185e00d5e4a617cf0fb5f7415f0cc80d51c15bdd"
+                "reference": "6febf558532ee6f25edd2699f74072c56def3f4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/456395511e37ecdbfc5777fb78ae6d69ee07ef98",
-                "reference": "185e00d5e4a617cf0fb5f7415f0cc80d51c15bdd",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/6febf558532ee6f25edd2699f74072c56def3f4a",
+                "reference": "6febf558532ee6f25edd2699f74072c56def3f4a",
                 "shasum": ""
             },
             "require": {
@@ -2656,7 +2636,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2015-07-30 15:57:38"
+            "time": "2015-09-30 17:01:01"
         },
         {
             "name": "symfony/symfony",
@@ -2664,12 +2644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "bd415c6985907fe915712af54c6495633e6523ee"
+                "reference": "2f205d47a6e5f021cf495dddd3b3f2f3e739ed53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/7f829b8d55092651b7f3d9551dfc6cf408380701",
-                "reference": "bd415c6985907fe915712af54c6495633e6523ee",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/2f205d47a6e5f021cf495dddd3b3f2f3e739ed53",
+                "reference": "2f205d47a6e5f021cf495dddd3b3f2f3e739ed53",
                 "shasum": ""
             },
             "require": {
@@ -2724,8 +2704,7 @@
                 "ircmaxell/password-compat": "~1.0",
                 "monolog/monolog": "~1.3",
                 "ocramius/proxy-manager": "~0.3.1",
-                "propel/propel1": "~1.6",
-                "symfony/phpunit-bridge": "~2.7"
+                "propel/propel1": "~1.6"
             },
             "type": "library",
             "extra": {
@@ -2764,7 +2743,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-09-21 06:03:52"
+            "time": "2015-10-18 20:22:26"
         },
         {
             "name": "twig/extensions",
@@ -2819,12 +2798,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "821464ad0137909bb38ad5dbf8a1f2230f33a9f2"
+                "reference": "656ecc0a5ce61c5b030eddb53c9e400fa99ee48a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/604e94883bc1691071d9a30ff522808dc476394c",
-                "reference": "821464ad0137909bb38ad5dbf8a1f2230f33a9f2",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/656ecc0a5ce61c5b030eddb53c9e400fa99ee48a",
+                "reference": "656ecc0a5ce61c5b030eddb53c9e400fa99ee48a",
                 "shasum": ""
             },
             "require": {
@@ -2872,7 +2851,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-21 07:07:22"
+            "time": "2015-10-13 07:16:21"
         }
     ],
     "packages-dev": [
