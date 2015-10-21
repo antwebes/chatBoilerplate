@@ -178,7 +178,7 @@ class FeatureContext extends BaseContext
     	$this->beforeViewUserList();
     
     	$this->fakeServerMappings->addGetResource(
-    			'/api/users?limit=25&offset=0&filters=outstanding%3D1',
+    			'/api/users?limit=25&offset=0&filters=language%3Des%2Coutstanding%3D1',
     			'fixtures/users/users_outstanding.json'
     			);
     }

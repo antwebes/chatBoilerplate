@@ -7,7 +7,7 @@ Feature: View User data
     Given I am on "http://boilerplatele.local/app_dev.php"
      When I click "Usuarios"
      Then the API url "/api/users?limit=30&offset=0&filters=language%3Des&order=hasProfilePhoto%3Ddesc%2ClastLogin%3Ddesc" should have been called
-      And the API url "/api/users?limit=25&offset=0&filters=outstanding%3D1" should have been called
+      And the API url "/api/users?limit=25&offset=0&filters=language%3Des%2Coutstanding%3D1" should have been called
       And I click "Emily"
       And I should see the value "btn_chat_user" into attribute "data-behat"
 
