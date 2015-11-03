@@ -20,6 +20,8 @@
               <a href="{{ path('confirm_email') }}"> Aquí tienes toda la información necesaria</a> o también puedes <a href="{{ path('chatea_client_user_settings') }}">cambiarte de email</a>
           </div>
     </div>
+  {% elseif (app.user) and ( app.user.validated == true) %}
+      <div data-role="notificatons" class="hidden"></div>
   {% endif %}
 {% endblock flash_message %}
 
@@ -95,6 +97,9 @@
             document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
             document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
         {% endif %}
+
+        {% include "AppBundle:layout:notifications.html.twig" %}
+
     </script>
 {% endblock body_js_end %}
 
