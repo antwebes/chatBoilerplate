@@ -19,7 +19,12 @@
                     <a class="btn btn-lg btn-primary" data-behat="update-profile-photo" href="{{ path('chatea_client_update_profile_photo') }}">{{ 'user.edit_profile_photo' | trans }}</a>
                 </div>
                 <br>
-
+				<div class="col-xs-12">
+					<a class="btn btn-lg btn-primary" data-behat="update-city" href="{{ path('chatea_client_update_profile_city') }}">
+						<i class="fa fa-map-marker"></i> {{ 'user.edit_city' | trans({}, 'UserChange') }}
+					</a>
+				</div>
+				<br/>
                 <div class="col-xs-12">
                     <a class="btn btn-lg btn-primary" href="{{ path('ant_user_user_show_all_visits', {'username': app.user.username, 'user_id': app.user.id}) }}">{{ "user.last_visits" | trans }}</a>
                 </div>

@@ -21,7 +21,7 @@
           </div>
     </div>
   {% elseif (app.user) and ( app.user.validated == true) %}
-      <div data-role="notificatons" class="hidden"></div>
+      <div data-role="notificatons" class="hidden"><div class="col-xs-12 alert alert-warning" id="message_header_center"></div></div>
   {% endif %}
 {% endblock flash_message %}
 
