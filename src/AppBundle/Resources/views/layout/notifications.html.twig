@@ -1,0 +1,4 @@
+{% if (app.user) and ( app.user.validated == true) %}
+    var notificationText = '{{ 'user.no_profile_photo' | trans }} <a href="{{ path('chatea_client_update_profile_photo') }}">{{ 'user.edit_profile_photo' | trans({}, 'UserRegistration') }}</a>';
+    notifyIfUserHasNoProfilePhoto({{  app.user.id }}, '{{ api_endpoint }}', '{{ app.user.accessToken }}', notificationText);
+{% endif %}
