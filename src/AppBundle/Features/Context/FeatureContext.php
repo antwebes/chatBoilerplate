@@ -207,6 +207,19 @@ class FeatureContext extends BaseContext
         		'fixtures/users/users_limit.json'
         );
     }
+
+    /**
+     * @BeforeScenario @view_popular_photos
+     */
+    public function beforeViewPopularPhotos()
+    {
+        $this->doInitFakeServer();
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/photos?limit=30&offset=0&filters=number_votes_greater_equal%3D3&order=score%3Ddesc',
+            'fixtures/photos/popularphotos.json'
+        );
+    }
     
     /**
      * @BeforeScenario @view_user_profile

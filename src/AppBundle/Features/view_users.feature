@@ -32,7 +32,7 @@ Feature: View User data
     Given I am on "http://boilerplatele.local/app_dev.php"
      When I click "Usuarios"
       And I click "Emily"
-     When I click "Fotos"
+     When I click on the element with css "data-behat" and "user-photos"
      Then I should be on "/usuario/login"
 
   @view_user_profile @view_users
@@ -40,7 +40,7 @@ Feature: View User data
     Given I am logedin
      When I click "Usuarios"
       And I click "Emily"
-      And I click "Fotos"
+      And I click on the element with css "data-behat" and "user-photos"
      Then I should be on "/usuarios/2/fotos"
       And I should see 19 photos
 
@@ -49,6 +49,6 @@ Feature: View User data
     Given I am logedin
      When I click "Usuarios"
       And I click "Emily"
-      And I click "Fotos"
+      And I click on the element with css "data-behat" and "user-photos"
       And I click on the first photo
      Then I should be on "/2014/02/18/53031792da81a_large.jpg"
