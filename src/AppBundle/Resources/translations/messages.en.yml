@@ -19,6 +19,3 @@ menu.item.register_rooms: Register Channels
 menu.item.login: Login
 menu.item.logout: Logout
 menu.item.register: Register
-
-user.no_profile_photo: "You don't have a profile photo. To have more visits we suggest you to upload a profile photo."
-user.no_city: "You don't have a city. To have more visits we suggest you to set your city."

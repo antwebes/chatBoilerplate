@@ -12,17 +12,7 @@
           {{ flashMessage }}
       </div>
   {% endfor %}
-  {% if (app.user) and ( app.user.validated == false) %}
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="col-xs-12" id="message_header_center">
-          <div class="alert alert-warning">
-              Hola <strong>{{ app.user.username }}</strong>, Ahora solo necesitas validar tu email.
-              <a href="{{ path('confirm_email') }}"> Aquí tienes toda la información necesaria</a> o también puedes <a href="{{ path('chatea_client_user_settings') }}">cambiarte de email</a>
-          </div>
-    </div>
-  {% elseif (app.user) and ( app.user.validated == true) %}
-      <div data-role="notificatons" class="hidden"><div class="col-xs-12 alert alert-warning" id="message_header_center"></div></div>
-  {% endif %}
+  {% include "AppBundle:layout:notificationslayout.html.twig" %}
 {% endblock flash_message %}
 
 {% block body_pre_container %}
@@ -98,7 +88,7 @@
             document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
         {% endif %}
 
-        {% include "AppBundle:layout:notifications.html.twig" %}
+        {% include "AppBundle:layout:notificationsscript.html.twig" %}
 
     </script>
 {% endblock body_js_end %}

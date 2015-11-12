@@ -1,0 +1,8 @@
+
+{% if (app.user) and ( app.user.validated == true) %}
+    var notificationText = '{{ 'user.no_city' | trans({}, 'Notifications') }} <a href="{{ path('chatea_client_update_profile_city') }}">{{ 'user.edit_city' | trans({}, 'UserChange') }}</a>';
+    notifyIfUserHasNoCity({{  app.user.id }}, '{{ api_endpoint }}', '{{ app.user.accessToken }}', notificationText);
+
+    var notificationText = '{{ 'user.no_profile_photo' | trans({}, 'Notifications') }} <a href="{{ path('chatea_client_update_profile_photo') }}">{{ 'user.edit_profile_photo' | trans({}, 'UserRegistration') }}</a>';
+    notifyIfUserHasNoProfilePhoto({{  app.user.id }}, '{{ api_endpoint }}', '{{ app.user.accessToken }}', notificationText);
+{% endif %}

@@ -1,0 +1,11 @@
+{% if (app.user) and ( app.user.validated == false) %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="col-xs-12" id="message_header_center">
+        <div class="alert alert-warning">
+            Hola <strong>{{ app.user.username }}</strong>, Ahora solo necesitas validar tu email.
+            <a href="{{ path('confirm_email') }}"> Aquí tienes toda la información necesaria</a> o también puedes <a href="{{ path('chatea_client_user_settings') }}">cambiarte de email</a>
+        </div>
+    </div>
+{% elseif (app.user) and ( app.user.validated == true) %}
+    <div data-role="notificatons" class="hidden"><div class="col-xs-12 alert alert-warning" id="message_header_center"><a class="close" title="close" aria-label="close" data-dismiss="alert" href="#">×</a></div></div>
+{% endif %}
