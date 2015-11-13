@@ -12,7 +12,7 @@
           {{ flashMessage }}
       </div>
   {% endfor %}
-  {% include "AppBundle:layout:notificationslayout.html.twig" %}
+  {% include "ApiSocialBundle:Common:notificationslayout.html.twig" %}
 {% endblock flash_message %}
 
 {% block body_pre_container %}
@@ -88,7 +88,7 @@
             document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";
         {% endif %}
 
-        {% include "AppBundle:layout:notificationsscript.html.twig" %}
+        {% include "ApiSocialBundle:Common:notificationsscript.html.twig" %}
 
     </script>
 {% endblock body_js_end %}
