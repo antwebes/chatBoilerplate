@@ -76,10 +76,9 @@ chatea_client:
         user_manager: %limits.users%
         photo_manager: %limits.photos%
 
-ewz_recaptcha:
-    public_key:  %recaptcha_public_key%
-    private_key: %recaptcha_private_key%
-    locale_key:  kernel.default_locale
+beelab_recaptcha2:
+    site_key:  %recaptcha_public_key%
+    secret: %recaptcha_private_key%
     enabled: %recaptcha_enabled%
 
 services:

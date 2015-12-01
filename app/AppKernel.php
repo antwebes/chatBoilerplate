@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Ant\Bundle\ChateaClientBundle\ChateaClientBundle(),
             new Ant\Bundle\ChateaSecureBundle\ChateaSecureBundle(),
-            new EWZ\Bundle\RecaptchaBundle\EWZRecaptchaBundle(),
+            new Beelab\Recaptcha2Bundle\BeelabRecaptcha2Bundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
             new Snc\RedisBundle\SncRedisBundle(),
             new Ant\Bundle\ApiSocialBundle\ApiSocialBundle(),
