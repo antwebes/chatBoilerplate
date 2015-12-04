@@ -4,12 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bd648f6bd37a36f7447829f1abee50d8",
-    "content-hash": "58c25c63592596ef2df33ad17002f8e4",
+    "hash": "35ac2d2837c21868cbd115cbd0b3aa03",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
-            "version": "dev-develop",
+            "version": "dev-master",
             "target-dir": "Ant/Bundle/ApiSocialBundle",
             "source": {
                 "type": "git",
@@ -71,7 +70,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/3dbfc7bffcf69aa71018867bd0ba978aaa15d29f",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/6b91483625c496cde10401525483ec28f2f621d3",
                 "reference": "3dbfc7bffcf69aa71018867bd0ba978aaa15d29f",
                 "shasum": ""
             },
@@ -309,7 +308,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "766c6c482dea55470da973704931c8df142a9a2d"
+                "reference": "547fafb334a2abf20df05fd1b1754c55d43211a0"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -331,7 +330,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-11-13 12:20:18"
+            "time": "2015-12-02 14:02:27"
         },
         {
             "name": "beelab/recaptcha2-bundle",
@@ -459,12 +458,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "f69c21c5cea834def1664a73a1b7cd5fcdfbd23e"
+                "reference": "da201c5a23b9c19e275d27937f8db221dc608bf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/f69c21c5cea834def1664a73a1b7cd5fcdfbd23e",
-                "reference": "f69c21c5cea834def1664a73a1b7cd5fcdfbd23e",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/da201c5a23b9c19e275d27937f8db221dc608bf1",
+                "reference": "da201c5a23b9c19e275d27937f8db221dc608bf1",
                 "shasum": ""
             },
             "require": {
@@ -521,7 +520,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-11-02 18:32:40"
+            "time": "2015-12-03 10:46:43"
         },
         {
             "name": "doctrine/collections",
@@ -595,12 +594,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "79fdef35a79a3694e5ae552575d23fd7dc8482c2"
+                "reference": "fe7126cee6f796a7c60a569806aa152e5d6cccf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/79fdef35a79a3694e5ae552575d23fd7dc8482c2",
-                "reference": "79fdef35a79a3694e5ae552575d23fd7dc8482c2",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/fe7126cee6f796a7c60a569806aa152e5d6cccf5",
+                "reference": "fe7126cee6f796a7c60a569806aa152e5d6cccf5",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +659,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-10-30 18:43:38"
+            "time": "2015-12-03 14:18:51"
         },
         {
             "name": "doctrine/dbal",
@@ -2303,12 +2302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/assetic-bundle.git",
-                "reference": "9ad8456e78d99572037be7302346c65d5248e7b1"
+                "reference": "d444bd055c8292ad021dbca33480959281341508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/9ad8456e78d99572037be7302346c65d5248e7b1",
-                "reference": "9ad8456e78d99572037be7302346c65d5248e7b1",
+                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/d444bd055c8292ad021dbca33480959281341508",
+                "reference": "d444bd055c8292ad021dbca33480959281341508",
                 "shasum": ""
             },
             "require": {
@@ -2365,7 +2364,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2015-12-01 12:15:10"
+            "time": "2015-12-03 18:35:30"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2489,12 +2488,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "d9b8d0c1e91acd1f6cb773ba4e8c2077a453eb89"
+                "reference": "8ab107c90550a444eaa774a7172df191cb376046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/d9b8d0c1e91acd1f6cb773ba4e8c2077a453eb89",
-                "reference": "d9b8d0c1e91acd1f6cb773ba4e8c2077a453eb89",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/8ab107c90550a444eaa774a7172df191cb376046",
+                "reference": "8ab107c90550a444eaa774a7172df191cb376046",
                 "shasum": ""
             },
             "require": {
@@ -2594,7 +2593,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-11-30 12:29:40"
+            "time": "2015-12-03 09:03:30"
         },
         {
             "name": "twig/extensions",
