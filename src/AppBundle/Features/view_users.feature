@@ -26,6 +26,16 @@ Feature: View User data
         | Edad        |           | #ponemos age vacio para que no peten los test cada año
         | Sexo	            | Mujer     |
         | Estoy buscando	| Mujeres   |
+      And I shouuld se the user has 35 visits
+
+  @view_user_with_no_profile @view_users
+  Scenario: View user profile
+    Given I am on "http://boilerplatele.local/app_dev.php"
+    When I click "Usuarios"
+    Then the API url "/api/users?limit=30&offset=0&filters=language%3Des&order=hasProfilePhoto%3Ddesc%2ClastLogin%3Ddesc" should have been called
+    And the API url "/api/users?limit=25&offset=0&filters=language%3Des%2Coutstanding%3D1" should have been called
+    And I click "Emily"
+    And I shouuld se the user has 0 visits
 
   @view_user_profile @view_users
   Scenario: To view users photos I need to login

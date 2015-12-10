@@ -226,13 +226,43 @@ class FeatureContext extends BaseContext
      */
     public function beforeUserProfile()
     {
-        $this->beforeViewUserList();        
-        
+        $this->beforeViewUserList();
+
         $this->fakeServerMappings->addGetResource(
             '/api/users/emily',
             'fixtures/users/user.json'
         );
-        
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/2',
+            'fixtures/users/user.json'
+        );
+
+        $this->fakeCallsOfUserProfile();
+    }
+
+    /**
+     * @BeforeScenario @view_user_with_no_profile
+     */
+    public function beforeUserNoProfile()
+    {
+        $this->beforeViewUserList();
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/emily',
+            'fixtures/users/user_no_profile.json'
+        );
+
+        $this->fakeServerMappings->addGetResource(
+            '/api/users/2',
+            'fixtures/users/user_no_profile.json'
+        );
+
+        $this->fakeCallsOfUserProfile();
+    }
+
+    private function fakeCallsOfUserProfile()
+    {
         //RightBar with list channels in show user
         $this->fakeServerMappings->addGetResource(
         		'/api/channels?filter=language%3Des&order=fans%3Ddesc&limit=10&offset=0',
@@ -243,10 +273,6 @@ class FeatureContext extends BaseContext
         		'fixtures/users/user_fotos.json'
         );
         
-        $this->fakeServerMappings->addGetResource(
-            '/api/users/2',
-            'fixtures/users/user.json'
-        );
         $this->fakeServerMappings->addGetResource(
             '/api/users/2/channels?limit=25&offset=0',
             'fixtures/users/user_channels.json'
@@ -753,5 +779,20 @@ class FeatureContext extends BaseContext
     	// ok, let's click on it
     	$element->click();
     
+    }
+
+    /**
+     * @Given /^I shouuld se the user has (\d+) visits$/
+     */
+    public function iShouuldSeTheUserHasVisits($expectedNumberOfVisits)
+    {
+        $element = $this->getSession()->getPage()->find('css', '[data-behat="user_visits"]');
+
+        $visits = trim($element->getText());
+
+        if($visits !== $expectedNumberOfVisits){
+            $message = sprintf("Expected %s visits but got %s visits", $expectedNumberOfVisits, $visits);
+            throw new ExpectationException($message, $this->getSession());
+        }
     }
 }
