@@ -7,15 +7,25 @@
 
 {% block body_container_content %}
 	<div class="row">
+	
+	{% if plain is not defined %}
+	    <div class="col-xs-12 text-center">
+	    	<h1 style="font-size:2em">
+	    	{% if client == 34 %}
+	    		{{ "login.explication_credentials_chateagratis" | trans }}
+	    	{% else %}
+	    		{{ "login.explication_credentials_chatzona" | trans }}
+	    	{% endif %}
+	    	</h1>
+	    </div>
+	{% endif %}
+	
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
             <div id="loginchateacont" class="col-xs-12 wellchatea clearfix">
                 {% if error is defined and error %}
                     <div class="error alert alert-danger">{{ error }}</div>
                 {% endif %}
 
-                {% if plain is not defined %}
-                    <legend>{{ "login.login" | trans }}</legend>
-                {% endif %}
 
                 <form action="{{ path("_security_check") }}" method="post" id="login">
                     <div class="form-group row">
@@ -42,7 +52,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-        <br><br>
+        <br>
         <div class="col-xs-12 wellchatea clearfix">
             <legend>{{ "login.register_title" | trans }}</legend>
             <br>
