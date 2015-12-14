@@ -122,7 +122,7 @@
 
         {% block body_js_end %}
         {% endblock body_js_end %}
-		            <script>
+			<script>
                 window.chat_url = "{{ chat_url  }}";
                 window.api_endpoint = "{{ api_endpoint }}";
                 {% if app.user %}
@@ -139,6 +139,17 @@
 				{% include "ApiSocialBundle:Message:Common/script_to_navbar.html.twig" %}
                 {% endjavascripts %}
             {% endif %}
+            <script type="text/javascript">
+	       	function sendEvent(category, action, label, value) {
+	       	    if (typeof ga !== 'undefined') {
+	       	        if(typeof value !== 'undefined') {
+	       	            ga('send', 'event', category, action, label, value);
+	       	        }else {
+	       	            ga('send', 'event', category, action, label);
+	       	        }
+	       	    }
+	       	}
+       	  </script>
     {% endblock body %}
     </body>
 </html>
