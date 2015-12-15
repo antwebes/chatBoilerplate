@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "d444e100422bf22600207dd49ccbccb3bd4afd95"
+                "reference": "620443e17c6cf576e808c19e976805e18318f15c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/d444e100422bf22600207dd49ccbccb3bd4afd95",
-                "reference": "d444e100422bf22600207dd49ccbccb3bd4afd95",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/620443e17c6cf576e808c19e976805e18318f15c",
+                "reference": "620443e17c6cf576e808c19e976805e18318f15c",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-10 09:12:23"
+            "time": "2015-12-14 11:46:43"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -308,7 +308,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "db5223894ed395c1b26cdf4e83e952c80ace9bbe"
+                "reference": "69e066dcc62c64eaa803e4a83103219a6859dd58"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -330,7 +330,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-10 09:12:44"
+            "time": "2015-12-14 10:46:06"
         },
         {
             "name": "beelab/recaptcha2-bundle",
@@ -730,12 +730,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "a6ef2a0c1655cb0fa0d3e8e93df908a779504e55"
+                "reference": "44b1ca7b82a56f1af2b1fbe7477b3b36c38ee2b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/a6ef2a0c1655cb0fa0d3e8e93df908a779504e55",
-                "reference": "a6ef2a0c1655cb0fa0d3e8e93df908a779504e55",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/44b1ca7b82a56f1af2b1fbe7477b3b36c38ee2b7",
+                "reference": "44b1ca7b82a56f1af2b1fbe7477b3b36c38ee2b7",
                 "shasum": ""
             },
             "require": {
@@ -801,7 +801,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-12-05 10:23:22"
+            "time": "2015-12-14 10:49:21"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -2489,12 +2489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "4cde2d1e3332ed86932784bf97881ea4305b11bf"
+                "reference": "b23c9a3b5b7e4d67e75c32cf36d2b0d124ca6c0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/4cde2d1e3332ed86932784bf97881ea4305b11bf",
-                "reference": "4cde2d1e3332ed86932784bf97881ea4305b11bf",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b23c9a3b5b7e4d67e75c32cf36d2b0d124ca6c0a",
+                "reference": "b23c9a3b5b7e4d67e75c32cf36d2b0d124ca6c0a",
                 "shasum": ""
             },
             "require": {
@@ -2594,7 +2594,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-12-10 00:42:36"
+            "time": "2015-12-15 01:21:41"
         },
         {
             "name": "twig/extensions",
