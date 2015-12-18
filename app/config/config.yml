@@ -93,3 +93,20 @@ api_social:
         hasProfilePhoto: desc
         lastLogin: desc
     realtime_endpoint: %realtime_endpoint%
+
+audit:
+    request_filters: {info_filter_password: ant_audit.info.info_filter_password, info_filter_client_secret: ant_audit.info.info_filter_client_secret}
+    audit_request_policy: check_request_method
+    allowed_methods: ['POST', 'PATCH', 'PUT', 'DELETE']
+
+monolog:
+    handlers:
+        main:
+            action_level: critical
+            id: snc_redis.monolog.handler
+            type: service
+            level: error
+        audit:
+            type:     rotating_file
+            path:     %kernel.logs_dir%/audit.log
+            channels: [audit]

@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "35ac2d2837c21868cbd115cbd0b3aa03",
+    "hash": "9df37b22a6160ee3e13d43ed39daeaec",
+    "content-hash": "efaa3ab383178b497c19c2a8130cb7b8",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
@@ -58,6 +59,49 @@
                 "chateagratis"
             ],
             "time": "2015-12-15 08:29:01"
+        },
+        {
+            "name": "antwebes/audit-bundle",
+            "version": "dev-improvements",
+            "target-dir": "Ant/AuditBundle",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:antweb/auditbundle.git",
+                "reference": "cf67420b9f6fbb47eae4d01441575c277327ec56"
+            },
+            "require": {
+                "fluent/logger": "1.0.0",
+                "monolog/monolog": "~1.0",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.3",
+                "symfony/http-kernel": ">=2.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master@dev",
+                "phpunit/phpunit": "3.7.*",
+                "symfony/expression-language": "v2.7.2"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Ant\\AuditBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chrysweel",
+                    "homepage": "https://github.com/antwebes"
+                }
+            ],
+            "description": "Audit Bundle for symfony2",
+            "homepage": "https://bitbucket.org/antweb/auditbundle",
+            "keywords": [
+                "social"
+            ],
+            "time": "2015-12-18 08:19:12"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -730,12 +774,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "44b1ca7b82a56f1af2b1fbe7477b3b36c38ee2b7"
+                "reference": "1b7261af4cedb10080bb56a070c16be2754c75bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/44b1ca7b82a56f1af2b1fbe7477b3b36c38ee2b7",
-                "reference": "44b1ca7b82a56f1af2b1fbe7477b3b36c38ee2b7",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/1b7261af4cedb10080bb56a070c16be2754c75bb",
+                "reference": "1b7261af4cedb10080bb56a070c16be2754c75bb",
                 "shasum": ""
             },
             "require": {
@@ -801,7 +845,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-12-14 10:49:21"
+            "time": "2015-12-17 13:17:10"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -809,12 +853,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
-                "reference": "030ff41ef1db66370b36467086bfb817a661fe6a"
+                "reference": "5f8a9a9c7c3395e9c5dd0562a51221d434592567"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/030ff41ef1db66370b36467086bfb817a661fe6a",
-                "reference": "030ff41ef1db66370b36467086bfb817a661fe6a",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/5f8a9a9c7c3395e9c5dd0562a51221d434592567",
+                "reference": "5f8a9a9c7c3395e9c5dd0562a51221d434592567",
                 "shasum": ""
             },
             "require": {
@@ -828,6 +872,7 @@
                 "instaclick/object-calisthenics-sniffs": "dev-master",
                 "instaclick/symfony2-coding-standard": "dev-remaster",
                 "phpunit/phpunit": "~4",
+                "predis/predis": "~0.8",
                 "satooshi/php-coveralls": "~0.6.1",
                 "squizlabs/php_codesniffer": "~1.5",
                 "symfony/console": "~2.2|~3.0",
@@ -888,7 +933,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-11-27 04:59:07"
+            "time": "2015-12-15 19:13:11"
         },
         {
             "name": "doctrine/inflector",
@@ -1083,6 +1128,59 @@
                 "orm"
             ],
             "time": "2015-08-31 13:19:01"
+        },
+        {
+            "name": "fluent/logger",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fluent/fluent-logger-php.git",
+                "reference": "360ad86483847f81ba25a79aa183520d790f6fca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fluent/fluent-logger-php/zipball/360ad86483847f81ba25a79aa183520d790f6fca",
+                "reference": "360ad86483847f81ba25a79aa183520d790f6fca",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "2.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fluent\\Logger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "authors": [
+                {
+                    "name": "Shuhei Tanuma",
+                    "email": "chobieee@gmail.com"
+                },
+                {
+                    "name": "Sotaro Karasawa",
+                    "email": "sotarok@crocos.co.jp"
+                },
+                {
+                    "name": "DQNEO",
+                    "email": "dqneoo@gmail.com"
+                }
+            ],
+            "description": "a logging library for Fluentd",
+            "homepage": "http://github.com/fluent/fluent-logger-php",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2015-10-16 05:38:10"
         },
         {
             "name": "google/recaptcha",
@@ -1485,12 +1583,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "cab3ff71ffc802af272928ff71341cfc51e8ee98"
+                "reference": "205f528f5b23e5b9a3e95991d38da2ef9b2db408"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/cab3ff71ffc802af272928ff71341cfc51e8ee98",
-                "reference": "cab3ff71ffc802af272928ff71341cfc51e8ee98",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/205f528f5b23e5b9a3e95991d38da2ef9b2db408",
+                "reference": "205f528f5b23e5b9a3e95991d38da2ef9b2db408",
                 "shasum": ""
             },
             "require": {
@@ -1555,7 +1653,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-11-26 23:48:42"
+            "time": "2015-12-16 18:41:23"
         },
         {
             "name": "nikic/php-parser",
@@ -2489,12 +2587,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b23c9a3b5b7e4d67e75c32cf36d2b0d124ca6c0a"
+                "reference": "6b13708ab6dd8227d00247f03d7e8577ec2de554"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b23c9a3b5b7e4d67e75c32cf36d2b0d124ca6c0a",
-                "reference": "b23c9a3b5b7e4d67e75c32cf36d2b0d124ca6c0a",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/6b13708ab6dd8227d00247f03d7e8577ec2de554",
+                "reference": "6b13708ab6dd8227d00247f03d7e8577ec2de554",
                 "shasum": ""
             },
             "require": {
@@ -2594,7 +2692,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-12-15 01:21:41"
+            "time": "2015-12-18 10:44:19"
         },
         {
             "name": "twig/extensions",
@@ -3335,6 +3433,7 @@
         "snc/redis-bundle": 20,
         "antwebes/help-bundle": 20,
         "antwebes/pretty-bundle": 20,
+        "antwebes/audit-bundle": 20,
         "behat/behat": 0,
         "behat/mink": 0,
         "antwebes/guzzle-fake-server": 20
@@ -3342,7 +3441,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3.3"
+        "php": ">=5.5.0"
     },
     "platform-dev": []
 }
