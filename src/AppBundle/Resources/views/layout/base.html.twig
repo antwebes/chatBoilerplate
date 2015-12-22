@@ -12,6 +12,7 @@
         <meta name="description" content="{% block head_meta_description %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:image" content="{% block og_image %}{% endblock %}" />
+        <meta property="og:title" content="{% block og_title %}{% endblock %}" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         {% if favicon is defined and favicon is not null %}
         	<link rel="shortcut icon" href="{{ favicon }}" />
