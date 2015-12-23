@@ -18,3 +18,4 @@ Feature: View User data
       And I click on the element with css "data-behat" and "user-greeting"
      Then I should see "Perfil de ausername"
       And I should see the value "edit_profile" into attribute "data-behat"
+      And I should see the value "share-buttons" into attribute "data-behat"
