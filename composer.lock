@@ -308,7 +308,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "4e5cc46198976f6ecf2b5eedfdeae8e1dfa831e7"
+                "reference": "b8da989118f4ad922b2a60b84efeabfded2384e2"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -330,7 +330,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-23 08:59:12"
+            "time": "2015-12-24 12:12:42"
         },
         {
             "name": "beelab/recaptcha2-bundle",
