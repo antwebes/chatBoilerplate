@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "ff53f0610d3ebd89d8baf017a02e538026484c15"
+                "reference": "9f345ca100989bb2bb405a96f63e5a4d48c35331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/ff53f0610d3ebd89d8baf017a02e538026484c15",
-                "reference": "ff53f0610d3ebd89d8baf017a02e538026484c15",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/9f345ca100989bb2bb405a96f63e5a4d48c35331",
+                "reference": "9f345ca100989bb2bb405a96f63e5a4d48c35331",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-24 11:59:08"
+            "time": "2015-12-28 09:53:00"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -462,7 +462,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/bc23e0f46da064cbc53c1b1243472477487ef754",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/619c3d4910205255c6cc637adb97fec16eaca532",
                 "reference": "bc23e0f46da064cbc53c1b1243472477487ef754",
                 "shasum": ""
             },
@@ -598,7 +598,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/6065c0756da7dc286b8221107ade4c70298b1eba",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/773c56e51fc26ae07a47146fae31b320dd6cada3",
                 "reference": "6065c0756da7dc286b8221107ade4c70298b1eba",
                 "shasum": ""
             },
@@ -2494,7 +2494,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/45a006046d3f7734d675e13939963a2d60bef6e0",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/c4bef7233c4cf1432bec42684f95c5408fbe5dec",
                 "reference": "45a006046d3f7734d675e13939963a2d60bef6e0",
                 "shasum": ""
             },
@@ -2654,7 +2654,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/db93842e80d758f6c74c3e1f1f088badb3fc84f0",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7df0a5512db43c1b6adc20dfcb12f1b22d6edad7",
                 "reference": "db93842e80d758f6c74c3e1f1f088badb3fc84f0",
                 "shasum": ""
             },
