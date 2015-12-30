@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "9f345ca100989bb2bb405a96f63e5a4d48c35331"
+                "reference": "b98d43e1b42a0825885d9a32b9cdbcf9694e79b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/9f345ca100989bb2bb405a96f63e5a4d48c35331",
-                "reference": "9f345ca100989bb2bb405a96f63e5a4d48c35331",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/b98d43e1b42a0825885d9a32b9cdbcf9694e79b0",
+                "reference": "b98d43e1b42a0825885d9a32b9cdbcf9694e79b0",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-28 09:53:00"
+            "time": "2015-12-29 12:26:48"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -308,7 +308,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "b8da989118f4ad922b2a60b84efeabfded2384e2"
+                "reference": "f7f0c340cd8117bb0bc1d8b85bd44ca17b041913"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -330,7 +330,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-24 12:12:42"
+            "time": "2015-12-29 12:33:11"
         },
         {
             "name": "beelab/recaptcha2-bundle",
@@ -458,22 +458,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "bc23e0f46da064cbc53c1b1243472477487ef754"
+                "reference": "619c3d4910205255c6cc637adb97fec16eaca532"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/cache/zipball/619c3d4910205255c6cc637adb97fec16eaca532",
-                "reference": "bc23e0f46da064cbc53c1b1243472477487ef754",
+                "reference": "619c3d4910205255c6cc637adb97fec16eaca532",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "~5.5|~7.0"
             },
             "conflict": {
                 "doctrine/common": ">2.2,<2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": ">=3.7",
+                "phpunit/phpunit": "~4.8|~5.0",
                 "predis/predis": "~1.0",
                 "satooshi/php-coveralls": "~0.6"
             },
@@ -520,7 +520,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-12-19 04:57:29"
+            "time": "2015-12-25 12:33:13"
         },
         {
             "name": "doctrine/collections",
@@ -594,12 +594,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "6065c0756da7dc286b8221107ade4c70298b1eba"
+                "reference": "773c56e51fc26ae07a47146fae31b320dd6cada3"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/common/zipball/773c56e51fc26ae07a47146fae31b320dd6cada3",
-                "reference": "6065c0756da7dc286b8221107ade4c70298b1eba",
+                "reference": "773c56e51fc26ae07a47146fae31b320dd6cada3",
                 "shasum": ""
             },
             "require": {
@@ -659,7 +659,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-12-04 13:08:02"
+            "time": "2015-12-26 08:54:38"
         },
         {
             "name": "doctrine/dbal",
@@ -1091,12 +1091,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/recaptcha.git",
-                "reference": "e4bfe88a2558fa2a812aec543086a117be340f81"
+                "reference": "f3390c376129f84d22734df1f94cc7db25006bbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/recaptcha/zipball/e4bfe88a2558fa2a812aec543086a117be340f81",
-                "reference": "e4bfe88a2558fa2a812aec543086a117be340f81",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/f3390c376129f84d22734df1f94cc7db25006bbc",
+                "reference": "f3390c376129f84d22734df1f94cc7db25006bbc",
                 "shasum": ""
             },
             "require": {
@@ -1128,7 +1128,7 @@
                 "recaptcha",
                 "spam"
             ],
-            "time": "2015-10-25 22:02:40"
+            "time": "2015-12-28 18:03:30"
         },
         {
             "name": "guzzle/guzzle",
@@ -2304,12 +2304,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/assetic-bundle.git",
-                "reference": "d444bd055c8292ad021dbca33480959281341508"
+                "reference": "aa5b4f8b712f38745928fa845ddb73300bb2af6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/d444bd055c8292ad021dbca33480959281341508",
-                "reference": "d444bd055c8292ad021dbca33480959281341508",
+                "url": "https://api.github.com/repos/symfony/assetic-bundle/zipball/aa5b4f8b712f38745928fa845ddb73300bb2af6d",
+                "reference": "aa5b4f8b712f38745928fa845ddb73300bb2af6d",
                 "shasum": ""
             },
             "require": {
@@ -2366,7 +2366,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2015-12-03 18:35:30"
+            "time": "2015-12-28 13:12:39"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2490,12 +2490,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "45a006046d3f7734d675e13939963a2d60bef6e0"
+                "reference": "675baceb72e9ff91f66dcad8a1a8b5b7fef0b37c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/c4bef7233c4cf1432bec42684f95c5408fbe5dec",
-                "reference": "45a006046d3f7734d675e13939963a2d60bef6e0",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/675baceb72e9ff91f66dcad8a1a8b5b7fef0b37c",
+                "reference": "675baceb72e9ff91f66dcad8a1a8b5b7fef0b37c",
                 "shasum": ""
             },
             "require": {
@@ -2595,7 +2595,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-12-24 01:02:08"
+            "time": "2015-12-30 10:26:47"
         },
         {
             "name": "twig/extensions",
@@ -2650,12 +2650,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "db93842e80d758f6c74c3e1f1f088badb3fc84f0"
+                "reference": "7df0a5512db43c1b6adc20dfcb12f1b22d6edad7"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/twigphp/Twig/zipball/7df0a5512db43c1b6adc20dfcb12f1b22d6edad7",
-                "reference": "db93842e80d758f6c74c3e1f1f088badb3fc84f0",
+                "reference": "7df0a5512db43c1b6adc20dfcb12f1b22d6edad7",
                 "shasum": ""
             },
             "require": {
@@ -2703,7 +2703,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-11-17 12:22:13"
+            "time": "2015-12-26 21:40:37"
         }
     ],
     "packages-dev": [
