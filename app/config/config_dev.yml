@@ -32,6 +32,7 @@ assetic:
 
 twig:
     globals:
+        bp_analytics_id: UA-41992080-4
         social_endpoint: %social_endpoint%
         payment_endpoint: %payment_endpoint%
         api_endpoint: %api_endpoint%

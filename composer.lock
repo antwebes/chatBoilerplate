@@ -13,16 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "b98d43e1b42a0825885d9a32b9cdbcf9694e79b0"
+                "reference": "bc5a5a797cdc333f7ebd08132b403b8d93cc0503"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/b98d43e1b42a0825885d9a32b9cdbcf9694e79b0",
-                "reference": "b98d43e1b42a0825885d9a32b9cdbcf9694e79b0",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/bc5a5a797cdc333f7ebd08132b403b8d93cc0503",
+                "reference": "bc5a5a797cdc333f7ebd08132b403b8d93cc0503",
                 "shasum": ""
             },
             "require": {
-                "antwebes/chatea-client-bundle": "0.1.33"
+                "antwebes/chatea-client-bundle": "0.1.35"
             },
             "require-dev": {
                 "mockery/mockery": "@stable",
@@ -57,21 +57,21 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-29 12:26:48"
+            "time": "2015-12-30 11:06:49"
         },
         {
             "name": "antwebes/chatea-client-bundle",
-            "version": "v0.1.33",
+            "version": "v0.1.35",
             "target-dir": "Ant/Bundle/ChateaClientBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "d7b50df67ce010744c39b0edbe634177509e3493"
+                "reference": "b516f84a802e29e7732e6ffaf31d328cb6413d6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/d7b50df67ce010744c39b0edbe634177509e3493",
-                "reference": "d7b50df67ce010744c39b0edbe634177509e3493",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/b516f84a802e29e7732e6ffaf31d328cb6413d6c",
+                "reference": "b516f84a802e29e7732e6ffaf31d328cb6413d6c",
                 "shasum": ""
             },
             "require": {
@@ -118,7 +118,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-12-10 08:06:48"
+            "time": "2015-12-30 08:42:25"
         },
         {
             "name": "antwebes/chatea-client-lib",
