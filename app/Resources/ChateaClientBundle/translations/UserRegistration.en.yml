@@ -75,3 +75,5 @@ user.edit_profile.success: "Your profile has been updated successfully"
 user.register.change_password: You can also change your email <a href="%path%" title="%title%">from here</a>
 change_email: "Change email"
 user.last_visits: "Last visits"
+register.explication_credentials_chateagratis: in network chat chateagratis
+register.explication_credentials_chatzona: in network chat chatzona
