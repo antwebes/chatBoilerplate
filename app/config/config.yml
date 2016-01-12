@@ -26,6 +26,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        welcome_visits_limit: 3
+        welcome_channels_limit: 9
 
 
 # Doctrine Configuration

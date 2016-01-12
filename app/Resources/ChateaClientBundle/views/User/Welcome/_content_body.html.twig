@@ -1,0 +1,44 @@
+{% trans_default_domain 'User' %}
+
+<h1 class="text-center">
+    {{ 'user.welcome' | trans({'%username%': app.user.username}) }}
+    {% if app.user.validated %}
+        <small> {{ 'user.welcome.subtitle' | trans({'%username%': app.user.username}) }}</small>
+    {% endif %}
+    {#<a class="btn btn-primary pull-right" href="{{ path('avatar_page') }}?type=button"><i class="icon-comment-alt"></i> Ir al chat</a></h1>#}
+<br />
+<hr>
+
+{% if app.user.validated %}
+
+    {% if not userMe.city %}
+        <div class="alert alert-warning">
+            {{ 'user.no_city' | trans({}, 'Notifications') }}
+            <a href="{{ path('chatea_client_update_profile_city') }}">{{ 'user.edit_city' | trans({}, 'UserChange') }}</a>
+        </div>
+    {% endif %}
+
+    {% if not userMe.profile %}
+        <div class="alert alert-warning">
+            {{ 'user.no_profile' | trans({}, 'Notifications') }}
+            <a href="{{ path('chatea_client_update_profile') }}">{{ 'user.edit_profile' | trans({}, 'UserRegistration') }}</a>
+        </div>
+    {% elseif not userMe.profile.profilePhoto %}
+        <div class="alert alert-warning">
+            {{ 'user.no_profile_photo' | trans({}, 'Notifications') }}
+            <a href="{{ path('chatea_client_update_profile_photo') }}">{{ 'user.edit_profile_photo' | trans({}, 'UserRegistration') }}</a>
+        </div>
+    {% endif %}
+
+    {% render(controller('ApiSocialBundle:Visit:renderWidgetUserVisitors', { 'user': userMe, 'limit': welcome_visits_limit, 'expand': true })) %}
+
+    {% if userMe.channels | length > 0 %}
+        {% include "ChateaClientBundle:User/Welcome:_channelsList.html.twig" with {'channels': userMe.channels, 'user': userMe, 'welcomeChannelsLimit': welcome_channels_limit , 'col_type': 'col-xs', 'col_size':'4'} %}
+    {% endif %}
+
+    <a class="btn btn-lg btn-primary" href="{{ path('user_vote') }}" title="{{ 'photos.vote' | trans({}, 'Photos') }}">{{ 'photos.vote' | trans({}, 'Photos') }}</a>
+{% else %}
+    <div class="row well">
+        Hola <strong>{{ app.user.username }}</strong>, {{  "para completar tu registro solo necesitas validar tu email."  | trans }} <a href="{{ path('confirm_email') }}">Aquí tienes toda la información necesaria </a> o también puedes <a href="{{ path('chatea_client_user_settings') }}">cambiarte de email </a>
+    </div>
+{% endif %}
