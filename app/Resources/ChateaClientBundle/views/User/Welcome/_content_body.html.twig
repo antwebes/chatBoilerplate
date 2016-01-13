@@ -18,7 +18,7 @@
         </div>
     {% endif %}
 
-    {% if not userMe.profile %}
+    {% if not userMe.profile or userMe.profile | isProfileEmpty %}
         <div class="alert alert-warning">
             {{ 'user.no_profile' | trans({}, 'Notifications') }}
             <a href="{{ path('chatea_client_update_profile') }}">{{ 'user.edit_profile' | trans({}, 'UserRegistration') }}</a>
