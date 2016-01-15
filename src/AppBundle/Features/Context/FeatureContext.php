@@ -88,10 +88,16 @@ class FeatureContext extends BaseContext
             )
         );
 
+//         $this->fakeServerMappings->addGetResource(
+//             '/api/users/2',
+//             'fixtures/users/user_recent_register.json'
+//         );
+        
+        //Tenemos que hacer esta llamada, porque ahora para saltar el registro, reemplazamos esta variable por el id de usuario, pero lo hacemos por javascript por eso no se llega a cambiar.
         $this->fakeServerMappings->addGetResource(
-            '/api/users/2',
-            'fixtures/users/user_recent_register.json'
-        );
+        		'/api/users/__userId__',
+        		'fixtures/users/user_recent_register.json'
+        		);
     }
 
     /**
