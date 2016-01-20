@@ -29,13 +29,19 @@
 			</form>
 	        {% else %}
 	        <ul class="nav navbar-nav navbar-right">
-				<li><a href="{{ path('ant_user_user_show', {'username' : app.user.username, 'user_id': app.user.id }) }}" data-behat="user-greeting">{% trans %}Bienvenido{% endtrans %} {{ app.user.username }}</a></li>
-<li><a title="{{ "Messages" | trans }}" href="{{ path('ant_user_user_messages') }}">{{ "Messages" | trans }} (<span id="num_messages">0</span>)</a></li>
+				<li><a href="{{ path('ant_user_user_show', {'username' : app.user.username, 'user_id': app.user.id }) }}?type=navbar" data-behat="user-greeting">{% trans %}Bienvenido{% endtrans %} {{ app.user.username }}</a></li>
+				<li><a title="{{ "Messages" | trans }}" href="{{ path('ant_user_user_messages') }}">{{ "Messages" | trans }} (<span id="num_messages">0</span>)</a></li>
 			  	<li class="dropdown">
 			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 			    		{{ "menu.item.my_account" | trans }} <span class="caret"></span>
 			    	</a>
 				    <ul class="dropdown-menu">
+				    	<li><a href="{{ path('ant_user_user_show', {'user_id': app.user.id, 'username': app.user.username}) }}?type=btn_navbar">
+				        		<b style="display:block">{{ app.user.username }}</b>
+				        		{{ "menu.item.show_my_profile" | trans }}
+			        		</a>
+			        	</li>
+			        	<li role="separator" class="divider"></li>
 				      <li><a title="{{ "menu.item.user_profile" | trans }}" href="{{ path('chatea_client_update_profile_index') }}">{{ "menu.item.user_profile" | trans }}</a></li>
 				      <li><a title="{{ "menu.item.preferences" | trans }}" href="{{ path('chatea_client_user_settings') }}">{{ "menu.item.preferences" | trans }}</a></li>
                       <li><a title="{{ "menu.item.register_rooms" | trans }}" href="{{ path('chatea_client_register_channel') }}">{{ "menu.item.register_rooms" | trans }}</a></li>
