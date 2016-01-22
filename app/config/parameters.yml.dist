@@ -40,3 +40,7 @@ parameters:
     payment_endpoint: "http://chateapayments.lo/app_dev.php/"
     visits_limit: 3
     realtime_endpoint: http://127.0.0.1:8000
+    redis_session: true
+    redis_session_client: default
+    redis_session_prefix: 'chat.boilerplate_'
+    redis_session_ttl: 3600
