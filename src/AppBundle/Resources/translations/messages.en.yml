@@ -14,7 +14,8 @@ menu.item.popular_photos: Popular photos
 menu.item.vote_photos: Vote
 menu.item.help: Help
 menu.item.my_account: My Acount
-menu.item.user_profile: Profile
+menu.item.user_profile: Edit profile
+menu.item.show_my_profile: See profile
 menu.item.preferences: Preferences
 menu.item.register_rooms: Register Channels
 menu.item.login: Login

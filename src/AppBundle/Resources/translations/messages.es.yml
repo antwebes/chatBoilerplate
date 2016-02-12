@@ -12,10 +12,11 @@ menu.item.chat: Chat
 menu.item.users: Usuarios
 menu.item.channels: Canales
 menu.item.popular_photos: Fotos populares
-menu.item.vote_photos: Votos
+menu.item.vote_photos: Votar fotos
 menu.item.help: Ayuda
 menu.item.my_account: Mi Cuenta
-menu.item.user_profile: Perfil
+menu.item.user_profile: Editar perfil
+menu.item.show_my_profile: Ver perfil
 menu.item.preferences: Ajustes
 menu.item.register_rooms: Registrar canal
 menu.item.login: Iniciar sesión
