@@ -13,7 +13,7 @@ Feature: View User data
 
   @view_my_profile
   Scenario: View my profile with button edit profile
-    Given I am logedin
+    Given I am logedin and go to index
       And I should see "Mi cuenta"
       And I click on the element with css "data-behat" and "user-greeting"
      Then I should see "Perfil de ausername"

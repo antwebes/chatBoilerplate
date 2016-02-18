@@ -146,6 +146,23 @@ class FeatureContext extends BaseContext
     }
     
     /**
+     * @BeforeScenario @page_welcome
+     */
+    public function beforePageWelcome()
+    {
+    	//para page welcome
+    	$this->fakeServerMappings->addGetResource(
+    	'/api/me',
+    	'fixtures/users/user_logued.json'
+    			);
+    	
+    	$this->fakeServerMappings->addGetResource(
+    			'/api/users/2/visitors?limit=3',
+    			'fixtures/users/visitors.json'
+    			);
+    }
+    
+    /**
      * @BeforeScenario @part_from_index
      */
     public function beforeViewIndexList()
@@ -694,6 +711,14 @@ class FeatureContext extends BaseContext
         }
         return $element;
 
+    }
+    /**
+     * @Given /^I am logedin and go to index$/
+     */
+    public function iAmLogedinAndGoToIndex()
+    {
+    	$this->iAmLogedin();
+    	$this->visit('/');
     }
 
     /**

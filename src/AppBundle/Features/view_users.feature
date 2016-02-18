@@ -47,7 +47,7 @@ Feature: View User data
 
   @view_user_profile @view_users
   Scenario: View users photos as loged in user
-    Given I am logedin
+    Given I am logedin and go to index
      When I click "Usuarios"
       And I click "Emily"
       And I click on the element with css "data-behat" and "user-photos"
@@ -56,7 +56,7 @@ Feature: View User data
 
   @view_user_profile @view_users
   Scenario: View a users photo as loged in user
-    Given I am logedin
+    Given I am logedin and go to index
      When I click "Usuarios"
       And I click "Emily"
       And I click on the element with css "data-behat" and "user-photos"

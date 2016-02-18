@@ -4,7 +4,7 @@ Feature: Edit provile data
 
   @edit_user_profile @edit_user_profile_success
   Scenario: Edit profile with success
-    Given I am logedin
+    Given I am logedin and go to index
      When I click on the element with css "data-behat" and "change-profile"
       And I click on the element with css "data-behat" and "btn_edit_profile"
       And I fill in "social_profile_youWant" with "algo querere"
@@ -17,7 +17,7 @@ Feature: Edit provile data
      
   @edit_user_profile @edit_user_profile_seeking_empty
   Scenario: Edit profile with seeking empty
-    Given I am logedin
+    Given I am logedin and go to index
      When I click on the element with css "data-behat" and "change-profile"
       And I click on the element with css "data-behat" and "btn_edit_profile"
       And I fill in "social_profile_youWant" with "text of you want"
@@ -31,7 +31,7 @@ Feature: Edit provile data
   
   @edit_user_profile @edit_user_profile_success
   Scenario: Go to page of edit profile photo
-    Given I am logedin
+    Given I am logedin and go to index
      When I click on the element with css "data-behat" and "change-profile"
       And I click on the element with css "data-behat" and "update-profile-photo"
      Then The "data-behat" with tag "title-update-photo-profile" exist
