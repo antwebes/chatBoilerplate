@@ -27,8 +27,9 @@
                 </div>
             </a>
         </div>
-        {% if col_size is defined and loop.index == 12/col_size %}<div class="clearfix visible-xs-block">
-        </div>{% endif %}
+        {% if col_size is defined and loop.index == 12/col_size %}
+        	<div class="clearfix"></div>
+        {% endif %}
     {% else %}
         <div class="col-lg-12">{{ 'user.welcome.no_channels' | trans }}</div>
     {% endfor %}
@@ -36,6 +37,6 @@
         <div class="clearfix visible-xs-block">
         </div>
         <hr>
-        <a href="{{ path('user_channel_list', {'userIs': user.id, 'list': 'owner'}) }}">{{ 'user.welcome.view_all_channels' | trans }}</a>
+        <a href="{{ path('user_channel_list', {'userId': user.id, 'list': 'owner'}) }}">{{ 'user.welcome.view_all_channels' | trans }}</a>
     {% endif %}
 </div>
