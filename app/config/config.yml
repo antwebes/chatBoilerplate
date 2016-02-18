@@ -26,6 +26,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        welcome_visits_limit: 3
+        welcome_channels_limit: 9
 
 
 # Doctrine Configuration
@@ -93,3 +96,4 @@ api_social:
         hasProfilePhoto: desc
         lastLogin: desc
     realtime_endpoint: %realtime_endpoint%
+    profile_properties_to_check: ['gender', 'youWant', 'about', 'seeking']

@@ -1,0 +1,42 @@
+{% trans_default_domain 'User' %}
+
+<h1 class="text-center">{{ 'user.welcome.enter_channels_owner' | trans }}</h1>
+
+<div class="row well">
+    {% for channel in channels | slice(0, welcomeChannelsLimit) %}
+        <div class="{% if col_type is defined and col_size is defined%}{{ col_type }}-{{ col_size }}{% else %}col-lg-4{% endif %}">
+            <a href="{{ path('channel_show', {'slug': channel.slug})}}" target="_blank">
+                <div>
+                    {% if channel.photo %}
+                        <img class="pull-left thumbnail" src="{{ channel.photo.pathIcon }}" width="50" height="50" title="{{ channel.name }}">
+                    {% else %}
+                        {% image '@ChateaClientBundle/Resources/public/images/no-photo-chatroom-icon.jpg'  output="images/no-photo-chatroom-icon.jpg" %}
+                        <img class="pull-left thumbnail" src="{{ asset_url }}">
+                        {% endimage %}
+                    {% endif %}
+                </div>
+                <div>
+                    <div>
+                        <p>{{ channel.name }}</p>
+                        <div class="badge" title="Número de visitas al canal">
+                            <span data-behat="user_visits">
+                                {{ channel.countVisits }}
+                            </span><i class="fa fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% if col_size is defined and loop.index == 12/col_size %}
+        	<div class="clearfix"></div>
+        {% endif %}
+    {% else %}
+        <div class="col-lg-12">{{ 'user.welcome.no_channels' | trans }}</div>
+    {% endfor %}
+    {% if channels | length > welcomeChannelsLimit %}
+        <div class="clearfix visible-xs-block">
+        </div>
+        <hr>
+        <a href="{{ path('user_channel_list', {'userId': user.id, 'list': 'owner'}) }}">{{ 'user.welcome.view_all_channels' | trans }}</a>
+    {% endif %}
+</div>
