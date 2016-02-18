@@ -2,6 +2,7 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\Yaml\Parser;
 
 class AppKernel extends Kernel
 {
@@ -43,7 +44,15 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
+        $yaml = new Parser();
+        $parametersPath = $this->getRootDir().'/config/parameters.yml';
+        $parameters = $yaml->parse(file_get_contents($parametersPath));
+
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+
+        if(isset($parameters['parameters']['redis_session']) && $parameters['parameters']['redis_session'] === true){
+            $loader->load($this->getRootDir().'/config/redis_session.yml');
+        }
     }
 
     protected function getContainerBaseClass()

@@ -1,0 +1,5 @@
+snc_redis:
+    session:
+        client: %redis_session_client%
+        prefix: %redis_session_prefix%
+        ttl: %redis_session_ttl%

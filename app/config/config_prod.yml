@@ -36,7 +36,3 @@ snc_redis:
             alias: default
             dsn: redis://%redis_password%@%redis_host%/%redis_db%
             logging: %kernel.debug%
-    session:
-      client: default
-      prefix: 'chat.boilerplate_'
-      ttl: 3600
