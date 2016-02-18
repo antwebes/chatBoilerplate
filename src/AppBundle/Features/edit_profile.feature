@@ -6,7 +6,7 @@ Feature: Edit provile data
   Scenario: Edit profile with success
     Given I am logedin
      When I click on the element with css "data-behat" and "change-profile"
-      And I click "Editar perfil"
+      And I click on the element with css "data-behat" and "btn_edit_profile"
       And I fill in "social_profile_youWant" with "algo querere"
       And I fill in "social_profile_about" with "algo sobre min"
       And I select "4" from "social_profile_birthday_month"
@@ -19,7 +19,7 @@ Feature: Edit provile data
   Scenario: Edit profile with seeking empty
     Given I am logedin
      When I click on the element with css "data-behat" and "change-profile"
-      And I click "Editar perfil"
+      And I click on the element with css "data-behat" and "btn_edit_profile"
       And I fill in "social_profile_youWant" with "text of you want"
       And I fill in "social_profile_about" with "algo sobre min"
       And I select "Escoge una opción" from "social_profile[seeking]"
