@@ -96,4 +96,5 @@ api_social:
         hasProfilePhoto: desc
         lastLogin: desc
     realtime_endpoint: %realtime_endpoint%
+    api_endpoint: %api_endpoint%
     profile_properties_to_check: ['gender', 'youWant', 'about', 'seeking']
