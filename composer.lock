@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "35ac2d2837c21868cbd115cbd0b3aa03",
-    "content-hash": "d96db53279d76a11955047e80502e2b2",
+    "hash": "ad874479746f00360fdf1d093b644b5d",
+    "content-hash": "f6433f9d65b1fcde4451c3f760a1465a",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
@@ -59,6 +59,41 @@
                 "chateagratis"
             ],
             "time": "2016-03-15 11:54:36"
+        },
+        {
+            "name": "antwebes/chat-bundle",
+            "version": "dev-master",
+            "target-dir": "Ant/ChatBundle",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:antwebes/chatbundle.git",
+                "reference": "f3d936c005b58324d761882e7e217b5a2f2d1393"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "dev-master"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ant\\ChatBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "pablo",
+                    "email": "-"
+                }
+            ],
+            "description": "A bundle to provide page chat",
+            "keywords": [
+                "chat bundle"
+            ],
+            "time": "2016-03-18 21:22:03"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -2663,7 +2698,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0f355998586f251b6b032c206cbb31b7901f2329",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/06146f3f2b37ff92f6d9586d263d08f83abc0be5",
                 "reference": "0f355998586f251b6b032c206cbb31b7901f2329",
                 "shasum": ""
             },
@@ -3508,6 +3543,7 @@
         "snc/redis-bundle": 20,
         "antwebes/help-bundle": 20,
         "antwebes/pretty-bundle": 20,
+        "antwebes/chat-bundle": 20,
         "behat/behat": 0,
         "behat/mink": 0,
         "antwebes/guzzle-fake-server": 20

@@ -1,3 +1,7 @@
+chat:
+    resource: "@ChatBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ant_api_social:
     resource: "@ApiSocialBundle/Resources/config/routing-es.yml"
     prefix:   /
