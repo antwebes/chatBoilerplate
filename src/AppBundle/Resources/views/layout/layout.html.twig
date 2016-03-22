@@ -60,13 +60,13 @@
     <div class="col-md-4">
       <h2>Registra tu apodo</h2>
       <p>Registra tu apodo para que nadie pueda usarlo. Es totalmente gratis y te permitirá registrar canales, subir tu perfil y muchas novedades más. </p>
-      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_user') }}" role="button" data-behat="register">Registrar apodo</a></p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('chatea_client_register_user', {'type': 'btn_index'}) }}" role="button" data-behat="register">Registrar apodo</a></p>
     </div>
 
     <div class="col-md-4">
       <h2>Entrar con tu cuenta</h2>
       <p>Accede al chat con tu nick registrado introduciendo usuario y contraseña.</p>
-      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login') }}" role="button" name="button-login">Iniciar sesión</a></p>
+      <p><a class="btn btn-primary btn-lg" href="{{ path('_antwebes_chateaclient_login', {'type': 'btn_index'}) }}" role="button" name="button-login">Iniciar sesión</a></p>
    </div>
 
     <div class="col-md-4">
