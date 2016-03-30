@@ -14,12 +14,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "3a5cb977e7a4d7643431283d21d6bf0739afe9b2"
+                "reference": "4411c783fed2360d26f432e01ea61666f6e42f67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/3a5cb977e7a4d7643431283d21d6bf0739afe9b2",
-                "reference": "3a5cb977e7a4d7643431283d21d6bf0739afe9b2",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/4411c783fed2360d26f432e01ea61666f6e42f67",
+                "reference": "4411c783fed2360d26f432e01ea61666f6e42f67",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2016-03-15 11:54:36"
+            "time": "2016-03-17 07:33:36"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -395,7 +395,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/07a9af2d4de5f9ef0bf2d9ae94421e5fc50d7859",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/2e1b1f7597e2f647e99e96e747fcae9718ac817b",
                 "reference": "07a9af2d4de5f9ef0bf2d9ae94421e5fc50d7859",
                 "shasum": ""
             },
@@ -532,7 +532,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/866e100a425b8b73d15393fd081c6bf067f05bf9",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/392b8dd9e04c073e832fcda99270ec5a8f5e30cd",
                 "reference": "866e100a425b8b73d15393fd081c6bf067f05bf9",
                 "shasum": ""
             },
@@ -1490,7 +1490,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a9ccae25cbb5c0af6f2a549e4cc3ee6628c253ab",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dec4e574c2efcbbd4b6441ef64334daa79edf8f2",
                 "reference": "a9ccae25cbb5c0af6f2a549e4cc3ee6628c253ab",
                 "shasum": ""
             },
@@ -2141,7 +2141,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/a75f351c8e7cc99f1931796c0a78d551178c3bdf",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/507a15f56fa7699f6cc8c2c7de4080b19ce22546",
                 "reference": "a75f351c8e7cc99f1931796c0a78d551178c3bdf",
                 "shasum": ""
             },
@@ -2663,7 +2663,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0f355998586f251b6b032c206cbb31b7901f2329",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/8110612a468a40a534ac91b5c93bff6fa873ff98",
                 "reference": "0f355998586f251b6b032c206cbb31b7901f2329",
                 "shasum": ""
             },
