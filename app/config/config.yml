@@ -92,6 +92,7 @@ services:
 
 api_social:
     visits_limit: %visits_limit%
+    api_endpoint: %api_endpoint%
     users_orders:
         hasProfilePhoto: desc
         lastLogin: desc
