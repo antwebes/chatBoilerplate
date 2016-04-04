@@ -36,3 +36,6 @@ snc_redis:
             alias: default
             dsn: redis://%redis_password%@%redis_host%/%redis_db%
             logging: %kernel.debug%
+            
+chatea_client:
+    can_skip_register_profile: false

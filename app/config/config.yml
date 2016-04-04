@@ -79,7 +79,6 @@ chatea_client:
         user_manager: %limits.users%
         photo_manager: %limits.photos%
     register_with_profile: true
-    can_skip_register_profile: false
 
 beelab_recaptcha2:
     site_key:  %recaptcha_public_key%

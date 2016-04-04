@@ -14,3 +14,6 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+chatea_client:
+    can_skip_register_profile: true
