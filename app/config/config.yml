@@ -78,7 +78,6 @@ chatea_client:
     limits:
         user_manager: %limits.users%
         photo_manager: %limits.photos%
-    profile_properties_to_check: ['gender', 'youWant', 'about', 'seeking']
 
 beelab_recaptcha2:
     site_key:  %recaptcha_public_key%
