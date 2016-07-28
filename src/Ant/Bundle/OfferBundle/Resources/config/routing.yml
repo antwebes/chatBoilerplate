@@ -1,7 +1,7 @@
 offer_oferta:
     resource: "@OfferBundle/Resources/config/routing/offer.yml"
-    prefix:   /oferta
+    prefix:   /usuario/ofertas
 
-offer_homepage:
+offer:
     path:     /ofertas
-    defaults: { _controller: OfferBundle:Default:index }
+    defaults: { _controller: "OfferBundle:Offer:index" }

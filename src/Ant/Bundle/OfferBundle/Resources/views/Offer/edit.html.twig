@@ -1,16 +1,16 @@
-{% extends '::base.html.twig' %}
+{% extends 'OfferBundle::layout.html.twig' %}
 
-{% block body -%}
+{% block main_section %}
     <h1>Offer edit</h1>
 
     {{ form(edit_form) }}
 
         <ul class="record_actions">
     <li>
-        <a href="{{ path('offer') }}">
+        <a href="{{ path('offer_my') }}">
             Back to the list
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
-{% endblock %}
+{% endblock main_section %}

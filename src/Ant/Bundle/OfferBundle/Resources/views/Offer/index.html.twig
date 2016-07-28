@@ -1,57 +1,43 @@
-{% extends '::base.html.twig' %}
+{% extends 'PrettyBundle:Default:layout_full.html.twig' %}
 
-{% block body -%}
-    <h1>Offer list</h1>
+{% block head_css %}
+    {{ parent() }}
+    <style>
+        .panel-default h4{
+            font-weight: unset !important;
+        }
+    </style>
+{% endblock %}
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Slug</th>
-                <th>Description</th>
-                <th>Countvisits</th>
-                <th>Owner</th>
-                <th>Enabled</th>
-                <th>Publicatedat</th>
-                <th>Isexpired</th>
-                <th>Numusers</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('offer_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.slug }}</td>
-                <td>{{ entity.description }}</td>
-                <td>{{ entity.countVisits }}</td>
-                <td>{{ entity.owner }}</td>
-                <td>{{ entity.enabled }}</td>
-                <td>{% if entity.publicatedAt %}{{ entity.publicatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.isExpired }}</td>
-                <td>{{ entity.numUsers }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('offer_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('offer_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('offer_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+{% block body_container_content_full %}
+    <div class="container" style="margin-bottom:5%">
+        {% block body_container_center %}
+            <div class="container">
+                <br/>
+                <br/>
+                <br/>
+                {% for entity in entities %}
+                    {# Hacemos estos chequeaos para poner listas de 4 elementos #}
+                    {% if loop.index % 5 == 0 %}
+                        <div class="row">
+                    {% endif %}
+                    {% if loop.first %}
+                        <div class="row">
+                    {% endif %}
+                        <div class="col-lg-3 col-md-6 text-center">
+                            <div class="service-box">
+                                <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
+                                <h3>{{ entity.name }}</h3>
+                                <p class="text-muted">{{ entity.description }}</p>
+                            </div>
+                        </div>
+                    {% if not loop.first and loop.index % 4 == 0 %}
+                        </div>
+                        <br/>
+                        <br/>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endblock body_container_center %}
+    </div>
+{% endblock body_container_content_full %}

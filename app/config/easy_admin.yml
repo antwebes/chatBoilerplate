@@ -1,0 +1,13 @@
+easy_admin:
+    entities:
+        Offer:
+            class: Ant\Bundle\OfferBundle\Entity\Offer
+            label: 'Ofertas'
+            new:
+                fields:
+                    - { property: 'name', label: 'Nombre' }
+                    - { property: 'description', label: 'Descripción' }
+                    - { property: 'owner', label: 'Usuario propietario' }
+                    - { property: 'enabled', label: 'Habilitada' }
+                    - { property: 'expiredAt', label: 'Expirará el..' }
+    site_name: 'Mans Networking'

@@ -32,3 +32,8 @@ core_api:
     defaults: { _controller: AppBundle:Default:api }
     requirements:
         _resource:  .+
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin

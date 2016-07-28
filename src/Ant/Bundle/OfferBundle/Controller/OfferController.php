@@ -15,6 +15,24 @@ use Ant\Bundle\OfferBundle\Form\OfferType;
 class OfferController extends Controller
 {
 
+    private function assertPermissions()
+    {
+        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            throw new AccessDeniedException();
+        }
+    }
+
+    private function getUserOnline()
+    {
+        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            return null;
+        }
+
+        $user = $this->getUser();
+
+        return $user;
+    }
+
     /**
      * Lists all Offer entities.
      *
@@ -23,12 +41,36 @@ class OfferController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        $user = $this->getUserOnline();
+
         $entities = $em->getRepository('OfferBundle:Offer')->findAll();
 
         return $this->render('OfferBundle:Offer:index.html.twig', array(
             'entities' => $entities,
         ));
     }
+
+    /**
+     * Lists all my Offer entities.
+     *
+     */
+    public function myOffersAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $this->getUserOnline();
+
+        if (is_null($user)){
+            $entities = null;
+        }else{
+            $entities = $em->getRepository('OfferBundle:Offer')->findBy(array('owner'=> $user->getId()));
+        }
+
+        return $this->render('OfferBundle:Offer:index_dashboard.html.twig', array(
+            'entities' => $entities,
+        ));
+    }
+
     /**
      * Creates a new Offer entity.
      *
