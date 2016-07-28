@@ -2,7 +2,7 @@
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ "ChateaClientBundle", "ApiSocialBundle", "HelpBundle", "AppBundle"]
+    bundles:        [ "ChateaClientBundle", "ApiSocialBundle", "HelpBundle", "AppBundle", "OfferBundle"]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

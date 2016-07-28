@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: assetic.yml }
+    - { resource: stof_doctrine_extensions.yml }
 
 framework:
     #esi:             ~

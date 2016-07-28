@@ -1,0 +1,30 @@
+offer:
+    path:     /
+    defaults: { _controller: "OfferBundle:Offer:index" }
+
+offer_show:
+    path:     /{id}/show
+    defaults: { _controller: "OfferBundle:Offer:show" }
+
+offer_new:
+    path:     /new
+    defaults: { _controller: "OfferBundle:Offer:new" }
+
+offer_create:
+    path:     /create
+    defaults: { _controller: "OfferBundle:Offer:create" }
+    requirements: { _method: post }
+
+offer_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "OfferBundle:Offer:edit" }
+
+offer_update:
+    path:     /{id}/update
+    defaults: { _controller: "OfferBundle:Offer:update" }
+    requirements: { _method: post|put }
+
+offer_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "OfferBundle:Offer:delete" }
+    requirements: { _method: post|delete }
