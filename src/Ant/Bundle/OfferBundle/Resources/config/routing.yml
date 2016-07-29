@@ -1,7 +1,8 @@
-offer_oferta:
-    resource: "@OfferBundle/Resources/config/routing/offer.yml"
+offer_user_offer:
+    resource: "@OfferBundle/Resources/config/routing/user_offer.yml"
     prefix:   /usuario/ofertas
 
-offer:
-    path:     /ofertas
-    defaults: { _controller: "OfferBundle:Offer:index" }
+offer_public_offer:
+    resource: "@OfferBundle/Resources/config/routing/offer.yml"
+    prefix:   /ofertas
+

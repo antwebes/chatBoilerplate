@@ -1,30 +1,7 @@
-offer_my:
-    path:     /creadas
-    defaults: { _controller: "OfferBundle:Offer:myOffers" }
+offer:
+    path:     /
+    defaults: { _controller: "OfferBundle:Offer:index" }
 
 offer_show:
     path:     /{id}/ver
     defaults: { _controller: "OfferBundle:Offer:show" }
-
-offer_new:
-    path:     /nuevo
-    defaults: { _controller: "OfferBundle:Offer:new" }
-
-offer_create:
-    path:     /crear
-    defaults: { _controller: "OfferBundle:Offer:create" }
-    requirements: { _method: post }
-
-offer_edit:
-    path:     /{id}/editar
-    defaults: { _controller: "OfferBundle:Offer:edit" }
-
-offer_update:
-    path:     /{id}/actualizar
-    defaults: { _controller: "OfferBundle:Offer:update" }
-    requirements: { _method: post|put }
-
-offer_delete:
-    path:     /{id}/borrar
-    defaults: { _controller: "OfferBundle:Offer:delete" }
-    requirements: { _method: post|delete }

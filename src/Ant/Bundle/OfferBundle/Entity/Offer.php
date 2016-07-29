@@ -61,7 +61,7 @@ class Offer
      * @var boolean if true offer is enabled
      * @ORM\Column(name="enabled", type="boolean" )
      */
-    private $enabled = false;
+    private $enabled = true;
 
     /**
      * @ORM\Column(type="datetime")

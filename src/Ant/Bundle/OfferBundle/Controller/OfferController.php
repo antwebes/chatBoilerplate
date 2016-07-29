@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Ant\Bundle\OfferBundle\Entity\Offer;
 use Ant\Bundle\OfferBundle\Form\OfferType;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Offer controller.
@@ -14,25 +15,6 @@ use Ant\Bundle\OfferBundle\Form\OfferType;
  */
 class OfferController extends Controller
 {
-
-    private function assertPermissions()
-    {
-        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
-            throw new AccessDeniedException();
-        }
-    }
-
-    private function getUserOnline()
-    {
-        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            return null;
-        }
-
-        $user = $this->getUser();
-
-        return $user;
-    }
-
     /**
      * Lists all Offer entities.
      *
@@ -66,7 +48,7 @@ class OfferController extends Controller
             $entities = $em->getRepository('OfferBundle:Offer')->findBy(array('owner'=> $user->getId()));
         }
 
-        return $this->render('OfferBundle:Offer:index_dashboard.html.twig', array(
+        return $this->render('OfferBundle:Offer:my.html.twig', array(
             'entities' => $entities,
         ));
     }
@@ -111,7 +93,7 @@ class OfferController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Crear'));
 
         return $form;
     }
@@ -156,13 +138,7 @@ class OfferController extends Controller
      */
     public function showAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('OfferBundle:Offer')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Offer entity.');
-        }
+        $entity = $this->findOfferByIdThrowExceptionIfNotExist($id);
 
         $deleteForm = $this->createDeleteForm($id);
 
@@ -178,13 +154,7 @@ class OfferController extends Controller
      */
     public function editAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('OfferBundle:Offer')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Offer entity.');
-        }
+        $entity = $this->findOfferByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id);
 
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
@@ -220,13 +190,7 @@ class OfferController extends Controller
      */
     public function updateAction(Request $request, $id)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('OfferBundle:Offer')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Offer entity.');
-        }
+        $entity = $this->findOfferByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id);
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
@@ -257,6 +221,8 @@ class OfferController extends Controller
             $em = $this->getDoctrine()->getManager();
             $entity = $em->getRepository('OfferBundle:Offer')->find($id);
 
+            $this->checkIfUserIsOwnerOffer($entity);
+
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find Offer entity.');
             }
@@ -283,5 +249,72 @@ class OfferController extends Controller
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
         ;
+    }
+
+    private function assertPermissions()
+    {
+        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            throw new AccessDeniedException();
+        }
+    }
+
+    private function getUserOnline()
+    {
+        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+            return null;
+        }
+
+        $user = $this->getUser();
+
+        return $user;
+    }
+
+    /**
+     * @param Offer $offer
+     * @return bool
+     */
+    private function checkIfUserIsOwnerOffer(Offer $offer)
+    {
+        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            throw new AccessDeniedException();
+        }
+
+        $user = $this->getUser();
+
+        if ($user->getId() != $offer->getOwner()){
+            throw new AccessDeniedException('No es una oferta tuya.');
+        }else{
+            return true;
+        }
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    private function findOfferByIdThrowExceptionIfNotExist($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('OfferBundle:Offer')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Offer entity.');
+        }
+
+        return $entity;
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    private function findOfferByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id)
+    {
+        $entity = $this->findOfferByIdThrowExceptionIfNotExist($id);
+
+        $this->checkIfUserIsOwnerOffer($entity);
+
+        return $entity;
     }
 }

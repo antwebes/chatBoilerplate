@@ -15,16 +15,19 @@ class OfferType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('description')
-            ->add('owner', 'integer', array('disabled' => true))
-            ->add('enabled')
-            ->add('expiredAt', 'date', array(
-                'widget' => 'single_text',
-                // this is actually the default format for single_text
-                'format' => 'yyyy-MM-dd',
+            ->add('name', 'text', array('label' => 'Nombre'))
+            ->add('description', 'textarea', array('label' => 'Descripción'))
+            ->add('owner', 'integer', array(
+                'disabled'  => true,
+                'label'     => 'Propietario'
             ))
-            ->add('numUsers')
+            ->add('expiredAt', 'date', array(
+                'widget'    => 'single_text',
+                // this is actually the default format for single_text
+                'format'    => 'yyyy-MM-dd',
+                'label'     => 'Fecha de expiración'
+            ))
+//            ->add('numUsers', 'integer', array('label' => 'Número de usuarios'))
         ;
     }
     

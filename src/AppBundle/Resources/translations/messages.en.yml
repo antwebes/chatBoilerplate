@@ -18,6 +18,7 @@ menu.item.user_profile: Edit profile
 menu.item.show_my_profile: See profile
 menu.item.preferences: Preferences
 menu.item.register_rooms: Register Channels
+menu.item.my_offers: My offers
 menu.item.login: Login
 menu.item.logout: Logout
 menu.item.register: Register

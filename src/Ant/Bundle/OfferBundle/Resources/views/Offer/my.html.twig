@@ -7,22 +7,19 @@
         <section class="container-wrap main-color">
             <div id="main-container" class="container-full">
                 <!-- MAIN SECTION -->
-                <h1>Offer list</h1>
+                <h1>Mis ofertas</h1>
 
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Name</th>
-                        <th>Slug</th>
-                        <th>Description</th>
-                        <th>Countvisits</th>
-                        <th>Owner</th>
-                        <th>Enabled</th>
-                        <th>Publicatedat</th>
-                        <th>Isexpired</th>
-                        <th>Numusers</th>
-                        <th>Actions</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Habilitada</th>
+                        <th>Fecha de creación</th>
+                        <th>Está expirada</th>
+                        {#<th>Nº usuarios</th>#}
+                        <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -30,36 +27,30 @@
                         <tr>
                             <td><a href="{{ path('offer_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                             <td>{{ entity.name }}</td>
-                            <td>{{ entity.slug }}</td>
                             <td>{{ entity.description }}</td>
-                            <td>{{ entity.countVisits }}</td>
-                            <td>{{ entity.owner }}</td>
                             <td>{{ entity.enabled }}</td>
                             <td>{% if entity.publicatedAt %}{{ entity.publicatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
                             <td>{{ entity.isExpired }}</td>
-                            <td>{{ entity.numUsers }}</td>
+                            {#<td>{{ entity.numUsers }}</td>#}
                             <td>
                                 <ul>
                                     <li>
-                                        <a href="{{ path('offer_show', { 'id': entity.id }) }}">show</a>
+                                        <a href="{{ path('offer_show', { 'id': entity.id }) }}">Ver</a>
                                     </li>
                                     <li>
-                                        <a href="{{ path('offer_edit', { 'id': entity.id }) }}">edit</a>
+                                        <a href="{{ path('offer_edit', { 'id': entity.id }) }}">Editar</a>
                                     </li>
                                 </ul>
                             </td>
                         </tr>
+                    {% else %}
+                        No has creado ninguna oferta todavia
                     {% endfor %}
                     </tbody>
                 </table>
-
-                <ul>
-                    <li>
-                        <a href="{{ path('offer_new') }}">
-                            Create a new entry
-                        </a>
-                    </li>
-                </ul>
+                <a href="{{ path('offer_new') }}">
+                    <button type="button" class="btn btn-primary">Crear una oferta</button>
+                </a>
                 <!-- END MAIN SECTION -->
             </div>
         </section>
