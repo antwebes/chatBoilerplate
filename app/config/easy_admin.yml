@@ -10,4 +10,10 @@ easy_admin:
                     - { property: 'owner', label: 'Usuario propietario' }
                     - { property: 'enabled', label: 'Habilitada' }
                     - { property: 'expiredAt', label: 'Expirará el..' }
+        Parking:
+            class: Ant\Bundle\ParkingBundle\Entity\Parking
+            label: 'Parkings'
+        ParkingTicket:
+                    class: Ant\Bundle\ParkingBundle\Entity\ParkingTicket
+                    label: 'ParkingTickets'
     site_name: 'Mans Networking'

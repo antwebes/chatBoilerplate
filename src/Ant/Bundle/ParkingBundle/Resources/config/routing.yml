@@ -1,0 +1,7 @@
+parking_parkimetro:
+    resource: "@ParkingBundle/Resources/config/routing/parkingticket.yml"
+    prefix:   /parkimetro
+
+parking_parking:
+    resource: "@ParkingBundle/Resources/config/routing/parking.yml"
+    prefix:   /parking

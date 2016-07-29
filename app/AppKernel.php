@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new Ant\Bundle\OfferBundle\OfferBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Ant\Bundle\ParkingBundle\ParkingBundle(),
         );
 
 

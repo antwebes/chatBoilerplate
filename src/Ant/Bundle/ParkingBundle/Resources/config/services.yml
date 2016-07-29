@@ -1,0 +1,4 @@
+services:
+#    parking.example:
+#        class: Ant\Bundle\ParkingBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
