@@ -41,3 +41,9 @@ easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/"
     type:     annotation
     prefix:   /admin
+
+#INIT Mremi contact_form
+#I need include routes in xml, If I override routes in yml, I get an strange error.
+mremi_contact_form:
+    resource: "@AppBundle/Resources/config/routing_mremi_contact.xml"
+#FIN Mremi contact_form

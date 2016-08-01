@@ -1,0 +1,33 @@
+{#
+
+This file is part of the Mremi\ContactBundle Symfony bundle.
+
+(c) Rémi Marseille <marseille.remi@gmail.com>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends "MremiContactBundle::layout.html.twig" %}
+
+{% trans_default_domain 'MremiContactBundle' %}
+
+{% form_theme form 'MremiContactBundle:Contact:bootstrap_form_theme.html.twig' %}
+
+{% block title %}{{ 'mremi_contact.form_page_title'|trans }}{% endblock %}
+
+{% block main_section %}
+    <div class="col-xs-12">
+        <br/>
+        {{ form_start(form, {'action': path('mremi_contact_form')}) }}
+        <fieldset>
+            {#<legend>{{ 'mremi_contact.form_title'|trans }}</legend>#}
+            <h1 class="text-center">Ponte en contacto <small> Envíanos tu pregunta, consulta o inquietud.</small></h1>
+
+            {{ form_widget(form) }}
+        </fieldset>
+        {{ form_end(form) }}
+        <hr/>
+    </div>
+{% endblock main_section %}

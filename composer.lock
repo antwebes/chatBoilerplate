@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aee9890b9438f3237cd68a5064925384",
-    "content-hash": "4f877a304951e868cc99296e8a2f1794",
+    "hash": "6265f5ec0b3d77054d616bb362efee77",
+    "content-hash": "b0b3a28be32f1a0eba8ea9ed2adcf478",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
@@ -1761,6 +1761,61 @@
                 "psr-3"
             ],
             "time": "2016-04-20 19:08:06"
+        },
+        {
+            "name": "mremi/contact-bundle",
+            "version": "v1.3.0",
+            "target-dir": "Mremi/ContactBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mremi/ContactBundle.git",
+                "reference": "09fc0666f2460df59fb707e56c83e50ab58987d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mremi/ContactBundle/zipball/09fc0666f2460df59fb707e56c83e50ab58987d8",
+                "reference": "09fc0666f2460df59fb707e56c83e50ab58987d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "swiftmailer/swiftmailer": "~4.3|~5",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "twig/twig": "~1.20"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "~0.1|~1.0",
+                "phpunit/phpunit": "~4.8",
+                "symfony/phpunit-bridge": "~2.7|~3.0"
+            },
+            "suggest": {
+                "mremi/templating-extra-bundle": "In order to profile pages, get some statistics and enhance front office development"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Mremi\\ContactBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rémi Marseille",
+                    "email": "marseille.remi@gmail.com"
+                }
+            ],
+            "description": "Implementation of a contact form for Symfony2",
+            "homepage": "https://github.com/mremi/ContactBundle",
+            "keywords": [
+                "Symfony2",
+                "contact",
+                "form"
+            ],
+            "time": "2015-10-27 12:23:50"
         },
         {
             "name": "nikic/php-parser",

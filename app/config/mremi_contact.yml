@@ -1,0 +1,17 @@
+mremi_contact:
+    store_data:            false
+    contact_class:         Mremi\ContactBundle\Model\Contact
+
+    form:
+        type:              mremi_contact
+        name:              contact_form
+        validation_groups: [Default]
+        subject_provider:  mremi_contact.subject_provider.noop
+
+    email:
+        from:
+            - { address: no-reply@mans-networking.com, name: "John Doe" }
+        mailer:            mremi_contact.mailer.twig_swift
+        to:
+            - { address: pablo@antweb.es, name: "Webmaster" }
+        template:          MremiContactBundle:Contact:email.txt.twig

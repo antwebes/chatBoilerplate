@@ -29,7 +29,8 @@
         "antwebes/pretty-bundle": "dev-master",
         "jms/translation-bundle": "1.1.0",
         "stof/doctrine-extensions-bundle": "^1.2",
-        "javiereguiluz/easyadmin-bundle": "^1.15"
+        "javiereguiluz/easyadmin-bundle": "^1.15",
+        "mremi/contact-bundle": "v1.3.0"
     },
     "require-dev" : {
         "behat/behat" : "2.4.*@stable",

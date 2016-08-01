@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new Ant\Bundle\ParkingBundle\ParkingBundle(),
+            new Mremi\ContactBundle\MremiContactBundle(),
         );
 
 
