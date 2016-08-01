@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Ant\Bundle\ParkingBundle\Entity\ParkingTicket;
 use Ant\Bundle\ParkingBundle\Form\ParkingTicketType;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * ParkingTicket controller.
@@ -123,13 +124,7 @@ class ParkingTicketController extends Controller
      */
     public function editAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ParkingBundle:ParkingTicket')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find ParkingTicket entity.');
-        }
+        $entity = $this->findOfferByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id);
 
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
@@ -194,11 +189,8 @@ class ParkingTicketController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('ParkingBundle:ParkingTicket')->find($id);
 
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find ParkingTicket entity.');
-            }
+            $entity = $this->findOfferByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id);
 
             $em->remove($entity);
             $em->flush();
@@ -225,10 +217,10 @@ class ParkingTicketController extends Controller
     }
 
     /**
-     * @param Offer $offer
+     * @param ParkingTicket $parkingTicket
      * @return bool
      */
-    private function checkIfUserIsOwnerOffer(Offer $offer)
+    private function checkIfUserIsOwnerParkingTicket(ParkingTicket $parkingTicket)
     {
         if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
             throw new AccessDeniedException();
@@ -236,8 +228,8 @@ class ParkingTicketController extends Controller
 
         $user = $this->getUser();
 
-        if ($user->getId() != $offer->getOwner()){
-            throw new AccessDeniedException('No es una oferta tuya.');
+        if ($user->getId() != $parkingTicket->getCreator()){
+            throw new AccessDeniedException('No es un ticket de parking tuyo.');
         }else{
             return true;
         }
@@ -268,7 +260,7 @@ class ParkingTicketController extends Controller
     {
         $entity = $this->findParkingTicketByIdThrowExceptionIfNotExist($id);
 
-        $this->checkIfUserIsOwnerParking($entity);
+        $this->checkIfUserIsOwnerParkingTicket($entity);
 
         return $entity;
     }

@@ -7,12 +7,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Ant\Bundle\ParkingBundle\Entity\Parking;
 use Ant\Bundle\ParkingBundle\Form\ParkingType;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * Parking controller.
  *
  */
-class ParkingController extends Controller
+class ParkingController extends BaseController
 {
 
     /**
@@ -101,13 +102,7 @@ class ParkingController extends Controller
      */
     public function showAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ParkingBundle:Parking')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Parking entity.');
-        }
+        $entity = $this->findParkingByIdThrowExceptionIfNotExist($id);
 
         $deleteForm = $this->createDeleteForm($id);
 
@@ -123,13 +118,7 @@ class ParkingController extends Controller
      */
     public function editAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ParkingBundle:Parking')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Parking entity.');
-        }
+        $entity = $this->findParkingByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id);
 
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
@@ -165,13 +154,7 @@ class ParkingController extends Controller
      */
     public function updateAction(Request $request, $id)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $entity = $em->getRepository('ParkingBundle:Parking')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Parking entity.');
-        }
+        $entity = $this->findParkingByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id);
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
@@ -228,5 +211,54 @@ class ParkingController extends Controller
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
         ;
+    }
+
+    /**
+     * @param Parking $parking
+     * @return bool
+     */
+    private function checkIfUserIsOwnerParking(Parking $parking)
+    {
+        if (!$this->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            throw new AccessDeniedException();
+        }
+
+        $user = $this->getUser();
+
+        if ($user->getId() != $parking->getOwner()){
+            throw new AccessDeniedException('No es un parking tuya.');
+        }else{
+            return true;
+        }
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    private function findParkingByIdThrowExceptionIfNotExist($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('ParkingBundle:Parking')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Parking entity.');
+        }
+
+        return $entity;
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    private function findParkingByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id)
+    {
+        $entity = $this->findParkingByIdThrowExceptionIfNotExist($id);
+
+        $this->checkIfUserIsOwnerParking($entity);
+
+        return $entity;
     }
 }
