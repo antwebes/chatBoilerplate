@@ -30,6 +30,28 @@ class ParkingController extends BaseController
             'entities' => $entities,
         ));
     }
+
+    /**
+     * Lists all my Parking entities.
+     *
+     */
+    public function myParkingsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $this->getUserOnline();
+
+        if (is_null($user)){
+            $entities = null;
+        }else{
+            $entities = $em->getRepository('ParkingBundle:Parking')->findBy(array('owner'=> $user->getId()));
+        }
+
+        return $this->render('ParkingBundle:ParkingTicket:my.html.twig', array(
+            'entities' => $entities,
+        ));
+    }
+
     /**
      * Creates a new Parking entity.
      *
@@ -182,12 +204,8 @@ class ParkingController extends BaseController
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('ParkingBundle:Parking')->find($id);
 
-            if (!$entity) {
-                throw $this->createNotFoundException('Unable to find Parking entity.');
-            }
+            $entity = $this->findParkingByIdThrowExceptionIfNotExistOrIfUserLoguedIsNotOwner($id);
 
             $em->remove($entity);
             $em->flush();

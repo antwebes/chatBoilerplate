@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
  * ParkingTicket controller.
  *
  */
-class ParkingTicketController extends Controller
+class ParkingTicketController extends BaseController
 {
 
     /**
@@ -30,6 +30,28 @@ class ParkingTicketController extends Controller
             'entities' => $entities,
         ));
     }
+    
+    /**
+     * Lists all my ParkingTickets entities.
+     *
+     */
+    public function myParkingTicketsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $this->getUserOnline();
+
+        if (is_null($user)){
+            $entities = null;
+        }else{
+            $entities = $em->getRepository('ParkingBundle:ParkingTicket')->findBy(array('creator'=> $user->getId()));
+        }
+
+        return $this->render('ParkingBundle:ParkingTicket:my.html.twig', array(
+            'entities' => $entities,
+        ));
+    }
+    
     /**
      * Creates a new ParkingTicket entity.
      *

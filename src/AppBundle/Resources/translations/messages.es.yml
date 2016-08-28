@@ -4,8 +4,6 @@ channels: Canales
 Messages: Mensajes
 "My photos": "Mis fotos"
 
-
-
 menu.title: Toggle navigation
 menu.item.home: Inicio
 menu.item.chat: Chat
@@ -20,6 +18,7 @@ menu.item.show_my_profile: Ver perfil
 menu.item.preferences: Ajustes
 menu.item.register_rooms: Registrar canal
 menu.item.my_offers: Mis ofertas
+menu.item.my_parking_tickets: Mis plazas liberadas
 menu.item.login: Iniciar sesión
 menu.item.logout: Salir
 menu.item.register: Registrarse

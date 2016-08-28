@@ -1,16 +1,19 @@
-{% extends '::base.html.twig' %}
+{% extends 'ParkingBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>ParkingTicket list</h1>
+{% block body_container_center %}
+    <h1>Plazas de aparcamientos liberadas</h1>
 
-    <table class="records_list">
+    <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Creator</th>
-                <th>Startdate</th>
-                <th>Enddate</th>
-                <th>Actions</th>
+                <th>Identificador</th>
+                <th>Liberada por el usuario</th>
+                <th>Plaza de aparcamiento</th>
+                <th>Desde</th>
+                <th>Hasta</th>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <th>Accciones</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
@@ -18,28 +21,35 @@
             <tr>
                 <td><a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.creator }}</td>
+                <td>{{ entity.parking.number }}</td>
                 <td>{% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.endDate %}{{ entity.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('parkimetro_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id == entity.id %}
+                    <ul>
+                        <li>
+                            <a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">Ver</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('parkimetro_edit', { 'id': entity.id }) }}">Editar</a>
+                        </li>
+                    </ul>
+                {% else %}
+                    -
+                {% endif %}
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
+    {% if is_granted('IS_AUTHENTICATED_FULLY')%}
         <ul>
         <li>
             <a href="{{ path('parkimetro_new') }}">
-                Create a new entry
+                Libera una plaza de aparcamiento
             </a>
         </li>
     </ul>
-    {% endblock %}
+    {% endif %}
+{% endblock body_container_center %}

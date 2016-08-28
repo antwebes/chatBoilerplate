@@ -1,0 +1,26 @@
+parking_my:
+    path:     /creados
+    defaults: { _controller: "ParkingBundle:Parking:myParkings" }
+
+parking_new:
+    path:     /nueva
+    defaults: { _controller: "ParkingBundle:Parking:new" }
+
+parking_create:
+    path:     /crear
+    defaults: { _controller: "ParkingBundle:Parking:create" }
+    requirements: { _method: post }
+
+parking_edit:
+    path:     /{id}/editar
+    defaults: { _controller: "ParkingBundle:Parking:edit" }
+
+parking_update:
+    path:     /{id}/actualizar
+    defaults: { _controller: "ParkingBundle:Parking:update" }
+    requirements: { _method: post|put }
+
+parking_delete:
+    path:     /{id}/borrar
+    defaults: { _controller: "ParkingBundle:Parking:delete" }
+    requirements: { _method: post|delete }

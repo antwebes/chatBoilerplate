@@ -1,15 +1,17 @@
-{% extends '::base.html.twig' %}
+{% extends 'ParkingBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>ParkingTicket creation</h1>
+{% block body_container_center %}
+<div class="container" style="margin-bottom:5%">
+    <h1>Libera una plaza de aparcamiento</h1>
 
     {{ form(form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('parkimetro') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
-{% endblock %}
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('parkimetro') }}">
+                Volver a la lista de plazas libres
+            </a>
+        </li>
+    </ul>
+</div>
+{% endblock body_container_center %}

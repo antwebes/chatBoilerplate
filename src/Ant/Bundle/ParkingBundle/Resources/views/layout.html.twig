@@ -1,0 +1,17 @@
+{% extends 'PrettyBundle:Default:layout_full.html.twig' %}
+
+{% block head_css %}
+	{{ parent() }}
+	<style>
+	.panel-default h4{
+	    font-weight: unset !important; 
+	}
+	</style>
+{% endblock %}
+
+{% block body_container_content_full %}
+	<div class="container" style="margin-bottom:5%">
+		{% block body_container_center %}
+		{% endblock body_container_center %}
+	</div>
+{% endblock body_container_content_full %}

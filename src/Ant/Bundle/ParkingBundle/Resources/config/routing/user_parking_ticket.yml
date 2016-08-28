@@ -1,0 +1,26 @@
+parkimetro_my:
+    path:     /creados
+    defaults: { _controller: "ParkingBundle:ParkingTicket:myParkingTickets" }
+    
+parkimetro_new:
+    path:     /nuevo
+    defaults: { _controller: "ParkingBundle:ParkingTicket:new" }
+
+parkimetro_create:
+    path:     /crear
+    defaults: { _controller: "ParkingBundle:ParkingTicket:create" }
+    requirements: { _method: post }
+
+parkimetro_edit:
+    path:     /{id}/editar
+    defaults: { _controller: "ParkingBundle:ParkingTicket:edit" }
+
+parkimetro_update:
+    path:     /{id}/actualizar
+    defaults: { _controller: "ParkingBundle:ParkingTicket:update" }
+    requirements: { _method: post|put }
+
+parkimetro_delete:
+    path:     /{id}/borrar
+    defaults: { _controller: "ParkingBundle:ParkingTicket:delete" }
+    requirements: { _method: post|delete }

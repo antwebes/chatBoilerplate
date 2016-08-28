@@ -1,7 +1,7 @@
-{% extends '::base.html.twig' %}
+{% extends 'ParkingBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>ParkingTicket</h1>
+{% block body_container_center %}
+    <h1>Plaza de aparcamiento liberada</h1>
 
     <table class="record_properties">
         <tbody>
@@ -14,11 +14,11 @@
                 <td>{{ entity.creator }}</td>
             </tr>
             <tr>
-                <th>Startdate</th>
+                <th>Libre desde</th>
                 <td>{{ entity.startDate|date('Y-m-d H:i:s') }}</td>
             </tr>
             <tr>
-                <th>Enddate</th>
+                <th>Hasta</th>
                 <td>{{ entity.endDate|date('Y-m-d H:i:s') }}</td>
             </tr>
         </tbody>
@@ -27,14 +27,14 @@
         <ul class="record_actions">
     <li>
         <a href="{{ path('parkimetro') }}">
-            Back to the list
+            Volver al listado
         </a>
     </li>
     <li>
         <a href="{{ path('parkimetro_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
-{% endblock %}
+{% endblock body_container_center %}
