@@ -1,7 +1,7 @@
 {% extends 'ParkingBundle::layout.html.twig' %}
 
 {% block body_container_center %}
-    <h1>Plazas de aparcamientos liberadas</h1>
+    <h1 class="text-center">Plazas de aparcamientos liberadas</h1>
 
     <table class="table">
         <thead>
@@ -20,7 +20,7 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.creator }}</td>
+                <td><a href="{{ path('ant_user_user_show', { 'username' : 'anonimous' , 'user_id': entity.creator } ) }}">{{ entity.creator }}</a></td>
                 <td>{{ entity.parking.number }}</td>
                 <td>{% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.endDate %}{{ entity.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
@@ -39,17 +39,35 @@
                 {% endif %}
                 </td>
             </tr>
+        {% else %}
+            <tr><td style="color:red;">No hay ninguna plaza de parking disponible para aparcar, lo sentimos mucho.<td></tr>
         {% endfor %}
         </tbody>
     </table>
 
-    {% if is_granted('IS_AUTHENTICATED_FULLY')%}
-        <ul>
-        <li>
-            <a href="{{ path('parkimetro_new') }}">
+    <div class="clearfix">
+        <a href="{{ path('parkimetro_new') }}" class="btn btn-primary pull-right" role="button">
+            {% if is_granted('IS_AUTHENTICATED_FULLY')%}
                 Libera una plaza de aparcamiento
-            </a>
-        </li>
-    </ul>
-    {% endif %}
+            {% else %}
+                Identificate para liberar una plaza de aparcamiento
+            {% endif %}
+        </a>
+    </div>
+    <hr/>
+    
+    <p>Agradecemos para que el sistema funcione, respetar las horas de inicio y final para ocupar una plaza liberada.</p>
+    
+    <div class="row">
+        <div class="col-lg-6 col-xs-12">
+            {% image '@ParkingBundle/Resources/public/images/croquis_plazas_nave.png' %}
+                <img src="{{ asset_url }}" alt="Croquis plazas nave" />
+            {% endimage %}
+        </div>
+        <div class="col-lg-6 col-xs-12">
+            {% image '@ParkingBundle/Resources/public/images/croquis_plazas_interior.png' %}
+                <img src="{{ asset_url }}" alt="Croquis plazas interior" />
+            {% endimage %}
+        </div>
+    </div>
 {% endblock body_container_center %}

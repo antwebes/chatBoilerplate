@@ -11,6 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity()
  * @ORM\Table(name="parking_ticket")
+ * @ORM\Entity(repositoryClass="Ant\Bundle\ParkingBundle\Entity\ParkingTicketRepository")
  */
 class ParkingTicket
 {

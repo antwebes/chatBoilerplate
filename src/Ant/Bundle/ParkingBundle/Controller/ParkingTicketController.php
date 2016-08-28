@@ -24,7 +24,7 @@ class ParkingTicketController extends BaseController
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('ParkingBundle:ParkingTicket')->findAll();
+        $entities = $em->getRepository('ParkingBundle:ParkingTicket')->findAllParkingTicketFromToday();
 
         return $this->render('ParkingBundle:ParkingTicket:index.html.twig', array(
             'entities' => $entities,
