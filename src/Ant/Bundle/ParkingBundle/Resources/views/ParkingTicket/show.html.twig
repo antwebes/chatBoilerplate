@@ -1,40 +1,48 @@
-{% extends 'ParkingBundle::layout.html.twig' %}
+{% extends 'ParkingBundle::layout_show_entity.html.twig' %}
 
-{% block body_container_center %}
-    <h1>Plaza de aparcamiento liberada</h1>
+{% block title_show_entity %}Plaza de aparcamiento liberada{% endblock %}
 
-    <table class="record_properties">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Creator</th>
-                <td>{{ entity.creator }}</td>
-            </tr>
-            <tr>
-                <th>Libre desde</th>
-                <td>{{ entity.startDate|date('Y-m-d H:i:s') }}</td>
-            </tr>
-            <tr>
-                <th>Hasta</th>
-                <td>{{ entity.endDate|date('Y-m-d H:i:s') }}</td>
-            </tr>
-        </tbody>
-    </table>
+{% block content_show_entity %}
+    <div class="row col-xs-8  col-xs-offset-2">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ entity.id }}</td>
+                </tr>
+                <tr>
+                    <th>Creator</th>
+                    <td>{{ entity.creator }}</td>
+                </tr>
+                <tr>
+                    <th>Libre desde</th>
+                    <td>{{ entity.startDate|date('Y-m-d H:i:s') }}</td>
+                </tr>
+                <tr>
+                    <th>Hasta</th>
+                    <td>{{ entity.endDate|date('Y-m-d H:i:s') }}</td>
+                </tr>
+                <tr>
+                    <th>Comentarios</th>
+                    <td>{{ entity.note }}</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('parkimetro') }}">
-            Volver al listado
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('parkimetro_edit', { 'id': entity.id }) }}">
-            Editar
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
-{% endblock body_container_center %}
+        <nav>
+            <ul class="pager">
+                <li>
+                    <a href="{{ path('parkimetro') }}">
+                        Volver al listado
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('parkimetro_edit', { 'id': entity.id }) }}">
+                        Editar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        {{ form(delete_form) }}
+    </div>
+{% endblock %}

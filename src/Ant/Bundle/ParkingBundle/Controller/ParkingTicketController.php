@@ -153,7 +153,7 @@ class ParkingTicketController extends BaseController
 
         return $this->render('ParkingBundle:ParkingTicket:edit.html.twig', array(
             'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -172,7 +172,7 @@ class ParkingTicketController extends BaseController
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        $form->add('submit', 'submit', array('label' => 'Actualizar'));
 
         return $form;
     }
@@ -182,13 +182,14 @@ class ParkingTicketController extends BaseController
      */
     public function updateAction(Request $request, $id)
     {
-        $entity = $this->findParkingTicketByIdThrowExceptionIfNotExist();
+        $entity = $this->findParkingTicketByIdThrowExceptionIfNotExist($id);
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
         $editForm->handleRequest($request);
 
         if ($editForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
             $em->flush();
 
             return $this->redirect($this->generateUrl('parkimetro_edit', array('id' => $id)));
@@ -196,7 +197,7 @@ class ParkingTicketController extends BaseController
 
         return $this->render('ParkingBundle:ParkingTicket:edit.html.twig', array(
             'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'form'        => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -233,7 +234,7 @@ class ParkingTicketController extends BaseController
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('parkimetro_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Eliminar'))
             ->getForm()
         ;
     }

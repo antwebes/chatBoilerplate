@@ -1,16 +1,159 @@
-{% extends 'ParkingBundle::layout.html.twig' %}
+{% extends 'ParkingBundle::layout_show_entity.html.twig' %}
 
-{% block body_container_center %}
-    <h1>Editar plaza liberada</h1>
+{% block head_css %}
+    {{ parent() }}
+    {% stylesheets "@ParkingBundle/Resources/public/css/bootstrap-datetimepicker.min.css" %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+    
+{% endblock %}
 
-    {{ form(edit_form) }}
+{% block body_js_end %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('[data-js="start"]').datetimepicker({
+                useCurrent: true, //Important! See issue #1075
+                locale: 'es',
+                sideBySide: true
+            });
+            $('[data-js="end"]').datetimepicker({
+                locale: 'es',
+                useCurrent: false,
+                sideBySide: true
+            });
+            $('[data-js="start"]').on("dp.change", function (e) {
+                $('[data-js="end"]').data("DateTimePicker").minDate(e.date);
+            });
+            $('[data-js="end"]').on("dp.change", function (e) {
+                $('[data-js="start"]').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+    </script>
+{% endblock body_js_end %}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('parkimetro') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
-{% endblock body_container_center %}
+{% block title_show_entity %}Editar plaza liberada{% endblock %}
+
+{% block content_show_entity %}
+    <div class="row col-xs-8  col-xs-offset-2">
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+            {{ form_errors(form) }}
+
+            <div class="form-group">
+                {{ form_label(form.startDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
+                {{ form_errors(form.startDate) }}
+                <div class='col-sm-5 input-group date'>
+                    {{ form_widget(form.startDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'start'}}) }}
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(form.endDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
+                {{ form_errors(form.endDate) }}
+                <div class='col-sm-5 input-group date'>
+                    {{ form_widget(form.endDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'end'}}) }}
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 col-sm-offset-2 control-label">{{ form_label(form.parking) }}</label>
+                {{ form_errors(form.parking) }}
+                <div class="col-sm-5">
+                    {{ form_widget(form.parking, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 col-sm-offset-2 control-label">{{ form_label(form.note) }}</label>
+                {{ form_errors(form.note) }}
+                <div class="col-sm-5">
+                    {{ form_widget(form.note, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group"> 
+                <div class="col-sm-offset-5 col-sm-3">
+                    {{ form_widget(form.submit, {'attr': {'class': 'btn btn-success'}, 'label': 'Actualizar'}) }}
+                </div>
+            </div>
+
+        {{ form_end(form) }}
+        
+        
+        {#<form action="{{ path('parkimetro_update', {'id': entity.id}) }}" method="post" {{ form_enctype(form) }} class="form-horizontal">
+            {{ form_errors(form) }}
+
+                <div class="form-group">
+                    {{ form_label(form.startDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
+                    {{ form_errors(form.startDate) }}
+                    <div class='col-sm-5 input-group date datetimepicker' data-js="start">
+                        {{ form_widget(form.startDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'start'}}) }}
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.endDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
+                    {{ form_errors(form.endDate) }}
+                    <div class='col-sm-5 input-group date' data-js="end">
+                        {{ form_widget(form.endDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'end'}}) }}
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 col-sm-offset-2 control-label">{{ form_label(form.parking) }}</label>
+                    {{ form_errors(form.parking) }}
+                    <div class="col-sm-5">
+                        {{ form_widget(form.parking, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 col-sm-offset-2 control-label">{{ form_label(form.note) }}</label>
+                    {{ form_errors(form.note) }}
+                    <div class="col-sm-5">
+                        {{ form_widget(form.note, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <div class="col-sm-offset-5 col-sm-3">
+                        {{ form_widget(form.submit, {'attr': {'class': 'btn btn-success'}, 'label': 'Actualizar'}) }}
+                    </div>
+                </div>
+            {{ form_end(form) }}
+        </form>#}
+    
+    
+        <nav>
+            <ul class="pager">
+                <li>
+                    <a href="{{ path('parkimetro') }}">
+                        Volver al listado
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        
+        
+        {#<table class="table">
+            
+            {{ form(edit_form) }}
+
+            <ul class="record_actions">
+                <li>
+                    <a href="{{ path('parkimetro') }}">
+                        Back to the list
+                    </a>
+                </li>
+                <li>{{ form(delete_form) }}</li>
+            </ul>
+        </table>#}
+    </div>
+{% endblock content_show_entity%}
