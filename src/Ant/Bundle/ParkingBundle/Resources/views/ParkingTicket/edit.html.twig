@@ -82,53 +82,6 @@
             </div>
 
         {{ form_end(form) }}
-        
-        
-        {#<form action="{{ path('parkimetro_update', {'id': entity.id}) }}" method="post" {{ form_enctype(form) }} class="form-horizontal">
-            {{ form_errors(form) }}
-
-                <div class="form-group">
-                    {{ form_label(form.startDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
-                    {{ form_errors(form.startDate) }}
-                    <div class='col-sm-5 input-group date datetimepicker' data-js="start">
-                        {{ form_widget(form.startDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'start'}}) }}
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    {{ form_label(form.endDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
-                    {{ form_errors(form.endDate) }}
-                    <div class='col-sm-5 input-group date' data-js="end">
-                        {{ form_widget(form.endDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'end'}}) }}
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 col-sm-offset-2 control-label">{{ form_label(form.parking) }}</label>
-                    {{ form_errors(form.parking) }}
-                    <div class="col-sm-5">
-                        {{ form_widget(form.parking, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 col-sm-offset-2 control-label">{{ form_label(form.note) }}</label>
-                    {{ form_errors(form.note) }}
-                    <div class="col-sm-5">
-                        {{ form_widget(form.note, {'attr': {'class': 'form-control'}}) }}
-                    </div>
-                </div>
-                <div class="form-group"> 
-                    <div class="col-sm-offset-5 col-sm-3">
-                        {{ form_widget(form.submit, {'attr': {'class': 'btn btn-success'}, 'label': 'Actualizar'}) }}
-                    </div>
-                </div>
-            {{ form_end(form) }}
-        </form>#}
-    
     
         <nav>
             <ul class="pager">
@@ -139,21 +92,6 @@
                 </li>
             </ul>
         </nav>
-        
-        
-        
-        {#<table class="table">
-            
-            {{ form(edit_form) }}
-
-            <ul class="record_actions">
-                <li>
-                    <a href="{{ path('parkimetro') }}">
-                        Back to the list
-                    </a>
-                </li>
-                <li>{{ form(delete_form) }}</li>
-            </ul>
-        </table>#}
+        {{ form(delete_form) }}
     </div>
 {% endblock content_show_entity%}

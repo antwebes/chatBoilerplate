@@ -46,7 +46,7 @@
         <div class="form-group">
             {{ form_label(form.startDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
             {{ form_errors(form.startDate) }}
-            <div class='col-sm-5 input-group date datetimepicker' data-js="start">
+            <div class='col-sm-5 input-group date'>
                 {{ form_widget(form.startDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'start'}}) }}
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
@@ -56,7 +56,7 @@
         <div class="form-group">
             {{ form_label(form.endDate, null, { 'label_attr': {'class': 'col-sm-3 col-sm-offset-2 control-label'} }) }}
             {{ form_errors(form.endDate) }}
-            <div class='col-sm-5 input-group date' data-js="end">
+            <div class='col-sm-5 input-group date'>
                 {{ form_widget(form.endDate, {'attr': {'class': 'form-control input-inline datetimepicker', 'data-js': 'end'}}) }}
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
@@ -80,7 +80,7 @@
         <div class="form-group"> 
             <div class="col-sm-offset-5 col-sm-3">
 {#                <input type="submit" class="btn btn-primary submit" />#}
-                {{ form_widget(form.submit, {'attr': {'class': 'btn btn-default'}, 'label': 'Guardar'}) }}
+                {{ form_widget(form.submit, {'attr': {'class': 'btn btn-success'}, 'label': 'Guardar'}) }}
 {#                <button type="submit" class="btn btn-default">Submit</button>#}
             </div>
         </div>
