@@ -7,8 +7,8 @@
         <table class="table">
             <tbody>
                 <tr>
-                    <th>Id</th>
-                    <td>{{ entity.id }}</td>
+                    <th>Plaza de aparcamiento</th>
+                    <td>{{ entity.parking.number }}</td>
                 </tr>
                 <tr>
                     <th>Creator</th>
@@ -36,13 +36,17 @@
                         Volver al listado
                     </a>
                 </li>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id == entity.creator %}
                 <li>
                     <a href="{{ path('parkimetro_edit', { 'id': entity.id }) }}">
                         Editar
                     </a>
                 </li>
+                {% endif %}
             </ul>
         </nav>
-        {{ form(delete_form) }}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id == entity.creator %}
+            {{ form(delete_form) }}
+        {% endif %}   
     </div>
 {% endblock %}

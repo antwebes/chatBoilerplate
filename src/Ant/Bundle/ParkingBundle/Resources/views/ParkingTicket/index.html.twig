@@ -25,7 +25,7 @@
                 <td>{% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.endDate %}{{ entity.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
-                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id == entity.id %}
+                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id == entity.creator %}
                     <ul>
                         <li>
                             <a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">Ver</a>
