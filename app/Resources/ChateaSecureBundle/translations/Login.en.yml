@@ -8,3 +8,4 @@ login.submit: "Login"
 login.forgot_password: "Forgot password?"
 login.explication_credentials_chateagratis: You can access with nick and password of chateagratis.net
 login.explication_credentials_chatzona: You can access with nick and password of network irc chatzona
+login.explication_credentials_mans: You can access with your credentials of network mans

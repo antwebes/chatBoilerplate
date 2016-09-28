@@ -82,3 +82,4 @@ user.register.change_password: También puedes cambiarte de email <a href="%path
 change_email: "Cambiar email"
 register.explication_credentials_chateagratis: en la red de chat chateagratis
 register.explication_credentials_chatzona: en la red de chat chatzona
+register.explication_credentials_mans: en la intranet de Mans
