@@ -1,8 +1,26 @@
 easy_admin:
+    design:
+        form_theme: 'vertical'
     entities:
         Offer:
             class: Ant\Bundle\OfferBundle\Entity\Offer
             label: 'Ofertas'
+            form:
+                fields:
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Información básica' }
+                    - { property: 'name', label: 'Nombre' }
+                    - { property: 'description', label: 'Descripción' }
+                    - { property: 'enabled', label: 'Habilitada' }
+                    - { property: 'publicatedAt', label: 'Creada el..' }
+                    - { property: 'expiredAt', label: 'Expirará el..' }
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Multimedia' }
+                    - { property: 'imageFile', type: 'vich_image'}
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Información avanzada' }
+                    - { property: 'owner', label: 'Usuario propietario' }
+                    - { property: 'slug', label: 'Slug' }
+                    - { property: 'isExpired', label: 'Está expirado' }
+                    - { property: 'countVisits', label: 'Contador' }
+                    - { property: 'numUsers', label: 'nº usuarios' }
             new:
                 fields:
                     - { property: 'name', label: 'Nombre' }
@@ -10,10 +28,14 @@ easy_admin:
                     - { property: 'owner', label: 'Usuario propietario' }
                     - { property: 'enabled', label: 'Habilitada' }
                     - { property: 'expiredAt', label: 'Expirará el..' }
+                    - { property: 'imageFile', type: 'vich_image' }
+            list:
+                actions: ['edit', 'search', 'show']
+                fields: ['id', 'name', 'owner' , 'enabled' , 'publicatedAt', { property: 'image', type: 'image' , base_path: %app.path.offer_images%}]
         Parking:
             class: Ant\Bundle\ParkingBundle\Entity\Parking
             label: 'Parkings'
         ParkingTicket:
-                    class: Ant\Bundle\ParkingBundle\Entity\ParkingTicket
-                    label: 'ParkingTickets'
+            class: Ant\Bundle\ParkingBundle\Entity\ParkingTicket
+            label: 'ParkingTickets'
     site_name: 'Mans Networking'

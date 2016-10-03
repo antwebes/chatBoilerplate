@@ -1,0 +1,103 @@
+{% extends 'PrettyBundle:Default:layout_full.html.twig' %}
+
+{% block head_css %}
+    {{ parent() }}
+    <style>
+        .left {
+            float: left;
+            position: relative;
+        }
+
+        .bigNum {
+            font-size: 35px;
+            margin: 25px;
+        }
+
+        .width100 {
+            width: 100% !important;
+        }
+
+        .m-t-40 {
+            margin-top: 40px;
+        }
+
+        .m-b-15 {
+            margin-bottom: 15px;
+        }
+        .text_title {
+                color: #222;
+                font-family: Georgia;
+                font-size: 20px;
+                font-style: italic;
+        }
+        .txt-header-h4 {
+            color: #666666;
+            font-family: Georgia;
+            font-size: 16px;
+            font-style: italic;
+            line-height: 25px;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block body_container_content_full %}
+    <br/>
+    <br/>
+    <div class="container" style="margin-bottom:5%">
+        {% block body_container_center %}
+            <div class="width100 left m-b-15">
+                <div style="width:40.2%" class="left"><hr class="hr-style m-t-20"></div>
+                <div style="width:19.5%" class="left">
+                        <center><span class="text_title">Participa</span></center>
+                </div>
+                <div style="width:40.2%" class="left"><hr class="hr-style m-t-20"></div><br><br><br>
+                <center>
+                        <span class="txt-header-h4">Envíanos a nuestro email, todo aquello que quieras que se incluya en esta web
+                        <br/>
+                        Puedes enviarnos tu oferta, para que todos los emprendedores la puedan ver y disfrutar.
+                        <br/>
+                </center>
+                <center>
+                    <br/>
+                    <i class="fa fa-plus fa-1x" aria-hidden="true"></i>
+                </center>
+            </div>
+
+            <div class="width100 left m-b-15 m-t-40">
+                <div style="width:40.2%" class="left"><hr class="hr-style m-t-20"></div>
+                <div style="width:19.5%" class="left">
+                        <center><span class="text_title">Fundación Paideia</span></center>
+                </div>
+                <div style="width:40.2%" class="left"><hr class="hr-style m-t-20"></div><br><br><br>
+                <center><span class="txt-header-h4">
+                        Esta se trata de una herramienta online en la que cuanto mas participemos mejor funcionará
+                        <br/>
+                        puedes consultar y liberar plazas de aparcamiento, enviar mensajes a otros emprendedores y publicar y ver las ofertas disponibles para los emprendedores de Mans
+                        <br/>
+                        únete a esta iniciativa y participa! 
+                </span></center>
+                <center>
+                    <br/>
+                    <i class="fa fa-equal fa-4x" aria-hidden="true"></i>
+                </center>
+            </div>
+
+            <div class="width100 left m-b-15 m-t-40">
+                <div style="width:40.2%" class="left"><hr class="hr-style m-t-20"></div>
+                <div style="width:19.5%" class="left">
+                        <center><span class="text_title">Herramienta online</span></center>
+                </div>
+                <div style="width:40.2%" class="left"><hr class="hr-style m-t-20"></div><br><br><br>
+                <center><span class="txt-header-h4">
+                        Gracias a esta colaboración los alumnos podrán tener acceso a una base de datos de preguntas test actualizada
+                        <br/>
+                        con la que podrán practicar múltiples modalidades de exámenes tipo test.
+                        <br/>
+                        Además podrán llevar un control detallado de su progreso y evolución y compararse anónimamente con el resto de sus compañeros.
+                </span></center>
+            </div>
+        {% endblock body_container_center %}
+    </div>
+{% endblock body_container_content_full %}

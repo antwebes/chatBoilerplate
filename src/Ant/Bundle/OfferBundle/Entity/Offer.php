@@ -6,11 +6,15 @@ use Doctrine\ORM\Mapping as ORM;
 
 use Gedmo\Mapping\Annotation as Gedmo;
 
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity()
  * @ORM\Table(name="offer")
+ * @Vich\Uploadable
  */
 class Offer
 {
@@ -86,6 +90,18 @@ class Offer
      * @ORM\Column(name="num_users", type="integer", nullable=true, options={"default"=0})
      */
     private $numUsers = 0;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="offer_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
 
 
     public function __construct()
@@ -269,5 +285,32 @@ class Offer
         $this->numUsers = $numUsers;
     }
 
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
 
 }

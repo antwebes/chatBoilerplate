@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new Ant\Bundle\ParkingBundle\ParkingBundle(),
             new Mremi\ContactBundle\MremiContactBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
         );
 
 

@@ -6,7 +6,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Identificador</th>
+{#                <th>Identificador</th>#}
                 <th>Liberada por el usuario</th>
                 <th>Plaza de aparcamiento</th>
                 <th>Desde</th>
@@ -19,7 +19,7 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+{#                <td><a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>#}
                 <td><a href="{{ path('ant_user_user_show', { 'username' : 'anonimous' , 'user_id': entity.creator } ) }}">{{ entity.creator }}</a></td>
                 <td>{{ entity.parking.number }}</td>
                 <td>{% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>

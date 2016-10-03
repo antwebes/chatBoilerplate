@@ -5,4 +5,8 @@ offer_user_offer:
 offer_public_offer:
     resource: "@OfferBundle/Resources/config/routing/offer.yml"
     prefix:   /ofertas
+    
+offer_contact_send:
+    path:     /participa
+    defaults: { _controller: "OfferBundle:Contact:contact" }
 

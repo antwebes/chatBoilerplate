@@ -41,7 +41,7 @@ class Parking
      * @Assert\Choice(choices = {"rented", "free"}, message = "Choose a valid state.")
      * @ORM\Column(name="state", type="string", length=255 )
      */
-    private $state = true;
+    private $state;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)

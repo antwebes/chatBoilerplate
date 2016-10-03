@@ -5,6 +5,7 @@ imports:
     - { resource: stof_doctrine_extensions.yml }
     - { resource: easy_admin.yml }
     - { resource: mremi_contact.yml }
+    - { resource: vich_uploader.yml }
 
 framework:
     #esi:             ~
@@ -32,6 +33,7 @@ twig:
     globals:
         welcome_visits_limit: 3
         welcome_channels_limit: 9
+        app_path_offer_images: %app.path.offer_images%
 
 
 # Doctrine Configuration
@@ -101,3 +103,6 @@ api_social:
         hasProfilePhoto: desc
         lastLogin: desc
     realtime_endpoint: %realtime_endpoint%
+
+parameters:
+    app.path.offer_images: /uploads/images/offers

@@ -228,4 +228,9 @@ class ParkingTicket
     {
         return $this->parking;
     }
+    
+    public function __toString()
+    {
+        return strval($this->getId());
+    }
 }
