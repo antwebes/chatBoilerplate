@@ -10,7 +10,10 @@ class ParkingTicketRepository extends EntityRepository
     {
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT pt FROM ParkingBundle:ParkingTicket pt WHERE pt.endDate >= :today ORDER BY pt.startDate ASC'
+                'SELECT pt '
+                    . 'FROM ParkingBundle:ParkingTicket pt '
+                    . 'WHERE pt.endDate >= :today '
+                    . 'ORDER BY pt.startDate ASC'
             )->setParameter('today', new \DateTime())
             ->getResult();
     }

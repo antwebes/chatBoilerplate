@@ -1,0 +1,55 @@
+{% trans_default_domain 'PrettyBundle' %}
+<section class="container-wrap main-color" style=""><div class="section-container container"><div class="row">
+            <div class="col-sm-3 wpb_column column_container">
+                <div class="wpb_wrapper">
+
+                </div>
+            </div>
+
+            <div class="col-sm-2 wpb_column column_container">
+                <div class="wpb_wrapper">
+
+                    <div class="kleo_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <h1 style="margin-bottom: 0;"><span data-number="{{ num_parking_ticket }}" class="kleo-animate-number animate-when-almost-visible" data-timer="3000">{{ num_parking_ticket }}</span></h1>
+                            <h4>{{  "header.stats.parking_ticket" |  trans({}, "messages") }}</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2 wpb_column column_container">
+                <div class="wpb_wrapper">
+
+                    <div class="kleo_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <h1 style="margin-bottom: 0;"><span data-number="{{ num_offers }}" class=" kleo-animate-number animate-when-almost-visible" data-timer="3000">{{ num_offers }}</span></h1>
+                            <h4>{{  "header.stats.offers" | trans({}, "messages")}}</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2 wpb_column column_container">
+                <div class="wpb_wrapper">
+
+                    <div class="kleo_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <h1 style="margin-bottom: 0;"><span data-number="{{ num_users }}" class=" kleo-animate-number animate-when-almost-visible" data-timer="3000">{{ num_users }}</span></h1>
+                            <h4>{{ "header.stats.users" | trans }}</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 wpb_column column_container">
+                <div class="wpb_wrapper">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- end section -->
