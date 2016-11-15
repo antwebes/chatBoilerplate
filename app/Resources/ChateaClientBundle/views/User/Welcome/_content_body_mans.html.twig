@@ -1,0 +1,41 @@
+{% trans_default_domain 'User' %}
+
+<div class="page-header">
+  <h1 class="text-center">
+	{% include "ChateaClientBundle:User:Welcome/_title.html.twig" %}
+	{% if app.user.validated %}
+		<small> {{ 'user.welcome.subtitle' | trans({'%username%': app.user.username}) }}</small>
+	{% endif %}
+  </h1>
+</div>
+
+<div class="container">
+    <div class="row">
+    {% if app.user.validated %}
+
+        {% if not userMe.city %}
+            <div class="alert alert-warning">
+                {{ 'user.no_city' | trans({}, 'Notifications') }}
+                <a href="{{ path('chatea_client_update_profile_city') }}?type=link_welcome">{{ 'user.edit_city' | trans({}, 'UserChange') }}</a>
+            </div>
+        {% endif %}
+
+        {% if not userMe.profile or userMe.profile | isProfileEmpty %}
+            <div class="alert alert-warning">
+                {{ 'user.no_profile' | trans({}, 'Notifications') }}
+                <a href="{{ path('chatea_client_update_profile') }}?type=link_welcome">{{ 'user.edit_profile' | trans({}, 'UserRegistration') }}</a>
+            </div>
+        {% elseif not userMe.profile.profilePhoto %}
+            <div class="alert alert-warning">
+                {{ 'user.no_profile_photo' | trans({}, 'Notifications') }}
+                <a href="{{ path('chatea_client_update_profile_photo') }}?type=link_welcome">{{ 'user.edit_profile_photo' | trans({}, 'UserRegistration') }}</a>
+            </div>
+        {% endif %}
+
+    {% else %}
+        <div class="row well">
+            Hola <strong>{{ app.user.username }}</strong>, {{  "para completar tu registro solo necesitas validar tu email."  | trans }} <a href="{{ path('confirm_email') }}">Aquí tienes toda la información necesaria </a> o también puedes <a href="{{ path('chatea_client_user_settings') }}?type=link_welcome">cambiarte de email </a>
+        </div>
+    {% endif %}
+    </div> 
+</div> 

@@ -3,9 +3,11 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="1">
-                <source>menu.item.parkimetro</source>
-                <target>Plazas libres</target>
+                <source>user.no_profile_photo</source>
+                <target>No tienes ninguna foto de perfil. Para tener mejor networking te sugerimos que subas una foto de perfil.</target>
             </trans-unit>
         </body>
     </file>
 </xliff>
+
+            
