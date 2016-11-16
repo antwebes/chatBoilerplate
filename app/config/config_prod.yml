@@ -34,7 +34,7 @@ snc_redis:
         default:
             type: predis
             alias: default
-            dsn: redis://%redis_password%@%redis_host%/%redis_db%
+            dsn: %redis_endpoint%
             logging: %kernel.debug%
             
 chatea_client:

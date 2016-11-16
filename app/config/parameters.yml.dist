@@ -30,9 +30,7 @@ parameters:
 
     social_endpoint: 'https://www.chatsfree.net/'
 
-    redis_host: localhost
-    redis_db: 3
-    redis_password: ~
+    redis_endpoint: redis://redis/3
     limits.users: 30
     limits.photos: 30
     guzzle_fake_server_base_fixtures_path: AppBundle/Features/fixtures
