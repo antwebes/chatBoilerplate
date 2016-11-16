@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a2ebe3d04474b5de013747a4d578cf3",
-    "content-hash": "7055fc050c471d03c100ea3bf3fe033b",
+    "hash": "1a8ddcb329557a4896cdddda472463ce",
+    "content-hash": "d890c0f86003e9669fafb0a79aa95347",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
@@ -14,12 +14,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ApiSocialBundle.git",
-                "reference": "9fd51f2659339f61d818e4b26a06c968e4a4fd70"
+                "reference": "ad5f0bf964d6518a2d0bc513b12e92f55c5afa91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/9fd51f2659339f61d818e4b26a06c968e4a4fd70",
-                "reference": "9fd51f2659339f61d818e4b26a06c968e4a4fd70",
+                "url": "https://api.github.com/repos/antwebes/ApiSocialBundle/zipball/ad5f0bf964d6518a2d0bc513b12e92f55c5afa91",
+                "reference": "ad5f0bf964d6518a2d0bc513b12e92f55c5afa91",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2016-11-15 16:12:03"
+            "time": "2016-11-16 18:33:06"
         },
         {
             "name": "antwebes/chatea-client-bundle",
@@ -305,7 +305,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "d780dcc25649b1b922380f724d6e74864d01d1cf"
+                "reference": "2dc64974d50d2213b8c5c0e6119f87050ab3726e"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -327,7 +327,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2016-10-05 16:10:02"
+            "time": "2016-11-16 18:34:58"
         },
         {
             "name": "beelab/recaptcha2-bundle",
@@ -2510,50 +2510,32 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "3.0.x-dev",
+            "version": "2.3.x-dev",
+            "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "0fd0205ae3503132c90059bad3781f39b2b32107"
+                "reference": "f9e4c9794fb2624bcdee302109896d990bacddec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/0fd0205ae3503132c90059bad3781f39b2b32107",
-                "reference": "0fd0205ae3503132c90059bad3781f39b2b32107",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/f9e4c9794fb2624bcdee302109896d990bacddec",
+                "reference": "f9e4c9794fb2624bcdee302109896d990bacddec",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.2",
-                "symfony/dependency-injection": "~2.3|~3.0",
-                "symfony/framework-bundle": "~2.3|~3.0"
-            },
-            "require-dev": {
-                "symfony/browser-kit": "~2.3|~3.0",
-                "symfony/dom-crawler": "~2.3|~3.0",
-                "symfony/expression-language": "~2.4|~3.0",
-                "symfony/finder": "~2.3|~3.0",
-                "symfony/phpunit-bridge": "~3.2",
-                "symfony/psr-http-message-bridge": "^0.3",
-                "symfony/security-bundle": "~2.4|~3.0",
-                "symfony/twig-bundle": "~2.3|~3.0",
-                "symfony/yaml": "~2.3|~3.0",
-                "twig/twig": "~1.11|~2.0",
-                "zendframework/zend-diactoros": "^1.3"
-            },
-            "suggest": {
-                "symfony/expression-language": "",
-                "symfony/psr-http-message-bridge": "To use the PSR-7 converters",
-                "symfony/security-bundle": ""
+                "symfony/framework-bundle": "~2.2"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Sensio\\Bundle\\FrameworkExtraBundle\\": ""
+                "psr-0": {
+                    "Sensio\\Bundle\\FrameworkExtraBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2563,7 +2545,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "This bundle provides a way to configure your controllers with annotations",
@@ -2571,7 +2555,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2016-10-12 02:10:54"
+            "time": "2014-03-14 07:43:23"
         },
         {
             "name": "sensio/generator-bundle",
