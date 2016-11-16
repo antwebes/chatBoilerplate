@@ -41,5 +41,5 @@ snc_redis:
         default:
             type: predis
             alias: default
-            dsn: ~ #%redis_endpoint%
+            dsn: %redis_endpoint%
             logging: %kernel.debug%
