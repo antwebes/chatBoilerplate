@@ -12,6 +12,7 @@ else
     cp /var/www/html/docker/php/php-prod.ini /usr/local/etc/php/php.ini
     rm /var/www/html/app/config/parameters.yml
     ln -s /var/www/html/app/config/shared/parameters.yml /var/www/html/app/config/parameters.yml
+    SYMFONY_ENV=prod php composer.phar install --prefer-dist -o --no-dev
     php app/console cache:clear -e=prod --no-warmup
     php app/console assets:install -e=prod
     php app/console  assetic:dump -e=prod

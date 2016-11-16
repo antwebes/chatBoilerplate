@@ -32,9 +32,7 @@ ADD . /var/www/html/
 RUN chmod 755 /var/www/html/entrypoint.sh
 RUN cp /var/www/html/docker/apache/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 RUN cp /var/www/html/docker/php/php-prod.ini /usr/local/etc/php/php.ini
-RUN mkdir /var/www/html/app/config/shared
-RUN cp /usr/lib/php5/20131226/apcu.so /usr/local/lib/php/extensions/no-debug-non-zts-20131226/apcu.so
-RUN SYMFONY_ENV=prod php composer.phar install --prefer-dist -o --no-dev    
+RUN cp /usr/lib/php5/20131226/apcu.so /usr/local/lib/php/extensions/no-debug-non-zts-20131226/apcu.so   
 
 EXPOSE 80
 CMD ["/var/www/html/entrypoint.sh"]
