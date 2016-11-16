@@ -12,7 +12,7 @@
                 <th>Desde</th>
                 <th>Hasta</th>
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <th>Accciones</th>
+                    <th>Acciones</th>
                 {% endif %}
             </tr>
         </thead>
@@ -25,18 +25,16 @@
                 <td>{% if entity.startDate %}{{ entity.startDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.endDate %}{{ entity.endDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
-                {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id == entity.creator %}
                     <ul>
                         <li>
                             <a href="{{ path('parkimetro_show', { 'id': entity.id }) }}">Ver</a>
                         </li>
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') and app.user.id == entity.creator %}
                         <li>
                             <a href="{{ path('parkimetro_edit', { 'id': entity.id }) }}">Editar</a>
                         </li>
+                        {% endif %}
                     </ul>
-                {% else %}
-                    -
-                {% endif %}
                 </td>
             </tr>
         {% else %}

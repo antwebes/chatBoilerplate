@@ -35,10 +35,9 @@ security:
                 handlers: [antwewebs_revoke_access_on_logout_handler]
 
     access_control:
-        - { path: ^/demo/secured/hello/admin/, roles: ROLE_ADMIN }
         - { path: ^/usuarios/.*/fotos, roles: ROLE_USER }
         - { path: ^/perfil, roles: ROLE_USER }
-        - { path: ^/admin, roles: ROLE_USER }
+        - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/usuario/ofertas, roles: ROLE_USER }
         - { path: ^/usuario/parking, roles: ROLE_USER }
         - { path: ^/usuario/parkimetro, roles: ROLE_USER }
