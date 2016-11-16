@@ -39,9 +39,6 @@ src/AppBundle/Resources/views/affiliates/*
 /app/phpunit.xml
 /phpunit.xml
 
-# Composer PHAR
-/composer.phar
-
 # -- Editores -----------------------------------------
 # vim
 .*.sw[a-z]
