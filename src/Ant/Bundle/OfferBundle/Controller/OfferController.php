@@ -25,7 +25,7 @@ class OfferController extends Controller
 
         $user = $this->getUserOnline();
 
-        $entities = $em->getRepository('OfferBundle:Offer')->finByCriteria(array('enabled'=> true));
+        $entities = $em->getRepository('OfferBundle:Offer')->findBy(array('enabled'=> true));
 
         return $this->render('OfferBundle:Offer:index.html.twig', array(
             'entities' => $entities,
