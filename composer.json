@@ -25,7 +25,7 @@
         "raulfraile/ladybug-bundle": "~1.0",
         "predis/predis": "^1.0",
         "snc/redis-bundle": "1.1.x-dev",
-        "antwebes/help-bundle": "dev-icons_bootstrap_filter_optipng",
+        "antwebes/help-bundle": "dev-mans_boilerplate",
         "antwebes/pretty-bundle": "dev-mans_boilerplate",
         "jms/translation-bundle": "1.1.0",
         "stof/doctrine-extensions-bundle": "^1.2",

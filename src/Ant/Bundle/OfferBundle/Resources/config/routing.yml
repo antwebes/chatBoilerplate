@@ -10,3 +10,8 @@ offer_contact_send:
     path:     /participa
     defaults: { _controller: "OfferBundle:Contact:contact" }
 
+offer_help:
+    path: /ayuda/ofertas
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'OfferBundle:Help:offer.html.twig'

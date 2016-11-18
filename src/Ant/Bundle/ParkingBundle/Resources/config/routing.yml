@@ -13,3 +13,9 @@ parking_user_parking:
 parking_user_parking_ticket:
     resource: "@ParkingBundle/Resources/config/routing/user_parking_ticket.yml"
     prefix:   /usuario/parkimetro
+    
+parking_help:
+    path: /ayuda/parking
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    'ParkingBundle:Help:parking.html.twig'

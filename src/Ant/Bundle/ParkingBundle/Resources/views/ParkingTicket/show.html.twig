@@ -11,8 +11,8 @@
                     <td>{{ entity.parking.number }}</td>
                 </tr>
                 <tr>
-                    <th>Usuario</th>
-                    <td>{{ entity.creator }}</td>
+                    <th>Liberada por</th>
+                    <td><a href="{{ path('ant_user_user_show', { 'username' : 'anonimous' , 'user_id': entity.creator } ) }}">{{entity.creator}}</a></td>
                 </tr>
                 <tr>
                     <th>Libre desde</th>

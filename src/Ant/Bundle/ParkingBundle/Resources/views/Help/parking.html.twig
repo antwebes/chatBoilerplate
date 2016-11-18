@@ -1,0 +1,82 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}Ofertas{% endblock %}
+
+{% block body_container_center %}
+<style>
+
+	.bbc {
+		color: #fff;
+		background-color: #00f;
+		border-color: #00f;
+		font-size: 18px;
+    	font-weight: 700;
+	}
+
+</style>
+	{# Begin of first two buttons #}
+    <h1 style="text-align: center;margin-bottom:20px;">Aparcamiento</h1>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingOne">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          No encuentro mi plaza para liberarla
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+	      <div class="panel-body">
+                <p>Por favor envíanos al siguiente email <a href="mailto:{{ email }}"><i class="fa fa-envelope"></i> {{ email }}</a> tu número de plaza y si es interior o exterior.</p>
+                <p>La añadiremos lo antes posible y muchas gracias por participar en esta iniciativa.</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingTwo">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	          He tenido problemas al liberar una plaza
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	      <div class="panel-body">
+                  <p>Si has tenido cualquier tipo de problema, por favor noticanoslo para intentar que no se vuelva a producir.</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingThree">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	          He visto que hay una plaza libre... ¿Puedo reservarla ?
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	      <div class="panel-body">
+                  <p>No, las plazas no se reservan en ningún momento, el primero que llegue a una plaza liberada podrá aparcar.</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingFour">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	          ¿Para que voy a liberar mi plaza a de aparcamiento?
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+	      <div class="panel-body">
+	        <p>Esta iniciativa se trata de colaborar con el resto de la gente.</p>
+	        <p>aparcar en el polígono es un problema diario, liberar tu plaza cuando no la vayas a utilizar, no te perjudica en nada y permitirás que haya un coche mal aparcado menos.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+    {% include "HelpBundle::end.html.twig" %}
+
+{% endblock %}

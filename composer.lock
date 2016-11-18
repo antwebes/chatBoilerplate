@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1a8ddcb329557a4896cdddda472463ce",
-    "content-hash": "d890c0f86003e9669fafb0a79aa95347",
+    "hash": "298d859dde7b1be0eea2f8de777c6052",
+    "content-hash": "e3e42c1e6e1f89c8b1d286d85659109f",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
@@ -259,17 +259,17 @@
         },
         {
             "name": "antwebes/help-bundle",
-            "version": "dev-icons_bootstrap_filter_optipng",
+            "version": "dev-mans_boilerplate",
             "target-dir": "Ant/HelpBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/HelpBundle.git",
-                "reference": "d1efc164d26a99b682a58bf4685b918f883aaa12"
+                "reference": "2a86ff16ccf6b19dbaf449c113838f0ec6fc7817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/HelpBundle/zipball/d1efc164d26a99b682a58bf4685b918f883aaa12",
-                "reference": "d1efc164d26a99b682a58bf4685b918f883aaa12",
+                "url": "https://api.github.com/repos/antwebes/HelpBundle/zipball/2a86ff16ccf6b19dbaf449c113838f0ec6fc7817",
+                "reference": "2a86ff16ccf6b19dbaf449c113838f0ec6fc7817",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -296,7 +296,7 @@
             "keywords": [
                 "help bundle"
             ],
-            "time": "2015-07-23 10:31:56"
+            "time": "2016-11-18 09:58:42"
         },
         {
             "name": "antwebes/pretty-bundle",
@@ -305,7 +305,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "2dc64974d50d2213b8c5c0e6119f87050ab3726e"
+                "reference": "787e2754d9c3e233fd0cadc90e8bf92960e05e25"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -327,7 +327,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2016-11-16 18:34:58"
+            "time": "2016-11-18 10:00:04"
         },
         {
             "name": "beelab/recaptcha2-bundle",
@@ -1741,12 +1741,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "9d43c66cc6f76ffdea964ee46e6b2b34ed981248"
+                "reference": "3c782662f9d29c02eb3f200a02dafc8288e28a9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/9d43c66cc6f76ffdea964ee46e6b2b34ed981248",
-                "reference": "9d43c66cc6f76ffdea964ee46e6b2b34ed981248",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/3c782662f9d29c02eb3f200a02dafc8288e28a9e",
+                "reference": "3c782662f9d29c02eb3f200a02dafc8288e28a9e",
                 "shasum": ""
             },
             "require": {
@@ -1811,7 +1811,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-11-16 11:15:57"
+            "time": "2016-11-17 11:01:44"
         },
         {
             "name": "mremi/contact-bundle",
@@ -1913,12 +1913,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteoctober/Pagerfanta.git",
-                "reference": "63729ff5edd69072f0e34dc88d205975e2dd5164"
+                "reference": "b69b72cac3dcda50132a1d2267bba78c3b76efca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/63729ff5edd69072f0e34dc88d205975e2dd5164",
-                "reference": "63729ff5edd69072f0e34dc88d205975e2dd5164",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/b69b72cac3dcda50132a1d2267bba78c3b76efca",
+                "reference": "b69b72cac3dcda50132a1d2267bba78c3b76efca",
                 "shasum": ""
             },
             "require": {
@@ -1931,7 +1931,7 @@
                 "jmikola/geojson": "~1.0",
                 "mandango/mandango": "~1.0@dev",
                 "mandango/mondator": "~1.0@dev",
-                "phpunit/phpunit": "~4",
+                "phpunit/phpunit": "~4 | ~5",
                 "propel/propel1": "~1.6",
                 "ruflin/elastica": "~1.3",
                 "solarium/solarium": "~3.1"
@@ -1972,7 +1972,7 @@
                 "paginator",
                 "paging"
             ],
-            "time": "2016-05-26 15:47:30"
+            "time": "2016-11-17 11:47:15"
         },
         {
             "name": "paragonie/random_compat",
@@ -3302,12 +3302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "61bf5da0acfee706e34b18ceb112f96cffb480cb"
+                "reference": "e55069863dc5408f7323b2789a23de781c0c192e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/61bf5da0acfee706e34b18ceb112f96cffb480cb",
-                "reference": "61bf5da0acfee706e34b18ceb112f96cffb480cb",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e55069863dc5408f7323b2789a23de781c0c192e",
+                "reference": "e55069863dc5408f7323b2789a23de781c0c192e",
                 "shasum": ""
             },
             "require": {
@@ -3355,7 +3355,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-11-15 22:01:44"
+            "time": "2016-11-17 17:51:52"
         },
         {
             "name": "vich/uploader-bundle",

@@ -1,0 +1,85 @@
+{% extends 'HelpBundle::layout.html.twig' %}
+
+{% block breadcrumbs_actually %}Ofertas{% endblock %}
+
+{% block body_container_center %}
+<style>
+
+	.bbc {
+		color: #fff;
+		background-color: #00f;
+		border-color: #00f;
+		font-size: 18px;
+    	font-weight: 700;
+	}
+
+</style>
+	{# Begin of first two buttons #}
+    <h1 style="text-align: center;margin-bottom:20px;">Ofertas</h1>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingOne">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          ¿ Como puedo crear una oferta ?
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+	      <div class="panel-body">
+	        <p>Actualmente para crear una oferta, puedes enviarnosla al siguiente correo: <a href="mailto:{{ email }}"><i class="fa fa-envelope"></i> {{ email }}</a></p>
+	        <p>Mándanos un titulo, descripción, imagen y fecha de expiración y número de unidades en caso de que esté limitada en algún sentido.</p>
+	        <p>También es recomendable que nos envies el usuario con el que estás registrado, para que la gente que desee beneficiarse de la oferta, pueda contactarte en caso de ser necesario.</p>
+                <p>Una vez validada se publicará lo antes posible.</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingTwo">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	          Me gusta una oferta y ahora qué ?
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	      <div class="panel-body">
+                  <p>Si ves una oferta que te gusta y quieres aprovecharte de ella, simplemente debes seguir las instrucciones detalladas en la oferta.</p>
+                  <p>Si no queda suficientemente claro por favor póngase en contacto con el administrador para que se lo comuniquemos al creador de la oferta.</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingThree">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	          Quiero eliminar una oferta
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	      <div class="panel-body">
+                  <p>Actualmente para eliminar una oferta, tienes que notificarselo al administrador directamente, puedes hacerlo a través del siguiente correo: <a href="mailto:{{ email }}"><i class="fa fa-envelope"></i> {{ email }}</a></p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default">
+	    <div class="panel-heading" role="tab" id="headingFour">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	          Creo que hay una oferta que me perjudica
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+	      <div class="panel-body">
+	        <p>Si crees que hay una oferta que te perjudica como empresa de Mans, háznoslo saber cuanto antes.</p>
+	        <p>En ningún momento queremos que estas ofertas perjudiquen a otras empresas del centro, si no, todo lo contrario.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+    {% include "HelpBundle::end.html.twig" %}
+
+{% endblock %}
