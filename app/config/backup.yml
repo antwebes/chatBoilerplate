@@ -9,6 +9,8 @@ dizda_cloud_backup:
 
     databases:
         mysql:
+           all_databases: true
+
 
 
 services:
