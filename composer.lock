@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "298d859dde7b1be0eea2f8de777c6052",
-    "content-hash": "e3e42c1e6e1f89c8b1d286d85659109f",
+    "hash": "a6caa04e1c1722e3aeb743fa02ed5311",
+    "content-hash": "800c063a5af26e3664e1d1f77767cea5",
     "packages": [
         {
             "name": "antwebes/api-social-bundle",
@@ -330,6 +330,69 @@
             "time": "2016-11-21 10:07:45"
         },
         {
+            "name": "aws/aws-sdk-php",
+            "version": "2.8.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "64fa4b07f056e338a5f0f29eece75babaa83af68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/64fa4b07f056e338a5f0f29eece75babaa83af68",
+                "reference": "64fa4b07f056e338a5f0f29eece75babaa83af68",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": "~3.7",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "doctrine/cache": "~1.0",
+                "ext-openssl": "*",
+                "monolog/monolog": "~1.4",
+                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit-mock-objects": "2.3.1",
+                "symfony/yaml": "~2.1"
+            },
+            "suggest": {
+                "doctrine/cache": "Adds support for caching of credentials and responses",
+                "ext-apc": "Allows service description opcode caching, request and response caching, and credentials caching",
+                "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
+                "monolog/monolog": "Adds support for logging HTTP requests and responses",
+                "symfony/yaml": "Eases the ability to write manifests for creating jobs in AWS Import/Export"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Aws": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Amazon Web Services",
+                    "homepage": "http://aws.amazon.com"
+                }
+            ],
+            "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+            "homepage": "http://aws.amazon.com/sdkforphp",
+            "keywords": [
+                "amazon",
+                "aws",
+                "cloud",
+                "dynamodb",
+                "ec2",
+                "glacier",
+                "s3",
+                "sdk"
+            ],
+            "time": "2016-07-25 18:03:20"
+        },
+        {
             "name": "beelab/recaptcha2-bundle",
             "version": "0.1.x-dev",
             "source": {
@@ -424,6 +487,74 @@
                 "transliterator"
             ],
             "time": "2016-10-21 08:46:05"
+        },
+        {
+            "name": "dizda/cloud-backup-bundle",
+            "version": "3.4.0",
+            "target-dir": "Dizda/CloudBackupBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dizda/CloudBackupBundle.git",
+                "reference": "276258762cee75f2e19e1b61cc85b738ea9fe27c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dizda/CloudBackupBundle/zipball/276258762cee75f2e19e1b61cc85b738ea9fe27c",
+                "reference": "276258762cee75f2e19e1b61cc85b738ea9fe27c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0",
+                "symfony/framework-bundle": "^2.1 || ^3.0",
+                "symfony/monolog-bundle": "^2.3"
+            },
+            "require-dev": {
+                "google/apiclient": "1.1.7",
+                "symfony/symfony": "^2.3.25"
+            },
+            "suggest": {
+                "dropbox/dropbox-sdk": "To enable upload to Dropbox",
+                "happyr/google-site-authenticator-bundle": "To enable upload dumps on google drive.",
+                "jongotlin/deadmanssnitch-bundle": "To report your successful backups to deadmanssnitch.com",
+                "knplabs/knp-gaufrette-bundle": "To use Gaufrette as a cloud storage",
+                "matthiasplappert/cloudapp-api": "To support upload to CloudApp",
+                "oneup/flysystem-bundle": "To use Flysystem as a cloud storage"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Dizda\\CloudBackupBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Dizdarevic",
+                    "email": "dizzda@gmail.com",
+                    "homepage": "https://twitter.com/dizzda"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/dizda/CloudBackupBundle/graphs/contributors"
+                }
+            ],
+            "description": "Be able to backup your database(s) and upload it to the cloud (Dropbox, CloudApp, GoogleDrive, etc.)",
+            "homepage": "https://github.com/dizda/CloudBackupBundle",
+            "keywords": [
+                "GDrive",
+                "GoogleDrive",
+                "cloudapp",
+                "database",
+                "dropbox",
+                "dump",
+                "mongodb",
+                "mysql",
+                "symfony"
+            ],
+            "time": "2016-10-18 11:48:02"
         },
         {
             "name": "doctrine/annotations",
@@ -1659,6 +1790,150 @@
             "time": "2013-06-08 14:08:19"
         },
         {
+            "name": "knplabs/gaufrette",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/Gaufrette.git",
+                "reference": "ea6f4d473109c43253d4b5e75d473a51da819e08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/ea6f4d473109c43253d4b5e75d473a51da819e08",
+                "reference": "ea6f4d473109c43253d4b5e75d473a51da819e08",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "amazonwebservices/aws-sdk-for-php": "1.5.*",
+                "aws/aws-sdk-php": "~2",
+                "doctrine/dbal": ">=2.3",
+                "dropbox-php/dropbox-php": "*",
+                "google/apiclient": "~1.1.3",
+                "herzult/php-ssh": "*",
+                "league/flysystem": "~1.0",
+                "microsoft/windowsazure": "dev-master",
+                "mikey179/vfsstream": "~1.2.0",
+                "phpseclib/phpseclib": "^2.0",
+                "phpspec/phpspec": "~2.4",
+                "phpunit/phpunit": "3.7.*",
+                "rackspace/php-opencloud": "1.9.*"
+            },
+            "suggest": {
+                "amazonwebservices/aws-sdk-for-php": "to use the legacy Amazon S3 adapters",
+                "aws/aws-sdk-php": "to use the Amazon S3 adapter",
+                "doctrine/dbal": "to use the Doctrine DBAL adapter",
+                "dropbox-php/dropbox-php": "to use the Dropbox adapter",
+                "ext-apc": "to use the APC adapter",
+                "ext-curl": "*",
+                "ext-fileinfo": "This extension is used to automatically detect the content-type of a file in the AwsS3, OpenCloud, AzureBlogStorage and GoogleCloudStorage adapters",
+                "ext-mbstring": "*",
+                "ext-mongo": "*",
+                "ext-zip": "to use the Zip adapter",
+                "google/apiclient": "to use GoogleCloudStorage adapter",
+                "herzult/php-ssh": "to use SFtp adapter",
+                "knplabs/knp-gaufrette-bundle": "to use with Symfony2",
+                "league/flysystem": "to use Flysystem adapters",
+                "microsoft/windowsazure": "to use Microsoft Azure Blob Storage adapter",
+                "phpseclib/phpseclib": "to use PhpseclibSftp adapter",
+                "rackspace/php-opencloud": "to use Opencloud adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gaufrette": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The contributors",
+                    "homepage": "http://github.com/knplabs/Gaufrette/contributors"
+                },
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                }
+            ],
+            "description": "PHP5 library that provides a filesystem abstraction layer",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "abstraction",
+                "file",
+                "filesystem",
+                "media"
+            ],
+            "time": "2016-05-31 08:06:54"
+        },
+        {
+            "name": "knplabs/knp-gaufrette-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpGaufretteBundle.git",
+                "reference": "cee7dbfbed23d324ac7ed23d25d7b7709da95257"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpGaufretteBundle/zipball/cee7dbfbed23d324ac7ed23d25d7b7709da95257",
+                "reference": "cee7dbfbed23d324ac7ed23d25d7b7709da95257",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/gaufrette": "~0.1.7|~0.2",
+                "symfony/framework-bundle": "~2.0|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2",
+                "symfony/console": "~2.0|~3.0",
+                "symfony/yaml": "~2.0|~3.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Bundle\\GaufretteBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The contributors",
+                    "homepage": "https://github.com/knplabs/KnpGaufretteBundle/contributors"
+                },
+                {
+                    "name": "Antoine Hérault",
+                    "email": "antoine.herault@gmail.com"
+                }
+            ],
+            "description": "Allows to easily use the Gaufrette library in a Symfony project",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "abstraction",
+                "file",
+                "filesystem",
+                "media"
+            ],
+            "time": "2016-02-04 07:27:14"
+        },
+        {
             "name": "kriswallsmith/assetic",
             "version": "dev-master",
             "source": {
@@ -2785,12 +3060,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset.git",
-                "reference": "3fefb7894820447175818d3a86596c1f9a4fd78b"
+                "reference": "87ff61a7d1fda5a7e782c6bc11c49c6e14ffcbbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/asset/zipball/3fefb7894820447175818d3a86596c1f9a4fd78b",
-                "reference": "3fefb7894820447175818d3a86596c1f9a4fd78b",
+                "url": "https://api.github.com/repos/symfony/asset/zipball/87ff61a7d1fda5a7e782c6bc11c49c6e14ffcbbe",
+                "reference": "87ff61a7d1fda5a7e782c6bc11c49c6e14ffcbbe",
                 "shasum": ""
             },
             "require": {
@@ -2805,7 +3080,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -2832,7 +3107,7 @@
             ],
             "description": "Symfony Asset Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-24 15:57:00"
+            "time": "2016-11-19 20:35:20"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -3302,12 +3577,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e55069863dc5408f7323b2789a23de781c0c192e"
+                "reference": "ed6e8972aca32f27d36f5d625b8f041723c9b94f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e55069863dc5408f7323b2789a23de781c0c192e",
-                "reference": "e55069863dc5408f7323b2789a23de781c0c192e",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ed6e8972aca32f27d36f5d625b8f041723c9b94f",
+                "reference": "ed6e8972aca32f27d36f5d625b8f041723c9b94f",
                 "shasum": ""
             },
             "require": {
@@ -3315,7 +3590,7 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~2.7"
+                "symfony/phpunit-bridge": "~3.2@dev"
             },
             "type": "library",
             "extra": {
@@ -3355,7 +3630,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-11-17 17:51:52"
+            "time": "2016-11-19 19:44:10"
         },
         {
             "name": "vich/uploader-bundle",

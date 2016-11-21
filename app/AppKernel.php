@@ -32,6 +32,8 @@ class AppKernel extends Kernel
             new Ant\Bundle\ParkingBundle\ParkingBundle(),
             new Mremi\ContactBundle\MremiContactBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+            new Dizda\CloudBackupBundle\DizdaCloudBackupBundle(),
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle()
         );
 
 

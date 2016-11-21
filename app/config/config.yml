@@ -6,6 +6,7 @@ imports:
     - { resource: easy_admin.yml }
     - { resource: mremi_contact.yml }
     - { resource: vich_uploader.yml }
+    - { resource: backup.yml }
 
 framework:
     #esi:             ~
