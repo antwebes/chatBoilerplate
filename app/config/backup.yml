@@ -1,7 +1,7 @@
 dizda_cloud_backup:
     processor:
         type: tar
-        date_format: 'Y/m/d/H-i-s'
+        date_format: 'Y-m-d-H-i-s'
     cloud_storages:
         gaufrette:
             service_name:   # Gaufrette filesystem(s) service name
