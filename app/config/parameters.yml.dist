@@ -42,3 +42,7 @@ parameters:
     redis_session_client: default
     redis_session_prefix: 'chat.boilerplate_'
     redis_session_ttl: 3600
+    amazon_s3.key: "key"
+    amazon_s3.secret: "secret"
+    amazon_s3.region: "us-east-1"
+    amazon_backup_s3_bucket_name: "mans-backups"
