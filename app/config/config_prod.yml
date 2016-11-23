@@ -24,7 +24,7 @@ monolog:
 
 twig:
     globals:
-        bp_analytics_id: UA-41992080-4
+        bp_analytics_id: %analytics_id%
         social_endpoint: %social_endpoint%
         api_endpoint: %api_endpoint%
         payment_endpoint: %payment_endpoint%

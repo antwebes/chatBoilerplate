@@ -46,3 +46,4 @@ parameters:
     amazon_s3.secret: "secret"
     amazon_s3.region: "us-east-1"
     amazon_backup_s3_bucket_name: "mans-backups"
+    analytics_id: UA-XXXXX-X
