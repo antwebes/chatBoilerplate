@@ -305,7 +305,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "b11f1055df28799b1299746c1b0443d72ff3ea0b"
+                "reference": "ac59b053044e0247906d489cabc5df371bda41c0"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -327,7 +327,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2016-11-23 08:55:41"
+            "time": "2016-11-23 15:30:26"
         },
         {
             "name": "aws/aws-sdk-php",
