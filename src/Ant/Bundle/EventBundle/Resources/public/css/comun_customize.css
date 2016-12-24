@@ -1,0 +1,84 @@
+/*
+
+  Objetivo de esta hoja de estilos
+  --------------------------------------------------------------
+   Agrupa todos los estilos comunes de todas las partes del sitio
+   web, tanto públicas como privadas: tipos de letra, tamaños,
+   colores, márgenes, etc.
+
+  Se aplica a
+  --------------------------------------------------------------
+   frontend, backend y extranet
+
+*/
+/* ===========================================================================
+   Botones
+   ======================================================================== */
+/* Botón normal */
+.boton, .boton:visited {
+    background: rgb(204,0,102);
+    border-bottom: 1px solid rgba(0,0,0, 0.25);
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    padding: .5em 1em;
+    text-decoration: none;
+
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: .2em;
+
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0, 0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0, 0.6);
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.6);
+
+    text-shadow: 0 1px 1px #603;
+}
+.boton:hover {
+    background: rgba(205,0,102, 0.8);
+    color: #FFF !important;
+}
+
+/* Botón click-to-action */
+.cta {
+    background: #0035C7;
+    border-radius: 5px;
+    color: #FFF !important;
+    display: inline-block;
+    font-size: 21px;
+    line-height: 30px;
+    padding: 12px 15px 12px 10px;
+    margin: 1em;
+    min-width: 50%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.cta strong {
+    background: #FFF;
+    border-radius: 5px;
+    color: #0035C7;
+    font-size: 24px;
+    font-weight: normal;
+    margin-right: 10px;
+    padding: 5px 10px;
+    -moz-box-shadow: 0px 0px 5px #4275FF;
+    -webkit-box-shadow: 0px 0px 5px #4275FF;
+    box-shadow: 0px 0px 5px #4275FF;
+}
+
+/* ===========================================================================
+   Estructura
+   ======================================================================== */
+#container-events {
+    background: #FFF;
+    margin: 0 auto 1em;
+    /*width: 960px;*/
+}
+
+#container-events > article {
+    /*min-height: 400px;*/
+}

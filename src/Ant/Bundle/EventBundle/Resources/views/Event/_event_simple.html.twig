@@ -1,0 +1,37 @@
+{% set expirada = event.fechaExpiracion|date('YmdHis') < 'now'|date('YmdHis') %}
+{% set comprada = comprada|default(false) %}
+
+<section class="event mini row">
+    <div class="description col-md-8 col-xs-12">
+        <h2><a href="{{ path('ant_event_city_show', { city: event.city.slug, slug: event.slug }) }}">{{ event.name }}</a></h2>
+
+        {{ event.description|mostrar_como_lista }}
+
+        {% if not expirada and not comprada %}
+            <a class="boton" href="{{event.link}}" target="_blank">{{ 'Apuntarse'|trans }}</a>
+{#            <a class="boton" href="{{ path('comprar', { city: event.city.slug, slug: event.slug }) }}">{{ 'Comprar'|trans }}</a>#}
+        {% endif %}
+
+        <div class="estado {{ expirada ? 'expirada' }} {{ comprada ? 'comprada' }}">
+            {% if comprada %}
+                {% trans with { '%fecha%': fechaCompra|localizeddate('long', 'medium') } %}
+                    Apuntado el %fecha%
+                {% endtrans %}
+            {% elseif not expirada %}
+                {% trans with {'%tiempo%': event.fechaExpiracion|cuenta_atras } %}
+                    <strong>Faltan</strong>: %tiempo%
+                {% endtrans %}
+            {% else %}
+                {% trans with { '%fecha%': event.fechaExpiracion|localizeddate('long', 'none') } %}
+                    Finalizada el %fecha%
+                {% endtrans %}
+            {% endif %}
+        <p class="precio">{{ event.precio }} &euro; <span>{{ descuento(event.precio, event.descuento) }}</span></p>
+        </div>
+    </div>
+
+    <div class="galeria col-xs-12 col-md-4">
+        <img alt="Fotografía del evento" src="{{ asset(event.rutaFoto, 'events') }}">
+{#        <p>{{ 'Disfruta de la event en'|trans }} <a href="{{ path('tienda_portada', { city: event.city.slug, tienda: event.tienda.slug }) }}">{{ event.tienda.name }}</a></p>#}
+    </div>
+</section>

@@ -1,0 +1,11 @@
+ant_event_city_show:
+    path:     /{city}/eventos/{slug}
+    defaults: { _controller: "EventBundle:City:show" }
+
+ant_event_list:
+    path:     /eventos
+    defaults: { _controller: "EventBundle:Event:list" }
+
+ant_event_show:
+    path:     /eventos/{slug}
+    defaults: { _controller: "EventBundle:Event:show" }

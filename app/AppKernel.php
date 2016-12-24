@@ -33,7 +33,8 @@ class AppKernel extends Kernel
             new Mremi\ContactBundle\MremiContactBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
             new Dizda\CloudBackupBundle\DizdaCloudBackupBundle(),
-            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle()
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new Ant\Bundle\EventBundle\EventBundle(),
         );
 
 

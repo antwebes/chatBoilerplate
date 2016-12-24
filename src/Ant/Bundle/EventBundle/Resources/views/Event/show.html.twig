@@ -1,0 +1,56 @@
+{#{% extends 'EventBundle::frontend.html.twig' %}#}
+{% extends 'PrettyBundle:Default:layout_full.html.twig' %}
+
+{#{% block id 'event' %}#}
+{% block title %}{{ event.name }}{% endblock %}
+
+{% block body_tag_class %} id="event"{% endblock %}
+
+{% block head_css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/event/css/normalizar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/event/css/comun_customize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/event/css/frontend.css') }}" />
+{% endblock %}
+
+{% block body_js_end %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/event/js/frontend.js') }}"></script>
+{% endblock %}
+
+{#{% block article %}#}
+{% block body_container_content_full %}
+    <div id="container-events" class="container">
+        <article class="event row">
+            {{ include('EventBundle:Event:_event_complete.html.twig') }}
+        </article>
+    </div>
+{% endblock %}
+{#
+{% block aside %}
+    {{ parent() }}
+
+    {% if cercanas is defined %}
+        <section id="relacionadas">
+            <h2>Events en otras ciudades</h2>
+            <ul>
+                {% for event in cercanas %}
+                    <li>{{ event.city.name }}: <a href="{{ path('event', { ciudad: event.ciudad.slug, slug: event.slug }) }}">{{ event.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
+    <section id="condiciones">
+        <h2>Condiciones generales</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+        </p>
+    </section>
+{% endblock %}#}

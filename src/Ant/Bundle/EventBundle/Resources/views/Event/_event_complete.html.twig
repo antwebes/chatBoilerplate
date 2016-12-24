@@ -1,0 +1,68 @@
+{% set expirada = event.fechaExpiracion|date('YmdHis') < 'now'|date('YmdHis') %}
+<section class="description col-xs-12 col-md-6">
+    <h1><a href="{{ path('ant_event_city_show', { city: event.city.slug, slug: event.slug }) }}">{{ event.name }}</a></h1>
+
+    {{ event.description|mostrar_como_lista }}
+
+    {% if not expirada %}
+        <a class="boton" href="{{event.link}}" target="_blank">{{ 'Apuntarse'|trans }}</a>
+{#        <a class="boton" href="{{ path('comprar', { city: event.city.slug, slug: event.slug }) }}">{{ 'Comprar'|trans }}</a>#}
+    {% endif %}
+</section>
+
+<section class="galeria col-xs-12 col-md-6">
+    <img alt="Fotografía de la event" src="{{ asset(event.rutaFoto, 'events') }}">
+{#    <p class="precio">{{ event.precio }} &euro; <span>{{ descuento(event.precio, event.descuento) }}</span></p>#}
+    <p><strong>{{ 'Condiciones'|trans }}:</strong> {{ event.condiciones }}</p>
+</section>
+
+<section class="estado {{ expirada ? 'expirada' }} col-xs-12">
+{% if not expirada %}
+    <div class="tiempo">
+        {% trans with { '%tiempo%': event.fechaExpiracion|cuenta_atras } %}
+            <strong>Faltan</strong>: %tiempo%
+        {% endtrans %}
+    </div>
+
+   {# <div class="compras">
+        <strong>{{ 'Compras'|trans }}</strong>: {{ event.compras }}
+    </div>#}
+
+    <div class="faltan">
+        {% set faltan = event.umbral - event.compras %}
+        {% if faltan > 0 %}
+            {% transchoice faltan with { '%faltan%': faltan } %}
+                {1} ¡<strong>Un solo asistente mas</strong> <br/> y se completa el evento!|[1, 9] ¡<strong>Sólo hay %faltan% sitios libres</strong> <br/> para completar el aforo!|]9,Inf] Hay <strong>%faltan% sitios libres</strong> <br/> para completar el aforo
+            {% endtranschoice %}
+        {% else %}
+            {% trans with { '%compras%': event.umbral } %}
+                <strong>Oferta activada</strong> por superar las <strong>%compras%</strong> compras necesarias
+            {% endtrans %}
+        {% endif %}
+    </div>
+{% else %}
+    <div class="tiempo">
+        {% trans with { '%fecha%': event.fechaExpiracion|localizeddate('long', 'none') } %}
+            <strong>Finalizada</strong> el %fecha%
+        {% endtrans %}
+    </div>
+
+    <div class="compras">
+        <strong>{{ 'Compras'|trans }}</strong>: {{ event.compras }}
+    </div>
+{% endif %}
+</section>
+
+<section class="direccion col-xs-12">
+    <h2>{{ 'Disfruta del event en'|trans }}</h2>
+    <p>
+        {%if event.address %} {{event.address}} {% endif %}
+{#        <a href="{{ path('tienda_portada', { city: event.city.slug, tienda: event.tienda.slug }) }}">{{ event.tienda.name }}</a>#}
+{#        {{ event.tienda.direccion|nl2br }}#}
+    </p>
+</section>
+
+{#<section class="tienda">
+    <h2>{{ 'Sobre la tienda'|trans }}</h2>
+    {{ event.tienda.description }}
+</section>#}

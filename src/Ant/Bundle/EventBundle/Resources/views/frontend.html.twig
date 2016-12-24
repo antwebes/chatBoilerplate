@@ -1,0 +1,45 @@
+{% extends 'EventBundle::base.html.twig' %}
+
+{% set ciudadSeleccionada = app.request.attributes.get('ciudad', ciudad_por_defecto) %}
+
+{% block stylesheets %}
+    {{  parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/event/css/frontend.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/event/js/frontend.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <header>
+{#        <h1><a href="{{ path('portada', { ciudad: ciudadSeleccionada }) }}">CUPON</a></h1>#}
+        <nav>
+            <ul>
+{#                <li><a href="{{ path('portada', { ciudad: ciudadSeleccionada }) }}">{{ 'Oferta del día'|trans }}</a></li>#}
+{#                <li><a href="{{ path('ciudad_recientes', { ciudad: ciudadSeleccionada }) }}">{{ 'Events recientes'|trans }}</a></li>#}
+{#                <li><a href="{{ path('usuario_compras') }}">{{ 'Mis events'|trans }}</a></li>#}
+{#                <li>{{ render(controller('AppBundle:Ciudad:listaCiudades', { ciudad: ciudadSeleccionada })) }}</li>#}
+            </ul>
+        </nav>
+    </header>
+
+    {% block anuncio %}{% endblock %}
+
+    <article class="{{ block('id') in ['portada', 'event'] ? 'event' }}">
+        {% block article %}{% endblock %}
+    </article>
+
+    <aside>
+        {% block aside %}
+            {% block registrate %}
+                <a id="registrate" class="boton" href="{{ path('chatea_client_register_user') }}">{{ 'Regístrate'|trans }}</a>
+            {% endblock %}
+
+            <section id="login">
+{#                {{ render_esi(controller('AppBundle:Usuario:cajaLogin')) }}#}
+            </section>
+        {% endblock %}
+    </aside>
+{% endblock %}

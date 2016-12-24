@@ -1,0 +1,35 @@
+{#{% extends 'EventBundle::frontend.html.twig' %}#}
+{% extends 'PrettyBundle:Default:layout_full.html.twig' %}
+{#
+{% block id 'recientes' %}
+{% block title %}Eventos recientes{% endblock %}
+
+{% block rss %}
+    <link rel="alternsate" type="application/rss+xml" title="RSS de las events más recientes" href="{{ url('ciudad_recientes', { ciudad: ciudad.slug, _format: 'rss' }) }}" />
+{% endblock %}#}
+
+{% block body_tag_class %} id="recientes"{% endblock %}
+
+{% block head_css %}
+    {{ parent() }}
+{#    <link rel="stylesheet" href="{{ asset('bundles/event/css/normalizar.css') }}" />#}
+    <link rel="stylesheet" href="{{ asset('bundles/event/css/comun_customize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/event/css/frontend.css') }}" />
+{% endblock %}
+
+{% block body_js_end %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/event/js/frontend.js') }}"></script>
+{% endblock %}
+
+{% block body_container_content_full %}
+    <div id="container-events" class="container">
+        <article class="row">
+        <h1>{{ "Eventos recientes "|trans() }}</h1>
+
+        {% for event in events %}
+            {{ include('EventBundle:Event:_event_simple.html.twig') }}
+        {% endfor %}
+        </article>
+    </div>
+{% endblock %}

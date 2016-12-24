@@ -1,3 +1,7 @@
+event:
+    resource: "@EventBundle/Resources/config/routing.yml"
+    prefix:   /
+
 parking:
     resource: "@ParkingBundle/Resources/config/routing.yml"
     prefix:   /

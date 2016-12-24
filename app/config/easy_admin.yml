@@ -2,6 +2,8 @@ easy_admin:
     design:
         form_theme: 'vertical'
     entities:
+        Event:
+            class: Ant\Bundle\EventBundle\Entity\Event
         Offer:
             class: Ant\Bundle\OfferBundle\Entity\Offer
             label: 'Ofertas'

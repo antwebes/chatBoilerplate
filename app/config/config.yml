@@ -7,6 +7,7 @@ imports:
     - { resource: mremi_contact.yml }
     - { resource: vich_uploader.yml }
     - { resource: backup.yml }
+    - { resource: event.yml }
 
 framework:
     #esi:             ~
@@ -20,12 +21,15 @@ framework:
     validation:      { enable_annotations: true }
     templating:
         engines: ['twig']
-        #assets_version: SomeVersionScheme
+        packages:
+            events:
+                base_urls: '%app.path.events_images%'
     default_locale:  "%locale%"
     trusted_proxies: [10.0.0.0/32]
     session:         ~
     fragments:       ~
     http_method_override: true
+    
 
 # Twig Configuration
 twig:
@@ -107,3 +111,4 @@ api_social:
 
 parameters:
     app.path.offer_images: /uploads/images/offers
+    app.path.events_images: /uploads/images/events

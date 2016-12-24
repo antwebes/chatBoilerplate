@@ -1,0 +1,9 @@
+services:
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }
+    event.twig.event_extension:
+        class: Ant\Bundle\EventBundle\Twig\Extension\EventExtension
+        tags:
+            - { name: twig.extension }

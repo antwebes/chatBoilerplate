@@ -1,0 +1,208 @@
+/*
+
+  Objetivo de esta hoja de estilos
+  --------------------------------------------------------------
+   Incluye solamente los estilos particulares del frontend o
+   parte pública del sitio web. Esto permite aplicar estilos
+   particulares al backend y a la extranet.
+
+  Se aplica a
+  --------------------------------------------------------------
+   frontend
+
+*/
+
+/* ===========================================================================
+   Estructura
+   ======================================================================== */
+article {
+    /*float: left;*/
+    padding: 0 10px 0 20px;
+    /*width: 700px;*/
+}
+article > section {
+    margin-bottom: 1em;
+}
+
+section:before, section:after { content: ""; display: table; }
+section:after { clear: both; }
+section { zoom: 1; }
+
+
+/* ===========================================================================
+   Ficha de Evento
+   ======================================================================== */
+.event {
+    margin-top: 2em;
+}
+
+.event h1 {
+    margin-top: 0;
+}
+
+.event .description {
+    /*float: left;*/
+    font-size: 14px;
+    /*width: 350px;*/
+}
+
+.event .description h1 a,
+.event.mini .description h2 a {
+    color: #C06;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-decoration: none;
+}
+.event.mini .description h2 a {
+    font-size: 21px;
+}
+.event .description h1 a:hover,
+.event.mini .description h2 a:hover {
+    color: #2200C1 !important;
+}
+
+.event .boton {
+    font-size: 28px;
+    padding: .4em .75em;
+}
+
+.event .galeria {
+    font-size: 13px;
+    /*float: right;*/
+    /*position: relative;*/
+    /*width: 320px;*/
+}
+.event .galeria img {
+    width: 250px;
+    margin-bottom: 13px;
+}
+.event .galeria .precio {
+    background: rgba(0, 21, 78, 0.9);
+    color: #FFF;
+    display: inline-block;
+    font-size: 28px;
+    padding: .25em .5em;
+    position: absolute;
+    top: 192px;
+    left: 0;
+}
+.event .galeria .precio span {
+    color: #FF3385;
+    font-size: 21px;
+    font-weight: bold;
+    padding-left: .5em;
+    text-shadow: 0 1px 1px #00154E;
+}
+
+.event .estado {
+    background: #DCDCDC;
+    clear: both;
+    margin: 1em 0;
+    padding: .5em 1em;
+    overflow: hidden;
+}
+.event .estado div {
+    float: left;
+}
+.event .estado .tiempo, .event .estado .compras {
+    font-size: 21px;
+    line-height: 36px;
+    width: 35%;
+}
+.event .estado .faltan {
+    width: 30%;
+}
+.event .expirada .tiempo {
+    width: 60%;
+}
+.event .expirada .compras {
+    width: 35%;
+}
+
+/*.event .direccion {
+    float: left;
+    width: 200px;
+}
+.event .tienda {
+    float: right;
+    width: 450px;
+}*/
+.event .direccion h2, .event .tienda h2 {
+    font-size: 16px;
+    margin-bottom: .25em;
+}
+
+.event .direccion a {
+    display: block;
+    font-size: 18px;
+    padding-bottom: .25em;
+}
+.event .direccion p {
+    font-size: 14px;
+}
+
+.event .tienda {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* ===========================================================================
+   Mini-ficha de Evento
+   ======================================================================== */
+.event.mini {
+   margin: 1em 0 2em;
+}
+
+.event.mini h2 {
+   margin-top: 0;
+}
+
+.event.mini .description {
+   /*float: left;*/
+   /*width: 400px;*/
+   font-size: 14px;
+}
+.event.mini .description p {
+   margin-top: 1em;
+}
+
+.event.mini .boton {
+    font-size: 21px;
+}
+
+.event.mini .estado {
+    background: none;
+    padding: 0 1em;
+}
+.event.mini .estado.expirada,
+.event.mini .estado.comprada {
+    font-weight: bold;
+}
+.event.mini .boton + .estado {
+    float: right;
+}
+
+.event.mini .galeria {
+   float: right;
+   /*width: 240px;*/
+}
+.event.mini .galeria img {
+   width: 240px;
+   margin-bottom: .5em;
+}
+.event.mini .galeria .precio {
+   font-size: 21px;
+   top: 145px;
+}
+.event.mini .cta {
+   background: #008000;
+   border-radius: 3px;
+   display: block;
+   font-size: 16px;
+   line-height: 1;
+   margin: .5em;
+   min-width: 0;
+   width: 100px;
+}
+

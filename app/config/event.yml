@@ -1,0 +1,6 @@
+parameters:
+    app.ciudad_por_defecto:  'coruna'
+
+twig:
+    globals:
+        ciudad_por_defecto: '%app.ciudad_por_defecto%'

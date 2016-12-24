@@ -1,0 +1,29 @@
+{% extends 'EventBundle::frontend.html.twig' %}
+
+{% block id 'recientes' %}
+{% block title %}Events recientes en {{ city.nombre }}{% endblock %}
+
+{% block rss %}
+    <link rel="alternate" type="application/rss+xml" title="RSS de las events más recientes en {{ city.nombre }}" href="{{ url('city_recientes', { city: city.slug, _format: 'rss' }) }}" />
+{% endblock %}
+
+{% block article %}
+    <h1>{{ "Events recientes en %city%"|trans({ '%city%': city.nombre }) }}</h1>
+
+    {% for event in events %}
+        {{ include('event/_event_simple.html.twig') }}
+    {% endfor %}
+{% endblock %}
+
+{% block aside %}
+    {{ parent() }}
+
+    <section id="cercanas">
+        <h2>{{ "Events en otras cityes"|trans }}</h2>
+        <ul>
+            <li>ciudad cercana</li>
+        </ul>
+    </section>
+
+    {{ include('comun/_sobre_nosotros.html.twig') }}
+{% endblock %}
