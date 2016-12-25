@@ -35,6 +35,7 @@ class AppKernel extends Kernel
             new Dizda\CloudBackupBundle\DizdaCloudBackupBundle(),
             new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
             new Ant\Bundle\EventBundle\EventBundle(),
+            new Ant\Bundle\MansBundle\MansBundle(),
         );
 
 

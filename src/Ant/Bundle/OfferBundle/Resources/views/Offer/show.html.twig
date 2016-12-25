@@ -22,7 +22,7 @@
                             {% endif %}
                             <h3>{{ entity.name }}</h3>
                             <p class="text-muted">{{ entity.description }}</p>
-                            <p>Expira el: {{ entity.expiredAt|date('Y-m-d H:i:s') }}</p>
+                            <p>{% if entity.expiredAt is not null %}Expira el: {{ entity.expiredAt|date('Y-m-d H:i:s') }}{% else %} Esta oferta no tiene fecha límite.{% endif %}</p>
                             <p>Puedes <a href="{{ path('ant_user_user_show', { 'username' : 'anonimous' , 'user_id': entity.owner }) }}">ver aquí quien ha publicado</a> de esta oferta</p>
                         </div>
                     </div>

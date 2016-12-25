@@ -1,3 +1,7 @@
+mans:
+    resource: "@MansBundle/Resources/config/routing.yml"
+    prefix:   /
+
 event:
     resource: "@EventBundle/Resources/config/routing.yml"
     prefix:   /

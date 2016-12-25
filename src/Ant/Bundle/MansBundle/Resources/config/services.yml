@@ -1,0 +1,4 @@
+services:
+#    mans.example:
+#        class: Ant\Bundle\MansBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
