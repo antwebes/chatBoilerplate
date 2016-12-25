@@ -305,7 +305,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "86294efefdf8d7546d0da85e92e3981e14759262"
+                "reference": "16ebee342eb4fd6e060e59378b9065598b61fd2c"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -327,7 +327,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2016-12-19 17:59:54"
+            "time": "2016-12-25 20:49:31"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -1265,12 +1265,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "a86a943d2cfa3014c7689ba4d533a9f0029b36a7"
+                "reference": "983dd85d6860f87fb7dffd0d9f7ad1462e20a09d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/a86a943d2cfa3014c7689ba4d533a9f0029b36a7",
-                "reference": "a86a943d2cfa3014c7689ba4d533a9f0029b36a7",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/983dd85d6860f87fb7dffd0d9f7ad1462e20a09d",
+                "reference": "983dd85d6860f87fb7dffd0d9f7ad1462e20a09d",
                 "shasum": ""
             },
             "require": {
@@ -1336,7 +1336,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-12-19 17:50:58"
+            "time": "2016-12-21 13:46:54"
         },
         {
             "name": "google/recaptcha",
@@ -3012,12 +3012,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "968cd5302dba8d60ddb64489069953fae2ff1a92"
+                "reference": "3547577659c1a035093b70fce5ae393b3c94f44e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/968cd5302dba8d60ddb64489069953fae2ff1a92",
-                "reference": "968cd5302dba8d60ddb64489069953fae2ff1a92",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/3547577659c1a035093b70fce5ae393b3c94f44e",
+                "reference": "3547577659c1a035093b70fce5ae393b3c94f44e",
                 "shasum": ""
             },
             "require": {
@@ -3057,7 +3057,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-12-06 13:58:36"
+            "time": "2016-12-20 05:27:43"
         },
         {
             "name": "symfony/asset",
@@ -3582,12 +3582,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9dd38e29e39b880c7f6ac183e506f4f37d216df1"
+                "reference": "ae05130032f059260c17a5b5ef221712c8ffd870"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9dd38e29e39b880c7f6ac183e506f4f37d216df1",
-                "reference": "9dd38e29e39b880c7f6ac183e506f4f37d216df1",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ae05130032f059260c17a5b5ef221712c8ffd870",
+                "reference": "ae05130032f059260c17a5b5ef221712c8ffd870",
                 "shasum": ""
             },
             "require": {
@@ -3595,12 +3595,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2@dev"
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.29-dev"
+                    "dev-master": "1.30-dev"
                 }
             },
             "autoload": {
@@ -3635,7 +3635,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-19 13:18:22"
+            "time": "2016-12-24 10:35:17"
         },
         {
             "name": "vich/uploader-bundle",
