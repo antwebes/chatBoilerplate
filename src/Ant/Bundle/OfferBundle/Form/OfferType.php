@@ -16,7 +16,7 @@ class OfferType extends AbstractType
     {
         $builder
             ->add('name', 'text', array('label' => 'Nombre'))
-            ->add('description', 'textarea', array('label' => 'Descripción'))
+            ->add('shortDescription', 'textarea', array('label' => 'Descripción corta'))
             ->add('owner', 'integer', array(
                 'disabled'  => true,
                 'label'     => 'Propietario'

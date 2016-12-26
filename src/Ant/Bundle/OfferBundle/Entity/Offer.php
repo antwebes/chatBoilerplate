@@ -41,11 +41,18 @@ class Offer
     private $slug;
 
     /**
-     * @var string $description
+     * @var string $shortDescription
      *
-     * @ORM\Column(name="description", type="text", nullable=true)
+     * @ORM\Column(name="short_description", type="string", length=255)
      */
-    private $description;
+    private $shortDescription;
+    
+    /**
+     * @var string $largeDescription
+     *
+     * @ORM\Column(name="large_description", type="text")
+     */
+    private $largeDescription;
 
     /**
      * @ORM\Column(type="integer", nullable=false)
@@ -176,17 +183,32 @@ class Offer
     /**
      * @return string
      */
-    public function getDescription()
+    public function getShortDescription()
     {
-        return $this->description;
+        return $this->shortDescription;
     }
 
     /**
-     * @param string $description
+     * @param string $shortDescription
      */
-    public function setDescription($description)
+    public function setShortDescription($shortDescription)
     {
-        $this->description = $description;
+        $this->shortDescription = $shortDescription;
+    }
+    /**
+     * @return string
+     */
+    public function getLargeDescription()
+    {
+        return $this->largeDescription;
+    }
+
+    /**
+     * @param string $largeDescription
+     */
+    public function setLargeDescription($largeDescription)
+    {
+        $this->largeDescription = $largeDescription;
     }
 
     /**

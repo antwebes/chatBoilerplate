@@ -21,7 +21,8 @@
                                 <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
                             {% endif %}
                             <h3>{{ entity.name }}</h3>
-                            <p class="text-muted">{{ entity.description }}</p>
+                            <p class="text-muted">{{ entity.shortDescription }}</p>
+                            <p class="text-muted">{{ entity.largeDescription }}</p>
                             <p>{% if entity.expiredAt is not null %}Expira el: {{ entity.expiredAt|date('Y-m-d H:i:s') }}{% else %} Esta oferta no tiene fecha límite.{% endif %}</p>
                             <p>Puedes <a href="{{ path('ant_user_user_show', { 'username' : 'anonimous' , 'user_id': entity.owner }) }}">ver aquí quien ha publicado</a> de esta oferta</p>
                         </div>

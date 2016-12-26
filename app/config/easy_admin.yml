@@ -11,7 +11,8 @@ easy_admin:
                 fields:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Información básica' }
                     - { property: 'name', label: 'Nombre' }
-                    - { property: 'description', label: 'Descripción' }
+                    - { property: 'shortDescription', label: 'Descripción corta' }
+                    - { property: 'largeDescription', label: 'Descripción larga' }
                     - { property: 'enabled', label: 'Habilitada' }
                     - { property: 'publicatedAt', label: 'Creada el..' }
                     - { property: 'expiredAt', label: 'Expirará el..' }
@@ -26,7 +27,8 @@ easy_admin:
             new:
                 fields:
                     - { property: 'name', label: 'Nombre' }
-                    - { property: 'description', label: 'Descripción' }
+                    - { property: 'shortDescription', label: 'Descripción corta' }
+                    - { property: 'largeDescription', label: 'Descripción larga' }
                     - { property: 'owner', label: 'Usuario propietario' }
                     - { property: 'enabled', label: 'Habilitada' }
                     - { property: 'expiredAt', label: 'Expirará el..' }

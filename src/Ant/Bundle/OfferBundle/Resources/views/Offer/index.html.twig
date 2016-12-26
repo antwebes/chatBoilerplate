@@ -32,7 +32,7 @@
                                     <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
                                 {% endif %}
                                 <a href="{{ path('offer_show', {id: entity.id}) }}"><h3>{{ entity.name }}</h3></a>
-                                <p class="text-muted">{{ entity.description }}</p>
+                                <p class="text-muted">{{ entity.shortDescription }}</p>
                             </div>
                         </div>
                     {% if loop.index % 4 == 0 or loop.last %}
