@@ -5,6 +5,7 @@ then
     echo "executing php in dev mode"
     cp /var/www/html/docker/php/php-dev.ini /usr/local/etc/php/php.ini
     chown -R www-data:www-data /var/www/html/app/cache/
+    chown -R www-data:www-data /var/www/html/web/uploads/images/
 
     apache2-foreground
 else
