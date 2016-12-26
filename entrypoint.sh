@@ -17,7 +17,7 @@ else
     php app/console cache:clear -e=prod --no-warmup
     php app/console assets:install -e=prod
     php app/console  assetic:dump -e=prod
-    chown -R www-data:www-data /var/www/html/app/cache/ /var/www/html/app/logs/ /var/www/html/web/media
+    chown -R www-data:www-data /var/www/html/app/cache/ /var/www/html/app/logs/ /var/www/html/web/media /var/www/html/web/uploads/images/
 
     apache2-foreground
 fi
