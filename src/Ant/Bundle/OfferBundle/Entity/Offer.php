@@ -29,6 +29,12 @@ class Offer
     /**
      * @var string $name
      * @Assert\NotBlank(message = "The offer name value should not be blank.")
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 255,
+     *      minMessage = "La descripción corta tiene que ser al menos de {{ limit }} caracteres",
+     *      maxMessage = "La descripción corta tiene que tener como máximo {{ limit }} caracteres"
+     * )
      * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
@@ -42,7 +48,12 @@ class Offer
 
     /**
      * @var string $shortDescription
-     *
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 255,
+     *      minMessage = "La descripción corta tiene que ser al menos de {{ limit }} caracteres",
+     *      maxMessage = "La descripción corta tiene que tener como máximo {{ limit }} caracteres"
+     * )
      * @ORM\Column(name="short_description", type="string", length=255)
      */
     private $shortDescription;
