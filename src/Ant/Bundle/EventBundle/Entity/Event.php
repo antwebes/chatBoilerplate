@@ -163,15 +163,15 @@ class Event
      *
      * @return Event
      */
-    public static function crearParaUser(UserInterface $user)
-    {
-        $event = new self();
-
-        $event->setTienda($user);
-        $event->setCity($user->getCity());
-
-        return $event;
-    }
+//    public static function crearParaUser(UserInterface $user)
+//    {
+//        $event = new self();
+//
+//        $event->setTienda($user);
+//        $event->setCity($user->getCity());
+//
+//        return $event;
+//    }
 
     /**
      * @return int
@@ -460,13 +460,13 @@ class Event
         return $this->city;
     }
 
-    /**
-     * @param Tienda $user
-     */
-    public function setUser(UserInterface $user)
-    {
-        $this->user = $user;
-    }
+//    /**
+//     * @param Tienda $user
+//     */
+//    public function setUser(UserInterface $user)
+//    {
+//        $this->user = $user;
+//    }
 
     /**
      * @return Tienda
