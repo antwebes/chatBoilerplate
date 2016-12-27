@@ -305,7 +305,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:antweb/prettybundle.git",
-                "reference": "bf10bd6d956f0882c1c9486a1eaaa449aff3246e"
+                "reference": "abbb1b6a67b432f6877afa4306c1956d75880cab"
             },
             "require": {
                 "symfony/framework-bundle": "~2.3"
@@ -327,7 +327,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2016-12-26 10:28:39"
+            "time": "2016-12-27 13:01:32"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -3582,12 +3582,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "5268900793747985d5b33001a2d7e1663f75a028"
+                "reference": "91938100bbe5c45fce3c4a1dddfbfcc01a50772c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/5268900793747985d5b33001a2d7e1663f75a028",
-                "reference": "5268900793747985d5b33001a2d7e1663f75a028",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/91938100bbe5c45fce3c4a1dddfbfcc01a50772c",
+                "reference": "91938100bbe5c45fce3c4a1dddfbfcc01a50772c",
                 "shasum": ""
             },
             "require": {
@@ -3635,7 +3635,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-26 07:10:59"
+            "time": "2016-12-27 10:58:11"
         },
         {
             "name": "vich/uploader-bundle",
