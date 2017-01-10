@@ -25,7 +25,7 @@ class ParkingTicket
 
     /**
      * @ORM\ManyToOne(targetEntity="Parking", inversedBy="parkingTickets")
-     * @ORM\JoinColumn(name="parking_id", referencedColumnName="id", nullable=false)
+     * @ORM\JoinColumn(name="parking_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
     private $parking;
 

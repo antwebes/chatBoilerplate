@@ -23,9 +23,9 @@ class Parking
     private $id;
 
     /**
-     * @var string $name
+     * @var string $number
      * @Assert\NotBlank(message = "The parking number value should not be blank.")
-     * @ORM\Column(name="number", type="integer", nullable=true)
+     * @ORM\Column(name="number", type="string", length=255, unique=true)
      */
     private $number;
 
