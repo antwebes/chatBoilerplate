@@ -22,7 +22,7 @@ class AppKernel extends Kernel
             new Ant\Bundle\ChateaSecureBundle\ChateaSecureBundle(),
             new Beelab\Recaptcha2Bundle\BeelabRecaptcha2Bundle(),
             new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
-            new Snc\RedisBundle\SncRedisBundle(),
+            //new Snc\RedisBundle\SncRedisBundle(),
             new Ant\Bundle\ApiSocialBundle\ApiSocialBundle(),
             new Ant\HelpBundle\HelpBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
@@ -49,10 +49,11 @@ class AppKernel extends Kernel
         $parameters = $yaml->parse(file_get_contents($parametersPath));
 
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
-
+        /*
         if(isset($parameters['parameters']['redis_session']) && $parameters['parameters']['redis_session'] === true){
             $loader->load($this->getRootDir().'/config/redis_session.yml');
         }
+        */
     }
 
     protected function getContainerBaseClass()
