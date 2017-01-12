@@ -29,13 +29,13 @@ twig:
         api_endpoint: %api_endpoint%
         payment_endpoint: %payment_endpoint%
 
-snc_redis:
-    clients:
-        default:
-            type: predis
-            alias: default
-            dsn: redis://%redis_password%@%redis_host%/%redis_db%
-            logging: %kernel.debug%
+#snc_redis:
+#    clients:
+#        default:
+#            type: predis
+#            alias: default
+#            dsn: redis://%redis_password%@%redis_host%/%redis_db%
+#            logging: %kernel.debug%
             
 chatea_client:
     can_skip_register_profile: false
