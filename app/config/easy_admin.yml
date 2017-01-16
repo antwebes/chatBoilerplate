@@ -4,6 +4,31 @@ easy_admin:
     entities:
         Event:
             class: Ant\Bundle\EventBundle\Entity\Event
+            form:
+                fields:
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Información básica' }
+                    - { property: 'name', label: 'Nombre' }
+                    - { property: 'description', label: 'Descripción' }
+                    - { property: 'condiciones', label: 'Condiciones para asistir' }
+                    - { property: 'link', label: 'Link externo' }
+                    - { property: 'address', label: 'Dirección' }
+                    - { property: 'precio', label: 'Precio' }
+                    - { property: 'descuento', label: 'Descuento' }
+                    - { property: 'fechaPublicacion', label: 'Creada el..' }
+                    - { property: 'fechaExpiracion', label: 'Expirará el..' }
+                    - { property: 'umbral', label: 'Aforo máximo aproximado' }
+                    - { property: 'city', label: 'Ciudad' }
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Multimedia' }
+                    - { property: 'imageFile', type: 'vich_image'}
+                    - { type: 'group', css_class: 'col-sm-6', label: 'Información avanzada' }
+                    - { property: 'slug', label: 'Slug' }
+                    - { property: 'revisada', label: 'Revisada' }
+                    - { property: 'fechaActualizacion', label: 'Actualizada el...' }
+                    - { property: 'compras', label: 'Compras ( futuro )' }
+                    - { property: 'owner', label: 'Usuario propietario' }
+            list:
+                actions: ['edit', 'search', 'show']
+                fields: ['id', 'name', 'revisada' , 'fechaPublicacion', { property: 'image', type: 'image' , base_path: %app.path.events_images%}]
         Offer:
             class: Ant\Bundle\OfferBundle\Entity\Offer
             label: 'Ofertas'

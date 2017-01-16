@@ -60,15 +60,17 @@ class Event
     protected $address;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
      */
-    protected $rutaFoto;
+    protected $image;
 
     /**
      * @Assert\Image(maxSize = "500k")
-     * @Vich\UploadableField(mapping="fotos_events", fileNameProperty="rutaFoto")
+     * @Vich\UploadableField(mapping="fotos_events", fileNameProperty="image")
+     * @var File
      */
-    protected $foto;
+    protected $imageFile;
 
     /**
      * @ORM\Column(type="decimal", scale=2)
@@ -78,7 +80,7 @@ class Event
     protected $precio;
 
     /**
-     * @ORM\Column(type="decimal", scale=2)
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
     protected $descuento;
 
@@ -104,7 +106,7 @@ class Event
     protected $fechaActualizacion;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     protected $compras;
 
@@ -279,31 +281,31 @@ class Event
     }
 
     /**
-     * @param string $rutaFoto
+     * @param string $image
      */
-    public function setRutaFoto($rutaFoto)
+    public function setImage($image)
     {
-        $this->rutaFoto = $rutaFoto;
+        $this->image = $image;
     }
 
     /**
      * @return string
      */
-    public function getRutaFoto()
+    public function getImage()
     {
-        return $this->rutaFoto;
+        return $this->image;
     }
 
     /**
-     * @param File $foto
+     * @param File $imageFile
      */
-    public function setFoto(File $foto = null)
+    public function setImageFile(File $imageFile = null)
     {
-        $this->foto = $foto;
+        $this->imageFile = $imageFile;
 
         // para que el "listener" de Doctrine guarde bien los cambios, al menos
-        // una propiedad debe cambiar su valor (además de la propiedad de la foto)
-        if (null !== $foto) {
+        // una propiedad debe cambiar su valor (además de la propiedad de la imageFile)
+        if (null !== $imageFile) {
             $this->fechaActualizacion = new \Datetime('now');
         }
     }
@@ -311,9 +313,9 @@ class Event
     /**
      * @return File
      */
-    public function getFoto()
+    public function getImageFile()
     {
-        return $this->foto;
+        return $this->imageFile;
     }
 
     /**

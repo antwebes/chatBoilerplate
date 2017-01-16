@@ -4,3 +4,6 @@ vich_uploader:
         offer_images:
             uri_prefix:         %app.path.offer_images%
             upload_destination: %kernel.root_dir%/../web/uploads/images/offers
+        fotos_events:
+            uri_prefix:         %app.path.events_images%
+            upload_destination: %kernel.root_dir%/../web/uploads/images/events

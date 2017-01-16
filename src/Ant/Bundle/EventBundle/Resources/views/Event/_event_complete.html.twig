@@ -11,7 +11,7 @@
 </section>
 
 <section class="galeria col-xs-12 col-md-6">
-    <img alt="Fotografía de la event" src="{{ asset(event.rutaFoto, 'events') }}">
+    <img alt="Fotografía del evento" src="{{ asset(event.image, 'events') }}">
 {#    <p class="precio">{{ event.precio }} &euro; <span>{{ descuento(event.precio, event.descuento) }}</span></p>#}
     <p><strong>{{ 'Condiciones'|trans }}:</strong> {{ event.condiciones }}</p>
 </section>
