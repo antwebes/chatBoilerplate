@@ -1,6 +1,6 @@
 <?php
 
-namespace Ant\Bundle\OfferBundle\Controller;
+namespace Ant\Bundle\MansBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -27,6 +27,6 @@ class StatsController extends Controller
 
         $num_parking_ticket = $qb->getQuery()->getSingleScalarResult();
         
-        return $this->render('OfferBundle:Stats:general.html.twig', array('num_offers' => $num_offers, 'num_users' => $num_users, 'num_parking_ticket' => $num_parking_ticket ));
+        return $this->render('MansBundle:Stats:general.html.twig', array('num_offers' => $num_offers, 'num_users' => $num_users, 'num_parking_ticket' => $num_parking_ticket ));
     }
 }
