@@ -36,25 +36,25 @@
             {% endtranschoice %}
         {% else %}
             {% trans with { '%compras%': event.umbral } %}
-                <strong>Oferta activada</strong> por superar las <strong>%compras%</strong> compras necesarias
+                <strong>Oferta activada</strong> por superar las <strong>%compras%</strong> asistentes necesarios
             {% endtrans %}
         {% endif %}
     </div>
 {% else %}
     <div class="tiempo">
         {% trans with { '%fecha%': event.fechaExpiracion|localizeddate('long', 'none') } %}
-            <strong>Finalizada</strong> el %fecha%
+            <strong>Finalizado</strong> el %fecha%
         {% endtrans %}
     </div>
 
     <div class="compras">
-        <strong>{{ 'Compras'|trans }}</strong>: {{ event.compras }}
+        <strong>{{ 'Asistentes'|trans }}</strong>: {{ event.compras }}
     </div>
 {% endif %}
 </section>
 
 <section class="direccion col-xs-12">
-    <h2>{{ 'Disfruta del event en'|trans }}</h2>
+    <h2>{{ 'Disfruta del evento en'|trans }}</h2>
     <p>
         {%if event.address %} {{event.address}} {% endif %}
 {#        <a href="{{ path('tienda_portada', { city: event.city.slug, tienda: event.tienda.slug }) }}">{{ event.tienda.name }}</a>#}

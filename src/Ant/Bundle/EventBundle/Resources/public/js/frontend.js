@@ -28,7 +28,7 @@ function muestraCuentaAtras(id, fecha) {
         segundos = Math.floor(falta);
         
         cuentaAtras = 
-                    (days < 1 ? '' :  days + 'd')
+                    (days < 1 ? '' :  days + 'd ')
                     + (horas < 10    ? '0' + horas    : horas)    + 'h '
                     + (minutos < 10  ? '0' + minutos  : minutos)  + 'm '
                     + (segundos < 10 ? '0' + segundos : segundos) + 's ';

@@ -23,10 +23,10 @@
                 {% endtrans %}
             {% else %}
                 {% trans with { '%fecha%': event.fechaExpiracion|localizeddate('long', 'none') } %}
-                    Finalizada el %fecha%
+                    Finalizado el %fecha%
                 {% endtrans %}
             {% endif %}
-        <p class="precio">{{ event.precio }} &euro; <span>{{ descuento(event.precio, event.descuento) }}</span></p>
+        <p class="precio">{% if event.precio > 0 %}{{ event.precio }} &euro; <span>{{ descuento(event.precio, event.descuento) }}</span> {% else %}Gratuito{% endif %}</p>
         </div>
     </div>
 

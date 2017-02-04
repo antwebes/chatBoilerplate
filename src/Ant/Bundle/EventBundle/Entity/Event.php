@@ -111,7 +111,7 @@ class Event
     protected $compras;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      *
      * @Assert\Type(type="integer")
      * @Assert\Range(min = 0)
