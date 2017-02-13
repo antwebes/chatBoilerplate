@@ -32,6 +32,11 @@ class EventController extends Controller
         if (!$event) {
             throw $this->createNotFoundException('No se ha encontrado el evento solicitada');
         }
+        if ($event->isPrivate()){
+             if (false === $this->get('security.context')->isGranted('ROLE_MANS')) {
+                 throw $this->createAccessDeniedException('Se trata de un evento solo para usuarios de Mans');
+             }
+        }
 
         return $this->render('EventBundle:Event:show.html.twig', array(
             'event' => $event,

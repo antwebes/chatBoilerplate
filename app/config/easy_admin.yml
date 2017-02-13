@@ -7,13 +7,13 @@ easy_admin:
             form:
                 fields:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Información básica' }
+                    - { property: 'private', label: 'Evento privado para gente de Mans' }
                     - { property: 'name', label: 'Nombre' }
                     - { property: 'description', label: 'Descripción' }
                     - { property: 'condiciones', label: 'Condiciones para asistir' }
                     - { property: 'link', label: 'Link externo' }
                     - { property: 'address', label: 'Dirección' }
                     - { property: 'precio', label: 'Precio' }
-                    - { property: 'descuento', label: 'Descuento' }
                     - { property: 'fechaPublicacion', label: 'Creada el..' }
                     - { property: 'fechaExpiracion', label: 'Expirará el..' }
                     - { property: 'umbral', label: 'Aforo máximo aproximado' }
@@ -23,18 +23,20 @@ easy_admin:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Información avanzada' }
                     - { property: 'slug', label: 'Slug' }
                     - { property: 'revisada', label: 'Revisada' }
+                    - { property: 'descuento', label: 'Descuento' }
                     - { property: 'fechaActualizacion', label: 'Actualizada el...' }
-                    - { property: 'compras', label: 'Compras ( futuro )' }
+                    - { property: 'participants', label: 'Participantes ( futuro )' }
                     - { property: 'owner', label: 'Usuario propietario' }
             list:
                 actions: ['edit', 'search', 'show']
-                fields: ['id', 'name', 'revisada' , 'fechaPublicacion', { property: 'image', type: 'image' , base_path: %app.path.events_images%}]
+                fields: ['id', 'name', 'private', 'revisada' , 'fechaPublicacion', { property: 'image', type: 'image' , base_path: %app.path.events_images%}]
         Offer:
             class: Ant\Bundle\OfferBundle\Entity\Offer
             label: 'Ofertas'
             form:
                 fields:
                     - { type: 'group', css_class: 'col-sm-6', label: 'Información básica' }
+                    - { property: 'private', label: 'Oferta exclusiva para gente de Mans' }
                     - { property: 'name', label: 'Nombre' }
                     - { property: 'shortDescription', label: 'Descripción corta' }
                     - { property: 'largeDescription', label: 'Descripción larga' }
@@ -60,7 +62,7 @@ easy_admin:
                     - { property: 'imageFile', type: 'vich_image' }
             list:
                 actions: ['edit', 'search', 'show']
-                fields: ['id', 'name', 'owner' , 'enabled' , 'publicatedAt', { property: 'image', type: 'image' , base_path: %app.path.offer_images%}]
+                fields: ['id', 'name', 'private' , 'enabled' , 'publicatedAt', { property: 'image', type: 'image' , base_path: %app.path.offer_images%}]
         Parking:
             class: Ant\Bundle\ParkingBundle\Entity\Parking
             label: 'Parkings'

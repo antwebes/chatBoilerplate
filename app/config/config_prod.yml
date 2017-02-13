@@ -38,4 +38,4 @@ snc_redis:
             logging: %kernel.debug%
             
 chatea_client:
-    can_skip_register_profile: false
+    can_skip_register_profile: true

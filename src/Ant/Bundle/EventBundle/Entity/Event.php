@@ -108,7 +108,7 @@ class Event
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    protected $compras;
+    protected $participants;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -129,6 +129,13 @@ class Event
      * @ORM\ManyToOne(targetEntity="Ant\Bundle\EventBundle\Entity\City")
      */
     protected $city;
+    
+    /**
+     * @ORM\Column(type="boolean")
+     *
+     * @Assert\Type(type="bool")
+     */
+    protected $private;
 
     /**
      * @ORM\ManyToOne(targetEntity="Ant\Bundle\EventBundle\Entity\User")
@@ -151,8 +158,9 @@ class Event
 
     public function __construct()
     {
-        $this->compras = 0;
+        $this->participants = 0;
         $this->revisada = false;
+        $this->private = false;
         $this->fechaActualizacion = new \Datetime();
     }
 
@@ -399,19 +407,19 @@ class Event
     }
 
     /**
-     * @param int $compras
+     * @param int $participants
      */
-    public function setCompras($compras)
+    public function setParticipants($participants)
     {
-        $this->compras = $compras;
+        $this->participants = $participants;
     }
 
     /**
      * @return int
      */
-    public function getCompras()
+    public function getParticipants()
     {
-        return $this->compras;
+        return $this->participants;
     }
 
     /**
@@ -444,6 +452,30 @@ class Event
     public function getRevisada()
     {
         return $this->revisada;
+    }
+    
+    /**
+     * @param bool $private
+     */
+    public function setPrivate($private)
+    {
+        $this->private = $private;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getPrivate()
+    {
+        return $this->private;
+    }
+    
+    /**
+     * @return bool
+     */
+    public function isPrivate()
+    {
+        return $this->private;
     }
 
     /**

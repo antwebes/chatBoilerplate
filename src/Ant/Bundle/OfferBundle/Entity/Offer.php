@@ -120,11 +120,19 @@ class Offer
      * @var File
      */
     private $imageFile;
+    
+    /**
+     * @ORM\Column(type="boolean")
+     *
+     * @Assert\Type(type="bool")
+     */
+    protected $private;
 
 
     public function __construct()
     {
         $this->publicatedAt = new \DateTime('now');
+        $this->private = false;
     }
 
     /**
@@ -344,6 +352,30 @@ class Offer
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * @param bool $private
+     */
+    public function setPrivate($private)
+    {
+        $this->private = $private;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getPrivate()
+    {
+        return $this->private;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPrivate()
+    {
+        return $this->private;
     }
 
 }

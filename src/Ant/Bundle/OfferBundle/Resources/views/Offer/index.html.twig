@@ -19,23 +19,18 @@
                 <br/>
                 <br/>
                 <br/>
+                {% set count = 0 %}
                 {% for entity in entities %}
-                    {# Hacemos estos chequeos para poner listas de 4 elementos #}
-                    {% if loop.first or loop.index % 4 == 1 %}
+                    {% set count = count + 1 %}
+                    {% if count == 0 or count % 4 == 1 %}
                         <div class="row">
                     {% endif %}
-                        <div class="col-lg-3 col-md-6 text-center">
-                            <div class="service-box">
-                                {% if entity.image %} 
-                                    <img src="{{app_path_offer_images}}/{{ entity.image }}" width="150px">
-                                {% else %}
-                                    <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
-                                {% endif %}
-                                <a href="{{ path('offer_show', {id: entity.id}) }}"><h3>{{ entity.name }}</h3></a>
-                                <p class="text-muted">{{ entity.shortDescription }}</p>
-                            </div>
-                        </div>
-                    {% if loop.index % 4 == 0 or loop.last %}
+                    {% if entity.isPrivate and app.user and is_granted('ROLE_MANS') %}
+                        {{ include('OfferBundle:Offer:_offer_simple.html.twig') }}
+                    {% elseif not entity.isPrivate %}
+                        {{ include('OfferBundle:Offer:_offer_simple.html.twig') }}
+                    {% endif %}
+                    {% if count % 4 == 0 or loop.last %}
                         </div>
                         <br/>
                         <br/>

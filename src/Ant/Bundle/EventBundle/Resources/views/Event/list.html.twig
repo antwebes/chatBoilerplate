@@ -28,7 +28,11 @@
         <h1>{{ "Eventos recientes "|trans() }}</h1>
 
         {% for event in events %}
-            {{ include('EventBundle:Event:_event_simple.html.twig') }}
+            {% if event.isPrivate and app.user and is_granted('ROLE_MANS') %}
+                {{ include('EventBundle:Event:_event_simple.html.twig') }}
+            {% elseif not event.isPrivate %}
+                {{ include('EventBundle:Event:_event_simple.html.twig') }}
+            {% endif %}
         {% endfor %}
         </article>
     </div>

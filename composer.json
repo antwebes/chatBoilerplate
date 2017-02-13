@@ -9,7 +9,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.3.*",
+        "symfony/symfony": "2.6.*",
         "doctrine/orm": "~2.2,>=2.2.3,<2.5",
         "doctrine/dbal": "<2.5",
         "doctrine/doctrine-bundle": "~1.2",
@@ -37,8 +37,8 @@
         "aws/aws-sdk-php" : "~2.8"
     },
     "require-dev" : {
-        "behat/behat" : "2.4.*@stable",
-        "behat/mink" : "1.4.*@stable",
+        "behat/behat" : "v2.5.5",
+        "behat/mink" : "v1.5.0",
         "behat/mink-extension" : "*",
         "behat/mink-goutte-driver" : "*",
         "behat/mink-selenium2-driver" : "*",

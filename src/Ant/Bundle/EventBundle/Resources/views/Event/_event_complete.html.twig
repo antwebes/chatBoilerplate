@@ -29,14 +29,14 @@
     </div>#}
 
     <div class="faltan">
-        {% set faltan = event.umbral - event.compras %}
+        {% set faltan = event.umbral - event.participants %}
         {% if faltan > 0 %}
             {% transchoice faltan with { '%faltan%': faltan } %}
                 {1} ¡<strong>Un solo asistente mas</strong> <br/> y se completa el evento!|[1, 9] ¡<strong>Sólo hay %faltan% sitios libres</strong> <br/> para completar el aforo!|]9,Inf] Hay <strong>%faltan% sitios libres</strong> <br/> para completar el aforo
             {% endtranschoice %}
         {% else %}
             {% trans with { '%compras%': event.umbral } %}
-                <strong>Oferta activada</strong> por superar las <strong>%compras%</strong> asistentes necesarios
+                <strong>Evento activado</strong> por superar los <strong>%compras%</strong> asistentes necesarios
             {% endtrans %}
         {% endif %}
     </div>
@@ -48,7 +48,9 @@
     </div>
 
     <div class="compras">
-        <strong>{{ 'Asistentes'|trans }}</strong>: {{ event.compras }}
+        {% if event.participants > 0 %}
+        <strong>{{ 'Asistentes'|trans }}</strong>: {{ event.participants }}
+        {% endif %}
     </div>
 {% endif %}
 </section>
