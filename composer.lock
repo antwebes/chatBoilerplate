@@ -67,18 +67,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaClientBundle.git",
-                "reference": "ff4abe2d1feba89b5afa926ce072ef652f03827c"
+                "reference": "79c1cba779aed1d2f32f1eb03c8af1ac0efbe1f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/ff4abe2d1feba89b5afa926ce072ef652f03827c",
-                "reference": "ff4abe2d1feba89b5afa926ce072ef652f03827c",
+                "url": "https://api.github.com/repos/antwebes/ChateaClientBundle/zipball/79c1cba779aed1d2f32f1eb03c8af1ac0efbe1f0",
+                "reference": "79c1cba779aed1d2f32f1eb03c8af1ac0efbe1f0",
                 "shasum": ""
             },
             "require": {
                 "antwebes/chatea-client-lib": "1.0.0",
                 "antwebes/chatea-common": "0.1.0",
-                "antwebes/chatea-secure-bundle": "0.1.6",
+                "antwebes/chatea-secure-bundle": "0.1.7",
                 "beelab/recaptcha2-bundle": "0.1.*",
                 "doctrine/annotations": "^1.2",
                 "symfony/assetic-bundle": ">2.3",
@@ -107,7 +107,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2017-02-14 07:38:34"
+            "time": "2017-03-31 09:43:22"
         },
         {
             "name": "antwebes/chatea-client-lib",
@@ -201,17 +201,17 @@
         },
         {
             "name": "antwebes/chatea-secure-bundle",
-            "version": "v0.1.6",
+            "version": "v0.1.7",
             "target-dir": "Ant/Bundle/ChateaSecureBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antwebes/ChateaSecureBundle.git",
-                "reference": "5d9dfc0f567e0c11678a8107c614086845d6d809"
+                "reference": "121ce1a00e8b0b43d06cac65ad60c06d30a2370b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/5d9dfc0f567e0c11678a8107c614086845d6d809",
-                "reference": "5d9dfc0f567e0c11678a8107c614086845d6d809",
+                "url": "https://api.github.com/repos/antwebes/ChateaSecureBundle/zipball/121ce1a00e8b0b43d06cac65ad60c06d30a2370b",
+                "reference": "121ce1a00e8b0b43d06cac65ad60c06d30a2370b",
                 "shasum": ""
             },
             "require": {
@@ -247,7 +247,7 @@
                 "chatea",
                 "chateagratis"
             ],
-            "time": "2015-10-26 12:10:06"
+            "time": "2017-03-31 09:40:46"
         },
         {
             "name": "antwebes/help-bundle",
