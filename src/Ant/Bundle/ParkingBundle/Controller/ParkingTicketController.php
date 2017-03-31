@@ -22,6 +22,8 @@ class ParkingTicketController extends BaseController
      */
     public function indexAction()
     {
+        $this->denyAccessUnlessGranted('ROLE_MANS', null, 'Esta acción está reservada solo para usuarios del centro Mans.');
+
         $em = $this->getDoctrine()->getManager();
 
         $entities = $em->getRepository('ParkingBundle:ParkingTicket')->findAllParkingTicketFromToday();
@@ -58,6 +60,8 @@ class ParkingTicketController extends BaseController
      */
     public function createAction(Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_MANS', null, 'Esta acción está reservada solo para usuarios del centro Mans.');
+        
         $entity = new ParkingTicket();
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);

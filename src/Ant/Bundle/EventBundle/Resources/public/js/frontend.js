@@ -3,10 +3,10 @@
  * cuánto falta para que expire la oferta.
  */
 function muestraCuentaAtras(id, fecha) {
-    var days, horas, minutos, segundos;
+    var days, horas, minutos;
     
     var ahora = new Date();
-    var fechaExpiracion = new Date(fecha.ano, fecha.mes, fecha.dia, fecha.hora, fecha.minuto, fecha.segundo);
+    var fechaExpiracion = new Date(fecha.ano, fecha.mes, fecha.dia, fecha.hora, fecha.minuto);
     
     var falta = Math.floor( (fechaExpiracion.getTime() - ahora.getTime()) / 1000 );
     
@@ -25,17 +25,14 @@ function muestraCuentaAtras(id, fecha) {
         minutos = Math.floor(falta/60);
         falta = falta % 60;
         
-        segundos = Math.floor(falta);
-        
         cuentaAtras = 
                     (days < 1 ? '' :  days + 'd ')
                     + (horas < 10    ? '0' + horas    : horas)    + 'h '
-                    + (minutos < 10  ? '0' + minutos  : minutos)  + 'm '
-                    + (segundos < 10 ? '0' + segundos : segundos) + 's ';
+                    + (minutos < 10  ? '0' + minutos  : minutos)  + 'm ';
         
         setTimeout(function() {
             muestraCuentaAtras(id, fecha);
-        }, 1000);
+        }, 60000);
     }
     
     document.getElementById(id).innerHTML = cuentaAtras;

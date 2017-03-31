@@ -63,8 +63,7 @@ class EventExtension extends \Twig_Extension
             'mes' => $fecha->format('m') - 1,
             'dia' => $fecha->format('d'),
             'hora' => $fecha->format('H'),
-            'minuto' => $fecha->format('i'),
-            'segundo' => $fecha->format('s'),
+            'minuto' => $fecha->format('i')
         ));
 
         $idAleatorio = 'cuenta-atras-'.mt_rand(1, 100000);
