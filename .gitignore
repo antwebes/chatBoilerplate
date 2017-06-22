@@ -116,3 +116,5 @@ Icon
 .idea/apiChatea.iml
 ## redis deb
 dump.rdb
+
+shared/*
