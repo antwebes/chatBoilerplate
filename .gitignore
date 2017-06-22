@@ -118,3 +118,5 @@ Icon
 dump.rdb
 
 shared/*
+
+docker-compose.yml

@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - ".:/var/www/html/"
-      - "/home/ping/.ssh/:/root/.ssh/"
+      - "/YOUR_KEY_PATH/:/root/.ssh/"
     ports:
       - 8000:80
     restart: always
